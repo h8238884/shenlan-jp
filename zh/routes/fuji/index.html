@@ -194,6 +194,9 @@
           .route-notebook-frame{ width:100%; display:block; border:0; border-radius:0; overflow:hidden; box-shadow:none; background:transparent;  }
           .route-notebook-note{ font-size: 13px; color: rgba(0,0,0,.55); margin-top: 8px; }
                   /* desktop-hide-mobile-only */
+          @media (max-width: 720px){
+            .desktop-only{ display:none !important; }
+          }
           @media (min-width: 721px){
             .route-map-labeled, .route-notebook-wrap{ display:none !important; }
           }

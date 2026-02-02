@@ -186,6 +186,9 @@
           .route-notebook-tabs .pill.active{ border-color: rgba(0,0,0,.32); background: rgba(0,0,0,.06); }
           .route-notebook-frame{ width:100%; display:block; border:0; border-radius:0; overflow:hidden; box-shadow:none; background:transparent;  }
                   /* desktop-hide-mobile-only */
+          @media (max-width: 720px){
+            .desktop-only{ display:none !important; }
+          }
           @media (min-width: 721px){
             .route-map-labeled, .route-notebook-wrap, .route-mobile-only{ display:none !important; }
           }
@@ -277,7 +280,7 @@
     </section>
 
     <!-- Fuji route map (desktop) -->
-    <section class="section">
+    <section class="section desktop-only">
       <div class="container reveal">
         <h2>ルートマップ</h2>
         <div class="fuji-map" aria-label="Fuji routes map">
