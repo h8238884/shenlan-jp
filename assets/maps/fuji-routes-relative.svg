@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1200" height="1500" role="img" aria-label="南线北线相对位置示意">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0.8" stdDeviation="0.8" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <image href="/assets/maps/fuji-relief-4x5.png" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- top label strip -->
+  <g filter="url(#shadow)">
+    <rect x="2" y="2" width="96" height="7" rx="2" fill="#fff" opacity="0.78"/>
+  </g>
+  <text x="4" y="7" font-size="3" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial" fill="#111827" opacity="0.9">南线 / 北线 · 相对位置示意</text>
+
+  <!-- routes -->
+  <polyline points="14.54,33.60 37.69,18.53 55.66,13.88 55.39,18.53 67.28,19.70 65.07,21.45 92.12,32.94" fill="none" stroke="#111827" stroke-opacity="0.18" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="14.54,33.60 37.69,18.53 55.66,13.88 55.39,18.53 67.28,19.70 65.07,21.45 92.12,32.94" fill="none" stroke="#3B82F6" stroke-opacity="0.75" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <polyline points="67.28,19.70 65.07,21.45 92.12,32.94 35.42,87.58 27.87,84.38 29.32,87.67" fill="none" stroke="#111827" stroke-opacity="0.18" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="67.28,19.70 65.07,21.45 92.12,32.94 35.42,87.58 27.87,84.38 29.32,87.67" fill="none" stroke="#F43F8C" stroke-opacity="0.75" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- points -->
+  <g>
+    <circle cx='14.54' cy='33.60' r='1.2' fill='white' opacity='0.95'/><circle cx='14.54' cy='33.60' r='0.85' fill='#3B82F6' opacity='0.95'/>
+    <circle cx='37.69' cy='18.53' r='1.2' fill='white' opacity='0.95'/><circle cx='37.69' cy='18.53' r='0.85' fill='#3B82F6' opacity='0.95'/>
+    <circle cx='55.66' cy='13.88' r='1.2' fill='white' opacity='0.95'/><circle cx='55.66' cy='13.88' r='0.85' fill='#3B82F6' opacity='0.95'/>
+    <circle cx='55.39' cy='18.53' r='1.2' fill='white' opacity='0.95'/><circle cx='55.39' cy='18.53' r='0.85' fill='#3B82F6' opacity='0.95'/>
+    <circle cx='67.28' cy='19.70' r='1.2' fill='white' opacity='0.95'/><circle cx='67.28' cy='19.70' r='0.85' fill='#111827' opacity='0.95'/>
+    <circle cx='65.07' cy='21.45' r='1.2' fill='white' opacity='0.95'/><circle cx='65.07' cy='21.45' r='0.85' fill='#111827' opacity='0.95'/>
+    <circle cx='92.12' cy='32.94' r='1.2' fill='white' opacity='0.95'/><circle cx='92.12' cy='32.94' r='0.85' fill='#111827' opacity='0.95'/>
+    <circle cx='35.42' cy='87.58' r='1.2' fill='white' opacity='0.95'/><circle cx='35.42' cy='87.58' r='0.85' fill='#F43F8C' opacity='0.95'/>
+    <circle cx='27.87' cy='84.38' r='1.2' fill='white' opacity='0.95'/><circle cx='27.87' cy='84.38' r='0.85' fill='#F43F8C' opacity='0.95'/>
+    <circle cx='29.32' cy='87.67' r='1.2' fill='white' opacity='0.95'/><circle cx='29.32' cy='87.67' r='0.85' fill='#F43F8C' opacity='0.95'/>
+  </g>
+
+  <!-- legend -->
+  <g filter="url(#shadow)">
+    <rect x="2" y="92" width="96" height="6" rx="2" fill="#fff" opacity="0.75"/>
+  </g>
+  <rect x="4" y="93.5" width="4" height="3" rx="0.8" fill="#3B82F6" opacity="0.85"/>
+  <text x="9" y="96" font-size="2.6" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial" fill="#111827" opacity="0.9">北线</text>
+  <rect x="20" y="93.5" width="4" height="3" rx="0.8" fill="#F43F8C" opacity="0.85"/>
+  <text x="25" y="96" font-size="2.6" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial" fill="#111827" opacity="0.9">南线</text>
+</svg>

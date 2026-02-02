@@ -1,0 +1,115 @@
+{
+  "bbox": {
+    "lon0": 138.5341875,
+    "lon1": 138.9353203125,
+    "lat0": 35.09,
+    "lat1": 35.59142618849041
+  },
+  "src": {
+    "w": 1280,
+    "h": 1199,
+    "bbox": {
+      "lon0": 138.42,
+      "lon1": 139.05,
+      "lat0": 35.09,
+      "lat1": 35.68
+    }
+  },
+  "crop": {
+    "w": 815,
+    "h": 1019,
+    "offsetX": 232,
+    "offsetY": 180
+  },
+  "orders": {
+    "southOrder": [
+      "hikawa",
+      "fujisan_sta",
+      "hirano",
+      "yume",
+      "tatemai",
+      "fujiwest"
+    ],
+    "northOrder": [
+      "asagiri",
+      "saiko",
+      "nagasaki",
+      "lawson",
+      "hikawa",
+      "fujisan_sta",
+      "hirano"
+    ]
+  },
+  "points": {
+    "asagiri": {
+      "key": "asagiri",
+      "title": "朝霧高原",
+      "route": "北线",
+      "left": "14.54%",
+      "top": "33.60%"
+    },
+    "lawson": {
+      "key": "lawson",
+      "title": "河口湖罗森",
+      "route": "北线",
+      "left": "55.39%",
+      "top": "18.53%"
+    },
+    "nagasaki": {
+      "key": "nagasaki",
+      "title": "河口湖长崎公园",
+      "route": "北线",
+      "left": "55.66%",
+      "top": "13.88%"
+    },
+    "saiko": {
+      "key": "saiko",
+      "title": "西湖畔",
+      "route": "北线",
+      "left": "37.69%",
+      "top": "18.53%"
+    },
+    "hikawa": {
+      "key": "hikawa",
+      "title": "日川时计店",
+      "route": "共通",
+      "left": "67.28%",
+      "top": "19.70%"
+    },
+    "fujisan_sta": {
+      "key": "fujisan_sta",
+      "title": "富士山站",
+      "route": "共通",
+      "left": "65.07%",
+      "top": "21.45%"
+    },
+    "hirano": {
+      "key": "hirano",
+      "title": "山中湖平野滨",
+      "route": "共通",
+      "left": "92.12%",
+      "top": "32.94%"
+    },
+    "yume": {
+      "key": "yume",
+      "title": "富士山梦大桥",
+      "route": "南线",
+      "left": "35.42%",
+      "top": "87.58%"
+    },
+    "tatemai": {
+      "key": "tatemai",
+      "title": "竪堀駅",
+      "route": "南线",
+      "left": "27.87%",
+      "top": "84.38%"
+    },
+    "fujiwest": {
+      "key": "fujiwest",
+      "title": "富士站西口",
+      "route": "南线",
+      "left": "29.32%",
+      "top": "87.67%"
+    }
+  }
+}

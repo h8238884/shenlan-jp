@@ -137,7 +137,8 @@
     </section>
 
     <section class="section">
-      <div class="container reveal">
+      <div class="container reveal route-notebook-container">
+        <h2>行程ルート</h2>
         <div class="routes">
           <div class="card route">
             <span class="badge">南ルート · 街並み + 定番の富士</span>
@@ -150,7 +151,6 @@
               <li>堅堀駅</li>
               <li>富士駅 西口商店街</li>
             </ul>
-            
           </div>
 
           <div class="card route">
@@ -164,7 +164,6 @@
               <li>河口湖・長崎公園</li>
               <li>西湖湖畔 / 朝霧高原</li>
             </ul>
-            
           </div>
         </div>
 
@@ -175,12 +174,300 @@
             <li>納品目安：ベーシック補正 約50枚 + レタッチ 約10枚（要望に応じて調整可）</li>
             <li>おすすめ：カップル旅行 / プロポーズ / 軽めの前撮り / ハネムーン / 小さな家族写真</li>
           </ul>
-          <div style="margin-top:12px">
-            <a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsAppで相談・予約</a>
+          <div style="margin-top:12px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsAppで相談・予約</a></div>
+        </div>
+
+        <h2 class="route-mobile-only" style="margin-top:16px">ルート（モバイル）</h2>
+
+        <style>
+          .route-notebook-wrap{ margin-top:14px; }
+          .route-notebook-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0 14px; }
+          .route-notebook-tabs .pill{ cursor:pointer; font-size:16px; padding:10px 14px; border-radius:999px; border:1px solid rgba(0,0,0,.16); background: rgba(255,255,255,.72); }
+          .route-notebook-tabs .pill.active{ border-color: rgba(0,0,0,.32); background: rgba(0,0,0,.06); }
+          .route-notebook-frame{ width:100%; display:block; border:0; border-radius:0; overflow:hidden; box-shadow:none; background:transparent;  }
+                  /* desktop-hide-mobile-only */
+          @media (min-width: 721px){
+            .route-map-labeled, .route-notebook-wrap, .route-mobile-only{ display:none !important; }
+          }
+          @media (max-width: 720px){
+            /* tighten spacing on mobile */
+            .route-notebook-wrap{ margin-top: 10px; }
+          }
+        </style>
+        <script>
+          // mobile-only-stripper: remove mobile-only blocks on desktop entirely
+          (function(){
+            function strip(){
+              if (window.innerWidth >= 721){
+                document.querySelectorAll('.route-map-labeled, .route-notebook-wrap, .route-mobile-only').forEach(el=>el.remove());
+              }
+            }
+            strip();
+            window.addEventListener('resize', strip);
+          })();
+        </script>
+
+        <div class="route-map-labeled" style="margin:10px 0 14px">
+          <img src="/assets/maps/fuji-routes-labeled-ja.png" alt="富士山マップ（南北ルート・地点ラベル）" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+
+
+
+        <div class="route-notebook-wrap" aria-label="Fuji notebook routes">
+          <div class="route-notebook-tabs">
+            <button class="pill" type="button" data-nb-tab="south">南</button>
+            <button class="pill" type="button" data-nb-tab="north">北</button>
+            <button class="pill" type="button" data-nb-tab="extra">おすすめ</button>
           </div>
+          <iframe id="nbFrame" class="route-notebook-frame" title="富士山ルート" src="/assets/notes/fuji/long-south-ja.html" loading="lazy"  style="height: 1200px"></iframe>
+        </div>
+
+        <script>
+          (function(){
+            const frame = document.getElementById('nbFrame');
+            if(!frame) return;
+
+            function measure(){
+              try {
+                const doc = frame.contentDocument;
+                if(!doc) return;
+                const h = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+                if(h) frame.style.height = Math.min(6000, h) + 'px';
+              } catch(e) {}
+            }
+
+            frame.addEventListener('load', ()=>{
+              // give layout/images a moment
+              setTimeout(measure, 40);
+              setTimeout(measure, 200);
+              setTimeout(measure, 800);
+            });
+
+            function setTab(which){
+              frame.dataset.tab = which;
+              frame.src = which === 'north'
+                ? '/assets/notes/fuji/long-north-ja.html'
+                : (which === 'extra' ? '/assets/notes/fuji/long-extra-ja.html' : '/assets/notes/fuji/long-south-ja.html');
+
+              document.querySelectorAll('[data-nb-tab]').forEach(btn=>{
+                btn.classList.toggle('active', btn.getAttribute('data-nb-tab') === which);
+              });
+              frame.style.height = '1200px';
+              setTimeout(measure, 60);
+              setTimeout(measure, 260);
+            }
+
+            // Receive height from iframe (prevents inner scrollbars)
+            window.addEventListener('message', (e)=>{
+              const d = e && e.data;
+              if(!d || d.type !== 'nbHeight') return;
+              if(d.tab && frame.dataset.tab && d.tab !== frame.dataset.tab) return;
+              const h = Math.max(200, Math.min(6000, Number(d.height)||0));
+              if(h) frame.style.height = h + 'px';
+            });
+
+            document.querySelectorAll('[data-nb-tab]').forEach(btn=>{
+              btn.addEventListener('click', ()=> setTab(btn.getAttribute('data-nb-tab')));
+            });
+
+            setTab('south');
+          })();
+        </script>
+      </div>
+    </section>
+
+    <!-- Fuji route map (desktop) -->
+    <section class="section">
+      <div class="container reveal">
+        <h2>ルートマップ</h2>
+        <div class="fuji-map" aria-label="Fuji routes map">
+          <div class="fuji-map-stage" role="img" aria-label="Map around Mt. Fuji">
+            <img class="fuji-map-illust" src="/assets/maps/fuji-relief-4x5.png" alt="富士山周辺地形図" loading="lazy" />
+            <img class="fuji-map-overlay" src="/assets/maps/fuji-relief.overlay.svg" alt="" aria-hidden="true" loading="lazy" />
+
+            <button class="map-point north" type="button" style="left:14.54%;top:33.60%"
+              data-title="朝霧高原"
+              data-route="北ルート"
+              data-img="/assets/img/full/fuji/_DSC7840.jpg"
+              aria-label="北ルート：朝霧高原"></button>
+            <span class="poi-label" style="left:14.54%;top:33.60%">朝霧高原</span>
+
+            <button class="map-point north" type="button" style="left:40.13%;top:18.53%"
+              data-title="西湖湖畔"
+              data-route="北ルート"
+              data-img="/assets/img/full/fuji/_DSC6349-___-NR-1.jpg"
+              aria-label="北ルート：西湖湖畔"></button>
+            <span class="poi-label" style="left:40.13%;top:18.53%">西湖湖畔</span>
+
+            <button class="map-point north" type="button" style="left:55.44%;top:14.55%"
+              data-title="河口湖・長崎公園"
+              data-route="北ルート"
+              data-img="/assets/img/full/fuji/_DSC3796.jpg,/assets/img/full/fuji/_DSC3725.jpg"
+              aria-label="北ルート：河口湖・長崎公園"></button>
+            <span class="poi-label" style="left:55.44%;top:14.55%">長崎公園</span>
+
+            <button class="map-point north" type="button" style="left:55.39%;top:18.53%"
+              data-title="河口湖ローソン"
+              data-route="北ルート"
+              data-img="/assets/img/full/fuji/_DSC5716.jpg"
+              aria-label="北ルート：河口湖ローソン"></button>
+            <span class="poi-label" style="left:55.39%;top:18.53%">河口湖ローソン</span>
+
+            <button class="map-point other" type="button" style="left:59.08%;top:17.69%"
+              data-title="河口浅間神社"
+              data-route="おすすめ"
+              data-img="/assets/img/full/fuji/_DSC8012.jpg"
+              aria-label="河口浅間神社"></button>
+            <span class="poi-label" style="left:59.08%;top:17.69%">河口浅間神社</span>
+
+            <button class="map-point other" type="button" style="left:65.20%;top:18.38%"
+              data-title="新倉富士浅間神社"
+              data-route="おすすめ"
+              data-img="/assets/img/full/fuji/_DSC0073.jpg,/assets/img/full/fuji/DSC06547.jpg"
+              aria-label="新倉富士浅間神社"></button>
+            <span class="poi-label" style="left:65.20%;top:18.38%">新倉富士浅間神社</span>
+
+            <button class="map-point other" type="button" style="left:51.63%;top:14.48%"
+              data-title="大石公園"
+              data-route="おすすめ"
+              data-img="/assets/img/full/fuji/_DSC6822.jpg"
+              aria-label="大石公園"></button>
+            <span class="poi-label" style="left:51.63%;top:14.48%">大石公園</span>
+
+            <button class="map-point both" type="button" style="left:67.01%;top:19.71%"
+              data-title="日川時計店"
+              data-route="南 / 北"
+              data-img="/assets/img/full/fuji/_DSC5775.jpg"
+              aria-label="日川時計店"></button>
+            <span class="poi-label" style="left:67.01%;top:19.71%">日川時計店</span>
+
+            <button class="map-point both" type="button" style="left:64.46%;top:21.20%"
+              data-title="富士山駅"
+              data-route="南 / 北"
+              data-img="/assets/img/full/fuji/_DSC6339ins.jpg"
+              aria-label="富士山駅"></button>
+            <span class="poi-label" style="left:64.46%;top:21.20%">富士山駅</span>
+
+            <button class="map-point both" type="button" style="left:92.12%;top:32.94%"
+              data-title="山中湖・平野浜"
+              data-route="南 / 北"
+              data-img="/assets/img/full/fuji/_DSC1408-___-NR.jpg"
+              aria-label="山中湖・平野浜"></button>
+            <span class="poi-label" style="left:92.12%;top:32.94%;transform:translate(-96px,-14px)">平野浜</span>
+
+            <button class="map-point south" type="button" style="left:35.42%;top:87.58%"
+              data-title="富士山 夢の大橋"
+              data-route="南ルート"
+              data-img="/assets/img/full/fuji/_DSC1070.jpg"
+              aria-label="南ルート：夢の大橋"></button>
+            <span class="poi-label" style="left:35.42%;top:87.58%">夢の大橋</span>
+
+            <button class="map-point south" type="button" style="left:27.87%;top:84.38%"
+              data-title="堅堀駅"
+              data-route="南ルート"
+              data-img="/assets/img/full/fuji/_DSC8987.jpg"
+              aria-label="南ルート：堅堀駅"></button>
+            <span class="poi-label" style="left:27.87%;top:84.38%">堅堀駅</span>
+
+            <button class="map-point south" type="button" style="left:29.32%;top:87.67%"
+              data-title="富士駅 西口"
+              data-route="南ルート"
+              data-img="/assets/img/full/fuji/_DSC0993.jpg"
+              aria-label="南ルート：富士駅 西口"></button>
+            <span class="poi-label" style="left:29.32%;top:87.67%">富士駅 西口</span>
+
+            <span class="map-label" style="left:48.16%;top:46.03%">富士山</span>
+            <span class="map-label" style="left:55.05%;top:14.84%">河口湖</span>
+            <span class="map-label" style="left:78.73%;top:34.79%">山中湖</span>
+            <span class="map-label" style="left:33.86%;top:18.23%">西湖</span>
+            <span class="map-label" style="left:16.41%;top:20.23%">精進湖</span>
+            <span class="map-label" style="left:11.42%;top:24.22%">本栖湖</span>
+
+            <div class="map-legend" aria-hidden="true">
+              <span class="lg north"><i></i>北</span>
+              <span class="lg south"><i></i>南</span>
+            </div>
+          </div>
+
+          <aside class="fuji-map-panel" aria-live="polite">
+            <div class="map-panel-head">
+              <b id="mapSpotTitle">点位にカーソルを合わせてください</b>
+              <span id="mapSpotMeta">北 / 南</span>
+            </div>
+            <div class="map-panel-img" aria-hidden="true">
+              <div class="map-panel-grid">
+                <img id="mapSpotImg" src="/assets/img/full/fuji/_DSC0073.jpg" alt="" loading="lazy" />
+                <img id="mapSpotImg2" src="/assets/img/full/fuji/_DSC0836.jpg" alt="" loading="lazy" hidden />
+              </div>
+            </div>
+          </aside>
+
+          <div class="map-tooltip" data-map-tooltip hidden></div>
         </div>
       </div>
     </section>
+
+    <script>
+      (function(){
+        var stage = document.querySelector('.fuji-map-stage');
+        var points = document.querySelectorAll('.fuji-map-stage .map-point');
+        var t = document.getElementById('mapSpotTitle');
+        var m = document.getElementById('mapSpotMeta');
+        var img = document.getElementById('mapSpotImg');
+        var img2 = document.getElementById('mapSpotImg2');
+        var tip = document.querySelector('[data-map-tooltip]');
+        if(!stage || !points.length || !t || !m || !img) return;
+
+        function splitImgs(src){
+          if(!src) return [];
+          src = String(src).replace(/，/g, ',');
+          if(src.indexOf(',') === -1) return [src.trim()].filter(Boolean);
+          return src.split(',').map(function(s){return s.trim()}).filter(Boolean);
+        }
+
+        function show(p){
+          var title = p.getAttribute('data-title') || 'Spot';
+          var route = p.getAttribute('data-route') || '';
+          var src = p.getAttribute('data-img') || '';
+          t.textContent = title;
+          m.textContent = route;
+          var list = splitImgs(src);
+          if(list[0]) img.src = list[0];
+          var grid = img && img.parentElement;
+          if(img2){
+            if(list[1]){ img2.hidden = false; img2.src = list[1]; }
+            else { img2.hidden = true; }
+          }
+          if(grid && grid.classList){
+            grid.classList.toggle('two', !!(list[1]));
+          }
+
+          if(tip){
+            tip.textContent = title;
+            tip.hidden = false;
+            tip.classList.toggle('north', p.classList.contains('north'));
+            tip.classList.toggle('south', p.classList.contains('south'));
+          }
+        }
+
+        function hideTip(){ if(tip){ tip.hidden = true; } }
+
+        stage.addEventListener('mousemove', function(e){
+          if(!tip || tip.hidden) return;
+          var r = stage.getBoundingClientRect();
+          var x = e.clientX - r.left;
+          var y = e.clientY - r.top;
+          tip.style.transform = 'translate(' + (x + 14) + 'px,' + (y + 14) + 'px)';
+        });
+        stage.addEventListener('mouseleave', hideTip);
+
+        points.forEach(function(p){
+          p.addEventListener('mouseenter', function(){show(p)});
+          p.addEventListener('focus', function(){show(p)});
+          p.addEventListener('click', function(){show(p)});
+        });
+      })();
+    </script>
 
     <section class="section">
       <div class="container reveal">

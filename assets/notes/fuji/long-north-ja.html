@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>富士山北线｜手帐长页（笔记本底纹 + 胶带贴图）</title>
+  <style>
+    @font-face {
+      font-family: 'Yomogi Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/Yomogi.ttf) format('truetype');
+    }
+    @font-face {
+      font-family: 'Zen Kurenaido Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/ZenKurenaido.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'YShi Written SC Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/YShiWrittenSC-Regular.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Dymon Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/Dymon-ShouXieTi.otf) format('opentype');
+    }
+
+    @font-face {
+      font-family: 'ZCOOL KuaiLe Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/ZCOOLKuaiLe.ttf) format('truetype');
+    }
+    @font-face {
+      font-family: 'MaShanZheng Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/MaShanZheng-Regular.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Zhi Mang Xing Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/ZhiMangXing.ttf) format('truetype');
+    }
+
+
+    :root{
+      --ink: #1f2328;
+      --muted: rgba(31,35,40,.64);
+      --paper: #fbf8f1;
+      --paper2: #fffdf8;
+      --line: rgba(33, 89, 166, .14);
+      --margin: rgba(229, 83, 75, .18);
+      --shadow: 0 16px 40px rgba(15,18,22,.14);
+      --radius: 22px;
+      --rule: 34px; /* 笔记本横线间距，同时用来对齐正文行高 */
+
+      /* 字体：想做到“看不出印刷体”，最好用你指定的手写字体文件（ttf/otf）。这里先用系统可用字体兜底 */
+      --crayon: 'Zen Kurenaido Local','Zen Kurenaido','Yomogi Local','Yomogi',cursive;
+      --pencil: 'Yomogi Local','Yomogi','Zen Kurenaido Local','Zen Kurenaido',cursive;
+      --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+
+      /* 竖图 */
+      --photoW: 280px;
+      --photoH: 380px; /* 约 3:4 */
+      --max: 100%;
+    }
+
+    html, body{
+      min-height: 100vh; height: 100%; }
+    body{
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: var(--ui);
+      background: linear-gradient(180deg, var(--paper2), var(--paper));
+    }
+
+    .wrap{
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 笔记本页面背景 */
+    .page{
+      min-height: 100vh;
+      position: relative;
+      background: linear-gradient(180deg, var(--paper2), var(--paper));
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
+      border: 0;
+    }
+    .page::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0 56px, var(--margin) 56px 58px, transparent 58px 100%),
+        repeating-linear-gradient(180deg, transparent 0 calc(var(--rule) * .52), var(--line) calc(var(--rule) * .52) calc(var(--rule) * .52 + 1px), transparent calc(var(--rule) * .52 + 1px) var(--rule)),
+        radial-gradient(2px 2px at 20% 30%, rgba(31,35,40,.06) 0 1px, transparent 2px),
+        radial-gradient(2px 2px at 70% 60%, rgba(31,35,40,.04) 0 1px, transparent 2px);
+      opacity: .95;
+      pointer-events: none;
+    }
+
+    /* 内容内边距：背景不变宽，只把内容缩进 */
+    .inner{
+      position: relative;
+      z-index: 2;
+      padding: 0 118px 10px;
+      box-sizing: border-box;
+    }
+
+    .topbar{
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 14px 0 0;
+      color: rgba(31,35,40,.56);
+      font-size: 11px;
+    }
+
+    .hero{
+      position: relative;
+      z-index: 2;
+      padding: 18px 0 10px;
+    }
+
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(31,35,40,.06);
+      color: rgba(31,35,40,.74);
+      font-size: 11px;
+      letter-spacing: .4px;
+    }
+
+    h1{
+      margin: 12px 0 6px;
+      font-family: var(--crayon);
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.12;
+      letter-spacing: .2px;
+      text-shadow:
+        0.8px 0 rgba(28, 72, 130, .16),
+        -0.8px 0 rgba(28, 72, 130, .12),
+        0 0.8px rgba(0,0,0,.08);
+    }
+
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 56em;
+    }
+
+    .slice{
+      position: relative;
+      z-index: 2;
+      padding: 24px 0 44px;
+    }
+
+    /* 站点卡片：左右交错 */
+    .spot{
+      display: grid;
+      grid-template-columns: var(--photoW) 1fr;
+      gap: 22px;
+      align-items: start;
+      margin: 28px 0;
+      padding: 6px 0;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+    .spot.alt{ grid-template-columns: 1fr var(--photoW); }
+
+    .photoWrap{
+      position: relative;
+      width: var(--photoW);
+      height: var(--photoH);
+      border-radius: 18px;
+      overflow: visible;
+      background: transparent;
+      box-shadow: none;
+      transform: rotate(-1.2deg);
+    }
+    .spot.alt .photoWrap{ transform: rotate(1.2deg); }
+
+    .photoWrap img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    /* 胶带 */
+    .tape{
+      position: absolute;
+      width: 120px;
+      height: 38px;
+      background: linear-gradient(180deg, rgba(255, 232, 160, .85), rgba(255, 219, 120, .78));
+      border: 1px solid rgba(120, 90, 15, .18);
+      box-shadow: 0 8px 16px rgba(15,18,22,.18);
+      opacity: .95;
+    }
+    .tape::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 8px, rgba(0,0,0,.03) 8px 9px);
+      mix-blend-mode: multiply;
+      opacity: .55;
+      pointer-events: none;
+    }
+    .t1{ top: -10px; left: 14px; transform: rotate(-12deg); }
+    .t2{ top: -8px; right: 16px; transform: rotate(10deg); }
+
+    .content{ padding: calc(var(--rule) * 0.18) 10px 6px; min-width: 0; }
+
+    /* 手帐随意感：每个块错位 + 垂直节奏（更明显一点） */
+    .spot{
+      grid-template-columns: var(--photoW) 1fr;
+    }
+    
+    .spot .photoWrap{
+      transform: rotate(-3deg) translateX(-6px) translateY(2px);
+    }
+    .spot.alt .photoWrap{
+      transform: rotate(3deg) translateX(6px) translateY(2px);
+    }
+    .spot:nth-of-type(3n) .photoWrap{
+      transform: rotate(-4deg) translateX(-10px) translateY(6px);
+    }
+    .spot:nth-of-type(4n) .photoWrap{
+      transform: rotate(4deg) translateX(10px) translateY(4px);
+    }
+
+
+    
+
+    .name{
+      margin: 0 0 8px;
+      font-family: var(--crayon);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.06;
+      color: rgba(24, 60, 115, .92);
+      text-shadow:
+        0.4px 0 rgba(24, 60, 115, .14),
+        -0.4px 0 rgba(24, 60, 115, .10);
+    }
+
+    .desc{
+      margin: 0;
+      font-family: var(--pencil);
+      color: rgba(31,35,40,.80);
+      font-size: 15px;
+      line-height: var(--rule);
+      letter-spacing: .2px;
+      text-shadow: 0 0.6px rgba(0,0,0,.10);
+      max-width: 56em;
+    }
+
+    @media (max-width: 720px){
+      .inner{ padding: 0 20px 8px; }
+      :root{ --photoW: 160px; --photoH: 220px; --rule: 30px; }
+      h1{ font-size: 20px; }
+      .slice{ padding: 16px 20px 24px; }
+      .spot{ grid-template-columns: var(--photoW) 1fr; padding: 0; gap: 12px; }
+      .spot.alt{ grid-template-columns: 1fr var(--photoW); }
+      .name{ font-size: 19px; }
+      .desc{ font-size: 14px; line-height: var(--rule); }
+      .tape{ width: 88px; height: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="page">
+      <div class="inner">
+      <div class="topbar">
+                <span>富士山ルート · 北（スクロール）</span>
+      </div>
+
+      <section class="hero">
+        <div class="kicker">北ルート · 湖畔 + 撮影スポット密集</div>
+        <h1>富士山北ルート</h1>
+        
+      </section>
+
+      <section class="slice">
+        <div class="spot"><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC7840.jpg" alt="朝霧高原" loading="lazy"></div><div class="content"><p class="name">朝霧高原</p><p class="desc">視界が開けた高原で、人物と富士のバランスが取りやすいです。ミニマルだけど寂しくない画に。風がある日は映画っぽい雰囲気。</p></div></div>
+<div class="spot alt"><div class="content"><p class="name">西湖湖畔</p><p class="desc">湖面が光を柔らかくしてくれるので、画がやさしく仕上がります。散歩やハグ、振り返りなど静かな感情表現に。</p></div><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC6349-___-NR-1.jpg" alt="西湖湖畔" loading="lazy"></div></div>
+<div class="spot"><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img id="nagasakiImg" src="/assets/img/full/fuji/_DSC3796.jpg" alt="河口湖・長崎公園" loading="lazy"></div><div class="content"><p class="name">河口湖・長崎公園</p><p class="desc">撮影ポイントが集まっていて、構図の切り替えがしやすいです。手前人物/中景湖岸/遠景富士のレイヤーが揃います。</p></div></div>
+<div class="spot alt"><div class="content"><p class="name">河口湖ローソン</p><p class="desc">定番の「富士×街」スポット。構図と色を少し抑えると観光感が減り、仕草やディテールで上品に仕上がります。</p></div><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC5716.jpg" alt="河口湖ローソン" loading="lazy"></div></div>
+<div class="spot"><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC5775.jpg" alt="日川時計店" loading="lazy"></div><div class="content"><p class="name">日川時計店</p><p class="desc">奥行きのある通りが強いリード線に。遠景に富士が現れる驚きがあります。歩く/信号待ち/振り返りなど街のストーリーに。</p></div></div>
+<div class="spot alt"><div class="content"><p class="name">富士山駅</p><p class="desc">要素が多く「旅の始まり/到着」の気分が作りやすい場所。ドリンクを持つ、服を整える、乗車前の瞬間など自然なカットに。</p></div><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC6339ins.jpg" alt="富士山駅" loading="lazy"></div></div>
+<div class="spot"><div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC1408-___-NR.jpg" alt="山中湖・平野浜" loading="lazy"></div><div class="content"><p class="name">山中湖・平野浜</p><p class="desc">湖と空で余白が作れ、リラックスした雰囲気に。光が良い日は背景がとてもクリーンで、写真に“呼吸感”が出ます。</p></div></div>
+      </section>
+      </div><!--/.inner-->
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const el = document.getElementById('nagasakiImg');
+      if (!el) return;
+      const cands = [
+        "/assets/img/full/fuji/_DSC3796.jpg",
+        "/assets/img/full/fuji/_DSC3725.jpg"
+      ];
+      el.src = cands[Math.floor(Math.random() * cands.length)];
+    })();
+  </script>
+
+  <script>
+    (function(){
+      function send(){
+        try {
+          var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+          parent.postMessage({type:'nbHeight', height: h, tab: 'north'}, '*');
+        } catch(e){}
+      }
+      window.addEventListener('load', send);
+      window.addEventListener('resize', send);
+      // images load can change height
+      document.addEventListener('readystatechange', send);
+      if ('ResizeObserver' in window){
+        new ResizeObserver(send).observe(document.documentElement);
+      }
+      setTimeout(send, 60);
+      setTimeout(send, 200);
+      setTimeout(send, 600);
+    })();
+  </script>
+
+</body>
+</html>

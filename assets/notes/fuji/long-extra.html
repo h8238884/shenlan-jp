@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>富士山｜推荐点位（南北线之外）</title>
+  <style>
+    @font-face {
+      font-family: 'YShi Written SC Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/YShiWrittenSC-Regular.ttf) format('truetype');
+    }
+    @font-face {
+      font-family: 'Dymon Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/Dymon-ShouXieTi.otf) format('opentype');
+    }
+    @font-face {
+      font-family: 'ZCOOL KuaiLe Local';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/ZCOOLKuaiLe.ttf) format('truetype');
+    }
+
+    :root{
+      --ink: #1f2328;
+      --muted: rgba(31,35,40,.62);
+      --paper: #fbf8f1;
+      --paper2: #fffdf8;
+      --line: rgba(33, 89, 166, .14);
+      --margin: rgba(229, 83, 75, .18);
+      --rule: 34px;
+
+      --crayon: 'ZCOOL KuaiLe Local','Dymon Local',cursive;
+      --pencil: 'YShi Written SC Local',cursive;
+      --ui: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+
+      --photoW: 280px;
+      --photoH: 380px;
+    }
+
+    html,body{
+      min-height: 100vh;height:100%}
+    body{
+      min-height: 100vh;
+      margin:0;
+      color:var(--ink);
+      font-family:var(--ui);
+      overflow-x:hidden;
+      background: linear-gradient(180deg, var(--paper2), var(--paper));
+    }
+
+    .wrap{max-width:100%;margin:0;padding:0}
+
+    .page{
+      min-height: 100vh;
+      position:relative;
+      background: linear-gradient(180deg, var(--paper2), var(--paper));
+      border-radius:0;
+      box-shadow:none;
+      overflow:hidden;
+      border:0;
+    }
+    .page::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, transparent 0 56px, var(--margin) 56px 58px, transparent 58px 100%),
+        repeating-linear-gradient(180deg, transparent 0 calc(var(--rule) * .52), var(--line) calc(var(--rule) * .52) calc(var(--rule) * .52 + 1px), transparent calc(var(--rule) * .52 + 1px) var(--rule));
+      opacity:.95;
+      pointer-events:none;
+    }
+
+    .inner{position:relative;z-index:2;padding:0 58px 28px;box-sizing:border-box}
+
+    .topbar{display:flex;justify-content:flex-end;padding:14px 0 0;color:rgba(31,35,40,.56);font-size:11px}
+
+    h1{margin:12px 0 10px;font-family:var(--crayon);font-weight:400;font-size:26px;line-height:1.12;letter-spacing:.2px}
+
+    .slice{padding:16px 0 24px}
+
+    .spot{display:grid;grid-template-columns:var(--photoW) 1fr;gap:18px;align-items:start;margin:26px 0;padding:6px 0}
+    .spot.alt{grid-template-columns:1fr var(--photoW)}
+
+    .photoWrap{position:relative;width:var(--photoW);height:var(--photoH);overflow:visible;transform:rotate(-2deg) translateX(-6px) translateY(2px)}
+    .spot.alt .photoWrap{transform:rotate(2deg) translateX(6px) translateY(2px)}
+    .spot:nth-of-type(3n) .photoWrap{transform:rotate(-3deg) translateX(-10px) translateY(6px)}
+    .spot:nth-of-type(4n) .photoWrap{transform:rotate(3deg) translateX(10px) translateY(4px)}
+
+    .photoWrap img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0;box-shadow:none}
+
+    .tape{position:absolute;width:120px;height:38px;background:linear-gradient(180deg, rgba(255,232,160,.85), rgba(255,219,120,.78));border:1px solid rgba(120,90,15,.18);box-shadow:0 8px 16px rgba(15,18,22,.18);opacity:.95}
+    .tape::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 8px, rgba(0,0,0,.03) 8px 9px);mix-blend-mode:multiply;opacity:.55}
+    .t1{top:-10px;left:14px;transform:rotate(-12deg)}
+    .t2{top:-8px;right:16px;transform:rotate(10deg)}
+
+    .content{padding:calc(var(--rule) * 0.18) 10px 6px;min-width:0}
+
+    .name{margin:0 0 8px;font-family:var(--crayon);font-weight:400;font-size:19px;line-height:1.1;color:rgba(24,60,115,.92)}
+
+    .desc{margin:0;font-family:var(--pencil);color:rgba(31,35,40,.80);font-size:14px;line-height:var(--rule);letter-spacing:.2px}
+
+    @media (max-width:720px){
+      :root{--photoW:160px;--photoH:220px;--rule:30px}
+      .inner{padding:0 20px 18px}
+      h1{font-size:22px}
+      .name{font-size:19px}
+      .desc{font-size:14px;line-height:var(--rule)}
+      .tape{width:88px;height:30px}
+      .spot{gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="page">
+      <div class="inner">
+        <div class="topbar"><span>富士山行程 · 推荐点位</span></div>
+        <h1>南北线之外 · 额外点位</h1>
+
+        <section class="slice">
+          <div class="spot">
+            <div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC8012.jpg" alt="河口湖浅見神社" loading="lazy"></div>
+            <div class="content"><p class="name">河口湖浅見神社</p><p class="desc">更安静、更生活化的神社氛围，适合想要“低调但有故事”的画面。</p></div>
+          </div>
+
+          <div class="spot alt">
+            <div class="content"><p class="name">新倉山浅間神社</p><p class="desc">经典机位层次丰富（建筑/台阶/富士），适合做一组更有“旅行记忆”的照片。</p></div>
+            <div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img id="arakuraImg" src="/assets/img/full/fuji/_DSC0073.jpg" alt="新倉山浅間神社" loading="lazy"></div>
+          </div>
+
+          <div class="spot">
+            <div class="photoWrap"><span class="tape t1"></span><span class="tape t2"></span><img src="/assets/img/full/fuji/_DSC6822.jpg" alt="大石公園" loading="lazy"></div>
+            <div class="content"><p class="name">大石公園</p><p class="desc">季节感很强：花与湖的组合让画面更柔、更“日系”。适合拍轻松自然的互动。</p></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const el = document.getElementById('arakuraImg');
+      if(!el) return;
+      const cands=[
+        '/assets/img/full/fuji/_DSC0073.jpg',
+        '/assets/img/full/fuji/DSC06547.jpg'
+      ];
+      el.src = cands[Math.floor(Math.random()*cands.length)];
+    })();
+  </script>
+
+  <script>
+    (function(){
+      function send(){
+        try {
+          var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+          parent.postMessage({type:'nbHeight', height: h, tab: 'extra'}, '*');
+        } catch(e){}
+      }
+      window.addEventListener('load', send);
+      window.addEventListener('resize', send);
+      // images load can change height
+      document.addEventListener('readystatechange', send);
+      if ('ResizeObserver' in window){
+        new ResizeObserver(send).observe(document.documentElement);
+      }
+      setTimeout(send, 60);
+      setTimeout(send, 200);
+      setTimeout(send, 600);
+    })();
+  </script>
+
+</body>
+</html>

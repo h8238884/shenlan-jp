@@ -137,7 +137,8 @@
     </section>
 
     <section class="section">
-      <div class="container reveal">
+      <div class="container reveal route-notebook-container">
+        <h2>行程路线</h2>
         <div class="routes">
           <div class="card route">
             <span class="badge">南线 · 城市感 + 经典富士</span>
@@ -147,10 +148,9 @@
               <li>富士急富士山站</li>
               <li>山中湖平野滨</li>
               <li>富士山梦大桥</li>
-              <li>坚崛车站</li>
-              <li>富士站西口商店街</li>
+              <li>竪堀駅</li>
+              <li>富士站西口</li>
             </ul>
-            <div class="price"><b>¥90,000</b><span>全包 / 10小时 / 东京都内接送</span></div>
           </div>
 
           <div class="card route">
@@ -162,23 +162,116 @@
               <li>富士急富士山站</li>
               <li>河口湖罗森</li>
               <li>河口湖长崎公园</li>
-              <li>富士西湖畔 / 朝雾高原</li>
+              <li>西湖畔 / 朝雾高原</li>
             </ul>
-            <div class="price"><b>¥90,000</b><span>全包 / 10小时 / 东京都内接送</span></div>
           </div>
         </div>
 
-        <div class="card route" style="margin-top:12px">
+        <div class="card route" style="margin-top:14px">
           <span class="badge">包含内容</span>
           <ul>
             <li>10小时包车 + 摄影服务 + 路线建议（根据天气与能见度微调）</li>
             <li>照片交付：粗修约 50 张 + 精修约 10 张（可按需求调整）</li>
             <li>适合：情侣旅拍 / 求婚 / 轻婚纱 / 蜜月纪念 / 小型家庭照</li>
           </ul>
-          <div style="margin-top:12px">
-            <a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp 咨询与预约</a>
-          </div>
+          <div style="margin-top:12px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp 咨询与预约</a></div>
         </div>
+
+        <h2 style="margin-top:16px">路线地图</h2>
+        <style>
+          .route-notebook-wrap{ margin-top:14px; }
+          .route-notebook-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0 14px; }
+          .route-notebook-tabs .pill{ cursor:pointer; font-size:16px; padding:10px 14px; border-radius:999px; border:1px solid rgba(0,0,0,.16); background: rgba(255,255,255,.72); }
+          .route-notebook-tabs .pill.active{ border-color: rgba(0,0,0,.32); background: rgba(0,0,0,.06); }
+          .route-notebook-frame{ width:100%; display:block; border:0; border-radius:0; overflow:hidden; box-shadow:none; background:transparent;  }
+                  /* desktop-hide-mobile-only */
+          @media (min-width: 721px){
+            .route-map-labeled, .route-notebook-wrap{ display:none !important; }
+          }
+          @media (max-width: 720px){
+            /* tighten spacing on mobile */
+            .route-notebook-wrap{ margin-top: 10px; }
+          }
+        </style>
+        <script>
+          // mobile-only-stripper: remove mobile-only blocks on desktop entirely
+          (function(){
+            function strip(){
+              if (window.innerWidth >= 721){
+                document.querySelectorAll('.route-map-labeled, .route-notebook-wrap').forEach(el=>el.remove());
+              }
+            }
+            strip();
+            window.addEventListener('resize', strip);
+          })();
+        </script>
+
+        <div class="route-map-labeled" style="margin:10px 0 14px">
+          <img src="/assets/maps/fuji-routes-labeled.png" alt="富士山地图（南线/北线点位标注）" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+
+
+
+        <div class="route-notebook-wrap" aria-label="Fuji notebook routes">
+          <div class="route-notebook-tabs">
+            <button class="pill" type="button" data-nb-tab="south">南线</button>
+            <button class="pill" type="button" data-nb-tab="north">北线</button>
+            <button class="pill" type="button" data-nb-tab="extra">推荐点位</button>
+          </div>
+          <iframe id="nbFrame" class="route-notebook-frame" title="富士山路线手帐" src="/assets/notes/fuji/long-south.html" loading="lazy"  style="height: 1200px"></iframe>
+        </div>
+
+        <script>
+          (function(){
+            const frame = document.getElementById('nbFrame');
+            if(!frame) return;
+
+            function measure(){
+              try {
+                const doc = frame.contentDocument;
+                if(!doc) return;
+                const h = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+                if(h) frame.style.height = Math.min(6000, h) + 'px';
+              } catch(e) {}
+            }
+
+            frame.addEventListener('load', ()=>{
+              // give layout/images a moment
+              setTimeout(measure, 40);
+              setTimeout(measure, 200);
+              setTimeout(measure, 800);
+            });
+
+            function setTab(which){
+              frame.dataset.tab = which;
+              frame.src = which === 'north'
+                ? '/assets/notes/fuji/long-north.html'
+                : (which === 'extra' ? '/assets/notes/fuji/long-extra.html' : '/assets/notes/fuji/long-south.html');
+
+              document.querySelectorAll('[data-nb-tab]').forEach(btn=>{
+                btn.classList.toggle('active', btn.getAttribute('data-nb-tab') === which);
+              });
+              frame.style.height = '1200px';
+              setTimeout(measure, 60);
+              setTimeout(measure, 260);
+            }
+
+            // Receive height from iframe (prevents inner scrollbars)
+            window.addEventListener('message', (e)=>{
+              const d = e && e.data;
+              if(!d || d.type !== 'nbHeight') return;
+              if(d.tab && frame.dataset.tab && d.tab !== frame.dataset.tab) return;
+              const h = Math.max(200, Math.min(6000, Number(d.height)||0));
+              if(h) frame.style.height = h + 'px';
+            });
+
+            document.querySelectorAll('[data-nb-tab]').forEach(btn=>{
+              btn.addEventListener('click', ()=> setTab(btn.getAttribute('data-nb-tab')));
+            });
+
+            setTab('south');
+          })();
+        </script>
       </div>
     </section>
 

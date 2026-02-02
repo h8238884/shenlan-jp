@@ -1,0 +1,188 @@
+/* Handwritten "notebook" long images for mobile (1080x1920) */
+
+@font-face{
+  font-family:"NoteHand";
+  src:url("/assets/fonts/MaShanZheng-Regular.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+:root{
+  --ink:#0b1220;
+  --muted:rgba(11,18,32,.65);
+  --paper:#fbf7ef;
+  --card:#ffffff;
+  --border:rgba(11,18,32,.10);
+  --shadow:0 10px 30px rgba(11,18,32,.10);
+  --tape:rgba(255,224,128,.55);
+  --tape2:rgba(152,221,255,.40);
+  --pin:#ff5a5f;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+}
+
+/* subtle paper texture via gradients (no images) */
+body:before{
+  content:"";
+  position:fixed; inset:0;
+  background:
+    radial-gradient(1200px 800px at 20% -10%, rgba(255,255,255,.75), rgba(255,255,255,0) 60%),
+    radial-gradient(900px 900px at 110% 30%, rgba(255,255,255,.5), rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0) 45%),
+    repeating-linear-gradient(0deg, rgba(11,18,32,.04) 0 1px, rgba(11,18,32,0) 1px 28px);
+  pointer-events:none;
+  opacity:.55;
+}
+
+.canvas{
+  width:1080px;
+  height:1920px;
+  margin:0 auto;
+  position:relative;
+  padding:56px 56px 48px;
+}
+
+.header{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+}
+
+.title{
+  font-family:"NoteHand", "PingFang SC", sans-serif;
+  font-size:74px;
+  line-height:1.05;
+  letter-spacing:.2px;
+  margin:0;
+}
+
+.subtitle{
+  margin:10px 0 0;
+  font-family:"NoteHand", "PingFang SC", sans-serif;
+  font-size:34px;
+  color:var(--muted);
+}
+
+.badge{
+  margin-left:auto;
+  align-self:flex-start;
+  padding:14px 18px;
+  border-radius:18px;
+  border:1px dashed rgba(11,18,32,.28);
+  background:rgba(255,255,255,.65);
+  box-shadow:0 10px 24px rgba(11,18,32,.08);
+  transform:rotate(1.2deg);
+  font-family:"NoteHand", "PingFang SC", sans-serif;
+  font-size:28px;
+  color:rgba(11,18,32,.78);
+}
+
+.grid{
+  margin-top:26px;
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap:18px;
+}
+
+.card{
+  background:rgba(255,255,255,.92);
+  border:1px solid var(--border);
+  border-radius:26px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
+}
+
+.card:before{
+  content:"";
+  position:absolute; left:18px; top:18px;
+  width:120px; height:28px;
+  background:var(--tape);
+  border-radius:8px;
+  transform:rotate(-2deg);
+}
+
+.card.tape2:before{ background:var(--tape2); transform:rotate(2deg); left:auto; right:18px; }
+
+.card-inner{ padding:26px 26px 24px; }
+
+.section-title{
+  font-family:"NoteHand", "PingFang SC", sans-serif;
+  font-size:34px;
+  margin:0 0 10px;
+}
+
+.small{
+  font-size:22px;
+  color:var(--muted);
+  line-height:1.35;
+}
+
+.spots{ margin:14px 0 0; padding:0; list-style:none; display:grid; gap:10px; }
+.spots li{
+  display:flex; gap:12px; align-items:flex-start;
+  padding:10px 12px;
+  border-radius:18px;
+  border:1px dashed rgba(11,18,32,.14);
+  background:rgba(255,255,255,.75);
+}
+.spots .dot{
+  width:12px; height:12px; border-radius:50%;
+  background:var(--pin);
+  margin-top:10px;
+  flex:0 0 auto;
+  box-shadow:0 0 0 6px rgba(255,90,95,.18);
+}
+.spots .name{
+  font-family:"NoteHand", "PingFang SC", sans-serif;
+  font-size:30px;
+  line-height:1.05;
+}
+
+.photos{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+
+.ph{
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(11,18,32,.10);
+  background:#fff;
+  box-shadow:0 12px 24px rgba(11,18,32,.10);
+  position:relative;
+}
+
+.ph img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+.ph.tall{ grid-row: span 2; }
+
+.footer{
+  position:absolute;
+  left:56px; right:56px; bottom:34px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:14px;
+}
+
+.footer .line{
+  font-family:"NoteHand", "PingFang SC", sans-serif;
+  font-size:28px;
+  color:rgba(11,18,32,.75);
+}
+
+.footer .brand{
+  font-size:18px;
+  color:rgba(11,18,32,.45);
+}
