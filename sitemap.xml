@@ -14,6 +14,7 @@
   <url><loc>https://shenlan.jp/en/routes/fuji/</loc></url>
   <url><loc>https://shenlan.jp/en/routes/kamakura/</loc></url>
   <url><loc>https://shenlan.jp/en/routes/tokyo/</loc></url>
+  <url><loc>https://shenlan.jp/en/routes/daikoku/</loc></url>
   <url><loc>https://shenlan.jp/ja/</loc></url>
   <url><loc>https://shenlan.jp/ja/about/</loc></url>
   <url><loc>https://shenlan.jp/ja/book/</loc></url>
@@ -27,6 +28,7 @@
   <url><loc>https://shenlan.jp/ja/routes/fuji/</loc></url>
   <url><loc>https://shenlan.jp/ja/routes/kamakura/</loc></url>
   <url><loc>https://shenlan.jp/ja/routes/tokyo/</loc></url>
+  <url><loc>https://shenlan.jp/ja/routes/daikoku/</loc></url>
   <url><loc>https://shenlan.jp/zh/</loc></url>
   <url><loc>https://shenlan.jp/zh/about/</loc></url>
   <url><loc>https://shenlan.jp/zh/book/</loc></url>
@@ -43,5 +45,6 @@
   <url><loc>https://shenlan.jp/zh/routes/fuji/</loc></url>
   <url><loc>https://shenlan.jp/zh/routes/kamakura/</loc></url>
   <url><loc>https://shenlan.jp/zh/routes/tokyo/</loc></url>
+  <url><loc>https://shenlan.jp/zh/routes/daikoku/</loc></url>
   <url><loc>https://shenlan.jp/zh/tokyo/</loc></url>
 </urlset>

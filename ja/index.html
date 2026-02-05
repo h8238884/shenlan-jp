@@ -43,7 +43,7 @@
         <img class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
       </a>
 
-      <button class="burger" type="button" aria-label="Menu" data-burger>
+      <button class="burger" type="button" aria-label="メニュー" data-burger>
         <span></span><span></span><span></span>
       </button>
 
@@ -54,21 +54,21 @@
         <div class="dropdown" data-dropdown>
           <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
-            <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>Routes</small></a>
-            <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>Signature</small></a>
-            <a href="/ja/routes/tokyo/" role="menuitem"><span>東京</span><small>Custom</small></a>
-            <a href="/ja/routes/kamakura/" role="menuitem"><span>鎌倉</span><small>Custom</small></a>
+            <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
+            <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
+            <a href="/ja/routes/tokyo/" role="menuitem"><span>東京</span><small>カスタム</small></a>
+            <a href="/ja/routes/kamakura/" role="menuitem"><span>鎌倉</span><small>カスタム</small></a><a href="/ja/routes/daikoku/" role="menuitem"><span>大黒PA</span><small>カスタム</small></a>
           </div>
         </div>
 
         <div class="dropdown" data-dropdown>
           <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>All</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>Landscape</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>Aerial</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>People</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>Other</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
           </div>
         </div>
 
@@ -76,7 +76,7 @@
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
 
-      <div class="lang" aria-label="language switch">
+      <div class="lang" aria-label="言語切替">
         <a href="/en/">EN</a>
         <a href="/zh/">中文</a>
         <a class="active" href="/ja/">日本語</a>
@@ -93,7 +93,7 @@
       <a class="sub" href="/ja/routes/">一覧</a>
       <a class="sub" href="/ja/routes/fuji/">富士山</a>
       <a class="sub" href="/ja/routes/tokyo/">東京</a>
-      <a class="sub" href="/ja/routes/kamakura/">鎌倉</a>
+      <a class="sub" href="/ja/routes/kamakura/">鎌倉</a><a class="sub" href="/ja/routes/daikoku/">大黒PA</a>
     </div>
 
     <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false">ポートフォリオ</button>
@@ -168,6 +168,17 @@
               <img src="/assets/img/hero/kamakura-1.jpg?v=1769777010741" alt="鎌倉・江の島撮影作品" loading="lazy" />
             </picture>
           </div>
+          <div class="swiper-slide"
+               data-title="大黒PA · JDMナイト"
+               data-desc="JDM・夜景・首都高（カスタム）"
+               data-primary-href="/ja/routes/daikoku/"
+               data-primary-text="大黒PA"
+               data-primary-sub="カーミート">
+            <picture>
+              <source media="(max-width: 520px)" srcset="/assets/img/hero/daikoku-2.jpg" />
+              <img src="/assets/img/hero/daikoku-1.jpg" alt="大黒PA カーミート" loading="lazy" />
+            </picture>
+          </div>
         </div>
         <div class="swiper-button-prev" aria-label="previous"></div>
         <div class="swiper-button-next" aria-label="next"></div>
@@ -209,7 +220,7 @@
             <h3>ルート・タイミング・光は任せてください</h3>
             <p>東京拠点のフォトグラファーであり、有資格ドライバーでもあります。移動と撮影を一つの流れにすることで、混雑や光を見ながらスムーズに進行し、撮影に集中できます。</p>
             <div class="meta">
-              <span class="tag">中文 / 日本語 / English</span>
+              <span class="tag">日本語 / 英語 / 中文</span>
               <span class="tag">自然・クリーン・シネマ</span>
             </div>
             <div style="margin-top:16px"><a class="pill" href="/ja/about/">もっと見る</a></div>
@@ -363,31 +374,31 @@
     <div class="container">
       <div class="row">
         <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div>Languages: 中文 / 日本語 / English</div>
+        <div>対応言語：日本語 / 英語 / 中文</div>
       </div>
 
       <div class="footer-nav">
         <div>
           <h4>shenlan photography</h4>
-          <div class="small">Mt. Fuji Travel Photoshoot · Tokyo</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
+          <div class="small">富士山フォトツアー · 東京</div>
+          <div class="small" style="margin-top:8px">英語 / 中文 / 日本語</div>
         </div>
         <div>
-          <h4>Site</h4>
+          <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
         </div>
         <div>
-          <h4>Routes</h4>
+          <h4>ルート</h4>
           <a href="/ja/routes/">一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
-          <a href="/ja/routes/kamakura/">鎌倉</a>
+          <a href="/ja/routes/kamakura/">鎌倉</a><a href="/ja/routes/daikoku/">大黒PA</a>
         </div>
         <div>
-          <h4>Book</h4>
+          <h4>予約</h4>
           <a href="/ja/book/">予約</a>
         </div>
       </div>

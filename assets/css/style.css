@@ -195,6 +195,45 @@ html.reveal-on .reveal.show{opacity:1;transform:none;filter:none}
 .price b{font-size:20px}
 .price span{color:var(--muted);font-size:12px}
 
+/* Routes overview: big image buttons */
+.routes-hero{display:grid;grid-template-columns:repeat(4, 1fr);gap:16px}
+@media (max-width: 1200px){.routes-hero{grid-template-columns:repeat(2, 1fr);}}
+@media (max-width: 980px){.routes-hero{grid-template-columns:1fr;}}
+
+.route-link{position:relative;overflow:hidden;
+  /* 3:4 portrait tiles */
+  aspect-ratio: 3 / 4;
+  min-height: 360px;
+  padding:22px;border-radius:22px;
+  border:1px solid rgba(11,18,32,.10);
+  box-shadow:0 18px 60px rgba(17,24,39,.12);
+  color:#fff;display:flex;flex-direction:column;justify-content:flex-end;
+  text-decoration:none;
+}
+@supports not (aspect-ratio: 3 / 4){
+  .route-link{height:420px}
+}
+.route-link::before{content:"";position:absolute;inset:0;
+  background-image:var(--route-bg);
+  background-size:cover;background-position:center;
+  opacity:.62;transform:scale(1.03);
+  filter:saturate(.92) contrast(.98) brightness(.92);
+  transition:transform 900ms cubic-bezier(.22,.61,.36,1), opacity 260ms ease, filter 260ms ease;
+}
+.route-link::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.60) 100%);
+  transition:background 260ms ease;
+}
+.route-link > *{position:relative;z-index:1}
+@media (hover:hover){
+  .route-link:hover::before{transform:scale(1.07);opacity:.92;filter:none}
+  .route-link:hover::after{background:linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.52) 100%);}
+}
+.route-link .badge{color:rgba(255,255,255,.88);border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.14)}
+.route-link h3{margin:12px 0 8px;font-size:22px;letter-spacing:.01em}
+.route-link .small{color:rgba(255,255,255,.84);font-size:13px;line-height:1.6}
+@media (max-width: 520px){.route-link{min-height:300px;padding:18px;border-radius:20px}.route-link h3{font-size:20px}}
+
 /* Portfolio masonry (modern + more content) */
 .masonry{columns:3;column-gap:12px}
 .masonry a{break-inside:avoid;display:block;margin:0 0 12px;border-radius:16px;overflow:hidden;border:1px solid rgba(11,18,32,.08);background:#fff}
@@ -212,6 +251,10 @@ html.reveal-on .reveal.show{opacity:1;transform:none;filter:none}
 .photo-card{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(11,18,32,.08);box-shadow:var(--shadow);background:#fff}
 .photo-card img{width:100%;height:420px;object-fit:cover;display:block}
 @media (max-width: 520px){.photo-card img{height:360px}}
+
+/* Photo card variant: show full image (no crop) */
+.photo-card.full{overflow:visible;background:transparent;border:none;box-shadow:none}
+.photo-card.full img{height:auto;object-fit:contain;border-radius:var(--radius);border:1px solid rgba(11,18,32,.08);box-shadow:var(--shadow);background:#fff}
 .copy-card{padding:22px}
 .copy-card h3{margin:0 0 10px;font-size:18px;letter-spacing:.01em}
 .copy-card p{margin:0;color:var(--muted);line-height:1.85}
