@@ -1,0 +1,268 @@
+:root{
+  --ink: rgba(234, 216, 165, .96);       /* gold */
+  --muted: rgba(234, 216, 165, .74);
+  --line: rgba(234, 216, 165, .26);
+
+  /* Thin + rounded (iOS/macOS). Fallbacks keep it clean. */
+  --round: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", system-ui, Arial, sans-serif;
+
+  /* Handwritten (readable) */
+  --nameFont: "Snell Roundhand", "Apple Chancery", "Bradley Hand", "Baskerville", serif;
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(--round)}
+
+/* Make gold readable */
+.glow{text-shadow: 0 14px 40px rgba(0,0,0,.55), 0 2px 12px rgba(0,0,0,.35)}
+
+
+.swiper{height:100vh;width:100vw;}
+.swiper-slide{position:relative;}
+
+/* Background image */
+.slide-bg{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.06);
+}
+/* per-page backgrounds */
+.slide-bg.p1{background-image:url("./bg-web.jpg");background-position:50% 22%;}
+/* p2: crop to show the church on the RIGHT side */
+.slide-bg.p2{background-image:url("./p2.jpg");background-position:78% 40%;}
+.slide-bg.p3{background-image:url("./p3.jpg");background-position:55% 70%;}
+
+/* Wash the photo a bit ("lower opacity") */
+.slide-bg::after{
+  content:"";
+  position:absolute;inset:0;
+  background: rgba(0,0,0,.30); /* stronger wash (lower photo presence) */
+}
+
+/* Keep text readable but avoid the heavy black mask */
+.overlay{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(1100px 820px at 50% 30%, rgba(0,0,0,.10), rgba(0,0,0,.30) 70%),
+    linear-gradient(to bottom, rgba(0,0,0,.14), rgba(0,0,0,.24) 45%, rgba(0,0,0,.34));
+}
+
+/* extra dark focus on bottom-left for page 3 readability */
+.overlay.p3{
+  background:
+    radial-gradient(900px 700px at 18% 78%, rgba(0,0,0,.10), rgba(0,0,0,.62) 75%),
+    linear-gradient(to bottom, rgba(0,0,0,.08), rgba(0,0,0,.20) 42%, rgba(0,0,0,.52));
+}
+
+/* Frame (very light) */
+.frame{position:absolute;inset:16px;border:1px solid rgba(255,255,255,.22);border-radius:22px;pointer-events:none}
+
+/* Layout */
+.container{
+  position:relative;
+  height:100%;
+  padding: 54px 24px 62px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  text-align:center;
+  gap:18px;
+}
+
+/* Center mode */
+.container.center{justify-content:center;}
+
+/* Top title + centered content helpers */
+.topblock{width: min(560px, 100%);}
+
+/* absolute center (for page 1 names + page 2 details) */
+.midcenter{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+/* Page 3: bottom-left placement */
+.container.p3{
+  align-items:flex-start;
+  text-align:left;
+  justify-content:space-between;
+}
+.p3-block{
+  width: min(560px, 100%);
+  margin-left:0;
+  padding-left: 4px;
+  padding-bottom: 76px; /* move quote higher */
+}
+
+.top{margin-top:12px}
+.middle{margin-top:10px}
+.bottom{margin-bottom:6px}
+
+/* Type */
+.kicker{
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: .34em;
+  color: rgba(255,255,255,.78);
+}
+
+.title{
+  font-weight: 220;
+  font-size: 38px;
+  letter-spacing: .22em;
+  line-height: 1.12;
+}
+
+.line{
+  font-weight: 260;
+  font-size: 15px;
+  letter-spacing: .10em;
+  color: var(--muted);
+}
+
+.names{
+  font-family: var(--nameFont);
+  font-weight: 400;
+  font-size: 54px;
+  letter-spacing: .02em;
+  line-height:1.02;
+  text-transform: none;
+  font-kerning: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+.amp{
+  font-family: var(--nameFont);
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing:.06em;
+  color: rgba(234, 216, 165, .92);
+  margin: 8px 0;
+}
+
+.meta{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+}
+
+/* (removed cover metalist styles) */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(234,216,165,.28);
+  background: rgba(0,0,0,.10);
+  color: rgba(234,216,165,.95);
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:.10em;
+  font-weight:260;
+}
+.btn:active{transform:translateY(1px)}
+
+
+.grid{
+  width:min(560px, 100%);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  text-align:left;
+}
+
+.cell{padding:12px 12px;border:1px solid rgba(255,255,255,.16);border-radius:16px;background: rgba(0,0,0,.06)}
+.label{font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.62);font-weight:280}
+.value{margin-top:6px;font-size:15px;letter-spacing:.10em;color:rgba(255,255,255,.90);font-weight:260}
+
+/* Page 2: centered vertical details */
+.details-center{width:min(560px,100%);}
+.details-list{display:flex;flex-direction:column;gap:14px;align-items:center;}
+.details-item{display:flex;gap:12px;align-items:baseline;justify-content:center;text-align:center;}
+/* unify all 4 lines */
+.details-list .details-item,
+.details-list .details-item span{
+  font-size:18px;
+  letter-spacing:.14em;
+  color: rgba(234,216,165,.95);
+  font-weight:260;
+}
+.d-label{font-size:18px;letter-spacing:.14em;color:rgba(234,216,165,.95);font-weight:260;}
+.d-val{font-size:18px;letter-spacing:.14em;color:rgba(234,216,165,.95);font-weight:260;}
+
+.note{max-width: 520px; font-size:13px; line-height:1.7; color: rgba(255,255,255,.76); letter-spacing:.06em; font-weight:260}
+
+.quote{
+  max-width: 520px;
+  font-family: var(--nameFont);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: .06em;
+  color: rgba(234,216,165,.92);
+}
+
+.sign{font-weight:260;letter-spacing:.18em;color:rgba(234,216,165,.84)}
+
+/* Subtle text glow for readability on photo */
+
+/* Hint */
+.hint{position:absolute;left:0;right:0;bottom:22px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;color:rgba(255,255,255,.66)}
+.swipe{width:18px;height:28px;border:1px solid rgba(255,255,255,.35);border-radius:12px;position:relative;}
+.swipe:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:4px;margin-left:-2px;border-radius:999px;background:rgba(255,255,255,.86);animation: wheel 1.2s ease-in-out infinite;}
+@keyframes wheel{0%{transform:translateY(0);opacity:.9}70%{transform:translateY(10px);opacity:.25}100%{transform:translateY(0);opacity:.9}}
+
+/* Music */
+.music{position:fixed;top:18px;right:18px;z-index:50;width:44px;height:44px;border-radius:999px;border:1px solid rgba(234,216,165,.26);background: rgba(0,0,0,.16);backdrop-filter: blur(10px);display:grid;place-items:center;}
+.music .note{
+  font-size:18px;
+  line-height:1;
+  color: rgba(234,216,165,.92);
+  transform: translateY(-1px);
+  text-shadow: 0 10px 24px rgba(0,0,0,.55);
+}
+.music[data-on="true"] .note{animation: noteSpin 1.6s linear infinite;}
+@keyframes noteSpin{0%{transform:translateY(-1px) rotate(0deg)}100%{transform:translateY(-1px) rotate(360deg)}}
+
+
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:60;padding:10px 14px;border-radius:999px;border:1px solid rgba(234,216,165,.20);background: rgba(0,0,0,.18);backdrop-filter: blur(10px);font-size:12px;letter-spacing:.14em;color: rgba(234,216,165,.90);opacity:0;pointer-events:none;}
+.toast.show{animation: toast 1.8s ease both;}
+@keyframes toast{0%{opacity:0;transform:translateX(-50%) translateY(8px)}12%{opacity:1;transform:translateX(-50%) translateY(0)}70%{opacity:1}100%{opacity:0;transform:translateX(-50%) translateY(-6px)}}
+
+/* Strong entrance */
+[data-animate]{
+  opacity:0;
+  transform: translateY(38px) scale(.985);
+  filter: blur(12px);
+  transition: opacity 1.35s cubic-bezier(.2,.85,.2,1), transform 1.35s cubic-bezier(.2,.85,.2,1), filter 1.35s cubic-bezier(.2,.85,.2,1);
+}
+.is-active [data-animate]{opacity:1;transform: translateY(0) scale(1);filter: blur(0);}
+/* longer stagger for batch reveal */
+.is-active [data-animate][data-delay="1"]{transition-delay:.10s}
+.is-active [data-animate][data-delay="2"]{transition-delay:.55s}
+.is-active [data-animate][data-delay="3"]{transition-delay:1.00s}
+.is-active [data-animate][data-delay="4"]{transition-delay:1.45s}
+.is-active [data-animate][data-delay="5"]{transition-delay:1.90s}
+.is-active [data-animate][data-delay="6"]{transition-delay:2.35s}
+
+@media (max-height: 740px){
+  .title{font-size:34px}
+  .names{font-size:42px}
+}
+@media (max-width: 360px){
+  .container{padding: 50px 18px 60px}
+  .names{font-size:40px}
+}

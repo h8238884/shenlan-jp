@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <title>黄炜&李妍 婚礼邀请</title>
+  <meta name="description" content="黄炜&李妍 婚礼邀请｜2026.06.21 轻井泽石之教堂" />
+
+  <!-- Open Graph / share preview (WeChat/FB/etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="黄炜&李妍 婚礼邀请" />
+  <meta property="og:description" content="2026.06.21 · 轻井泽石之教堂" />
+  <meta property="og:url" content="https://shenlan.jp/h5/wedding-invite/" />
+  <meta property="og:image" content="https://shenlan.jp/h5/wedding-invite/assets/bg-web.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1748" />
+
+  <!-- Twitter Card (most platforms also read this) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="黄炜&李妍 婚礼邀请" />
+  <meta name="twitter:description" content="2026.06.21 · 轻井泽石之教堂" />
+  <meta name="twitter:image" content="https://shenlan.jp/h5/wedding-invite/assets/bg-web.jpg" />
+
+  <link rel="preload" href="./assets/bg-web.jpg" as="image" />
+  <link rel="preload" href="./assets/bgm.wav" as="audio" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <audio id="bgm" preload="auto" loop playsinline webkit-playsinline>
+    <source src="./assets/bgm.m4a" type="audio/mp4" />
+    <source src="./assets/bgm.wav" type="audio/wav" />
+  </audio>
+
+  <button class="music" data-music data-on="false" aria-label="背景音乐开关">
+    <span class="note" aria-hidden="true">♪</span>
+  </button>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Page 1 -->
+      <section class="swiper-slide is-active">
+        <div class="slide-bg p1"></div>
+        <div class="overlay"></div>
+        <div class="frame"></div>
+
+        <div class="container">
+          <div class="topblock top glow" data-animate data-delay="1">
+            <div class="kicker">WEDDING INVITATION</div>
+            <div style="height:12px"></div>
+            <div class="title">婚礼请柬</div>
+          </div>
+
+          <div class="midcenter">
+            <div class="middle glow">
+              <div class="names" data-animate data-delay="2">Li Yan</div>
+              <div class="amp" data-animate data-delay="3">&</div>
+              <div class="names" data-animate data-delay="4">Huang Wei</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 2 -->
+      <section class="swiper-slide">
+        <div class="slide-bg p2"></div>
+        <div class="overlay"></div>
+        <div class="frame"></div>
+
+        <div class="container">
+          <div class="topblock top glow" data-animate data-delay="1">
+            <div class="kicker">DETAILS</div>
+            <div style="height:12px"></div>
+            <div class="title">仪式信息</div>
+          </div>
+
+          <div class="midcenter">
+            <div class="details-center glow">
+              <div class="details-list" data-animate data-delay="2">
+                <div class="details-item"><span class="d-val">2026.06.21</span></div>
+                <div class="details-item"><span class="d-val">轻井泽石之教堂</span></div>
+                <div class="details-item"><span class="d-val">15:15</span><span class="d-label">婚礼仪式</span></div>
+                <div class="details-item"><span class="d-val">16:45</span><span class="d-label">派对</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Page 3 -->
+      <section class="swiper-slide">
+        <div class="slide-bg p3"></div>
+        <div class="overlay p3"></div>
+        <div class="frame"></div>
+
+        <div class="container p3">
+          <div class="topblock top glow" data-animate data-delay="1">
+            <div class="kicker">RSVP</div>
+            <div style="height:10px"></div>
+            <div class="title">期待见到你</div>
+          </div>
+
+          <div class="p3-block glow">
+            <div class="quote" data-animate data-delay="2">Between stone and light,<br/>we promise a lifetime.</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
