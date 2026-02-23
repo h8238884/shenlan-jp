@@ -30,10 +30,10 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
   transform:scale(1.06);
 }
 /* per-page backgrounds */
-.slide-bg.p1{background-image:url("/assets/bg-web.jpg");background-position:50% 22%;}
+.slide-bg.p1{background-image:url("./bg-web.jpg");background-position:50% 22%;}
 /* p2: crop to show the church on the RIGHT side */
-.slide-bg.p2{background-image:url("/assets/p2.jpg");background-position:78% 40%;}
-.slide-bg.p3{background-image:url("/assets/p3.jpg");background-position:55% 70%;}
+.slide-bg.p2{background-image:url("./p2.jpg");background-position:78% 40%;}
+.slide-bg.p3{background-image:url("./p3.jpg");background-position:55% 70%;}
 
 /* Wash the photo a bit ("lower opacity") */
 .slide-bg::after{
