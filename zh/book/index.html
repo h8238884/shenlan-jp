@@ -227,7 +227,14 @@
   <script src="/assets/js/site.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-    const fp = flatpickr('#date', { dateFormat: 'Y-m-d', minDate: 'today', inline: true, showMonths: 2 });
+    const disabledDates = ['2026-02-27','2026-03-01','2026-03-16','2026-04-21'];
+    const fp = flatpickr('#date', {
+      dateFormat: 'Y-m-d',
+      minDate: 'today',
+      inline: true,
+      showMonths: 2,
+      disable: disabledDates,
+    });
     document.getElementById('submit').addEventListener('click', ()=>{
       const date = document.getElementById('date').value || '(未选择)';
       const people = document.getElementById('people').value;
