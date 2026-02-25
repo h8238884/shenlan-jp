@@ -75,6 +75,42 @@
     set(btns[0].getAttribute('data-tab'));
   });
 
+  // language switcher: keep same path across /en /zh /ja
+  (function(){
+    const path = window.location.pathname || '/';
+    const m = path.match(/^\/(en|zh|ja)(\/.*)?$/);
+    const current = m ? m[1] : null;
+    // rest includes leading slash; default to '/' (home)
+    const rest = m ? (m[2] || '/') : path;
+    const hrefFor = (lang)=>{
+      if(rest === '/' || rest === '') return `/${lang}/`;
+      return `/${lang}${rest}`;
+    };
+
+    // Update desktop header language links
+    document.querySelectorAll('.lang a').forEach((a)=>{
+      const txt = (a.textContent || '').trim().toLowerCase();
+      let lang = null;
+      if(txt === 'en') lang = 'en';
+      else if(txt === '中文') lang = 'zh';
+      else if(txt === '日本語') lang = 'ja';
+      if(!lang) return;
+      a.setAttribute('href', hrefFor(lang));
+      if(current) a.classList.toggle('active', lang === current);
+    });
+
+    // Update mobile panel language pills (hrefs only)
+    document.querySelectorAll('[data-mobile-panel] a.pill').forEach((a)=>{
+      const txt = (a.textContent || '').trim().toLowerCase();
+      let lang = null;
+      if(txt === 'en') lang = 'en';
+      else if(txt === '中文') lang = 'zh';
+      else if(txt === '日本語') lang = 'ja';
+      if(!lang) return;
+      a.setAttribute('href', hrefFor(lang));
+    });
+  })();
+
   // reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   if(reveals.length && 'IntersectionObserver' in window){
