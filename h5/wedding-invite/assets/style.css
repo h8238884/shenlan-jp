@@ -190,21 +190,113 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 .label{font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.62);font-weight:280}
 .value{margin-top:6px;font-size:15px;letter-spacing:.10em;color:rgba(255,255,255,.90);font-weight:260}
 
-/* Page 2: centered vertical details */
-.details-center{width:min(560px,100%);}
-.details-list{display:flex;flex-direction:column;gap:14px;align-items:center;}
-.details-item{display:flex;gap:12px;align-items:baseline;justify-content:center;text-align:center;}
-/* unify all 4 lines */
-.details-list .details-item,
-.details-list .details-item span{
-  font-size:18px;
-  letter-spacing:.14em;
-  color: rgba(234,216,165,.95);
-  font-weight:260;
-}
-.d-label{font-size:18px;letter-spacing:.14em;color:rgba(234,216,165,.95);font-weight:260;}
-.d-val{font-size:18px;letter-spacing:.14em;color:rgba(234,216,165,.95);font-weight:260;}
+/* Page 2: ceremony card (Gemini mock style) */
+/* align to the big outer frame (frame inset 16px + container padding) */
+.details-center{width:calc(100% - 64px); max-width:560px;}
 
+.ceremony-card{
+  width: min(520px, 100%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
+:root{
+  --gold: rgba(234, 216, 165, .96); /* keep existing gold */
+  --w-ink: rgba(255,255,255,.92);   /* inverted main text */
+  --w-gray: rgba(255,255,255,.62);  /* inverted gray */
+  --w-gray2: rgba(255,255,255,.46); /* lighter gray */
+  --w-line: rgba(255,255,255,.24);
+}
+
+/* match the provided Tailwind-ish code but in our CSS */
+.ceremony-card{
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 0;
+  font-family: "Cinzel", "Times New Roman", Georgia, "Baskerville", serif;
+}
+
+.ceremony-date{
+  font-size: 16px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: .20em;
+  margin-bottom: 4px;
+}
+
+.ceremony-place-en{
+  font-size: 10px;
+  color: var(--w-gray);
+  letter-spacing: .16em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ceremony-place-zh{
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,.92);
+  letter-spacing: .20em;
+  font-weight: 300;
+  font-family: var(--round);
+}
+
+.ceremony-times{
+  margin-top: 22px;
+  padding-top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 22px;
+  border-top: none;
+}
+
+.time-col{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 4px;
+  text-align:center;
+}
+
+.time{
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.time-en{
+  font-size: 11px;
+  color: var(--w-gray2);
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.time-zh{
+  font-size: 12px;
+  color: var(--w-ink);
+  font-weight: 300;
+  letter-spacing: .10em;
+  font-family: var(--round);
+}
+
+.divider{
+  justify-self: center;
+  align-self: center;
+  font-size: 20px;
+  color: rgba(255,255,255,.45);
+  opacity: .5;
+  line-height: 1;
+  transform: translateY(-1px);
+}
 .note{max-width: 520px; font-size:13px; line-height:1.7; color: rgba(255,255,255,.76); letter-spacing:.06em; font-weight:260}
 
 .quote{
