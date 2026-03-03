@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>bg-image 可视化演示</title>
+  <style>
+    :root{--pad:22px}
+    html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",system-ui,sans-serif}
+    body{background:#111;color:#fff;overflow:hidden}
+
+    /* demo background */
+    .bg-image{
+      background-image: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.35)), url('./assets/p2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    /* overlay content */
+    .card{
+      position:relative;
+      margin: var(--pad);
+      height: calc(100vh - var(--pad) * 2);
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding: 24px;
+      box-sizing:border-box;
+    }
+    h1{font-size:28px;margin:0 0 10px;letter-spacing:.08em}
+    p{margin:0;opacity:.9;line-height:1.6}
+    .hint{margin-top:14px;font-size:12px;opacity:.8}
+
+    /* toggle off gradient */
+    body.no-gradient .bg-image{
+      background-image: url('./assets/p2.jpg');
+    }
+
+    .controls{
+      position:fixed;left:14px;bottom:14px;right:14px;
+      display:flex;gap:10px;align-items:center;justify-content:space-between;
+      padding:12px 14px;border-radius:14px;
+      background:rgba(0,0,0,.35);backdrop-filter: blur(10px);
+      border:1px solid rgba(255,255,255,.16);
+      font-size:13px;
+    }
+    button{
+      appearance:none;border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.08);
+      color:#fff;border-radius:999px;padding:8px 12px;
+      font-size:13px;
+    }
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;opacity:.9}
+  </style>
+</head>
+<body>
+  <div class="bg-image" aria-hidden="true"></div>
+
+  <div class="card">
+    <div>
+      <h1>bg-image 演示</h1>
+      <p>背景图：<code>./assets/p2.jpg</code></p>
+      <p>叠加遮罩：<code>linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.35))</code></p>
+      <div class="hint">点击下面按钮切换「有遮罩 / 无遮罩」对比可读性</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div>当前：<b id="state">有遮罩</b></div>
+    <button id="toggle">切换遮罩</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById('toggle');
+    const state = document.getElementById('state');
+    function refresh(){
+      const off = document.body.classList.contains('no-gradient');
+      state.textContent = off ? '无遮罩' : '有遮罩';
+    }
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('no-gradient');
+      refresh();
+    });
+    refresh();
+  </script>
+</body>
+</html>

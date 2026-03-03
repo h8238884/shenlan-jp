@@ -1,4 +1,5 @@
 :root{
+  --stone-gold: #c5a368;
   --ink: rgba(234, 216, 165, .96);       /* gold */
   --muted: rgba(234, 216, 165, .74);
   --line: rgba(234, 216, 165, .26);
@@ -60,7 +61,12 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 }
 
 /* Frame (very light) */
-.frame{position:absolute;inset:16px;border:1px solid rgba(255,255,255,.22);border-radius:22px;pointer-events:none}
+.frame{position:absolute;inset:16px;border:1px solid rgba(197,163,104,.40);border-radius:22px;pointer-events:none}
+.frame .corner{position:absolute;width:40px;height:40px;border:1.5px solid var(--stone-gold);opacity:.55}
+.frame .corner.tl{top:10px;left:10px;border-right:0;border-bottom:0}
+.frame .corner.tr{top:10px;right:10px;border-left:0;border-bottom:0}
+.frame .corner.bl{bottom:10px;left:10px;border-right:0;border-top:0}
+.frame .corner.br{bottom:10px;right:10px;border-left:0;border-top:0}
 
 /* Layout */
 .container{
