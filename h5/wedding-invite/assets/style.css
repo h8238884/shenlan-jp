@@ -61,38 +61,7 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 }
 
 /* Frame (very light) */
-.frame{
-  position:absolute;
-  inset:16px;
-  border:1px solid rgba(197,163,104,.42); /* outer gold */
-  border-radius:0; /* square like reference */
-  pointer-events:none;
-}
-/* inner border line */
-.frame::before{
-  content:"";
-  position:absolute;
-  inset:14px;
-  border:1px solid rgba(197,163,104,.32);
-  border-radius:0;
-}
-/* L-corners */
-.frame .corner{
-  position:absolute;
-  width:54px;
-  height:54px;
-  border:1.5px solid rgba(197,163,104,.60);
-  opacity:.70;
-}
-.frame .corner.tl{top:10px;left:10px;border-right:0;border-bottom:0}
-.frame .corner.tr{top:10px;right:10px;border-left:0;border-bottom:0}
-.frame .corner.bl{bottom:10px;left:10px;border-right:0;border-top:0}
-.frame .corner.br{bottom:10px;right:10px;border-left:0;border-top:0}
-/* soften on small screens */
-@media (max-width: 420px){
-  .frame::before{inset:12px}
-  .frame .corner{width:48px;height:48px;opacity:.65}
-}
+.frame{position:absolute;inset:16px;border:1px solid rgba(255,255,255,.22);border-radius:22px;pointer-events:none}
 
 /* Layout */
 .container{
