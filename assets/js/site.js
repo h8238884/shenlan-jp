@@ -75,6 +75,29 @@
     set(btns[0].getAttribute('data-tab'));
   });
 
+  // canonical URL: reduce duplicates (slash/index.html/http) for search engines
+  (function(){
+    try{
+      const origin = 'https://shenlan.jp';
+      let path = window.location.pathname || '/';
+      // Normalize index.html
+      if(path.endsWith('/index.html')) path = path.slice(0, -'/index.html'.length) + '/';
+      // Root redirects to /en/ (site behavior). Prefer canonical to final.
+      if(path === '/' || path === '') path = '/en/';
+      // Ensure trailing slash for non-file paths
+      if(!path.endsWith('/') && !/\.[a-zA-Z0-9]+$/.test(path)) path = path + '/';
+
+      const canonicalHref = origin + path;
+      let link = document.querySelector('link[rel="canonical"]');
+      if(!link){
+        link = document.createElement('link');
+        link.setAttribute('rel','canonical');
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', canonicalHref);
+    }catch(e){}
+  })();
+
   // language switcher: keep same path across /en /zh /ja
   (function(){
     const path = window.location.pathname || '/';
