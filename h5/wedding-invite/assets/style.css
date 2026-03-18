@@ -135,7 +135,7 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
   letter-spacing: .22em;
   line-height: 1.12;
 }
-.title-light{color:rgba(255,255,255,.96)}
+.title-light{color:var(--gold)}
 
 .line{
   font-weight: 260;
@@ -342,12 +342,12 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 .info-section{display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 0}
 .info-section + .info-section{border-top:1px solid rgba(255,255,255,.14)}
 .info-section-last{padding-bottom:6px}
-.info-label-en{font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.52);text-transform:uppercase;font-weight:520}
-.info-label-zh{font-size:14px;letter-spacing:.18em;color:rgba(255,255,255,.9);font-weight:300;font-family:var(--round)}
+.info-label-en{font-size:12px;letter-spacing:.18em;color:var(--w-gray2);text-transform:uppercase;font-weight:520;text-shadow:0 1px 1px rgba(255,255,255,.18),0 12px 32px rgba(0,0,0,.45)}
+.info-label-zh{font-size:13px;letter-spacing:.10em;color:var(--gold);font-weight:300;font-family:var(--round);text-shadow:0 1px 1px rgba(255,255,255,.16),0 12px 32px rgba(0,0,0,.45)}
 .meeting-grid{display:flex;justify-content:center;gap:28px;margin-top:8px;flex-wrap:wrap}
-.meeting-role{font-size:12px;color:rgba(255,255,255,.66);font-family:var(--round)}
-.meeting-time{font-size:16px;color:var(--gold);font-weight:700;letter-spacing:.08em;margin-left:6px}
-.info-location{font-size:12px;line-height:1.8;color:rgba(255,255,255,.8);letter-spacing:.06em}
+.meeting-role{font-size:13px;color:var(--gold);font-family:var(--round);letter-spacing:.10em;text-shadow:0 1px 1px rgba(255,255,255,.16),0 12px 32px rgba(0,0,0,.45)}
+.meeting-time{font-size:20px;color:var(--gold);font-weight:700;letter-spacing:.06em;margin-left:6px;text-shadow:0 1px 1px rgba(255,255,255,.26),0 14px 40px rgba(0,0,0,.55)}
+.info-location{font-size:13px;line-height:1.8;color:var(--w-ink);letter-spacing:.10em;text-shadow:0 1px 1px rgba(255,255,255,.16),0 12px 32px rgba(0,0,0,.45)}
 .btn-link-light{display:inline-block;border:1px solid rgba(255,255,255,.46);color:rgba(255,255,255,.92);background:rgba(255,255,255,.06);padding:8px 20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;margin-top:10px}
 .btn-link-light:hover{background:rgba(255,255,255,.88);color:#23313b}
 .glow-light{text-shadow: 0 14px 40px rgba(0,0,0,.35), 0 2px 12px rgba(0,0,0,.22)}
