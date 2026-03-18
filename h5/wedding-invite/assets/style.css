@@ -35,6 +35,7 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 /* p2: crop to show the church on the RIGHT side */
 .slide-bg.p2{background-image:url("./p2.jpg");background-position:78% 40%;}
 .slide-bg.p3{background-image:url("./p3.jpg");background-position:55% 70%;}
+.slide-bg.p4{background-image:url("./p4.jpg");background-position:center;}
 
 /* Wash the photo a bit ("lower opacity") */
 .slide-bg::after{
@@ -60,8 +61,15 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
     linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.12) 42%, rgba(0,0,0,.34));
 }
 
+.overlay.p4{
+  background:
+    linear-gradient(rgba(8,18,25,.24), rgba(8,18,25,.30)),
+    radial-gradient(900px 700px at 50% 50%, rgba(255,255,255,.05), rgba(0,0,0,.18) 75%);
+}
+
 /* Frame (very light) */
 .frame{position:absolute;inset:16px;border:1px solid rgba(255,255,255,.22);border-radius:22px;pointer-events:none}
+.frame-light{border-color:rgba(255,255,255,.38)}
 
 /* Layout */
 .container{
@@ -106,9 +114,11 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
   padding-bottom: 76px; /* move quote higher */
 }
 
-.top{margin-top:12px}
-.middle{margin-top:10px}
-.bottom{margin-bottom:6px}
+.container.p4{
+  justify-content:space-between;
+  align-items:center;
+  text-align:center;
+}
 
 /* Type */
 .kicker{
@@ -117,6 +127,7 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
   letter-spacing: .34em;
   color: rgba(255,255,255,.78);
 }
+.kicker-light{color:rgba(255,255,255,.76)}
 
 .title{
   font-weight: 220;
@@ -124,6 +135,7 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
   letter-spacing: .22em;
   line-height: 1.12;
 }
+.title-light{color:rgba(255,255,255,.96)}
 
 .line{
   font-weight: 260;
@@ -178,7 +190,6 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 }
 .btn:active{transform:translateY(1px)}
 
-
 .grid{
   width:min(560px, 100%);
   display:grid;
@@ -194,6 +205,7 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 /* Page 2: ceremony card (Gemini mock style) */
 /* align to the big outer frame (frame inset 16px + container padding) */
 .details-center{width:calc(100% - 64px); max-width:560px;}
+.details-center-light{width:min(520px,100%)}
 
 .ceremony-card{
   width: min(520px, 100%);
@@ -201,6 +213,15 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
   flex-direction:column;
   align-items:center;
   gap:12px;
+}
+
+.ceremony-card-light{
+  background: transparent;
+  border: none;
+  border-radius: 22px;
+  padding: 34px 24px;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 :root{
@@ -318,8 +339,18 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 }
 
 .sign{font-weight:260;letter-spacing:.18em;color:rgba(234,216,165,.84)}
-
-/* Subtle text glow for readability on photo */
+.info-section{display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 0}
+.info-section + .info-section{border-top:1px solid rgba(255,255,255,.14)}
+.info-section-last{padding-bottom:6px}
+.info-label-en{font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.52);text-transform:uppercase;font-weight:520}
+.info-label-zh{font-size:14px;letter-spacing:.18em;color:rgba(255,255,255,.9);font-weight:300;font-family:var(--round)}
+.meeting-grid{display:flex;justify-content:center;gap:28px;margin-top:8px;flex-wrap:wrap}
+.meeting-role{font-size:12px;color:rgba(255,255,255,.66);font-family:var(--round)}
+.meeting-time{font-size:16px;color:var(--gold);font-weight:700;letter-spacing:.08em;margin-left:6px}
+.info-location{font-size:12px;line-height:1.8;color:rgba(255,255,255,.8);letter-spacing:.06em}
+.btn-link-light{display:inline-block;border:1px solid rgba(255,255,255,.46);color:rgba(255,255,255,.92);background:rgba(255,255,255,.06);padding:8px 20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;margin-top:10px}
+.btn-link-light:hover{background:rgba(255,255,255,.88);color:#23313b}
+.glow-light{text-shadow: 0 14px 40px rgba(0,0,0,.35), 0 2px 12px rgba(0,0,0,.22)}
 
 /* Hint */
 .hint{position:absolute;left:0;right:0;bottom:22px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;color:rgba(255,255,255,.66)}
@@ -367,4 +398,6 @@ body{margin:0;background:#000;color:var(--ink);overflow:hidden;font-family:var(-
 @media (max-width: 360px){
   .container{padding: 50px 18px 60px}
   .names{font-size:40px}
+  .ceremony-card-light{padding:28px 18px}
+  .meeting-grid{gap:18px}
 }
