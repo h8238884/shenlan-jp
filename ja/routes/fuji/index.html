@@ -32,14 +32,17 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://shenlan.jp/#website","url":"https://shenlan.jp/","name":"shenlan photography","inLanguage":"ja","sameAs":["https://www.instagram.com/sljptk/"]},{"@type":"LocalBusiness","@id":"https://shenlan.jp/#business","name":"shenlan photography","url":"https://shenlan.jp/","telephone":"+81 70 9082 0657","areaServed":"Tokyo","sameAs":["https://www.instagram.com/sljptk/","https://wa.me/817090820657"]},{"@type":"WebPage","@id":"https://shenlan.jp/ja/routes/fuji/#webpage","url":"https://shenlan.jp/ja/routes/fuji/","name":"富士山撮影｜shenlan photography","description":"富士山フォトツアー/プロポーズ/前撮り：東京発、10時間。","inLanguage":"ja","isPartOf":{"@id":"https://shenlan.jp/#website"},"about":{"@id":"https://shenlan.jp/#business"}}]}</script>
   <!-- seo:ld:end -->
 <!-- seo:icons:start -->
-  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>\n<link rel="shortcut icon" href="/favicon.png?v=3"/>\n<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>\n<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
+  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>
+<link rel="shortcut icon" href="/favicon.png?v=3"/>
+<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
-        <img class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
+        <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
       </a>
 
       <button class="burger" type="button" aria-label="メニュー" data-burger>
@@ -211,18 +214,19 @@
         </script>
 
         <div class="route-map-labeled" style="margin:10px 0 14px">
-          <img src="/assets/maps/fuji-routes-labeled-ja.png" alt="富士山マップ（南北ルート・地点ラベル）" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img decoding="async" height="2000" width="1600" src="/assets/maps/fuji-routes-labeled-ja.png" alt="富士山マップ（南北ルート・地点ラベル）" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
 
 
 
         <div class="route-notebook-wrap" aria-label="Fuji notebook routes">
           <div class="route-notebook-tabs">
-            <button class="pill" type="button" data-nb-tab="south">南</button>
+            <button class="pill active" type="button" data-nb-tab="south">南</button>
             <button class="pill" type="button" data-nb-tab="north">北</button>
             <button class="pill" type="button" data-nb-tab="extra">おすすめ</button>
           </div>
-          <iframe id="nbFrame" class="route-notebook-frame" title="富士山ルート" src="/assets/notes/fuji/long-south-ja.html" loading="lazy"  style="height: 1200px"></iframe>
+          <button class="route-notebook-load pill" type="button" data-nb-load>富士山ルート手帳を開く</button>
+          <iframe id="nbFrame" class="route-notebook-frame" title="富士山ルート" data-src="/assets/notes/fuji/long-south-ja.html" loading="lazy" style="height: 1200px" hidden></iframe>
         </div>
 
         <script>
@@ -246,7 +250,11 @@
               setTimeout(measure, 800);
             });
 
+            const loadBtn = document.querySelector('[data-nb-load]');
+
             function setTab(which){
+              frame.hidden = false;
+              if(loadBtn) loadBtn.hidden = true;
               frame.dataset.tab = which;
               frame.src = which === 'north'
                 ? '/assets/notes/fuji/long-north-ja.html'
@@ -272,8 +280,7 @@
             document.querySelectorAll('[data-nb-tab]').forEach(btn=>{
               btn.addEventListener('click', ()=> setTab(btn.getAttribute('data-nb-tab')));
             });
-
-            setTab('south');
+            if(loadBtn) loadBtn.addEventListener('click', ()=> setTab('south'));
           })();
         </script>
       </div>
@@ -285,8 +292,8 @@
         <h2>ルートマップ</h2>
         <div class="fuji-map" aria-label="Fuji routes map">
           <div class="fuji-map-stage" role="img" aria-label="Map around Mt. Fuji">
-            <img class="fuji-map-illust" src="/assets/maps/fuji-relief-4x5.png" alt="富士山周辺地形図" loading="lazy" />
-            <img class="fuji-map-overlay" src="/assets/maps/fuji-relief.overlay.svg" alt="" aria-hidden="true" loading="lazy" />
+            <img decoding="async" height="1019" width="815" class="fuji-map-illust" src="/assets/maps/fuji-relief-4x5.png" alt="富士山周辺地形図" loading="lazy" />
+            <img decoding="async" class="fuji-map-overlay" src="/assets/maps/fuji-relief.overlay.svg" alt="" aria-hidden="true" loading="lazy" />
 
             <button class="map-point north" type="button" style="left:14.54%;top:33.60%"
               data-title="朝霧高原"
@@ -399,8 +406,8 @@
             </div>
             <div class="map-panel-img" aria-hidden="true">
               <div class="map-panel-grid">
-                <img id="mapSpotImg" src="/assets/img/full/fuji/_DSC0073.jpg" alt="" loading="lazy" />
-                <img id="mapSpotImg2" src="/assets/img/full/fuji/_DSC0836.jpg" alt="" loading="lazy" hidden />
+                <img decoding="async" height="1281" width="1920" id="mapSpotImg" src="/assets/img/full/fuji/_DSC0073.jpg" alt="" loading="lazy" />
+                <img decoding="async" height="1920" width="1281" id="mapSpotImg2" src="/assets/img/full/fuji/_DSC0836.jpg" alt="" loading="lazy" hidden />
               </div>
             </div>
           </aside>
@@ -476,66 +483,66 @@
       <div class="container reveal">
         <h2>富士山ギャラリー</h2>
         <div class="masonry" style="margin-top:14px">
-    <a data-lightbox href="/assets/img/full/fuji/_DSC0073.jpg"><img src="/assets/img/thumbs/fuji/_DSC0073.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC0836.jpg"><img src="/assets/img/thumbs/fuji/_DSC0836.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC0993.jpg"><img src="/assets/img/thumbs/fuji/_DSC0993.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC0996.jpg"><img src="/assets/img/thumbs/fuji/_DSC0996.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1070.jpg"><img src="/assets/img/thumbs/fuji/_DSC1070.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1325-___-NR.jpg"><img src="/assets/img/thumbs/fuji/_DSC1325-___-NR.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1385-___-NR.jpg"><img src="/assets/img/thumbs/fuji/_DSC1385-___-NR.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1408-___-NR.jpg"><img src="/assets/img/thumbs/fuji/_DSC1408-___-NR.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1418-___-NR.jpg"><img src="/assets/img/thumbs/fuji/_DSC1418-___-NR.jpg" alt="写真" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1795.jpg"><img src="/assets/img/thumbs/fuji/_DSC1795.jpg" alt="photo 10" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1863.jpg"><img src="/assets/img/thumbs/fuji/_DSC1863.jpg" alt="photo 11" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC1905.jpg"><img src="/assets/img/thumbs/fuji/_DSC1905.jpg" alt="photo 12" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC2338.jpg"><img src="/assets/img/thumbs/fuji/_DSC2338.jpg" alt="photo 13" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC2454.jpg"><img src="/assets/img/thumbs/fuji/_DSC2454.jpg" alt="photo 14" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC2894.jpg"><img src="/assets/img/thumbs/fuji/_DSC2894.jpg" alt="photo 15" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC2949.jpg"><img src="/assets/img/thumbs/fuji/_DSC2949.jpg" alt="photo 16" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC2980.jpg"><img src="/assets/img/thumbs/fuji/_DSC2980.jpg" alt="photo 17" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC3012ins.jpg"><img src="/assets/img/thumbs/fuji/_DSC3012ins.jpg" alt="photo 18" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC3725.jpg"><img src="/assets/img/thumbs/fuji/_DSC3725.jpg" alt="photo 19" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC3796.jpg"><img src="/assets/img/thumbs/fuji/_DSC3796.jpg" alt="photo 20" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC3948.jpg"><img src="/assets/img/thumbs/fuji/_DSC3948.jpg" alt="photo 21" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC5277.jpg"><img src="/assets/img/thumbs/fuji/_DSC5277.jpg" alt="photo 22" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC5346.jpg"><img src="/assets/img/thumbs/fuji/_DSC5346.jpg" alt="photo 23" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC5716.jpg"><img src="/assets/img/thumbs/fuji/_DSC5716.jpg" alt="photo 24" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC5736.jpg"><img src="/assets/img/thumbs/fuji/_DSC5736.jpg" alt="photo 25" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC5775.jpg"><img src="/assets/img/thumbs/fuji/_DSC5775.jpg" alt="photo 26" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC5805.jpg"><img src="/assets/img/thumbs/fuji/_DSC5805.jpg" alt="photo 27" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6134.jpg"><img src="/assets/img/thumbs/fuji/_DSC6134.jpg" alt="photo 28" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC0073.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC0073.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC0836.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC0836.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC0993.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC0993.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC0996.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC0996.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1070.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1070.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1325-___-NR.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1325-___-NR.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1385-___-NR.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1385-___-NR.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1408-___-NR.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1408-___-NR.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1418-___-NR.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1418-___-NR.jpg" alt="写真" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1795.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1795.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1863.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1863.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC1905.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC1905.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC2338.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC2338.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC2454.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC2454.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC2894.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC2894.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC2949.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC2949.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC2980.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC2980.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC3012ins.jpg"><img decoding="async" height="900" width="675" src="/assets/img/thumbs/fuji/_DSC3012ins.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC3725.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC3725.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC3796.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC3796.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC3948.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC3948.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC5277.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC5277.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC5346.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC5346.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC5716.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC5716.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC5736.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC5736.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC5775.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC5775.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC5805.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC5805.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6134.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6134.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
 <!-- removed missing image -->
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6270.jpg"><img src="/assets/img/thumbs/fuji/_DSC6270.jpg" alt="photo 30" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6318-___-NR.jpg"><img src="/assets/img/thumbs/fuji/_DSC6318-___-NR.jpg" alt="photo 31" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6337.jpg"><img src="/assets/img/thumbs/fuji/_DSC6337.jpg" alt="photo 32" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6339ins.jpg"><img src="/assets/img/thumbs/fuji/_DSC6339ins.jpg" alt="photo 33" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6349-___-NR-1.jpg"><img src="/assets/img/thumbs/fuji/_DSC6349-___-NR-1.jpg" alt="photo 34" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6352.jpg"><img src="/assets/img/thumbs/fuji/_DSC6352.jpg" alt="photo 35" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6410-___-NR.jpg"><img src="/assets/img/thumbs/fuji/_DSC6410-___-NR.jpg" alt="photo 36" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6586.jpg"><img src="/assets/img/thumbs/fuji/_DSC6586.jpg" alt="photo 37" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6617.jpg"><img src="/assets/img/thumbs/fuji/_DSC6617.jpg" alt="photo 38" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6737.jpg"><img src="/assets/img/thumbs/fuji/_DSC6737.jpg" alt="photo 39" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC6822.jpg"><img src="/assets/img/thumbs/fuji/_DSC6822.jpg" alt="photo 40" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC7698.jpg"><img src="/assets/img/thumbs/fuji/_DSC7698.jpg" alt="photo 41" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC7840.jpg"><img src="/assets/img/thumbs/fuji/_DSC7840.jpg" alt="photo 42" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC7868.jpg"><img src="/assets/img/thumbs/fuji/_DSC7868.jpg" alt="photo 43" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC7944.jpg"><img src="/assets/img/thumbs/fuji/_DSC7944.jpg" alt="photo 44" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC7959.jpg"><img src="/assets/img/thumbs/fuji/_DSC7959.jpg" alt="photo 45" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC7983.jpg"><img src="/assets/img/thumbs/fuji/_DSC7983.jpg" alt="photo 46" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC8008.jpg"><img src="/assets/img/thumbs/fuji/_DSC8008.jpg" alt="photo 47" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC8012.jpg"><img src="/assets/img/thumbs/fuji/_DSC8012.jpg" alt="photo 48" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC8037.jpg"><img src="/assets/img/thumbs/fuji/_DSC8037.jpg" alt="photo 49" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC8987.jpg"><img src="/assets/img/thumbs/fuji/_DSC8987.jpg" alt="photo 50" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC9449.jpg"><img src="/assets/img/thumbs/fuji/_DSC9449.jpg" alt="photo 51" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC9604.jpg"><img src="/assets/img/thumbs/fuji/_DSC9604.jpg" alt="photo 52" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC9621.jpg"><img src="/assets/img/thumbs/fuji/_DSC9621.jpg" alt="photo 53" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC9664.jpg"><img src="/assets/img/thumbs/fuji/_DSC9664.jpg" alt="photo 54" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC9874.jpg"><img src="/assets/img/thumbs/fuji/_DSC9874.jpg" alt="photo 55" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/_DSC9882.jpg"><img src="/assets/img/thumbs/fuji/_DSC9882.jpg" alt="photo 56" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/1.jpg"><img src="/assets/img/thumbs/fuji/1.jpg" alt="photo 57" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/2.jpg"><img src="/assets/img/thumbs/fuji/2.jpg" alt="photo 58" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/DSC06547.jpg"><img src="/assets/img/thumbs/fuji/DSC06547.jpg" alt="photo 59" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/fuji/DSC09525.jpg"><img src="/assets/img/thumbs/fuji/DSC09525.jpg" alt="photo 60" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6270.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6270.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6318-___-NR.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6318-___-NR.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6337.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6337.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6339ins.jpg"><img decoding="async" height="900" width="675" src="/assets/img/thumbs/fuji/_DSC6339ins.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6349-___-NR-1.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6349-___-NR-1.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6352.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6352.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6410-___-NR.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6410-___-NR.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6586.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6586.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6617.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6617.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6737.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6737.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC6822.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC6822.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC7698.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC7698.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC7840.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC7840.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC7868.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC7868.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC7944.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC7944.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC7959.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC7959.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC7983.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC7983.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC8008.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC8008.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC8012.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC8012.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC8037.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC8037.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC8987.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC8987.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC9449.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC9449.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC9604.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC9604.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC9621.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/_DSC9621.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC9664.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC9664.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC9874.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC9874.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/_DSC9882.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/_DSC9882.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/1.jpg"><img decoding="async" height="600" width="900" src="/assets/img/thumbs/fuji/1.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/2.jpg"><img decoding="async" height="900" width="600" src="/assets/img/thumbs/fuji/2.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/DSC06547.jpg"><img decoding="async" height="900" width="601" src="/assets/img/thumbs/fuji/DSC06547.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
+    <a data-lightbox href="/assets/img/full/fuji/DSC09525.jpg"><img decoding="async" height="900" width="601" src="/assets/img/thumbs/fuji/DSC09525.jpg" alt="富士山ロケーションフォト作品" loading="lazy"></a>
   </div>
       </div>
     </section>

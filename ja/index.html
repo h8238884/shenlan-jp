@@ -9,8 +9,8 @@
   <!-- icon handled by seo:icons block -->
 <link rel="canonical" href="https://shenlan.jp/ja/"/>
 <meta name="description" content="東京拠点のフォトグラファー＆有資格ドライバー。富士山（主力）＋東京・鎌倉のカスタム撮影。" />
+  <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/"/>
@@ -33,14 +33,17 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://shenlan.jp/#website","url":"https://shenlan.jp/","name":"shenlan photography","inLanguage":"ja","sameAs":["https://www.instagram.com/sljptk/"]},{"@type":"LocalBusiness","@id":"https://shenlan.jp/#business","name":"shenlan photography","url":"https://shenlan.jp/","telephone":"+81 70 9082 0657","areaServed":"Tokyo","sameAs":["https://www.instagram.com/sljptk/","https://wa.me/817090820657"]},{"@type":"WebPage","@id":"https://shenlan.jp/ja/#webpage","url":"https://shenlan.jp/ja/","name":"shenlan photography｜富士山・東京・鎌倉 フォトツアー","description":"東京拠点のフォトグラファー＆有資格ドライバー。富士山（主力）＋東京・鎌倉のカスタム撮影。","inLanguage":"ja","isPartOf":{"@id":"https://shenlan.jp/#website"},"about":{"@id":"https://shenlan.jp/#business"}}]}</script>
   <!-- seo:ld:end -->
 <!-- seo:icons:start -->
-  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>\n<link rel="shortcut icon" href="/favicon.png?v=3"/>\n<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>\n<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
+  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>
+<link rel="shortcut icon" href="/favicon.png?v=3"/>
+<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
-        <img class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
+        <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
       </a>
 
       <button class="burger" type="button" aria-label="メニュー" data-burger>
@@ -142,8 +145,8 @@
                data-primary-text="富士山ルート"
                data-primary-sub="南 / 北">
             <picture>
-              <source media="(max-width: 520px)" srcset="/assets/img/hero/fuji-2.jpg?v=1769782406758" />
-              <img src="/assets/img/hero/fuji-1.jpg?v=1769777010171" alt="富士山フォトツアー" loading="eager" />
+              <source media="(max-width: 520px)" srcset="/assets/img/hero/fuji-2-mobile.jpg 934w, /assets/img/hero/fuji-2.jpg?v=1769782406758 2001w" sizes="100vw" />
+              <img fetchpriority="high" decoding="async" height="2001" width="3000" srcset="/assets/img/hero/fuji-1-5k.jpg 5120w, /assets/img/hero/fuji-1.jpg?v=1769777010171 3000w" sizes="100vw" src="/assets/img/hero/fuji-1.jpg?v=1769777010171" alt="富士山フォトツアー" loading="eager" />
             </picture>
           </div>
           <div class="swiper-slide"
@@ -153,8 +156,8 @@
                data-primary-text="東京ルート"
                data-primary-sub="カスタム">
             <picture>
-              <source media="(max-width: 520px)" srcset="/assets/img/hero/tokyo-2.jpg?v=1769782407036" />
-              <img src="/assets/img/hero/tokyo-1.jpg?v=1769777010461" alt="写真" loading="lazy" />
+              <source media="(max-width: 520px)" srcset="/assets/img/hero/tokyo-2-mobile.jpg 934w, /assets/img/hero/tokyo-2.jpg?v=1769782407036 2001w" sizes="100vw" />
+              <img decoding="async" height="2001" width="3000" src="/assets/img/hero/tokyo-1.jpg?v=1769777010461" alt="写真" loading="lazy" />
             </picture>
           </div>
           <div class="swiper-slide"
@@ -164,8 +167,8 @@
                data-primary-text="鎌倉ルート"
                data-primary-sub="カスタム">
             <picture>
-              <source media="(max-width: 520px)" srcset="/assets/img/hero/kamakura-2.jpg?v=1769782407289" />
-              <img src="/assets/img/hero/kamakura-1.jpg?v=1769777010741" alt="鎌倉・江の島撮影作品" loading="lazy" />
+              <source media="(max-width: 520px)" srcset="/assets/img/hero/kamakura-2-mobile.jpg 1050w, /assets/img/hero/kamakura-2.jpg?v=1769782407289 2250w" sizes="100vw" />
+              <img decoding="async" height="2004" width="3000" src="/assets/img/hero/kamakura-1.jpg?v=1769777010741" alt="鎌倉・江の島撮影作品" loading="lazy" />
             </picture>
           </div>
           <div class="swiper-slide"
@@ -175,8 +178,8 @@
                data-primary-text="大黒PA"
                data-primary-sub="カーミート">
             <picture>
-              <source media="(max-width: 520px)" srcset="/assets/img/hero/daikoku-2.jpg" />
-              <img src="/assets/img/hero/daikoku-1.jpg" alt="大黒PA カーミート" loading="lazy" />
+              <source media="(max-width: 520px)" srcset="/assets/img/hero/daikoku-2-mobile.jpg 934w, /assets/img/hero/daikoku-2.jpg 2001w" sizes="100vw" />
+              <img decoding="async" height="2001" width="3000" srcset="/assets/img/hero/daikoku-1-5k.jpg 5120w, /assets/img/hero/daikoku-1.jpg 3000w" sizes="100vw" src="/assets/img/hero/daikoku-1.jpg" alt="大黒PA カーミート" loading="lazy" />
             </picture>
           </div>
         </div>
@@ -214,7 +217,7 @@
         <h2>フォトグラファーについて</h2>
         <div class="split" style="margin-top:14px">
           <div class="photo-card">
-            <img src="/assets/img/thumbs/people/photographer-960.jpg" alt="Photographer" loading="lazy" />
+            <img decoding="async" height="1280" width="960" src="/assets/img/thumbs/people/photographer-960.jpg" alt="Photographer" loading="lazy" />
           </div>
           <div class="card copy-card">
             <h3>ルート・タイミング・光は任せてください</h3>
@@ -247,24 +250,21 @@
 
             <div class="vehicle-media">
               <div class="vehicle-main">
-                <img src="/assets/img/car/gallery/_DSC4215.jpg?v=1769771018000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-main />
+                <img decoding="async" height="2200" width="1729" src="/assets/img/car/gallery/_DSC4215.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-main />
               </div>
             </div>
           </div>
         </div>
-          </div>
 
           <div class="vehicle-strip" aria-label="vehicle photos">
-            <img src="/assets/img/car/thumbs/_DSC4215.jpg?v=1769771018000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4215.jpg?v=1769771018000" data-active="true" />
-            <img src="/assets/img/car/thumbs/_DSC4226.jpg?v=1698245636000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4226.jpg?v=1698245636000" />
-            <img src="/assets/img/car/thumbs/_DSC8778.jpg?v=1769771026000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8778.jpg?v=1769771026000" />
-            <img src="/assets/img/car/thumbs/_DSC8995.jpg?v=1738211925000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8995.jpg?v=1738211925000" />
-            <img src="/assets/img/car/thumbs/_DSC9339.jpg?v=1695349217000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9339.jpg?v=1695349217000" />
-            <img src="/assets/img/car/thumbs/_DSC9397ins.jpg?v=1769771030000" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9397ins.jpg?v=1769771030000" />
+            <img decoding="async" height="900" width="707" src="/assets/img/car/thumbs/_DSC4215.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4215.jpg?v=20260526" data-active="true" />
+            <img decoding="async" height="900" width="600" src="/assets/img/car/thumbs/_DSC4226.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4226.jpg?v=20260526" />
+            <img decoding="async" height="900" width="600" src="/assets/img/car/thumbs/_DSC8778.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8778.jpg?v=20260526" />
+            <img decoding="async" height="600" width="900" src="/assets/img/car/thumbs/_DSC8995.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8995.jpg?v=20260526" />
+            <img decoding="async" height="900" width="720" src="/assets/img/car/thumbs/_DSC9339.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9339.jpg?v=20260526" />
+            <img decoding="async" height="900" width="720" src="/assets/img/car/thumbs/_DSC9397ins.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9397ins.jpg?v=20260526" />
           </div>
-            </div>
-          </div>
-        </div>
+          <p class="vehicle-hint">横にスワイプして車両写真を見る</p>
 
         <!-- vehicle CTA buttons removed -->
       </div>
@@ -290,10 +290,10 @@
                 <a class="more" href="/ja/portfolio/landscape/">もっと見る →</a>
               </div>
               <div class="thumb-scroll">
-                <a class="thumb" href="/ja/portfolio/landscape/"><img src="/assets/img/showcase/assets_img_landscape__DSC0207.jpg?v=1769775356509" alt="風景写真（日本）" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/landscape/"><img src="/assets/img/showcase/assets_img_landscape__DSC0270.jpg?v=1769775356620" alt="風景写真（日本）" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/landscape/"><img src="/assets/img/showcase/assets_img_landscape__DSC0337__.jpg?v=1769775356721" alt="風景写真（日本）" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/landscape/"><img src="/assets/img/showcase/assets_img_landscape__DSC0397-___-NR.jpg?v=1769775356830" alt="風景写真（日本）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/landscape/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_landscape__DSC0207.jpg?v=1769775356509" alt="風景写真（日本）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/landscape/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_landscape__DSC0270.jpg?v=1769775356620" alt="風景写真（日本）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/landscape/"><img decoding="async" height="427" width="640" src="/assets/img/showcase/assets_img_landscape__DSC0337__.jpg?v=1769775356721" alt="風景写真（日本）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/landscape/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_landscape__DSC0397-___-NR.jpg?v=1769775356830" alt="風景写真（日本）" loading="lazy"></a>
               </div>
             </div>
 
@@ -303,10 +303,10 @@
                 <a class="more" href="/ja/portfolio/aerial/">もっと見る →</a>
               </div>
               <div class="thumb-scroll">
-                <a class="thumb" href="/ja/portfolio/aerial/"><img src="/assets/img/showcase/assets_img_aerial__DSC6595ins.jpg?v=1769775356909" alt="空撮（ドローン）作品" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/aerial/"><img src="/assets/img/showcase/assets_img_aerial__DSC6680.jpg?v=1769775357013" alt="空撮（ドローン）作品" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/aerial/"><img src="/assets/img/showcase/assets_img_aerial_DJI_0021.jpg?v=1769775357092" alt="空撮（ドローン）作品" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/aerial/"><img src="/assets/img/showcase/assets_img_aerial_DJI_0047.jpg?v=1769775357173" alt="空撮（ドローン）作品" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/aerial/"><img decoding="async" height="853" width="640" src="/assets/img/showcase/assets_img_aerial__DSC6595ins.jpg?v=1769775356909" alt="空撮（ドローン）作品" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/aerial/"><img decoding="async" height="427" width="640" src="/assets/img/showcase/assets_img_aerial__DSC6680.jpg?v=1769775357013" alt="空撮（ドローン）作品" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/aerial/"><img decoding="async" height="479" width="640" src="/assets/img/showcase/assets_img_aerial_DJI_0021.jpg?v=1769775357092" alt="空撮（ドローン）作品" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/aerial/"><img decoding="async" height="479" width="640" src="/assets/img/showcase/assets_img_aerial_DJI_0047.jpg?v=1769775357173" alt="空撮（ドローン）作品" loading="lazy"></a>
               </div>
             </div>
 
@@ -316,10 +316,10 @@
                 <a class="more" href="/ja/portfolio/people/">もっと見る →</a>
               </div>
               <div class="thumb-scroll">
-                <a class="thumb" href="/ja/portfolio/people/"><img src="/assets/img/showcase/assets_img_people__DSC0339.jpg?v=1769775357272" alt="人物ポートレート（東京）" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/people/"><img src="/assets/img/showcase/assets_img_people__DSC0595.jpg?v=1769775357387" alt="人物ポートレート（東京）" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/people/"><img src="/assets/img/showcase/assets_img_people__DSC0613.jpg?v=1769775357492" alt="人物ポートレート（東京）" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/people/"><img src="/assets/img/showcase/assets_img_people__DSC0715-___-NR.jpg?v=1769775357602" alt="人物ポートレート（東京）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/people/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_people__DSC0339.jpg?v=1769775357272" alt="人物ポートレート（東京）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/people/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_people__DSC0595.jpg?v=1769775357387" alt="人物ポートレート（東京）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/people/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_people__DSC0613.jpg?v=1769775357492" alt="人物ポートレート（東京）" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/people/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_people__DSC0715-___-NR.jpg?v=1769775357602" alt="人物ポートレート（東京）" loading="lazy"></a>
               </div>
             </div>
 
@@ -329,10 +329,10 @@
                 <a class="more" href="/ja/portfolio/other/">もっと見る →</a>
               </div>
               <div class="thumb-scroll">
-                <a class="thumb" href="/ja/portfolio/other/"><img src="/assets/img/showcase/assets_img_other__DSC0431ins.jpg?v=1769775357690" alt="写真" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/other/"><img src="/assets/img/showcase/assets_img_other__DSC1052ins.jpg?v=1769775357792" alt="写真" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/other/"><img src="/assets/img/showcase/assets_img_other__DSC1079-___-NR.jpg?v=1769775357902" alt="写真" loading="lazy"></a>
-                <a class="thumb" href="/ja/portfolio/other/"><img src="/assets/img/showcase/assets_img_other__DSC2136.jpg?v=1769775358014" alt="写真" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/other/"><img decoding="async" height="853" width="640" src="/assets/img/showcase/assets_img_other__DSC0431ins.jpg?v=1769775357690" alt="写真" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/other/"><img decoding="async" height="800" width="640" src="/assets/img/showcase/assets_img_other__DSC1052ins.jpg?v=1769775357792" alt="写真" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/other/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_other__DSC1079-___-NR.jpg?v=1769775357902" alt="写真" loading="lazy"></a>
+                <a class="thumb" href="/ja/portfolio/other/"><img decoding="async" height="959" width="640" src="/assets/img/showcase/assets_img_other__DSC2136.jpg?v=1769775358014" alt="写真" loading="lazy"></a>
               </div>
             </div>
           </div>
@@ -357,12 +357,12 @@
             </div>
           </div>
           <div class="ig-grid">
-            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img src="/assets/img/ig/assets_img_landscape__DSC7219.jpg?v=1769775355828" alt="風景写真（日本）" loading="lazy"></a>
-            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img src="/assets/img/ig/assets_img_fuji__DSC0996.jpg?v=1769775355940" alt="写真" loading="lazy"></a>
-            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img src="/assets/img/ig/assets_img_tokyo__DSC9554.jpg?v=1769775356052" alt="写真" loading="lazy"></a>
-            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img src="/assets/img/ig/assets_img_tokyo__DSC4330.jpg?v=1769775356169" alt="写真" loading="lazy"></a>
-            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img src="/assets/img/ig/assets_img_landscape__DSC8409.jpg?v=1769775356279" alt="風景写真（日本）" loading="lazy"></a>
-            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img src="/assets/img/ig/assets_img_tokyo__DSC5339.jpg?v=1769775356387" alt="写真" loading="lazy"></a>
+            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img decoding="async" height="427" width="640" src="/assets/img/ig/assets_img_landscape__DSC7219.jpg?v=1769775355828" alt="風景写真（日本）" loading="lazy"></a>
+            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img decoding="async" height="959" width="640" src="/assets/img/ig/assets_img_fuji__DSC0996.jpg?v=1769775355940" alt="写真" loading="lazy"></a>
+            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img decoding="async" height="959" width="640" src="/assets/img/ig/assets_img_tokyo__DSC9554.jpg?v=1769775356052" alt="写真" loading="lazy"></a>
+            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img decoding="async" height="959" width="640" src="/assets/img/ig/assets_img_tokyo__DSC4330.jpg?v=1769775356169" alt="写真" loading="lazy"></a>
+            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img decoding="async" height="959" width="640" src="/assets/img/ig/assets_img_landscape__DSC8409.jpg?v=1769775356279" alt="風景写真（日本）" loading="lazy"></a>
+            <a href="https://www.instagram.com/sljptk/" target="_blank" rel="noopener"><img decoding="async" height="883" width="640" src="/assets/img/ig/assets_img_tokyo__DSC5339.jpg?v=1769775356387" alt="写真" loading="lazy"></a>
           </div>
         </div>
       </div>
@@ -405,7 +405,7 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/assets/js/site.js"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>

@@ -6,14 +6,59 @@
     overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;z-index:1000;padding:22px;';
     const img = document.createElement('img');
     img.style.cssText = 'max-width:min(1200px, 100%);max-height:90vh;border-radius:16px;box-shadow:0 22px 70px rgba(0,0,0,.35);';
+    const controls = document.createElement('div');
+    controls.style.cssText = 'position:fixed;left:0;right:0;bottom:18px;display:flex;justify-content:center;gap:10px;pointer-events:none;';
+    const prev = document.createElement('button');
+    const next = document.createElement('button');
+    const count = document.createElement('span');
+    [prev, next, count].forEach(el=>{
+      el.style.cssText = 'pointer-events:auto;border:1px solid rgba(255,255,255,.28);background:rgba(0,0,0,.36);color:#fff;border-radius:999px;padding:10px 13px;font:13px system-ui,-apple-system,Segoe UI,sans-serif;';
+    });
+    prev.type = 'button';
+    next.type = 'button';
+    prev.textContent = '‹';
+    next.textContent = '›';
     overlay.appendChild(img);
-    overlay.addEventListener('click', ()=>{ overlay.style.display='none'; img.src=''; });
+    controls.appendChild(prev);
+    controls.appendChild(count);
+    controls.appendChild(next);
+    overlay.appendChild(controls);
+    let current = 0;
+    const links = Array.from(lightboxLinks);
+    const closeLightbox = ()=>{ overlay.style.display='none'; img.src=''; };
+    const show = (idx)=>{
+      current = (idx + links.length) % links.length;
+      img.src = links[current].getAttribute('href');
+      count.textContent = `${current + 1} / ${links.length}`;
+    };
+    overlay.addEventListener('click', (e)=>{
+      if(e.target === overlay) closeLightbox();
+    });
+    img.addEventListener('click', (e)=>e.stopPropagation());
+    prev.addEventListener('click', (e)=>{ e.stopPropagation(); show(current - 1); });
+    next.addEventListener('click', (e)=>{ e.stopPropagation(); show(current + 1); });
+    let touchX = null;
+    overlay.addEventListener('touchstart', (e)=>{ touchX = e.touches[0] && e.touches[0].clientX; }, { passive:true });
+    overlay.addEventListener('touchend', (e)=>{
+      if(touchX == null) return;
+      const endX = e.changedTouches[0] && e.changedTouches[0].clientX;
+      if(endX == null) return;
+      const dx = endX - touchX;
+      if(Math.abs(dx) > 45) show(current + (dx < 0 ? 1 : -1));
+      touchX = null;
+    }, { passive:true });
     document.body.appendChild(overlay);
-    lightboxLinks.forEach(a=>a.addEventListener('click', (e)=>{
+    links.forEach((a, idx)=>a.addEventListener('click', (e)=>{
       e.preventDefault();
-      img.src = a.getAttribute('href');
+      show(idx);
       overlay.style.display = 'flex';
     }));
+    document.addEventListener('keydown', (e)=>{
+      if(overlay.style.display !== 'flex') return;
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowLeft') show(current - 1);
+      if(e.key === 'ArrowRight') show(current + 1);
+    });
   }
 
   // mobile burger

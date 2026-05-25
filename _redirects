@@ -2,3 +2,6 @@
 /en /en/ 301
 /ja /ja/ 301
 /zh /zh/ 301
+/zh/fuji/ /zh/routes/fuji/ 301
+/zh/tokyo/ /zh/routes/tokyo/ 301
+/zh/kamakura/ /zh/routes/kamakura/ 301

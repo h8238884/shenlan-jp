@@ -24,6 +24,7 @@
     .hint{font-size:12px;color:rgba(11,18,32,.60);line-height:1.6}
     .submit{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .cta{border:1px solid rgba(79,106,169,.45);background:rgba(79,106,169,.10);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit}
+    .cta.secondary{background:rgba(255,255,255,.82);border-color:rgba(11,18,32,.12)}
     .cta:hover{background:rgba(79,106,169,.14)}
   </style>
 <!-- seo:links:start -->
@@ -48,14 +49,17 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://shenlan.jp/#website","url":"https://shenlan.jp/","name":"shenlan photography","inLanguage":"zh","sameAs":["https://www.instagram.com/sljptk/"]},{"@type":"LocalBusiness","@id":"https://shenlan.jp/#business","name":"shenlan photography","url":"https://shenlan.jp/","telephone":"+81 70 9082 0657","areaServed":"Tokyo","sameAs":["https://www.instagram.com/sljptk/","https://wa.me/817090820657"]},{"@type":"WebPage","@id":"https://shenlan.jp/zh/book/#webpage","url":"https://shenlan.jp/zh/book/","name":"现在预约｜shenlan photography","description":"选择日期、人数与需求，提交预约信息。","inLanguage":"zh","isPartOf":{"@id":"https://shenlan.jp/#website"},"about":{"@id":"https://shenlan.jp/#business"}}]}</script>
   <!-- seo:ld:end -->
 <!-- seo:icons:start -->
-  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>\n<link rel="shortcut icon" href="/favicon.png?v=3"/>\n<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>\n<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
+  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>
+<link rel="shortcut icon" href="/favicon.png?v=3"/>
+<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/zh/" aria-label="shenlan photography">
-        <img class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
+        <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
       </a>
 
       <button class="burger" type="button" aria-label="菜单" data-burger>
@@ -155,8 +159,8 @@
     <section class="section">
       <div class="container reveal book-grid">
         <div class="card calendar">
-          <h3>可预约日历（示例）</h3>
-          <p class="hint">当前为前端演示版：日历支持选择日期，但“可预订状态/已满”需要后续接入真实日程数据。</p>
+          <h3>期望日期</h3>
+          <p class="hint">请选择你希望拍摄的日期。我会根据天气、路线与档期尽快确认。</p>
           <div class="field">
             <label>选择日期</label>
             <input id="date" placeholder="请选择日期" />
@@ -180,8 +184,9 @@
             <textarea id="note" placeholder="比如：想要富士山主推；更喜欢自然/电影感；是否有求婚计划；是否需要婚纱道具等"></textarea>
           </div>
           <div class="submit">
-            <button class="cta" id="submit" type="button">提交预约</button>
-            <span class="hint">会生成一封邮件草稿（发送到 no070809@gmail.com）。</span>
+            <button class="cta" id="whatsapp" type="button">通过 WhatsApp 发送</button>
+            <button class="cta secondary" id="email" type="button">生成邮件草稿</button>
+            <span class="hint">推荐使用 WhatsApp，回复会更快。</span>
           </div>
         </div>
       </div>
@@ -232,17 +237,25 @@
       dateFormat: 'Y-m-d',
       minDate: 'today',
       inline: true,
-      showMonths: 2,
+      showMonths: window.matchMedia('(max-width: 640px)').matches ? 1 : 2,
       disable: disabledDates,
     });
-    document.getElementById('submit').addEventListener('click', ()=>{
+    function getRequest(){
       const date = document.getElementById('date').value || '(未选择)';
       const people = document.getElementById('people').value;
       const note = document.getElementById('note').value || '(无)';
+      return { date, people, note };
+    }
+    document.getElementById('whatsapp').addEventListener('click', ()=>{
+      const { date, people, note } = getRequest();
+      const text = encodeURIComponent(`预约咨询 - shenlan photography\n预约日期: ${date}\n人数: ${people}\n需求: ${note}\n\n来自 shenlan.jp 预约页`);
+      location.href = `https://wa.me/817090820657?text=${text}`;
+    });
+    document.getElementById('email').addEventListener('click', ()=>{
+      const { date, people, note } = getRequest();
       const to = 'no070809@gmail.com';
       const subject = encodeURIComponent('预约咨询 - shenlan photography');
       const body = encodeURIComponent(`预约日期: ${date}\n人数: ${people}\n需求: ${note}\n\n（此为网站预约表单提交）`);
-      // NOTE: 前端无法直接发邮件；这里先用 mailto 打开邮件草稿。后续可接入表单服务/后端实现真正发送。
       location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
   </script>

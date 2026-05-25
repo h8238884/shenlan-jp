@@ -24,6 +24,7 @@
     .hint{font-size:12px;color:rgba(11,18,32,.60);line-height:1.6}
     .submit{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .cta{border:1px solid rgba(79,106,169,.45);background:rgba(79,106,169,.10);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit}
+    .cta.secondary{background:rgba(255,255,255,.82);border-color:rgba(11,18,32,.12)}
     .cta:hover{background:rgba(79,106,169,.14)}
   </style>
 <!-- seo:links:start -->
@@ -48,14 +49,17 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://shenlan.jp/#website","url":"https://shenlan.jp/","name":"shenlan photography","inLanguage":"en","sameAs":["https://www.instagram.com/sljptk/"]},{"@type":"LocalBusiness","@id":"https://shenlan.jp/#business","name":"shenlan photography","url":"https://shenlan.jp/","telephone":"+81 70 9082 0657","areaServed":"Tokyo","sameAs":["https://www.instagram.com/sljptk/","https://wa.me/817090820657"]},{"@type":"WebPage","@id":"https://shenlan.jp/en/book/#webpage","url":"https://shenlan.jp/en/book/","name":"Book now | shenlan photography","description":"Choose a date, group size, and requirements to create an email draft.","inLanguage":"en","isPartOf":{"@id":"https://shenlan.jp/#website"},"about":{"@id":"https://shenlan.jp/#business"}}]}</script>
   <!-- seo:ld:end -->
 <!-- seo:icons:start -->
-  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>\n<link rel="shortcut icon" href="/favicon.png?v=3"/>\n<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>\n<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
+  <link rel="icon" type="image/png" href="/favicon.png?v=3" sizes="32x32"/>
+<link rel="shortcut icon" href="/favicon.png?v=3"/>
+<link rel="icon" type="image/png" href="/assets/icon.png?v=3" sizes="512x512"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/en/" aria-label="shenlan photography">
-        <img class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
+        <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
       </a>
 
       <button class="burger" type="button" aria-label="Menu" data-burger>
@@ -148,15 +152,15 @@
     <section class="page-head">
       <div class="container">
         <h1>Book now</h1>
-        <p>This page creates an email draft (mailto) with your details.</p>
+        <p>Choose your date, group size, and notes. The fastest way to confirm availability is WhatsApp.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container reveal book-grid">
         <div class="card calendar">
-          <h3>Calendar (demo)</h3>
-          <p class="hint">Availability status needs real calendar integration later. For now you can pick a date.</p>
+          <h3>Preferred date</h3>
+          <p class="hint">Pick your preferred date. I will confirm availability and the best route after your request.</p>
           <div class="field"><label>Select date</label><input id="date" placeholder="Pick a date" /></div>
         </div>
 
@@ -169,8 +173,9 @@
             <textarea id="note" placeholder="Example: Mt. Fuji (South route), cinematic style, proposal plan, etc."></textarea>
           </div>
           <div class="submit">
-            <button class="cta" id="submit" type="button">Create email draft</button>
-            <span class="hint">Opens your mail app addressed to no070809@gmail.com</span>
+            <button class="cta" id="whatsapp" type="button">Send on WhatsApp</button>
+            <button class="cta secondary" id="email" type="button">Create email draft</button>
+            <span class="hint">WhatsApp is recommended for faster replies.</span>
           </div>
         </div>
       </div>
@@ -220,13 +225,22 @@
       dateFormat: 'Y-m-d',
       minDate: 'today',
       inline: true,
-      showMonths: 2,
+      showMonths: window.matchMedia('(max-width: 640px)').matches ? 1 : 2,
       disable: disabledDates,
     });
-    document.getElementById('submit').addEventListener('click', ()=>{
+    function getRequest(){
       const date = document.getElementById('date').value || '(not selected)';
       const people = document.getElementById('people').value;
       const note = document.getElementById('note').value || '(none)';
+      return { date, people, note };
+    }
+    document.getElementById('whatsapp').addEventListener('click', ()=>{
+      const { date, people, note } = getRequest();
+      const text = encodeURIComponent(`Booking request - shenlan photography\nDate: ${date}\nGroup size: ${people}\nNotes: ${note}\n\nSent from shenlan.jp`);
+      location.href = `https://wa.me/817090820657?text=${text}`;
+    });
+    document.getElementById('email').addEventListener('click', ()=>{
+      const { date, people, note } = getRequest();
       const to = 'no070809@gmail.com';
       const subject = encodeURIComponent('Booking request - shenlan photography');
       const body = encodeURIComponent(`Date: ${date}\nGroup size: ${people}\nNotes: ${note}\n\n(Submitted from shenlan.jp booking page)`);
