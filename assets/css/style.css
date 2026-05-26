@@ -458,6 +458,7 @@ html.reveal-on .reveal.show{opacity:1;transform:none;filter:none}
 .map-tooltip{
   position:absolute;
   left:0;top:0;
+  z-index:8;
   transform:translate(0,0);
   pointer-events:none;
   padding:8px 10px;
