@@ -120,6 +120,49 @@
     set(btns[0].getAttribute('data-tab'));
   });
 
+  // Hanabi portrait video: custom controls avoid browser fullscreen forcing a landscape stage.
+  document.querySelectorAll('[data-hanabi-player]').forEach((player)=>{
+    const video = player.querySelector('[data-hanabi-video]');
+    const toggle = player.querySelector('[data-video-toggle]');
+    const play = player.querySelector('[data-video-play]');
+    const mute = player.querySelector('[data-video-mute]');
+    const progress = player.querySelector('[data-video-progress]');
+    if(!video || !toggle || !play || !mute || !progress) return;
+
+    video.setAttribute('webkit-playsinline','');
+    video.controls = false;
+
+    const sync = ()=>{
+      const playing = !video.paused && !video.ended;
+      player.classList.toggle('is-playing', playing);
+      toggle.querySelector('[data-video-icon]').textContent = playing ? 'Ⅱ' : '▶';
+      play.textContent = playing ? 'Ⅱ' : '▶';
+      mute.textContent = video.muted ? (mute.dataset.soundOff || 'Off') : (mute.dataset.soundOn || 'On');
+      if(video.duration) progress.value = Math.round((video.currentTime / video.duration) * 1000);
+    };
+    const togglePlay = ()=>{
+      if(video.paused || video.ended) video.play().catch(()=>{
+        video.muted = true;
+        video.play().catch(()=>{});
+      });
+      else video.pause();
+    };
+
+    toggle.addEventListener('click', togglePlay);
+    play.addEventListener('click', togglePlay);
+    video.addEventListener('click', togglePlay);
+    mute.addEventListener('click', ()=>{
+      video.muted = !video.muted;
+      sync();
+    });
+    progress.addEventListener('input', ()=>{
+      if(!video.duration) return;
+      video.currentTime = (Number(progress.value) / 1000) * video.duration;
+    });
+    ['play','pause','ended','loadedmetadata','timeupdate','volumechange'].forEach((name)=>video.addEventListener(name, sync));
+    sync();
+  });
+
   // canonical URL: reduce duplicates (slash/index.html/http) for search engines
   (function(){
     try{
