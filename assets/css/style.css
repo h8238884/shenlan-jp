@@ -545,10 +545,20 @@ html.reveal-on .reveal.show{opacity:1;transform:none;filter:none}
 .route-stops .stop{font-size:13px;color:rgba(11,18,32,.86)}
 .route-stops img{width:98px;height:66px;object-fit:cover;border-radius:14px;border:1px solid rgba(11,18,32,.08);display:block}
 
-/* Youtube */
-.video{border-radius:20px;overflow:hidden;border:1px solid rgba(11,18,32,.08);box-shadow:var(--shadow);background:#000}
-.video .ratio{position:relative;padding-top:56.25%}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* Video */
+.video{border-radius:20px;overflow:hidden;border:0;box-shadow:var(--shadow);background:transparent;line-height:0}
+.video .ratio{position:relative;padding-top:56.25%;background:transparent}
+.video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:transparent;transform:scale(1.004);transform-origin:center}
+.video video{object-fit:cover}
+@media (max-width: 620px){
+  .section .container > .video{
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    border-radius:0;
+    box-shadow:none;
+  }
+}
 
 /* Vehicle section (dynamic + swapped vs photographer split) */
 .vehicle-band{border-radius:22px;border:1px solid rgba(11,18,32,.08);box-shadow:var(--shadow);background:rgba(255,255,255,.86);overflow:hidden}
