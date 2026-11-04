@@ -1,0 +1,85 @@
+.makeup-page{--makeup-ink:#332c2c;--makeup-muted:#807573;--makeup-line:#e5ddda;--makeup-accent:#916d68;--makeup-wash:#f0e9e5;color:var(--makeup-ink)}
+.makeup-head{padding:116px 0 48px}
+.makeup-hero{display:grid;grid-template-columns:1fr 1.05fr;gap:66px;align-items:center}
+.makeup-eyebrow{font-size:10px;line-height:1.7;letter-spacing:.18em;color:var(--makeup-accent);text-transform:uppercase;margin:0 0 20px;font-weight:600}
+.makeup-hero h1{font-family:Georgia,'Songti SC','Yu Mincho',serif;font-size:clamp(50px,5vw,66px);line-height:1.2;font-weight:400;letter-spacing:.035em;margin:0 0 15px}
+.makeup-name-en{font-family:Georgia,'Times New Roman',serif;font-size:14px;letter-spacing:.22em;margin:0 0 34px;color:var(--makeup-muted)}
+.makeup-tagline{font-family:Georgia,'Songti SC','Yu Mincho',serif;font-size:27px;line-height:1.5;font-weight:400;margin:0 0 20px;letter-spacing:.025em}
+.makeup-bio{font-size:14px;line-height:2.05;color:var(--makeup-muted);margin:0 0 26px;max-width:460px}
+.makeup-topics{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 30px;list-style:none;padding:0;font-size:11px;color:var(--makeup-accent)}
+.makeup-topics li+li::before{content:'·';margin-right:14px;color:#c1aaa5}
+.makeup-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.makeup-primary{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:48px;background:var(--makeup-accent);color:white;padding:14px 21px;border-radius:5px;font-size:13px;line-height:1.6}
+.makeup-text-link{font-size:13px;text-decoration:underline;text-underline-offset:6px;color:var(--makeup-accent)}
+.makeup-hero-visual{position:relative;margin:0;padding:0 24px 27px 0}
+.makeup-hero-visual::before{content:'';position:absolute;right:0;bottom:0;width:76%;height:81%;background:var(--makeup-wash);z-index:0}
+.makeup-hero-image{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 32%;border-radius:3px}
+.makeup-hero-visual figcaption{position:relative;display:flex;justify-content:space-between;gap:16px;font-size:10px;letter-spacing:.08em;line-height:1.6;margin-top:14px;color:var(--makeup-muted)}
+.makeup-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:54px;padding-top:29px;border-top:1px solid var(--makeup-line)}
+.makeup-note{display:flex;gap:15px;align-items:flex-start}
+.makeup-note-number{font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#bba7a0;line-height:1.3}
+.makeup-note h2{font-size:14px;font-weight:500;margin:0 0 9px;line-height:1.5}
+.makeup-note p{font-size:12px;color:var(--makeup-muted);line-height:1.9;margin:0}
+.makeup-section{padding:52px 0;scroll-margin-top:90px}
+.makeup-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:25px}
+.makeup-heading h2,.makeup-process h2{font-family:Georgia,'Songti SC','Yu Mincho',serif;font-size:31px;line-height:1.4;font-weight:400;letter-spacing:.015em;margin:0}
+.makeup-heading p:not(.makeup-eyebrow){font-size:13px;line-height:1.9;color:var(--makeup-muted);margin:0;max-width:410px}
+.makeup-filters{display:flex;gap:8px 21px;flex-wrap:wrap;border-bottom:1px solid var(--makeup-line);margin-bottom:30px;padding-bottom:11px}
+.makeup-filter{background:none;border:0;border-bottom:2px solid transparent;padding:10px 0;font:inherit;font-size:12px;line-height:1.5;color:var(--makeup-muted);cursor:pointer}
+.makeup-filter[aria-pressed=true]{color:var(--makeup-accent);border-bottom-color:var(--makeup-accent)}
+.makeup-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 22px}
+.makeup-work{margin:0;min-width:0}
+.makeup-work[hidden]{display:none}
+.makeup-work button{width:100%;display:block;padding:0;border:0;background:none;color:inherit;text-align:left;font:inherit;cursor:pointer}
+.makeup-frame{aspect-ratio:4/5;overflow:hidden;position:relative;background:var(--makeup-wash);border-radius:3px}
+.makeup-frame img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.makeup-expand{position:absolute;bottom:12px;right:12px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.9);font-size:17px;color:var(--makeup-ink)}
+.makeup-caption{display:block;padding-top:13px}
+.makeup-work-meta{display:flex;justify-content:space-between;gap:12px;font-size:10px;color:var(--makeup-accent);margin-bottom:6px;line-height:1.6;letter-spacing:.03em}
+.makeup-work-title{display:block;font-size:13px;line-height:1.7}
+.makeup-gallery-note{display:flex;justify-content:space-between;gap:25px;margin-top:28px;color:var(--makeup-muted);font-size:11px;line-height:1.85}
+.makeup-gallery-note p{margin:0;max-width:720px}
+.makeup-gallery-note [data-makeup-count]{white-space:nowrap}
+.makeup-story{display:grid;grid-template-columns:1.1fr 1fr;align-items:stretch;background:var(--makeup-wash);border-radius:4px;overflow:hidden}
+.makeup-story figure{margin:0;position:relative;min-height:420px}
+.makeup-story img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;object-position:center}
+.makeup-story figcaption{position:absolute;bottom:17px;left:20px;font-size:10px;letter-spacing:.12em;color:#fff;background:rgba(0,0,0,.28);padding:6px 8px}
+.makeup-story-copy{padding:48px 42px;display:flex;flex-direction:column;justify-content:center}
+.makeup-story h2{font-family:Georgia,'Songti SC','Yu Mincho',serif;font-size:30px;font-weight:400;line-height:1.65;letter-spacing:.015em;margin:0 0 23px}
+.makeup-story-copy>p:not(.makeup-eyebrow){font-size:13px;color:var(--makeup-muted);line-height:2;margin:0}
+.makeup-process{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding:58px 0 34px}
+.makeup-process-intro>p:last-child{font-size:13px;line-height:1.9;color:var(--makeup-muted);margin:18px 0 0}
+.makeup-steps{padding:0;margin:0;list-style:none}
+.makeup-steps li{display:flex;gap:23px;padding:20px 0;border-bottom:1px solid var(--makeup-line)}
+.makeup-steps li:first-child{padding-top:0}
+.makeup-steps h3{font-size:14px;font-weight:500;margin:0 0 8px;line-height:1.6}
+.makeup-steps p{font-size:13px;color:var(--makeup-muted);line-height:1.9;margin:0}
+.makeup-availability{display:flex;align-items:center;justify-content:space-between;gap:36px;padding:28px;background:#f5f1ee;border-radius:5px}
+.makeup-availability h2{font-size:18px;font-weight:500;margin:0 0 10px}
+.makeup-availability p{font-size:12px;color:var(--makeup-muted);line-height:1.9;margin:0;max-width:700px}
+.makeup-availability .makeup-primary{flex-shrink:0}
+.makeup-dialog{border:0;border-radius:6px;background:#fbfbfa;color:var(--makeup-ink);padding:0;width:min(920px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto}
+.makeup-dialog::backdrop{background:rgba(24,19,19,.8);backdrop-filter:blur(4px)}
+.makeup-dialog-inner{display:grid;grid-template-columns:1.25fr 1fr;min-width:0}
+.makeup-dialog-image-wrap{background:#e9e4e1;display:flex;align-items:center;justify-content:center;min-height:450px}
+.makeup-dialog-image{display:block;width:100%;height:auto;max-height:calc(100dvh - 32px);object-fit:contain}
+.makeup-dialog-copy{padding:60px 30px 30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.makeup-dialog-copy h2{font-size:23px;font-weight:500;line-height:1.6;margin:0 0 15px}
+.makeup-dialog-copy>p:not(.makeup-eyebrow){font-size:12px;color:var(--makeup-muted);line-height:1.9;margin:0 0 25px}
+.makeup-dialog-close{position:absolute;right:12px;top:12px;z-index:1;width:36px;height:36px;border:1px solid var(--makeup-line);border-radius:50%;background:#fbfbfa;color:var(--makeup-ink);font-size:23px;cursor:pointer}
+.makeup-dialog-nav{display:flex;width:100%;justify-content:space-between;align-items:center;gap:15px;margin-top:30px;color:var(--makeup-muted);font-size:11px}
+.makeup-dialog-nav button{width:40px;height:40px;border:1px solid var(--makeup-line);border-radius:50%;font-size:18px;background:none;color:var(--makeup-ink);cursor:pointer}
+.makeup-page a:focus-visible,.makeup-page button:focus-visible{outline:3px solid var(--makeup-accent);outline-offset:4px}
+@media(hover:hover){.makeup-work button:hover img{transform:scale(1.03)}.makeup-primary:hover{background:#76524f}.makeup-filter:hover{color:var(--makeup-accent)}}
+@media(max-width:950px){.makeup-hero{gap:36px}.makeup-hero h1{font-size:54px}.makeup-bio{font-size:13px}.makeup-notes{gap:24px}.makeup-story-copy{padding:32px}.makeup-process{gap:36px}}
+@media(max-width:680px){
+ .makeup-head{padding:104px 0 24px}.makeup-hero{grid-template-columns:1fr;gap:32px}.makeup-hero h1{font-size:49px}.makeup-name-en{margin-bottom:24px}.makeup-tagline{font-size:25px}.makeup-bio{font-size:13px}.makeup-topics{gap:7px 10px;margin-bottom:25px}.makeup-topics li+li::before{margin-right:10px}
+ .makeup-hero-visual{padding:0 18px 19px 0;max-width:450px;width:100%;margin:0 auto}.makeup-hero-image{aspect-ratio:1/1.08}.makeup-hero-visual figcaption{font-size:9px;gap:10px}
+ .makeup-notes{grid-template-columns:1fr;margin-top:30px;padding-top:25px;gap:20px}.makeup-note h2{margin-bottom:5px}.makeup-note p{font-size:12px}
+ .makeup-section{padding:32px 0}.makeup-heading{display:block}.makeup-heading h2,.makeup-process h2{font-size:27px}.makeup-heading p:not(.makeup-eyebrow){margin-top:14px}.makeup-filters{gap:4px 19px;margin-bottom:23px}.makeup-filter{font-size:11px}
+ .makeup-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}.makeup-caption{padding-top:10px}.makeup-work-meta{font-size:9px;gap:6px}.makeup-work-title{font-size:11px}.makeup-expand{width:25px;height:25px;bottom:8px;right:8px;font-size:15px}
+ .makeup-gallery-note{display:block}.makeup-gallery-note [data-makeup-count]{display:block;margin-top:10px}.makeup-story{grid-template-columns:1fr}.makeup-story figure{min-height:0;aspect-ratio:4/3}.makeup-story-copy{padding:29px 24px}.makeup-story h2{font-size:26px}
+ .makeup-process{grid-template-columns:1fr;padding-top:38px;gap:28px}.makeup-availability{padding:24px;align-items:flex-start;flex-direction:column;gap:22px}.makeup-availability .makeup-primary{width:100%}
+ .makeup-dialog-inner{grid-template-columns:1fr}.makeup-dialog-image-wrap{min-height:0}.makeup-dialog-image{max-height:52dvh}.makeup-dialog-copy{padding:24px}.makeup-dialog-copy h2{font-size:19px}.makeup-dialog-nav{margin-top:20px}.makeup-dialog-copy>p:not(.makeup-eyebrow){margin-bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){.makeup-frame img{transition:none}.makeup-work button:hover img{transform:none}}
