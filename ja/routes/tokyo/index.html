@@ -1,10 +1,10 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>東京撮影｜shenlan photography</title>
-  
-  
+
+
   <link rel="icon" href="https://shenlan.jp/assets/logo/logo.png"/>
 <link rel="canonical" href="https://shenlan.jp/ja/routes/tokyo/"/>
 <meta name="description" content="Tokyo photoshoot route: Shibuya, Harajuku, Shinjuku, Asakusa. Custom to season & style."/>
-<link rel="stylesheet" href="/assets/css/style.css?v=services-20261104"/><!-- seo:links:start -->
+<link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104"/><!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/routes/tokyo/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/routes/tokyo/"/>
     <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/routes/tokyo/"/>
@@ -32,7 +32,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head><body><header class="nav">
+<link rel="stylesheet" href="/assets/css/route-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head><body><header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
         <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
@@ -47,7 +47,7 @@
         <a href="/ja/about/">概要</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -57,17 +57,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span></a>
           </div>
         </div>
 
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a>
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
@@ -101,7 +109,13 @@
       <a class="sub" href="/ja/portfolio/other/">その他</a>
     </div>
 
-    <a href="/ja/services/">撮影オプション</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a>
     <a href="/ja/book/">予約</a>
 
@@ -112,7 +126,7 @@
     </div>
   </div>
 
-  
+
 
 
 
@@ -129,15 +143,14 @@
 <main>
   <section class="page-head"><div class="container"><h1>東京（カスタム撮影）</h1><p>神社の静けさからネオンの夜景まで。季節・混雑・好み（クリーン/シネマ/ストリート）に合わせて組みます。</p></div></section>
   <section class="section"><div class="container reveal">
-    <h2>撮影イメージ</h2>
-    <div class="routes" style="margin-top:14px"><div class="card route"><span class="badge">西東京 · 定番</span><h3>明治神宮 → 原宿 → キャットストリート → 渋谷</h3><ul><li>明治神宮：朝の空気感が最高</li><li>竹下通り：ポップ/カワイイ</li><li>キャットストリート：歩きながら自然なカット</li><li>ハチ公 + スクランブル交差点：王道の1枚</li><li>オプション：渋谷スカイ夕景（チケット要）</li></ul></div>
-<div class="card route"><span class="badge">下町 · 和</span><h3>浅草（着物におすすめ）+ 川沿いビュー</h3><ul><li>雷門・浅草寺周辺</li><li>仲見世：食べ歩きの雰囲気</li><li>裏路地：人の少ないポートレート</li><li>隅田川：スカイツリー背景</li></ul></div>
-<div class="card route"><span class="badge">夜 · シネマ</span><h3>新宿/渋谷ネオン（雨の日も映える）</h3><ul><li>歌舞伎町：ネオンのシネマ感</li><li>思い出横丁/路地：生活感のある雰囲気</li><li>街灯ポートレート（フィルム風）</li><li>代案：銀座/東京駅の夜景</li></ul></div></div>
-    <div class="card route" style="margin-top:14px"><span class="badge">おすすめ</span><ul><li>カップル/おひとり/友人/家族</li><li>着物/普段着/プロポーズ/軽いウェディング</li><li>初めての東京で定番を“ちゃんと綺麗に”残したい方</li></ul></div>
-    <div class="card route" style="margin-top:14px"><span class="badge">補足</span><ul><li>時間帯がすべて：混雑回避＋光の良いタイミングを狙います。</li><li>都内ならホテル出発もOK（場所は相談）。</li><li>雨の日は反射と屋根を活かして、よりシネマな仕上がりに。</li></ul>
-<div style="margin-top:12px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp</a></div></div>
+    <div class="route-section-intro" id="route-overview"><p class="route-eyebrow">旅のかたち</p><h2>あなたの物語に、似合う景色を。</h2><p>撮影スポットの一例です。天候・光・混雑に合わせて、場所の組み合わせや順番を調整します。</p></div><div class="routes route-story-grid" style="margin-top:14px"><div class="card route route-story"><div class="route-story-heading"><span class="route-story-number" aria-hidden="true">01</span><span class="route-eyebrow">西東京 · 街歩き</span></div><h3>いつもの一日を、映画のように。</h3><p class="route-story-intro">神宮の木陰から、にぎわう街へ。東京のリズムに身を任せて、自然な表情を残します。</p><div class="route-locations"><h4>撮影スポット</h4><ul><li>明治神宮：朝の空気感が最高</li><li>竹下通り：ポップ/カワイイ</li><li>キャットストリート：歩きながら自然なカット</li><li>ハチ公 + スクランブル交差点：王道の1枚</li><li>オプション：渋谷スカイ夕景（チケット要）</li></ul></div></div>
+<div class="card route route-story"><div class="route-story-heading"><span class="route-story-number" aria-hidden="true">02</span><span class="route-eyebrow">浅草 · 下町散歩</span></div><h3>路地を曲がって、少しゆっくり。</h3><p class="route-story-intro">提灯、寺の門、川からの風。小さな景色が、やさしい東京の思い出になります。</p><div class="route-locations"><h4>撮影スポット</h4><ul><li>雷門・浅草寺周辺</li><li>仲見世：食べ歩きの雰囲気</li><li>裏路地：人の少ないポートレート</li><li>隅田川：スカイツリー背景</li></ul></div></div>
+<div class="card route route-story"><div class="route-story-heading"><span class="route-story-number" aria-hidden="true">03</span><span class="route-eyebrow">東京 · 夜の時間</span></div><h3>灯りがともる、その先へ。</h3><p class="route-story-intro">ネオンに浮かぶ横顔、雨上がりの反射。夜の余韻とともに、あなたの物語を写します。</p><div class="route-locations"><h4>撮影スポット</h4><ul><li>歌舞伎町：ネオンのシネマ感</li><li>思い出横丁/路地：生活感のある雰囲気</li><li>街灯ポートレート（フィルム風）</li><li>代案：銀座/東京駅の夜景</li></ul></div></div></div>
+    <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>おすすめ</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>カップル/おひとり/友人/家族</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>着物/普段着/プロポーズ/軽いウェディング</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>初めての東京で定番を“ちゃんと綺麗に”残したい方</span></li></ul></div>
+    <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>補足</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>時間帯がすべて：混雑回避＋光の良いタイミングを狙います。</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>都内ならホテル出発もOK（場所は相談）。</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>雨の日は反射と屋根を活かして、よりシネマな仕上がりに。</span></li></ul>
+<div style="margin-top:12px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">撮影プランを相談する ↗</a></div></div>
   </div></section>
-  
+
   <section class="section"><div class="container reveal"><aside class="route-services" id="route-services" aria-label="撮影オプション"><h3>撮影に合わせて、装いも準備</h3><div class="services-options"><a class="route-service-link" href="/ja/services/dress/"><span class="route-service-icon dress" aria-hidden="true"><img src="/assets/img/services/dress.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">ドレスレンタル</span><span class="route-service-description">衣装・スタイル相談</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a><a class="route-service-link" href="/ja/services/flowers/"><span class="route-service-icon flowers" aria-hidden="true"><img src="/assets/img/services/flowers.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">お花の予約</span><span class="route-service-description">ブーケ・プロポーズ</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a><a class="route-service-link" href="/ja/services/makeup/"><span class="route-service-icon makeup" aria-hidden="true"><img src="/assets/img/services/makeup.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">ヘアメイク</span><span class="route-service-description">メイク・ヘアアレンジ</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a></div><p>サービス内容・料金・空き状況は個別に確認します。撮影プランに含まれる内容は、最終的なお見積もりにてご確認ください。</p></aside>
         <h2>ギャラリー</h2><div class="masonry" style="margin-top:14px">
     <a data-lightbox href="/assets/img/full/tokyo/___-1.jpg"><img decoding="async" height="640" width="960" src="/assets/img/thumbs/tokyo/___-1.jpg" alt="写真" loading="lazy"></a>
@@ -190,54 +203,34 @@
     <a data-lightbox href="/assets/img/full/tokyo/DSC06957.jpg"><img decoding="async" height="1288" width="960" src="/assets/img/thumbs/tokyo/DSC06957.jpg" alt="東京ロケーションフォト作品" loading="lazy"></a>
     <a data-lightbox href="/assets/img/full/tokyo/DSC08215.jpg"><img decoding="async" height="1437" width="960" src="/assets/img/thumbs/tokyo/DSC08215.jpg" alt="東京ロケーションフォト作品" loading="lazy"></a>
   </div></div></section>
-</main><footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div>対応言語：日本語 / 英語 / 中文</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+</main><footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/routes/tokyo/" lang="zh">中文</a><a href="/en/routes/tokyo/" lang="en">EN</a><a href="/ja/routes/tokyo/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
-  <script src="/assets/js/site.js"></script><script>document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());</script></body></html>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());</script></body></html>

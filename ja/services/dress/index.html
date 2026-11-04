@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/services/dress/"><link rel="alternate" hreflang="x-default" href="https://shenlan.jp/en/services/dress/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="shenlan photography"><meta property="og:title" content="PURESTUDIO · ドレスレンタル"><meta property="og:description" content="PURESTUDIOのウェディングドレス・ドレス12着を参考としてご紹介。スタイルの絞り込み、写真全体の表示、サイト内でのレンタル相談ができます。"><meta property="og:url" content="https://shenlan.jp/ja/services/dress/"><meta property="og:image" content="https://shenlan.jp/assets/img/services/dress/pure-12.webp"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon.png?v=3"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
-<link rel="stylesheet" href="/assets/css/style.css?v=services-20261104"><link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
+<link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104"><link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "PURESTUDIO · ドレスレンタル", "description": "PURESTUDIOのウェディングドレス・ドレス12着を参考としてご紹介。スタイルの絞り込み、写真全体の表示、サイト内でのレンタル相談ができます。", "url": "https://shenlan.jp/ja/services/dress/", "inLanguage": "ja"}</script>
 <link rel="stylesheet" href="/assets/css/dress.css?v=20261104-1">
-</head><body><header class="nav">
+<link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head><body><header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
         <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
@@ -28,7 +28,7 @@
         <a href="/ja/about/">概要</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -38,17 +38,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span></a>
           </div>
         </div>
 
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a>
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
@@ -82,7 +90,13 @@
       <a class="sub" href="/ja/portfolio/other/">その他</a>
     </div>
 
-    <a href="/ja/services/">撮影オプション</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a>
     <a href="/ja/book/">予約</a>
 
@@ -99,55 +113,35 @@
 <section class="dress-section" id="dress-collection"><div class="container"><div class="dress-heading"><div><p class="dress-eyebrow">THE DRESS EDIT</p><h2>あなたの物語に、似合う一着。</h2></div><p>広がるスカートから、すっきりとしたシルエットまで。写真をタップすると全体をご覧いただけます。ご相談には参考番号をご利用ください。</p></div><div class="dress-filters" role="group" aria-label="ドレスレンタル"><button class="dress-filter" type="button" data-dress-filter="all" aria-pressed="true">すべて</button><button class="dress-filter" type="button" data-dress-filter="volume" aria-pressed="false">ボリュームスカート</button><button class="dress-filter" type="button" data-dress-filter="slim" aria-pressed="false">すっきりシルエット</button><button class="dress-filter" type="button" data-dress-filter="short" aria-pressed="false">ショート＆アシンメトリー</button><button class="dress-filter" type="button" data-dress-filter="colour" aria-pressed="false">カラードレス</button></div><div class="dress-gallery" data-dress-gallery><figure class="dress-work" data-dress-work data-category="volume" data-orientation="landscape"><button type="button" data-full="/assets/img/services/dress/pure-01.webp" data-width="640" data-height="427" data-title="肩紐と重なるスカート" data-code="PS-01" aria-label="ドレスを見る PS-01 肩紐と重なるスカート" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-01.webp" srcset="/assets/img/services/dress/pure-01-small.webp 280w, /assets/img/services/dress/pure-01.webp 640w" sizes="(max-width:680px) 92vw, 50vw" width="640" height="427" alt="肩紐と重なるスカート" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-01</span><span class="dress-work-title">肩紐と重なるスカート</span></span></button></figure><figure class="dress-work" data-dress-work data-category="volume" data-orientation="landscape"><button type="button" data-full="/assets/img/services/dress/pure-02.webp" data-width="640" data-height="427" data-title="模様が映えるトレーン" data-code="PS-02" aria-label="ドレスを見る PS-02 模様が映えるトレーン" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-02.webp" srcset="/assets/img/services/dress/pure-02-small.webp 280w, /assets/img/services/dress/pure-02.webp 640w" sizes="(max-width:680px) 92vw, 50vw" width="640" height="427" alt="模様が映えるトレーン" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-02</span><span class="dress-work-title">模様が映えるトレーン</span></span></button></figure><figure class="dress-work" data-dress-work data-category="slim" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-03.webp" data-width="480" data-height="640" data-title="オフショルダーと長袖" data-code="PS-03" aria-label="ドレスを見る PS-03 オフショルダーと長袖" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-03.webp" srcset="/assets/img/services/dress/pure-03-small.webp 280w, /assets/img/services/dress/pure-03.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="オフショルダーと長袖" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-03</span><span class="dress-work-title">オフショルダーと長袖</span></span></button></figure><figure class="dress-work" data-dress-work data-category="colour" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-04.webp" data-width="480" data-height="640" data-title="ハートネックのブラックドレス" data-code="PS-04" aria-label="ドレスを見る PS-04 ハートネックのブラックドレス" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-04.webp" srcset="/assets/img/services/dress/pure-04-small.webp 280w, /assets/img/services/dress/pure-04.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="ハートネックのブラックドレス" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-04</span><span class="dress-work-title">ハートネックのブラックドレス</span></span></button></figure><figure class="dress-work" data-dress-work data-category="slim" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-05.webp" data-width="480" data-height="640" data-title="ハイネックのすっきりシルエット" data-code="PS-05" aria-label="ドレスを見る PS-05 ハイネックのすっきりシルエット" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-05.webp" srcset="/assets/img/services/dress/pure-05-small.webp 280w, /assets/img/services/dress/pure-05.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="ハイネックのすっきりシルエット" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-05</span><span class="dress-work-title">ハイネックのすっきりシルエット</span></span></button></figure><figure class="dress-work" data-dress-work data-category="colour" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-06.webp" data-width="480" data-height="640" data-title="淡いブルーのビスチェドレス" data-code="PS-06" aria-label="ドレスを見る PS-06 淡いブルーのビスチェドレス" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-06.webp" srcset="/assets/img/services/dress/pure-06-small.webp 280w, /assets/img/services/dress/pure-06.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="淡いブルーのビスチェドレス" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-06</span><span class="dress-work-title">淡いブルーのビスチェドレス</span></span></button></figure><figure class="dress-work" data-dress-work data-category="slim" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-07.webp" data-width="480" data-height="640" data-title="ケープ風ディテールとスリット" data-code="PS-07" aria-label="ドレスを見る PS-07 ケープ風ディテールとスリット" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-07.webp" srcset="/assets/img/services/dress/pure-07-small.webp 280w, /assets/img/services/dress/pure-07.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="ケープ風ディテールとスリット" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-07</span><span class="dress-work-title">ケープ風ディテールとスリット</span></span></button></figure><figure class="dress-work" data-dress-work data-category="slim" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-08.webp" data-width="480" data-height="640" data-title="軽やかなショルダー装飾" data-code="PS-08" aria-label="ドレスを見る PS-08 軽やかなショルダー装飾" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-08.webp" srcset="/assets/img/services/dress/pure-08-small.webp 280w, /assets/img/services/dress/pure-08.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="軽やかなショルダー装飾" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-08</span><span class="dress-work-title">軽やかなショルダー装飾</span></span></button></figure><figure class="dress-work" data-dress-work data-category="short" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-09.webp" data-width="480" data-height="640" data-title="前後の丈が異なるドレス" data-code="PS-09" aria-label="ドレスを見る PS-09 前後の丈が異なるドレス" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-09.webp" srcset="/assets/img/services/dress/pure-09-small.webp 280w, /assets/img/services/dress/pure-09.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="前後の丈が異なるドレス" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-09</span><span class="dress-work-title">前後の丈が異なるドレス</span></span></button></figure><figure class="dress-work" data-dress-work data-category="short" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-10.webp" data-width="480" data-height="640" data-title="ハイネックのミディドレス" data-code="PS-10" aria-label="ドレスを見る PS-10 ハイネックのミディドレス" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-10.webp" srcset="/assets/img/services/dress/pure-10-small.webp 280w, /assets/img/services/dress/pure-10.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="ハイネックのミディドレス" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-10</span><span class="dress-work-title">ハイネックのミディドレス</span></span></button></figure><figure class="dress-work" data-dress-work data-category="volume" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-11.webp" data-width="480" data-height="640" data-title="立体的な花飾りとスカート" data-code="PS-11" aria-label="ドレスを見る PS-11 立体的な花飾りとスカート" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-11.webp" srcset="/assets/img/services/dress/pure-11-small.webp 280w, /assets/img/services/dress/pure-11.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="立体的な花飾りとスカート" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-11</span><span class="dress-work-title">立体的な花飾りとスカート</span></span></button></figure><figure class="dress-work" data-dress-work data-category="volume" data-orientation="portrait"><button type="button" data-full="/assets/img/services/dress/pure-12.webp" data-width="480" data-height="640" data-title="オフショルダーの華やかな一着" data-code="PS-12" aria-label="ドレスを見る PS-12 オフショルダーの華やかな一着" aria-haspopup="dialog"><div class="dress-frame"><img class="" src="/assets/img/services/dress/pure-12.webp" srcset="/assets/img/services/dress/pure-12-small.webp 280w, /assets/img/services/dress/pure-12.webp 480w" sizes="(max-width:680px) 45vw, 360px" width="480" height="640" alt="オフショルダーの華やかな一着" loading=lazy decoding="async"><span class="dress-expand" aria-hidden="true">＋</span></div><span class="dress-caption"><span class="dress-ref">参考番号 PS-12</span><span class="dress-work-title">オフショルダーの華やかな一着</span></span></button></figure></div><div class="dress-gallery-note"><p>写真：PURESTUDIO · @purestudio_weddingdress。名称は当サイトでのスタイル説明、番号はお問い合わせ用です。サイズ・在庫・レンタル日程は別途確認が必要です。</p><span data-dress-count data-template="{count} / {total} 着を表示" aria-live="polite">12 / 12 着を表示</span></div></div></section>
 <section class="dress-section dress-planning"><div class="container"><div class="dress-heading"><div><p class="dress-eyebrow">YOUR DRESS, YOUR PLANS</p><h2>好きな一着から、<br>撮影の準備を。</h2></div><p>ドレスと撮影プランを合わせて考え、余裕を持って詳細を確認しましょう。</p></div><ol class="dress-steps"><li><span aria-hidden="true">01</span><h3>好きなスタイルを選ぶ</h3><p>写真を保存するか、PSから始まる参考番号をお控えください。ブーケやヘアメイクのイメージもお伝えいただけます。</p></li><li><span aria-hidden="true">02</span><h3>撮影予定を伝える</h3><p>日程、場所、お着替えの予定、サイズや試着、受け取り・返却のご希望をお知らせください。</p></li><li><span aria-hidden="true">03</span><h3>レンタル内容を確認する</h3><p>ドレス、料金、期間、屋外利用の範囲、アクセサリー、クリーニングや保証金の有無を確認します。</p></li></ol><div class="dress-faq"><h2>レンタル前のご案内</h2><div><details><summary>写真のドレスを指定できますか？</summary><p>参考番号でご希望をお知らせください。実際にレンタルできるドレス・サイズ・空き状況は、スタジオへの確認が必要です。</p></details><details><summary>富士山や東京の屋外撮影で使えますか？</summary><p>撮影場所、ルート、使用時間をお知らせください。屋外での利用、受け取り・返却、配送の可否は個別に確認します。</p></details><details><summary>料金やアクセサリーはどう確認しますか？</summary><p>希望のドレスと日程に合わせて、お見積もりと含まれる内容を確認します。アクセサリー、クリーニング、保証金の有無も予約前にご案内します。</p></details></div></div><div class="dress-cta"><div><h2>旅の思い出に、お気に入りの一着を。</h2><p>好きなスタイルと撮影予定日を添えて、レンタル内容をご相談ください。</p></div><a class="dress-button" href="/ja/book/?service=dress&amp;boutique=purestudio">ドレスレンタルを相談<span aria-hidden="true">→</span></a></div><div class="services-related"><span>あわせてコーディネート</span><a class="services-button" href="/ja/services/flowers/">お花の予約</a><a class="services-button" href="/ja/services/makeup/">ヘアメイク</a></div></div></section>
 <dialog class="dress-dialog" data-dress-dialog aria-labelledby="dress-dialog-title"><button class="dress-dialog-close" type="button" data-dress-close aria-label="ドレスのプレビューを閉じる">×</button><div class="dress-dialog-inner"><div class="dress-dialog-image-wrap"><img class="dress-dialog-image" data-dress-picture alt=""></div><div class="dress-dialog-copy"><p class="dress-eyebrow" data-dress-code>PURESTUDIO</p><h2 id="dress-dialog-title" data-dress-title></h2><p>スタイルの参考写真です。お問い合わせにはPURESTUDIOと参考番号が添えられます。サイズ・料金・レンタル可能日は別途確認します。</p><a class="dress-button" data-dress-inquiry data-booking="/ja/book/" href="/ja/book/?service=dress&amp;boutique=purestudio">このドレスを相談<span aria-hidden="true">→</span></a><div class="dress-dialog-nav"><button type="button" data-dress-prev aria-label="前のドレス">←</button><span data-dress-position aria-live="polite"></span><button type="button" data-dress-next aria-label="次のドレス">→</button></div></div></div></dialog>
-</main><footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div>対応言語：日本語 / 英語 / 中文</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+</main><footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/services/dress/" lang="zh">中文</a><a href="/en/services/dress/" lang="en">EN</a><a href="/ja/services/dress/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav>
-    </div>
-
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
-<script src="/assets/js/site.js"></script><script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+    </div></div></div></footer>
+<script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 <script src="/assets/js/dress.js?v=20261104-1"></script>
 </body></html>

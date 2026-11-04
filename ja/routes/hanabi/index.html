@@ -6,7 +6,7 @@
   <title>夏夜、花火紀行｜shenlan photography</title>
   <link rel="canonical" href="https://shenlan.jp/ja/routes/hanabi/"/>
   <meta name="description" content="浴衣、カップル、プロポーズ、夜景ポートレートを中心にした夏限定の花火大会撮影プラン。" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/routes/hanabi/"/>
   <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/routes/hanabi/"/>
   <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/routes/hanabi/"/>
@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="/favicon.png?v=3"/>
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/route-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -30,7 +30,7 @@
       <button class="burger" type="button" aria-label="ルート" data-burger><span></span><span></span><span></span></button>
       <nav class="nav-links" aria-label="primary">
         <a href="/ja/">ホーム</a><a href="/ja/about/">概要</a>
-        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -40,16 +40,24 @@
             <a href="/ja/routes/daikoku/" role="menuitem"><span>大黒PA</span><small>カスタム</small></a>
           </div>
         </div>
-        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>All</span><small>All</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>Landscape</span><small>Landscape</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>Aerial</span><small>Aerial</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>People</span><small>People</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>Other</span><small>Other</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>All</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>Landscape</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>Aerial</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>People</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>Other</span></a>
           </div>
         </div>
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a><a class="pill accent" href="/ja/book/">予約</a>
       </nav>
       <div class="lang" aria-label="language switch"><a href="/en/routes/hanabi/">EN</a><a href="/zh/routes/hanabi/">中文</a><a href="/ja/routes/hanabi/">日本語</a></div>
@@ -61,7 +69,13 @@
     <div class="mp-sub" data-mp-sub hidden>
       <a class="sub" href="/ja/routes/">一覧</a><a class="sub" href="/ja/routes/fuji/">富士山</a><a class="sub" href="/ja/routes/hanabi/">花火大会</a><a class="sub" href="/ja/routes/tokyo/">東京</a><a class="sub" href="/ja/routes/kamakura/">鎌倉</a><a class="sub" href="/ja/routes/daikoku/">大黒PA</a>
     </div>
-    <a href="/ja/portfolio/">ポートフォリオ</a><a href="/ja/services/">撮影オプション</a>
+    <a href="/ja/portfolio/">ポートフォリオ</a><button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a><a href="/ja/book/">予約</a>
     <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><a class="pill" href="/en/routes/hanabi/">EN</a><a class="pill" href="/zh/routes/hanabi/">中文</a><a class="pill" href="/ja/routes/hanabi/">日本語</a></div>
   </div>
@@ -84,12 +98,12 @@
       <div class="container reveal hanabi-service-layout">
         <div class="hanabi-service-copy">
           <div class="hanabi-intro">
-            <div class="card copy-card"><h2>着物の支度後からホテル送迎までの花火旅撮影</h2><p>花火大会当日は大規模な混雑や臨時交通規制が発生するため、東京エリアでの送迎を前提に行程を設計します。着物店でヘアメイクと着付けが完了した後に出発し、会場動線、光の時間帯、人流状況に合わせて街歩き、夜景ポートレート、花火背景の撮影を行い、大会終了後はホテルまでお送りします。</p></div>
-            <div class="card route"><span class="badge">サービスの流れ</span><ul><li>東京のホテルまたは着物店でお迎え</li><li>着物・ヘアメイク完了後に出発</li><li>会場周辺の街歩き、夜景、花火雰囲気撮影</li><li>花火大会終了後にホテルへお送り</li></ul></div>
+            <div class="card copy-card"><h2>ひと夏の夜を、咲く光とともに。</h2><p>花火大会当日は大規模な混雑や臨時交通規制が発生するため、東京エリアでの送迎を前提に行程を設計します。着物店でヘアメイクと着付けが完了した後に出発し、会場動線、光の時間帯、人流状況に合わせて街歩き、夜景ポートレート、花火背景の撮影を行い、大会終了後はホテルまでお送りします。</p></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>サービスの流れ</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>東京のホテルまたは着物店でお迎え</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>着物・ヘアメイク完了後に出発</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>会場周辺の街歩き、夜景、花火雰囲気撮影</span></li><li><span aria-hidden="true" class="route-practical-mark">04</span><span>花火大会終了後にホテルへお送り</span></li></ul></div>
           </div>
           <div class="hanabi-info">
-            <div class="card route"><span class="badge">移動プラン</span><ul><li>貸切車撮影：カップル、家族、友人グループにおすすめ</li><li>相乗り撮影：最大5名まで、送迎付きで予算を抑えたい方向け</li><li>東京、横浜、鎌倉、熱海方面など当日の交通規制に合わせて調整</li></ul></div>
-            <div class="card route"><span class="badge">予約時の注意</span><ul><li>人気大会は混雑するため、できれば 2-4 週間前の相談がおすすめです。</li><li>雨天・強風・大会中止の場合は、日程変更または夜景撮影への変更を相談できます。</li><li>着物店、ホテル位置、人数、貸切/相乗りの選択により出発時間と料金が変わります。</li></ul></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>移動プラン</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>貸切車撮影：カップル、家族、友人グループにおすすめ</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>相乗り撮影：最大5名まで、送迎付きで予算を抑えたい方向け</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>東京、横浜、鎌倉、熱海方面など当日の交通規制に合わせて調整</span></li></ul></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>予約時の注意</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>人気大会は混雑するため、できれば 2-4 週間前の相談がおすすめです。</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>雨天・強風・大会中止の場合は、日程変更または夜景撮影への変更を相談できます。</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>着物店、ホテル位置、人数、貸切/相乗りの選択により出発時間と料金が変わります。</span></li></ul></div>
           </div>
         </div>
           <div class="hanabi-video-frame" data-hanabi-player>
@@ -129,47 +143,35 @@
 <a data-lightbox href="/assets/img/full/fireworks/_DSC5160.jpg"><img decoding="async" src="/assets/img/thumbs/fireworks/_DSC5160.jpg" alt="花火大会" loading="lazy"></a></div></div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><div class="row"><div>© <span id="y"></span> shenlan photography · Tokyo</div><div><a href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp：+81 70 9082 0657</a></div></div>
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/routes/hanabi/" lang="zh">中文</a><a href="/en/routes/hanabi/" lang="en">EN</a><a href="/ja/routes/hanabi/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav></div>
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
-  <script src="/assets/js/site.js?v=hanabi-video-2"></script><script>document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());</script>
+    </div></div></div></footer>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());</script>
 </body>
 </html>

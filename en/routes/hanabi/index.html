@@ -6,7 +6,7 @@
   <title>A Summer Night in Bloom | shenlan photography</title>
   <link rel="canonical" href="https://shenlan.jp/en/routes/hanabi/"/>
   <meta name="description" content="Summer-only Japan fireworks photoshoot with yukata, couples, proposals, night portraits, and festival atmosphere around Tokyo." />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/routes/hanabi/"/>
   <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/routes/hanabi/"/>
   <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/routes/hanabi/"/>
@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="/favicon.png?v=3"/>
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/route-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -30,7 +30,7 @@
       <button class="burger" type="button" aria-label="Routes" data-burger><span></span><span></span><span></span></button>
       <nav class="nav-links" aria-label="primary">
         <a href="/en/">Home</a><a href="/en/about/">About</a>
-        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Routes</button>
+        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Routes<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/en/routes/" role="menuitem"><span>Overview</span><small>Routes</small></a>
             <a href="/en/routes/fuji/" role="menuitem"><span>Mt. Fuji</span><small>Signature</small></a>
@@ -40,16 +40,24 @@
             <a href="/en/routes/daikoku/" role="menuitem"><span>Daikoku PA</span><small>Custom</small></a>
           </div>
         </div>
-        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Portfolio</button>
+        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Portfolio<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/en/portfolio/" role="menuitem"><span>All</span><small>All</small></a>
-            <a href="/en/portfolio/landscape/" role="menuitem"><span>Landscape</span><small>Landscape</small></a>
-            <a href="/en/portfolio/aerial/" role="menuitem"><span>Aerial</span><small>Aerial</small></a>
-            <a href="/en/portfolio/people/" role="menuitem"><span>People</span><small>People</small></a>
-            <a href="/en/portfolio/other/" role="menuitem"><span>Other</span><small>Other</small></a>
+            <a href="/en/portfolio/" role="menuitem"><span>All</span></a>
+            <a href="/en/portfolio/landscape/" role="menuitem"><span>Landscape</span></a>
+            <a href="/en/portfolio/aerial/" role="menuitem"><span>Aerial</span></a>
+            <a href="/en/portfolio/people/" role="menuitem"><span>People</span></a>
+            <a href="/en/portfolio/other/" role="menuitem"><span>Other</span></a>
           </div>
         </div>
-        <a href="/en/services/">Shoot extras</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">Shoot extras<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="Shoot extras">
+            <a href="/en/services/" role="menuitem"><span>Overview</span></a>
+            <a href="/en/services/dress/" role="menuitem"><span>Wedding dress rental</span></a>
+            <a href="/en/services/flowers/" role="menuitem"><span>Flower orders</span></a>
+            <a href="/en/services/makeup/" role="menuitem"><span>Makeup &amp; styling</span></a>
+          </div>
+        </div>
         <a href="/en/contact/">Contact</a><a class="pill accent" href="/en/book/">Book now</a>
       </nav>
       <div class="lang" aria-label="language switch"><a href="/en/routes/hanabi/">EN</a><a href="/zh/routes/hanabi/">中文</a><a href="/ja/routes/hanabi/">日本語</a></div>
@@ -61,7 +69,13 @@
     <div class="mp-sub" data-mp-sub hidden>
       <a class="sub" href="/en/routes/">Overview</a><a class="sub" href="/en/routes/fuji/">Mt. Fuji</a><a class="sub" href="/en/routes/hanabi/">Fireworks</a><a class="sub" href="/en/routes/tokyo/">Tokyo</a><a class="sub" href="/en/routes/kamakura/">Kamakura</a><a class="sub" href="/en/routes/daikoku/">Daikoku PA</a>
     </div>
-    <a href="/en/portfolio/">Portfolio</a><a href="/en/services/">Shoot extras</a>
+    <a href="/en/portfolio/">Portfolio</a><button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">Shoot extras</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/en/services/">Overview</a>
+      <a class="sub" href="/en/services/dress/">Wedding dress rental</a>
+      <a class="sub" href="/en/services/flowers/">Flower orders</a>
+      <a class="sub" href="/en/services/makeup/">Makeup &amp; styling</a>
+    </div>
         <a href="/en/contact/">Contact</a><a href="/en/book/">Book now</a>
     <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><a class="pill" href="/en/routes/hanabi/">EN</a><a class="pill" href="/zh/routes/hanabi/">中文</a><a class="pill" href="/ja/routes/hanabi/">日本語</a></div>
   </div>
@@ -84,12 +98,12 @@
       <div class="container reveal hanabi-service-layout">
         <div class="hanabi-service-copy">
           <div class="hanabi-intro">
-            <div class="card copy-card"><h2>A full evening from kimono styling to hotel drop-off</h2><p>Fireworks days usually involve heavy crowds and temporary traffic restrictions, so the route is planned around a Tokyo pickup and drop-off flow. After kimono styling and makeup are completed, we depart from the kimono shop and arrange street portraits, blue-hour night scenes, and fireworks-background shots according to venue access, light, and crowd conditions before returning you to your hotel after the show.</p></div>
-            <div class="card route"><span class="badge">Service flow</span><ul><li>Pickup from your Tokyo hotel or kimono shop</li><li>Depart after kimono, hair, and makeup are ready</li><li>Street portraits, blue-hour night scenes, and fireworks mood</li><li>Hotel drop-off after the fireworks finish</li></ul></div>
+            <div class="card copy-card"><h2>Keep a summer night in a burst of light.</h2><p>Fireworks days usually involve heavy crowds and temporary traffic restrictions, so the route is planned around a Tokyo pickup and drop-off flow. After kimono styling and makeup are completed, we depart from the kimono shop and arrange street portraits, blue-hour night scenes, and fireworks-background shots according to venue access, light, and crowd conditions before returning you to your hotel after the show.</p></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>Service flow</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>Pickup from your Tokyo hotel or kimono shop</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>Depart after kimono, hair, and makeup are ready</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>Street portraits, blue-hour night scenes, and fireworks mood</span></li><li><span aria-hidden="true" class="route-practical-mark">04</span><span>Hotel drop-off after the fireworks finish</span></li></ul></div>
           </div>
           <div class="hanabi-info">
-            <div class="card route"><span class="badge">Transport options</span><ul><li>Private car shoot: best for couples, families, or small friend groups</li><li>Shared car shoot: up to 5 guests, a lighter option with pickup included</li><li>Tokyo, Yokohama, Kamakura, Atami, and nearby routes are planned around event traffic</li></ul></div>
-            <div class="card route"><span class="badge">Booking notes</span><ul><li>Ask 2-4 weeks ahead if possible; popular fireworks days get very crowded.</li><li>If rain, strong wind, or cancellation happens, we can discuss rescheduling or switching to a night portrait route.</li><li>Kimono shop location, hotel area, guest count, and private/shared car choice affect timing and pricing.</li></ul></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>Transport options</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>Private car shoot: best for couples, families, or small friend groups</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>Shared car shoot: up to 5 guests, a lighter option with pickup included</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>Tokyo, Yokohama, Kamakura, Atami, and nearby routes are planned around event traffic</span></li></ul></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>Booking notes</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>Ask 2-4 weeks ahead if possible; popular fireworks days get very crowded.</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>If rain, strong wind, or cancellation happens, we can discuss rescheduling or switching to a night portrait route.</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>Kimono shop location, hotel area, guest count, and private/shared car choice affect timing and pricing.</span></li></ul></div>
           </div>
         </div>
           <div class="hanabi-video-frame" data-hanabi-player>
@@ -129,46 +143,34 @@
 <a data-lightbox href="/assets/img/full/fireworks/_DSC5160.jpg"><img decoding="async" src="/assets/img/thumbs/fireworks/_DSC5160.jpg" alt="Fireworks" loading="lazy"></a></div></div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><div class="row"><div>© <span id="y"></span> shenlan photography · Tokyo</div><div><a href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp：+81 70 9082 0657</a></div></div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">Mt. Fuji Travel Photoshoot · Tokyo</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>Keep a little of the journey.</p><a class="site-footer-book" href="/en/book/">Plan your photoshoot <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/en/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>Natural photographs, from Tokyo streets to Mt. Fuji and the coast.</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="Language"><a href="/zh/routes/hanabi/" lang="zh">中文</a><a href="/en/routes/hanabi/" lang="en" aria-current="page">EN</a><a href="/ja/routes/hanabi/" lang="ja">日本語</a></nav></div><nav class="site-footer-links" aria-label="Footer navigation"><div class="site-footer-group footer-site">
           <h4>Site</h4>
           <a href="/en/">Home</a>
           <a href="/en/about/">About</a>
           <a href="/en/portfolio/">Portfolio</a>
           <a href="/en/contact/">Contact</a>
-          <a href="/en/book/">Book now</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>Routes</h4>
           <a href="/en/routes/">Overview</a>
           <a href="/en/routes/fuji/">Mt. Fuji</a>
           <a href="/en/routes/tokyo/">Tokyo</a>
           <a href="/en/routes/kamakura/">Kamakura</a>
           <a href="/en/routes/hanabi/">Fireworks</a>
-          <a href="/en/routes/daikoku/">Daikoku PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/en/autumn/">Autumn stories</a><a href="/en/routes/daikoku/">Daikoku PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>Shoot extras</h4>
           <a href="/en/services/">All extras</a>
           <a href="/en/services/dress/">Wedding dress rental</a>
           <a href="/en/services/flowers/">Flower orders</a>
           <a href="/en/services/makeup/">Hair &amp; makeup</a>
-        </div>
-      </nav></div>
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="Policies">
         <a href="/en/privacy-policy/">Privacy</a>
         <a href="/en/terms-and-conditions/">Booking terms</a>
         <a href="/en/legal-disclosure/">Legal disclosure</a>
       </nav>
-    </div>
-  </footer>
-  <script src="/assets/js/site.js?v=hanabi-video-2"></script><script>document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());</script>
+    </div></div></div></footer>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());</script>
 </body>
 </html>

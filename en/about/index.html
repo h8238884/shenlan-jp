@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | shenlan photography</title>
-  
-  
+
+
   <link rel="icon" href="https://shenlan.jp/assets/logo/logo.png"/>
 <link rel="canonical" href="https://shenlan.jp/en/about/"/>
 <meta name="description" content="Tokyo-based photographer & professional driver. Mt. Fuji / Tokyo / Kamakura travel photoshoots." />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/about/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/about/"/>
@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/about-stories.css?v=1"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -55,7 +55,7 @@
         <a href="/en/about/">About</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Routes</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Routes<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/en/routes/" role="menuitem"><span>Overview</span><small>Routes</small></a>
             <a href="/en/routes/fuji/" role="menuitem"><span>Mt. Fuji</span><small>Signature</small></a>
@@ -65,17 +65,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Portfolio</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Portfolio<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/en/portfolio/" role="menuitem"><span>All</span><small>All</small></a>
-            <a href="/en/portfolio/landscape/" role="menuitem"><span>Landscape</span><small>Landscape</small></a>
-            <a href="/en/portfolio/aerial/" role="menuitem"><span>Aerial</span><small>Aerial</small></a>
-            <a href="/en/portfolio/people/" role="menuitem"><span>People</span><small>People</small></a>
-            <a href="/en/portfolio/other/" role="menuitem"><span>Other</span><small>Other</small></a>
+            <a href="/en/portfolio/" role="menuitem"><span>All</span></a>
+            <a href="/en/portfolio/landscape/" role="menuitem"><span>Landscape</span></a>
+            <a href="/en/portfolio/aerial/" role="menuitem"><span>Aerial</span></a>
+            <a href="/en/portfolio/people/" role="menuitem"><span>People</span></a>
+            <a href="/en/portfolio/other/" role="menuitem"><span>Other</span></a>
           </div>
         </div>
 
-        <a href="/en/services/">Shoot extras</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">Shoot extras<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="Shoot extras">
+            <a href="/en/services/" role="menuitem"><span>Overview</span></a>
+            <a href="/en/services/dress/" role="menuitem"><span>Wedding dress rental</span></a>
+            <a href="/en/services/flowers/" role="menuitem"><span>Flower orders</span></a>
+            <a href="/en/services/makeup/" role="menuitem"><span>Makeup &amp; styling</span></a>
+          </div>
+        </div>
         <a href="/en/contact/">Contact</a>
         <a class="pill accent" href="/en/book/">Book now</a>
       </nav>
@@ -109,7 +117,13 @@
       <a class="sub" href="/en/portfolio/other/">Other</a>
     </div>
 
-    <a href="/en/services/">Shoot extras</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">Shoot extras</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/en/services/">Overview</a>
+      <a class="sub" href="/en/services/dress/">Wedding dress rental</a>
+      <a class="sub" href="/en/services/flowers/">Flower orders</a>
+      <a class="sub" href="/en/services/makeup/">Makeup &amp; styling</a>
+    </div>
         <a href="/en/contact/">Contact</a>
     <a href="/en/book/">Book now</a>
 
@@ -120,7 +134,6 @@
     </div>
   </div>
 
-  
 
 
 
@@ -134,91 +147,44 @@
 
 
 
-<main>
-    <section class="page-head">
-      <div class="container">
-        <h1>About</h1>
-        <p>I’m a Tokyo-based photographer and a licensed professional driver. Combining transport + photography makes your day easier, smoother, and better looking.</p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container reveal">
-        <div class="card route">
-          <span class="badge">What I can offer</span>
-          <ul>
-            <li><b>Mt. Fuji (Signature)</b>: 10-hour private hire car + photoshoot + route planning</li>
-            <li><b>Tokyo / Kamakura</b>: seasonal & style-based custom routes</li>
-            <li><b>Languages</b>: English / 中文 / 日本語</li>
-          </ul>
-        </div>
+<main class="about-page"><section class="section"><div class="container about-intro"><div class="about-intro-copy"><p class="about-kicker">About the photographer</p><h1>Remember the place.<br>And who you were in it.</h1><p class="about-lead">I’m a Tokyo-based photographer and licensed professional driver. Bringing transport and photography together means you can enjoy your day in Japan without constantly switching between getting somewhere and taking photographs.</p><p>My approach is clean, natural and a little cinematic. I’m drawn to the look towards a distant mountain, the smile when someone steps closer, and the small moments that were never planned for the camera.</p><div class="about-signature"><span>SHENLAN PHOTOGRAPHY</span><small>TOKYO / English · 中文 · 日本語</small></div></div><figure class="about-portrait"><img src="/assets/img/thumbs/people/photographer-960.jpg" width="960" height="1280" alt="Photographer holding a camera in a snowy landscape" decoding="async" fetchpriority="high"><figcaption>Natural · Clean · Cinematic</figcaption></figure></div></section>
+<section class="section about-philosophy"><div class="container"><div class="about-section-head"><p class="about-kicker">01 / THE WAY I SEE</p><h2>The landscape is the setting. You are the story.</h2><p>A photograph can hold a beautiful view—and the feeling of being there.</p></div><div class="about-three"><article><span class="about-number">01</span><h3>Room to be yourself</h3><p>Walk, talk, or pause to take in the view. Photography can be part of the journey, with space for expressions that come naturally.</p></article><article><span class="about-number">02</span><h3>A conversation with light</h3><p>Morning by the lake, shade on a side street, neon after dark. We choose settings around the season and the mood you want to remember.</p></article><article><span class="about-number">03</span><h3>A little room in the day</h3><p>A meaningful day is not a checklist of locations. Distance, weather and crowds help shape a pace that leaves time to stop.</p></article></div></div></section>
+<section class="section"><div class="container"><div class="about-section-head"><p class="about-kicker">02 / YOUR DAY, TOGETHER</p><h2>It begins with a conversation.</h2></div><ol class="about-process"><li><span class="about-step" aria-hidden="true">01</span><div><h3>Tell me what you have in mind</h3><p>Share your date, group size, places and preferred style. Couples, proposals, light wedding shoots, honeymoons and family trips can all begin with your own story.</p></div></li><li><span class="about-step" aria-hidden="true">02</span><div><h3>Shape the journey together</h3><p>We discuss the route, transport and any extras around the season, starting point and shoot. Scope, pricing and availability are confirmed before booking.</p></div></li><li><span class="about-step" aria-hidden="true">03</span><div><h3>Step into the scenery</h3><p>The order of the day adapts to light, weather, visibility and crowds. Transport and photography are coordinated together, with fewer arrangements for you to juggle.</p></div></li></ol></div></section>
+<section class="section"><div class="container"><div class="about-section-head"><p class="about-kicker">03 / PLACES TO REMEMBER</p><h2>Different places. The same unhurried approach.</h2></div><div class="about-routes"><a href="/en/routes/fuji/"><img src="/assets/img/autumn/fuji-route-north.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><div><h3>Mt. Fuji</h3><p>A 10-hour private car itinerary with photography and route planning, from town streets to quiet lakesides.</p><span>Explore route ↗</span></div></a><a href="/en/routes/tokyo/"><img src="/assets/img/hero/tokyo-2.jpg" alt="" width="900" height="600" loading="lazy" decoding="async"><div><h3>Tokyo</h3><p>Shrines, street scenes and city nights. A custom route shaped around the season and your preferred atmosphere.</p><span>Explore route ↗</span></div></a><a href="/en/routes/kamakura/"><img src="/assets/img/hero/kamakura-2.jpg" alt="" width="900" height="600" loading="lazy" decoding="async"><div><h3>Kamakura</h3><p>Temples, the Enoden train and the sea breeze. Take a slower walk between the old town and the coast.</p><span>Explore route ↗</span></div></a></div></div></section>
+<section class="section"><div class="container about-journey"><img src="/assets/img/car/gallery/_DSC8995.jpg?v=20260526" alt="Toyota Vellfire" width="2200" height="1467" loading="lazy" decoding="async"><div><p class="about-kicker">04 / BETWEEN THE FRAMES</p><h2>The journey between photographs matters, too.</h2><p>Travel in a Toyota Vellfire and take a breath between locations. Pickup, luggage and the itinerary are discussed ahead; traffic, weather and shooting conditions inform the plan.</p><div class="about-extras"><h3>Make the day feel like you.</h3><p>A dress, a bouquet or hair and makeup can help bring your idea into focus. Explore our partners and their work on this site, then discuss what you need. Details, prices and availability are confirmed separately.</p><a href="/en/services/">Explore shoot extras ↗</a></div></div></div></section>
+<section class="section"><div class="container"><div class="about-closing"><p class="about-kicker">LET’S MAKE A MEMORY</p><h2>What would you like to remember?</h2><p>You don’t need every detail worked out. Bring a date, an idea or a photograph you love, and we can start there.</p><div><a class="about-cta" href="/en/book/">Plan your photoshoot ↗</a><a href="/en/portfolio/">Explore the portfolio →</a></div></div></div></section></main>
 
-        <div class="card route" style="margin-top:14px">
-          <span class="badge">Style</span>
-          <ul>
-            <li>Clean, natural, cinematic</li>
-            <li>Great for couples, proposals, light wedding / pre-wedding, honeymoon, and small families</li>
-          </ul>
-        </div>
-
-        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="pill" href="/en/routes/">See routes</a>
-          <a class="pill accent" href="/en/book/">Book now</a>
-          <a class="pill" href="/en/contact/">Contact</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">Mt. Fuji Travel Photoshoot · Tokyo</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>Keep a little of the journey.</p><a class="site-footer-book" href="/en/book/">Plan your photoshoot <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/en/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>Natural photographs, from Tokyo streets to Mt. Fuji and the coast.</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="Language"><a href="/zh/about/" lang="zh">中文</a><a href="/en/about/" lang="en" aria-current="page">EN</a><a href="/ja/about/" lang="ja">日本語</a></nav></div><nav class="site-footer-links" aria-label="Footer navigation"><div class="site-footer-group footer-site">
           <h4>Site</h4>
           <a href="/en/">Home</a>
           <a href="/en/about/">About</a>
           <a href="/en/portfolio/">Portfolio</a>
           <a href="/en/contact/">Contact</a>
-          <a href="/en/book/">Book now</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>Routes</h4>
           <a href="/en/routes/">Overview</a>
           <a href="/en/routes/fuji/">Mt. Fuji</a>
           <a href="/en/routes/tokyo/">Tokyo</a>
           <a href="/en/routes/kamakura/">Kamakura</a>
           <a href="/en/routes/hanabi/">Fireworks</a>
-          <a href="/en/routes/daikoku/">Daikoku PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/en/autumn/">Autumn stories</a><a href="/en/routes/daikoku/">Daikoku PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>Shoot extras</h4>
           <a href="/en/services/">All extras</a>
           <a href="/en/services/dress/">Wedding dress rental</a>
           <a href="/en/services/flowers/">Flower orders</a>
           <a href="/en/services/makeup/">Hair &amp; makeup</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="Policies">
         <a href="/en/privacy-policy/">Privacy</a>
         <a href="/en/terms-and-conditions/">Booking terms</a>
         <a href="/en/legal-disclosure/">Legal disclosure</a>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
-  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

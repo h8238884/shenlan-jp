@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>关于｜shenlan photography</title>
-  
-  
+
+
   <link rel="icon" href="https://shenlan.jp/assets/logo/logo.png"/>
 <link rel="canonical" href="https://shenlan.jp/zh/about/"/>
 <meta name="description" content="东京摄影师 & 合法营运司机。富士山旅拍、东京、镰仓等定制线路。" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/about/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/about/"/>
@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/about-stories.css?v=1"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -55,7 +55,7 @@
         <a href="/zh/about/">关于</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">行程</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">行程<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/zh/routes/" role="menuitem"><span>路线介绍</span><small>总览</small></a>
             <a href="/zh/routes/fuji/" role="menuitem"><span>富士山</span><small>主推</small></a>
@@ -65,17 +65,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">作品集</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">作品集<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/zh/portfolio/" role="menuitem"><span>全部</span><small>全部</small></a>
-            <a href="/zh/portfolio/landscape/" role="menuitem"><span>风景</span><small>风景</small></a>
-            <a href="/zh/portfolio/aerial/" role="menuitem"><span>航拍</span><small>航拍</small></a>
-            <a href="/zh/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/zh/portfolio/other/" role="menuitem"><span>其他</span><small>其他</small></a>
+            <a href="/zh/portfolio/" role="menuitem"><span>全部</span></a>
+            <a href="/zh/portfolio/landscape/" role="menuitem"><span>风景</span></a>
+            <a href="/zh/portfolio/aerial/" role="menuitem"><span>航拍</span></a>
+            <a href="/zh/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/zh/portfolio/other/" role="menuitem"><span>其他</span></a>
           </div>
         </div>
 
-        <a href="/zh/services/">拍摄配套</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">拍摄配套<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="拍摄配套">
+            <a href="/zh/services/" role="menuitem"><span>配套总览</span></a>
+            <a href="/zh/services/dress/" role="menuitem"><span>婚纱租赁</span></a>
+            <a href="/zh/services/flowers/" role="menuitem"><span>鲜花预订</span></a>
+            <a href="/zh/services/makeup/" role="menuitem"><span>化妆造型</span></a>
+          </div>
+        </div>
         <a href="/zh/contact/">联系</a>
         <a class="pill accent" href="/zh/book/">现在预约</a>
       </nav>
@@ -109,7 +117,13 @@
       <a class="sub" href="/zh/portfolio/other/">其他</a>
     </div>
 
-    <a href="/zh/services/">拍摄配套</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">拍摄配套</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/zh/services/">配套总览</a>
+      <a class="sub" href="/zh/services/dress/">婚纱租赁</a>
+      <a class="sub" href="/zh/services/flowers/">鲜花预订</a>
+      <a class="sub" href="/zh/services/makeup/">化妆造型</a>
+    </div>
         <a href="/zh/contact/">联系</a>
     <a href="/zh/book/">现在预约</a>
 
@@ -120,7 +134,6 @@
     </div>
   </div>
 
-  
 
 
 
@@ -134,86 +147,45 @@
 
 
 
-<main>
-    <section class="page-head">
-      <div class="container">
-        <h1>关于</h1>
-        <p>我是东京摄影师，同时也是持证运营的司机。把“交通”和“拍摄”合在一起，就是为了让你在日本的这一天更轻松、更好看。</p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container reveal">
-        <div class="card route">
-          <span class="badge">我能提供什么</span>
-          <ul>
-            <li>富士山旅拍（主推）：10小时包车 + 拍摄 + 线路建议</li>
-            <li>东京/镰仓等：按季节与风格定制路线</li>
-            <li>语言：中文 / 日本語 / English</li>
-          </ul>
-        </div>
-        <div class="card route" style="margin-top:14px">
-          <span class="badge">拍摄风格</span>
-          <ul>
-            <li>日系清爽、自然、电影感</li>
-            <li>适合情侣、求婚、轻婚纱、蜜月、小型家庭照</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
+<main class="about-page"><section class="section"><div class="container about-intro"><div class="about-intro-copy"><p class="about-kicker">关于摄影师</p><h1>让照片记住风景，<br>也记住当时的你。</h1><p class="about-lead">我是常驻东京的摄影师，也是持证运营的司机。把交通与拍摄放在同一段旅程里，是希望你不用在赶路和拍照之间切换，而是自在地度过在日本的这一天。</p><p>我喜欢清爽、自然，带一点电影感的画面。比起每一刻都面对镜头，我更在意你看向远山时的表情、相伴的人靠近时的笑意，以及旅途中那些没有刻意安排的小瞬间。</p><div class="about-signature"><span>SHENLAN PHOTOGRAPHY</span><small>TOKYO / 中文 · 日本語 · English</small></div></div><figure class="about-portrait"><img src="/assets/img/thumbs/people/photographer-960.jpg" width="960" height="1280" alt="摄影师在雪地中手持相机" decoding="async" fetchpriority="high"><figcaption>自然 · 清爽 · 电影感</figcaption></figure></div></section>
+<section class="section about-philosophy"><div class="container"><div class="about-section-head"><p class="about-kicker">01 / THE WAY I SEE</p><h2>照片里的主角，是你。</h2><p>风景是相遇的地方，情绪才是值得带走的记忆。</p></div><div class="about-three"><article><span class="about-number">01</span><h3>不必一直看镜头</h3><p>可以慢慢走、聊聊天，也可以安静地看一会儿风景。让拍摄融入旅程，让表情回到自然。</p></article><article><span class="about-number">02</span><h3>让光线参与叙事</h3><p>湖畔的晨光、街角的树影、入夜的霓虹，各有不同的气息。我们结合季节与想要的风格，寻找适合的场景。</p></article><article><span class="about-number">03</span><h3>为旅途留一点余地</h3><p>不把每个地点都塞进一天。结合距离、天气与人流安排节奏，把时间留给值得停下来的瞬间。</p></article></div></div></section>
+<section class="section"><div class="container"><div class="about-section-head"><p class="about-kicker">02 / YOUR DAY, TOGETHER</p><h2>一场拍摄，从一次交谈开始。</h2></div><ol class="about-process"><li><span class="about-step" aria-hidden="true">01</span><div><h3>聊聊你的想法</h3><p>告诉我日期、人数、想去的地方，以及你喜欢的照片风格。情侣、求婚、轻婚纱、蜜月或家庭旅行，都可以从你的故事出发。</p></div></li><li><span class="about-step" aria-hidden="true">02</span><div><h3>一起梳理行程</h3><p>根据季节、出发位置和拍摄需求，沟通路线、交通与配套。服务内容、费用和档期会在预约前确认。</p></div></li><li><span class="about-step" aria-hidden="true">03</span><div><h3>出发，进入风景</h3><p>当天结合光线、天气、能见度与人流调整拍摄顺序。交通与摄影由同一套安排衔接，减少来回协调的负担。</p></div></li></ol></div></section>
+<section class="section"><div class="container"><div class="about-section-head"><p class="about-kicker">03 / PLACES TO REMEMBER</p><h2>不同的地方，同样从容的节奏。</h2></div><div class="about-routes"><a href="/zh/routes/fuji/"><img src="/assets/img/autumn/fuji-route-north.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><div><h3>富士山</h3><p>10 小时包车、摄影与路线建议。从街巷到湖畔，在山景之间寻找适合你的画面。</p><span>查看路线 ↗</span></div></a><a href="/zh/routes/tokyo/"><img src="/assets/img/hero/tokyo-2.jpg" alt="" width="900" height="600" loading="lazy" decoding="async"><div><h3>东京</h3><p>神社、街头与夜色。按季节和偏好的氛围定制路线，记录城市里的你。</p><span>查看路线 ↗</span></div></a><a href="/zh/routes/kamakura/"><img src="/assets/img/hero/kamakura-2.jpg" alt="" width="900" height="600" loading="lazy" decoding="async"><div><h3>镰仓</h3><p>寺院、江之电与海风。慢一点走，让古都与海岸成为旅途的一部分。</p><span>查看路线 ↗</span></div></a></div></div></section>
+<section class="section"><div class="container about-journey"><img src="/assets/img/car/gallery/_DSC8995.jpg?v=20260526" alt="Toyota Vellfire" width="2200" height="1467" loading="lazy" decoding="async"><div><p class="about-kicker">04 / BETWEEN THE FRAMES</p><h2>把路上的事，也一起安排好。</h2><p>乘坐 Toyota Vellfire，让拍摄点之间的移动成为休息的片刻。接送范围、行李和具体行程提前沟通；路线会结合交通、天气和拍摄条件安排。</p><div class="about-extras"><h3>为这一天，搭配你的造型。</h3><p>轻婚纱、手捧花或妆发，可以让照片更贴近你心中的样子。站内可查看合作商介绍与作品，再沟通需要的配套；内容、费用和档期需单独确认。</p><a href="/zh/services/">浏览拍摄配套 ↗</a></div></div></div></section>
+<section class="section"><div class="container"><div class="about-closing"><p class="about-kicker">LET’S MAKE A MEMORY</p><h2>你想留下怎样的一天？</h2><p>不需要先想好每一个细节。带着一个日期、一段期待，或一张喜欢的照片，我们从这里开始。</p><div><a class="about-cta" href="/zh/book/">聊聊拍摄计划 ↗</a><a href="/zh/portfolio/">看看我的作品 →</a></div></div></div></section></main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div><a href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp：+81 70 9082 0657</a></div>
-      </div>
-
-      <nav class="footer-nav" aria-label="页脚导航">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山旅拍 · 东京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>把旅途，留在光里。</p><a class="site-footer-book" href="/zh/book/">聊聊拍摄计划 <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/zh/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>在东京、富士山与海岸之间，记录自然发生的你。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="语言"><a href="/zh/about/" lang="zh" aria-current="page">中文</a><a href="/en/about/" lang="en">EN</a><a href="/ja/about/" lang="ja">日本語</a></nav></div><nav class="site-footer-links" aria-label="页脚导航"><div class="site-footer-group footer-site">
           <h4>网站</h4>
           <a href="/zh/">首页</a>
           <a href="/zh/about/">关于</a>
           <a href="/zh/portfolio/">作品集</a>
           <a href="/zh/contact/">联系</a>
-          <a href="/zh/book/">现在预约</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>行程</h4>
           <a href="/zh/routes/">路线总览</a>
           <a href="/zh/routes/fuji/">富士山</a>
           <a href="/zh/routes/tokyo/">东京</a>
           <a href="/zh/routes/kamakura/">镰仓</a>
           <a href="/zh/routes/hanabi/">花火大会</a>
-          <a href="/zh/routes/daikoku/">大黑 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/zh/autumn/">红叶季专题</a><a href="/zh/routes/daikoku/">大黑 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>摄影配套</h4>
           <a href="/zh/services/">配套总览</a>
           <a href="/zh/services/dress/">婚纱租赁</a>
           <a href="/zh/services/flowers/">鲜花预订</a>
           <a href="/zh/services/makeup/">化妆造型</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="条款与政策（英文）">
         <a href="/en/privacy-policy/">隐私政策</a>
         <a href="/en/terms-and-conditions/">预约条款</a>
         <a href="/en/legal-disclosure/">经营者信息</a>
-        <span class="footer-policy-language">英文</span>
+        <span class="site-footer-policy-language">英文</span>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
-  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

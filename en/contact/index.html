@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | shenlan photography</title>
-  
-  
+
+
   <link rel="icon" href="https://shenlan.jp/assets/logo/logo.png"/>
 <link rel="canonical" href="https://shenlan.jp/en/contact/"/>
 <meta name="description" content="Contact shenlan photography via WhatsApp. Tell me your date, group size, language, and style." />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/contact/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/contact/"/>
@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -55,7 +55,7 @@
         <a href="/en/about/">About</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Routes</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Routes<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/en/routes/" role="menuitem"><span>Overview</span><small>Routes</small></a>
             <a href="/en/routes/fuji/" role="menuitem"><span>Mt. Fuji</span><small>Signature</small></a>
@@ -65,17 +65,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Portfolio</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">Portfolio<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/en/portfolio/" role="menuitem"><span>All</span><small>All</small></a>
-            <a href="/en/portfolio/landscape/" role="menuitem"><span>Landscape</span><small>Landscape</small></a>
-            <a href="/en/portfolio/aerial/" role="menuitem"><span>Aerial</span><small>Aerial</small></a>
-            <a href="/en/portfolio/people/" role="menuitem"><span>People</span><small>People</small></a>
-            <a href="/en/portfolio/other/" role="menuitem"><span>Other</span><small>Other</small></a>
+            <a href="/en/portfolio/" role="menuitem"><span>All</span></a>
+            <a href="/en/portfolio/landscape/" role="menuitem"><span>Landscape</span></a>
+            <a href="/en/portfolio/aerial/" role="menuitem"><span>Aerial</span></a>
+            <a href="/en/portfolio/people/" role="menuitem"><span>People</span></a>
+            <a href="/en/portfolio/other/" role="menuitem"><span>Other</span></a>
           </div>
         </div>
 
-        <a href="/en/services/">Shoot extras</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">Shoot extras<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="Shoot extras">
+            <a href="/en/services/" role="menuitem"><span>Overview</span></a>
+            <a href="/en/services/dress/" role="menuitem"><span>Wedding dress rental</span></a>
+            <a href="/en/services/flowers/" role="menuitem"><span>Flower orders</span></a>
+            <a href="/en/services/makeup/" role="menuitem"><span>Makeup &amp; styling</span></a>
+          </div>
+        </div>
         <a href="/en/contact/">Contact</a>
         <a class="pill accent" href="/en/book/">Book now</a>
       </nav>
@@ -109,7 +117,13 @@
       <a class="sub" href="/en/portfolio/other/">Other</a>
     </div>
 
-    <a href="/en/services/">Shoot extras</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">Shoot extras</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/en/services/">Overview</a>
+      <a class="sub" href="/en/services/dress/">Wedding dress rental</a>
+      <a class="sub" href="/en/services/flowers/">Flower orders</a>
+      <a class="sub" href="/en/services/makeup/">Makeup &amp; styling</a>
+    </div>
         <a href="/en/contact/">Contact</a>
     <a href="/en/book/">Book now</a>
 
@@ -120,7 +134,7 @@
     </div>
   </div>
 
-  
+
 
 
 
@@ -172,55 +186,36 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">Mt. Fuji Travel Photoshoot · Tokyo</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>Keep a little of the journey.</p><a class="site-footer-book" href="/en/book/">Plan your photoshoot <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/en/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>Natural photographs, from Tokyo streets to Mt. Fuji and the coast.</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="Language"><a href="/zh/contact/" lang="zh">中文</a><a href="/en/contact/" lang="en" aria-current="page">EN</a><a href="/ja/contact/" lang="ja">日本語</a></nav></div><nav class="site-footer-links" aria-label="Footer navigation"><div class="site-footer-group footer-site">
           <h4>Site</h4>
           <a href="/en/">Home</a>
           <a href="/en/about/">About</a>
           <a href="/en/portfolio/">Portfolio</a>
           <a href="/en/contact/">Contact</a>
-          <a href="/en/book/">Book now</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>Routes</h4>
           <a href="/en/routes/">Overview</a>
           <a href="/en/routes/fuji/">Mt. Fuji</a>
           <a href="/en/routes/tokyo/">Tokyo</a>
           <a href="/en/routes/kamakura/">Kamakura</a>
           <a href="/en/routes/hanabi/">Fireworks</a>
-          <a href="/en/routes/daikoku/">Daikoku PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/en/autumn/">Autumn stories</a><a href="/en/routes/daikoku/">Daikoku PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>Shoot extras</h4>
           <a href="/en/services/">All extras</a>
           <a href="/en/services/dress/">Wedding dress rental</a>
           <a href="/en/services/flowers/">Flower orders</a>
           <a href="/en/services/makeup/">Hair &amp; makeup</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="Policies">
         <a href="/en/privacy-policy/">Privacy</a>
         <a href="/en/terms-and-conditions/">Booking terms</a>
         <a href="/en/legal-disclosure/">Legal disclosure</a>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
-  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

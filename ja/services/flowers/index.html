@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/services/flowers/"><link rel="alternate" hreflang="x-default" href="https://shenlan.jp/en/services/flowers/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="shenlan photography"><meta property="og:title" content="お花の予約"><meta property="og:description" content="M-20 FLOWER の花束作品とお花の予約。¥8,000〜のおまかせミックス、色・サイズ・ご予約の流れをご紹介します。"><meta property="og:url" content="https://shenlan.jp/ja/services/flowers/"><meta property="og:image" content="https://shenlan.jp/assets/img/services/flowers/m20-01.webp"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon.png?v=3"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
-<link rel="stylesheet" href="/assets/css/style.css?v=services-20261104"><link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
+<link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104"><link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "お花の予約 · M-20 FLOWER", "description": "M-20 FLOWER の花束作品とお花の予約。¥8,000〜のおまかせミックス、色・サイズ・ご予約の流れをご紹介します。", "url": "https://shenlan.jp/ja/services/flowers/", "inLanguage": "ja"}</script>
 <link rel="stylesheet" href="/assets/css/flowers.css?v=20261104-1">
-</head><body><header class="nav">
+<link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head><body><header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
         <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
@@ -28,7 +28,7 @@
         <a href="/ja/about/">概要</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -38,17 +38,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span></a>
           </div>
         </div>
 
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a>
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
@@ -82,7 +90,13 @@
       <a class="sub" href="/ja/portfolio/other/">その他</a>
     </div>
 
-    <a href="/ja/services/">撮影オプション</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a>
     <a href="/ja/book/">予約</a>
 
@@ -105,55 +119,35 @@
 <div class="flower-closing"><div><h2>大切な一日に、花の想いを。</h2><p>日程、ご予算、お好きな作品番号を添えて、花束のご相談を。</p></div><a class="flower-primary" href="/ja/book/?service=flowers">お花の予約を相談<span aria-hidden="true">↗</span></a></div>
 <div class="services-related"><span>あわせてご覧ください</span><a class="services-button" href="/ja/services/dress/">ドレスレンタル</a><a class="services-button" href="/ja/services/makeup/">ヘアメイク</a></div></div></section>
 <dialog class="flower-dialog" data-flower-dialog aria-labelledby="flower-dialog-title"><button type="button" class="flower-dialog-close" data-flower-close aria-label="作品プレビューを閉じる">×</button><div class="flower-dialog-inner"><img class="flower-dialog-image" data-flower-picture src="/assets/img/services/flowers/m20-01.webp" alt="" width="422" height="563"><div class="flower-dialog-copy"><p class="flower-kicker" data-flower-code>M-20 FLOWER</p><h2 id="flower-dialog-title" data-flower-title></h2><p>色や雰囲気の参考作品です。花材・料金は別途確認します。お問い合わせにはこの作品番号が自動で添えられます。</p><a class="flower-primary" data-flower-inquiry data-booking="/ja/book/" href="/ja/book/?service=flowers">この雰囲気で相談する<span aria-hidden="true">↗</span></a><div class="flower-dialog-nav"><button type="button" data-flower-prev aria-label="前の作品">←</button><span data-flower-position aria-live="polite"></span><button type="button" data-flower-next aria-label="次の作品">→</button></div></div></div></dialog>
-</main><footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div>対応言語：日本語 / 英語 / 中文</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+</main><footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/services/flowers/" lang="zh">中文</a><a href="/en/services/flowers/" lang="en">EN</a><a href="/ja/services/flowers/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav>
-    </div>
-
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
-<script src="/assets/js/site.js"></script><script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+    </div></div></div></footer>
+<script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 <script src="/assets/js/flowers.js?v=20261104-1"></script>
 </body></html>

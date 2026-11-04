@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/services/makeup/"><link rel="alternate" hreflang="x-default" href="https://shenlan.jp/en/services/makeup/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="shenlan photography"><meta property="og:title" content="大米粥 · ヘアメイク"><meta property="og:description" content="大米粥のヘアメイク作品。ブライダル、東京での撮影、ナチュラル、和装、クリエイティブなメイクをご紹介。サイト内で撮影に合わせたヘアメイクをご相談いただけます。"><meta property="og:url" content="https://shenlan.jp/ja/services/makeup/"><meta property="og:image" content="https://shenlan.jp/assets/img/services/makeup/dmz-01.webp"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon.png?v=3"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
-<link rel="stylesheet" href="/assets/css/style.css?v=services-20261104"><link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
+<link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104"><link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "大米粥 · ヘアメイク", "description": "大米粥のヘアメイク作品。ブライダル、東京での撮影、ナチュラル、和装、クリエイティブなメイクをご紹介。サイト内で撮影に合わせたヘアメイクをご相談いただけます。", "url": "https://shenlan.jp/ja/services/makeup/", "inLanguage": "ja"}</script>
 <link rel="stylesheet" href="/assets/css/makeup.css?v=20261104-1">
-</head><body><header class="nav">
+<link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head><body><header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
         <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
@@ -28,7 +28,7 @@
         <a href="/ja/about/">概要</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -38,17 +38,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span></a>
           </div>
         </div>
 
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a>
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
@@ -82,7 +90,13 @@
       <a class="sub" href="/ja/portfolio/other/">その他</a>
     </div>
 
-    <a href="/ja/services/">撮影オプション</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a>
     <a href="/ja/book/">予約</a>
 
@@ -101,55 +115,35 @@
 <div class="makeup-process"><div class="makeup-process-intro"><p class="makeup-eyebrow">BEFORE YOUR SHOOT</p><h2>好きなイメージから、<br>ご相談ください。</h2><p>参考写真やご希望を共有し、撮影に合わせたヘアメイクの内容を確認します。</p></div><ol class="makeup-steps"><li><span class="makeup-note-number" aria-hidden="true">01</span><div><h3>イメージを共有する</h3><p>このページの作品番号や、お好きなメイク・髪型・衣装・撮影の雰囲気をお知らせください。</p></div></li><li><span class="makeup-note-number" aria-hidden="true">02</span><div><h3>日程とスケジュールを伝える</h3><p>撮影日、場所、仕上がり希望時刻、衣装やスタイルを変える予定があるかをお知らせください。</p></div></li><li><span class="makeup-note-number" aria-hidden="true">03</span><div><h3>サービス内容を確認する</h3><p>出張対応、撮影中のお直し、所要時間、料金、空き状況は、ご予約前に個別に確認します。</p></div></li></ol></div><div class="makeup-availability"><div><h2>内容と空き状況は、個別にご確認を。</h2><p>撮影予定とヘアメイクのご希望をもとに、具体的な手配を相談します。和装作品の掲載は、着物レンタルや着付けが含まれることを意味しません。実際の内容は最終確認したプランに準じます。</p></div><a class="makeup-primary" href="/ja/book/?service=makeup&amp;artist=damizhou">ヘアメイクを相談<span aria-hidden="true">↗</span></a></div>
 <div class="services-related"><span>あわせてご覧ください</span><a class="services-button" href="/ja/services/dress/">ドレスレンタル</a><a class="services-button" href="/ja/services/flowers/">お花の予約</a></div></div></section>
 <dialog class="makeup-dialog" data-makeup-dialog aria-labelledby="makeup-dialog-title"><button type="button" class="makeup-dialog-close" data-makeup-close aria-label="作品プレビューを閉じる">×</button><div class="makeup-dialog-inner"><div class="makeup-dialog-image-wrap"><img class="makeup-dialog-image" data-makeup-picture src="/assets/img/services/makeup/dmz-01.webp" alt="" width="963" height="2000"></div><div class="makeup-dialog-copy"><p class="makeup-eyebrow" data-makeup-code>大米粥 / DAMIZHOU</p><h2 id="makeup-dialog-title" data-makeup-title></h2><p>この作品を参考に、メイクや髪型のご希望をお伝えください。お問い合わせにはアーティスト名と作品番号が添えられます。実際の内容は別途確認します。</p><a class="makeup-primary" data-makeup-inquiry data-booking="/ja/book/" href="/ja/book/?service=makeup&amp;artist=damizhou">このスタイルで相談<span aria-hidden="true">↗</span></a><div class="makeup-dialog-nav"><button type="button" data-makeup-prev aria-label="前の作品">←</button><span data-makeup-position aria-live="polite"></span><button type="button" data-makeup-next aria-label="次の作品">→</button></div></div></div></dialog>
-</main><footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div>対応言語：日本語 / 英語 / 中文</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+</main><footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/services/makeup/" lang="zh">中文</a><a href="/en/services/makeup/" lang="en">EN</a><a href="/ja/services/makeup/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav>
-    </div>
-
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
-<script src="/assets/js/site.js"></script><script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+    </div></div></div></footer>
+<script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 <script src="/assets/js/makeup.js?v=20261104-1"></script>
 </body></html>

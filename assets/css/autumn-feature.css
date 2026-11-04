@@ -1,0 +1,13 @@
+.autumn-feature-section{padding-top:38px}
+.autumn-feature{position:relative;display:block;min-height:360px;overflow:hidden;border-radius:22px;border:0;box-shadow:var(--shadow);background:#08080a;color:#fff}
+.autumn-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transition:transform 900ms cubic-bezier(.22,.61,.36,1)}
+.autumn-feature::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(0,0,0,.48), rgba(0,0,0,.12) 45%, transparent 70%);pointer-events:none}
+.autumn-feature-copy{position:relative;z-index:1;max-width:520px;padding:34px;display:flex;min-height:360px;flex-direction:column;justify-content:flex-end;align-items:flex-start}
+.autumn-feature-copy h2{margin:14px 0 10px;font-size:30px;letter-spacing:0;color:#fff}
+.autumn-feature-copy p{margin:0 0 16px;color:rgba(255,255,255,.84);line-height:1.8;font-size:14px}
+.autumn-feature-copy .badge{border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.12);color:rgba(255,255,255,.88)}
+.autumn-feature-copy .pill{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.10);color:#fff}
+@media (hover:hover){.autumn-feature:hover img{transform:scale(1.04)}}
+@media (max-width: 620px){.autumn-feature{min-height:440px;border-radius:18px}.autumn-feature::after{background:linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.50))}.autumn-feature-copy{min-height:440px;padding:22px}.autumn-feature-copy h2{font-size:26px}}
+
+.autumn-feature-copy{text-shadow:0 1px 8px rgba(0,0,0,.45)}

@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>shenlan photography｜富士山・東京・鎌倉 フォトツアー</title>
-  
-  
+
+
   <!-- icon handled by seo:icons block -->
 <link rel="canonical" href="https://shenlan.jp/ja/"/>
 <meta name="description" content="東京拠点のフォトグラファー＆有資格ドライバー。富士山（主力）＋東京・鎌倉のカスタム撮影。" />
   <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/"/>
@@ -39,7 +39,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/autumn-feature.css?v=3"><link rel="stylesheet" href="/assets/css/home-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -56,7 +56,7 @@
         <a href="/ja/about/">概要</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -66,17 +66,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span></a>
           </div>
         </div>
 
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a>
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
@@ -110,7 +118,13 @@
       <a class="sub" href="/ja/portfolio/other/">その他</a>
     </div>
 
-    <a href="/ja/services/">撮影オプション</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a>
     <a href="/ja/book/">予約</a>
 
@@ -121,7 +135,7 @@
     </div>
   </div>
 
-  
+
 
 
 
@@ -185,7 +199,7 @@
               <img decoding="async" height="2001" width="3000" srcset="/assets/img/hero/daikoku-1-5k.jpg 5120w, /assets/img/hero/daikoku-1.jpg 3000w" sizes="100vw" src="/assets/img/hero/daikoku-1.jpg" alt="大黒PA カーミート" loading="lazy" />
             </picture>
           </div>
-          <div class="swiper-slide" data-title="夏夜、花火紀行" data-desc="東京送迎 · 着物支度後に出発 · 花火後ホテルへ" data-primary-href="/ja/routes/hanabi/" data-primary-text="夏夜、花火紀行" data-primary-sub="夏限定"><picture><source media="(max-width: 520px)" srcset="/assets/img/hero/hanabi-2-mobile.jpg" sizes="100vw" /><img decoding="async" height="3413" width="5120" src="/assets/img/hero/hanabi-1-5k.jpg" alt="日本花火大会フォトツアー" loading="lazy" /></picture></div>
+          <div class="swiper-slide" data-title="紅葉の季節・富士山と秋色" data-desc="湖畔の紅葉・秋の撮影・見頃予想" data-primary-href="/ja/autumn/" data-primary-text="紅葉特集を見る" data-primary-sub="秋限定"><picture><source media="(max-width: 520px)" srcset="/assets/img/autumn/autumn-13-full.webp"><img decoding="async" width="2400" height="1502" src="/assets/img/autumn/home-hero-wide.webp" alt="紅葉に囲まれた富士山と河口湖" loading="lazy"></picture></div>
         </div>
         <div class="swiper-button-prev" aria-label="previous"></div>
         <div class="swiper-button-next" aria-label="next"></div>
@@ -207,19 +221,7 @@
     </section>
 
 
-    <section class="section hanabi-feature-section">
-      <div class="container reveal">
-        <a class="hanabi-feature" href="/ja/routes/hanabi/">
-          <img decoding="async" src="/assets/img/hero/hanabi-feature.jpg" alt="日本花火大会フォトツアー" loading="lazy" />
-          <div class="hanabi-feature-copy">
-            <span class="badge">夏限定</span>
-            <h2>夏夜、花火紀行</h2>
-            <p>東京送迎対応。着物の支度後に出発し、花火後はホテルへお送りします。貸切車または最大5名の相乗りを選べます。</p>
-            <span class="pill">送迎付き花火ルートを見る</span>
-          </div>
-        </a>
-      </div>
-    </section>
+    <section class="section autumn-feature-section" id="autumn-feature"><div class="container"><a class="autumn-feature" href="/ja/autumn/"><picture><source media="(max-width: 620px)" srcset="/assets/img/autumn/autumn-08-full.webp"><img src="/assets/img/autumn/home-card-v2-wide.webp" srcset="/assets/img/autumn/home-card-v2-small.webp 800w, /assets/img/autumn/home-card-v2-wide.webp 1800w" sizes="(max-width:680px) 100vw, 1120px" width="1800" height="978" alt="紅葉の季節・富士山と秋色" loading="lazy" decoding="async"></picture><div class="autumn-feature-copy"><span class="badge">秋限定 · 2026</span><h2>秋の彩りを、ふたりの物語に。</h2><p>富士山と紅葉に包まれる秋の旅。撮影作品と河口湖の見頃予想を見ながら、あなたに合った撮影プランを考えませんか。</p><span class="pill">紅葉特集を見る →</span></div></a></div></section>
 
     <section class="section">
       <div class="container reveal">
@@ -231,63 +233,9 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container reveal">
-        <h2>フォトグラファーについて</h2>
-        <div class="split" style="margin-top:14px">
-          <div class="photo-card">
-            <img decoding="async" height="1280" width="960" src="/assets/img/thumbs/people/photographer-960.jpg" alt="Photographer" loading="lazy" />
-          </div>
-          <div class="card copy-card">
-            <h3>ルート・タイミング・光は任せてください</h3>
-            <p>東京拠点のフォトグラファーであり、有資格ドライバーでもあります。移動と撮影を一つの流れにすることで、混雑や光を見ながらスムーズに進行し、撮影に集中できます。</p>
-            <div class="meta">
-              <span class="tag">日本語 / 英語 / 中文</span>
-              <span class="tag">自然・クリーン・シネマ</span>
-            </div>
-            <div style="margin-top:16px"><a class="pill" href="/ja/about/">もっと見る</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section home-story-section" id="photographer"><div class="container reveal"><div class="home-photographer"><figure class="home-portrait"><img src="/assets/img/thumbs/people/photographer-960.jpg" width="960" height="1280" alt="雪景色の中でカメラを持つフォトグラファー" loading="lazy" decoding="async"><figcaption>SHENLAN PHOTOGRAPHY / TOKYO</figcaption></figure><div class="home-story-copy"><p class="home-story-eyebrow">フォトグラファーについて</p><h2>旅するあなたを、<br>自然なままに。</h2><p class="home-story-lead">東京を拠点に撮影を行い、有資格ドライバーとして移動も担当しています。ルートや時間、光の向きまで考えながら、一日の流れを整えます。</p><p>ポーズを急がなくても大丈夫。歩いたり、話したり、大切な人を見つめたり。自然に生まれるそのひとときを、写真に残したいと思っています。</p><div class="home-story-values"><div><span class="home-story-index" aria-hidden="true">01</span><h3>自然な表情</h3><p>すっきりした色と、映画のような余韻</p></div><div><span class="home-story-index" aria-hidden="true">02</span><h3>ゆとりある時間</h3><p>移動と撮影をひとつの流れに</p></div><div><span class="home-story-index" aria-hidden="true">03</span><h3>伝わる言葉</h3><p>日本語 · English · 中文</p></div></div><a class="home-story-link" href="/ja/about/">撮影者をもっと知る <span aria-hidden="true">↗</span></a></div></div></div></section>
 
-    <section class="section">
-      <div class="container reveal">
-        <h2>車両</h2>
-
-        <div class="vehicle-band" style="margin-top:14px">
-          <div class="vehicle-grid">
-            <div class="vehicle-panel">
-              <h3>Toyota Vellfire（ハイヤー/貸切）</h3>
-              <p>移動と撮影を一体化することで、時間配分・光・混雑をコントロールしやすくなります。結果として、移動に追われず撮影に集中できます。</p>
-              <div class="vehicle-stats">
-                <div class="vstat"><b>送迎</b><span>東京都内（行程により調整）</span></div>
-                <div class="vstat"><b>快適</b><span>静か・空調安定・荷物OK</span></div>
-                <div class="vstat"><b>効率</b><span>撮影時間を最大化</span></div>
-              </div>
-            </div>
-
-            <div class="vehicle-media">
-              <div class="vehicle-main">
-                <img decoding="async" height="2200" width="1729" src="/assets/img/car/gallery/_DSC4215.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-main />
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <div class="vehicle-strip" aria-label="vehicle photos">
-            <img decoding="async" height="900" width="707" src="/assets/img/car/thumbs/_DSC4215.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4215.jpg?v=20260526" data-active="true" />
-            <img decoding="async" height="900" width="600" src="/assets/img/car/thumbs/_DSC4226.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4226.jpg?v=20260526" />
-            <img decoding="async" height="900" width="600" src="/assets/img/car/thumbs/_DSC8778.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8778.jpg?v=20260526" />
-            <img decoding="async" height="600" width="900" src="/assets/img/car/thumbs/_DSC8995.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8995.jpg?v=20260526" />
-            <img decoding="async" height="900" width="720" src="/assets/img/car/thumbs/_DSC9339.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9339.jpg?v=20260526" />
-            <img decoding="async" height="900" width="720" src="/assets/img/car/thumbs/_DSC9397ins.jpg?v=20260526" alt="車両（Toyota Vellfire）" loading="lazy" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9397ins.jpg?v=20260526" />
-          </div>
-          <p class="vehicle-hint">横にスワイプして車両写真を見る</p>
-
-        <!-- vehicle CTA buttons removed -->
-      </div>
-    </section>
+    <section class="section home-story-section" id="vehicle"><div class="container reveal"><div class="home-vehicle"><div class="home-story-copy"><p class="home-story-eyebrow">旅をともにする車</p><h2>景色と景色のあいだも、<br>心地よい時間に。</h2><p class="home-story-lead">Toyota Vellfireで、移動と撮影をひとつの旅に。次の撮影スポットまで、少しひと息。窓の外に流れる景色も、ゆっくり楽しんでください。</p><p class="home-vehicle-model">Toyota Vellfire · ハイヤー / 貸切</p><dl class="home-vehicle-details"><div><dt>旅のはじまり</dt><dd>東京都内・周辺の送迎範囲は、行程に合わせて確認します。</dd></div><div><dt>心地よく移動</dt><dd>静かな車内と安定した空調。お荷物は事前にご相談ください。</dd></div><div><dt>光に合わせて</dt><dd>撮影場所・光・交通状況に合わせて、一日のペースを調整します。</dd></div></dl><a class="home-story-link" href="/ja/book/">旅のプランを相談する <span aria-hidden="true">↗</span></a></div><div class="home-vehicle-gallery"><div class="home-vehicle-main"><img src="/assets/img/car/gallery/_DSC8995.jpg?v=20260526" width="2200" height="1467" alt="Toyota Vellfire" data-vehicle-main loading="lazy" decoding="async"></div><div class="home-vehicle-thumbs"><button type="button" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8995.jpg?v=20260526" data-active="true" aria-label="車両写真を見る 1"><img src="/assets/img/car/thumbs/_DSC8995.jpg?v=20260526" alt="" width="120" height="90" loading="lazy" decoding="async"></button><button type="button" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4215.jpg?v=20260526" aria-label="車両写真を見る 2"><img src="/assets/img/car/thumbs/_DSC4215.jpg?v=20260526" alt="" width="120" height="90" loading="lazy" decoding="async"></button><button type="button" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC4226.jpg?v=20260526" aria-label="車両写真を見る 3"><img src="/assets/img/car/thumbs/_DSC4226.jpg?v=20260526" alt="" width="120" height="90" loading="lazy" decoding="async"></button><button type="button" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC8778.jpg?v=20260526" aria-label="車両写真を見る 4"><img src="/assets/img/car/thumbs/_DSC8778.jpg?v=20260526" alt="" width="120" height="90" loading="lazy" decoding="async"></button><button type="button" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9339.jpg?v=20260526" aria-label="車両写真を見る 5"><img src="/assets/img/car/thumbs/_DSC9339.jpg?v=20260526" alt="" width="120" height="90" loading="lazy" decoding="async"></button><button type="button" data-vehicle-thumb data-full="/assets/img/car/gallery/_DSC9397ins.jpg?v=20260526" aria-label="車両写真を見る 6"><img src="/assets/img/car/thumbs/_DSC9397ins.jpg?v=20260526" alt="" width="120" height="90" loading="lazy" decoding="async"></button></div><p class="home-gallery-hint">小さな写真を選んで、車両をご覧ください。</p></div></div></div></section>
     <section class="section">
       <div class="container reveal">
         <h2>作品展示</h2>
@@ -302,7 +250,7 @@
           </div>
 
           <div class="tabpanes">
-            
+
             <div class="tabpane" data-pane="landscape">
               <div class="tabhead">
                 <div class="small">風景</div>
@@ -403,58 +351,38 @@
 
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div>対応言語：日本語 / 英語 / 中文</div>
-      </div>
-
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/" lang="zh">中文</a><a href="/en/" lang="en">EN</a><a href="/ja/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

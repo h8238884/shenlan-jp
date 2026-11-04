@@ -2,7 +2,7 @@
   <link rel="icon" href="https://shenlan.jp/assets/logo/logo.png"/>
 <link rel="canonical" href="https://shenlan.jp/ja/routes/daikoku/"/>
 <meta name="description" content="大黒PA（Daikoku PA）でJDMカーミートの雰囲気を体験。夜景と首都高の空気感も楽しめます。アクセス状況により柔軟にルート調整します。"/>
-<link rel="stylesheet" href="/assets/css/style.css?v=services-20261104"/>
+<link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104"/>
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/routes/daikoku/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/routes/daikoku/"/>
@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://shenlan.jp/assets/img/full/daikoku/daikoku71.jpg"/>
   <!-- seo:og:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head><body><header class="nav">
+<link rel="stylesheet" href="/assets/css/route-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head><body><header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/ja/" aria-label="shenlan photography">
         <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
@@ -37,7 +37,7 @@
         <a href="/ja/about/">概要</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ルート<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/ja/routes/" role="menuitem"><span>一覧</span><small>ルート</small></a>
             <a href="/ja/routes/fuji/" role="menuitem"><span>富士山</span><small>定番</small></a>
@@ -48,17 +48,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">ポートフォリオ<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span><small>すべて</small></a>
-            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span><small>風景</small></a>
-            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span><small>空撮</small></a>
-            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span><small>その他</small></a>
+            <a href="/ja/portfolio/" role="menuitem"><span>すべて</span></a>
+            <a href="/ja/portfolio/landscape/" role="menuitem"><span>風景</span></a>
+            <a href="/ja/portfolio/aerial/" role="menuitem"><span>空撮</span></a>
+            <a href="/ja/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/ja/portfolio/other/" role="menuitem"><span>その他</span></a>
           </div>
         </div>
 
-        <a href="/ja/services/">撮影オプション</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">撮影オプション<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="撮影オプション">
+            <a href="/ja/services/" role="menuitem"><span>オプション一覧</span></a>
+            <a href="/ja/services/dress/" role="menuitem"><span>ドレスレンタル</span></a>
+            <a href="/ja/services/flowers/" role="menuitem"><span>フラワーオーダー</span></a>
+            <a href="/ja/services/makeup/" role="menuitem"><span>ヘアメイク</span></a>
+          </div>
+        </div>
         <a href="/ja/contact/">連絡</a>
         <a class="pill accent" href="/ja/book/">予約</a>
       </nav>
@@ -93,7 +101,13 @@
       <a class="sub" href="/ja/portfolio/other/">その他</a>
     </div>
 
-    <a href="/ja/services/">撮影オプション</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">撮影オプション</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/ja/services/">オプション一覧</a>
+      <a class="sub" href="/ja/services/dress/">ドレスレンタル</a>
+      <a class="sub" href="/ja/services/flowers/">フラワーオーダー</a>
+      <a class="sub" href="/ja/services/makeup/">ヘアメイク</a>
+    </div>
         <a href="/ja/contact/">連絡</a>
     <a href="/ja/book/">予約</a>
 
@@ -115,34 +129,16 @@
         <p>JDM · 夜景 · 首都高 · カーミート · 雰囲気撮影</p>
         <div class="meta"><span class="tag">所要：約3時間</span><span class="tag">週末が人気</span><span class="tag">状況により調整</span></div>
 
-        <div class="card route" style="margin-top:14px">
-          <span class="badge">含まれるもの</span>
-          <ul>
-            <li>3時間の行程（季節/交通/現地状況により微調整）</li>
-            <li>ルート提案＋現地での案内（見学/撮影）</li>
-            <li>安全・規定に配慮した短時間の撮影ストップ（可能な場合）</li>
-          </ul>
+        <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>含まれるもの</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>3時間の行程（季節/交通/現地状況により微調整）</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>ルート提案＋現地での案内（見学/撮影）</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>安全・規定に配慮した短時間の撮影ストップ（可能な場合）</span></li></ul>
         </div>
 
-        <div class="card route" style="margin-top:14px">
-          <span class="badge">おすすめ</span>
-          <ul>
-            <li>JDM/カーカルチャーが好きな方</li>
-            <li>東京の夜景と“首都高の空気感”を体験したい方</li>
-            <li>カーミートの雰囲気を写真に残したい方</li>
-          </ul>
+        <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>おすすめ</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>JDM/カーカルチャーが好きな方</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>東京の夜景と“首都高の空気感”を体験したい方</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>カーミートの雰囲気を写真に残したい方</span></li></ul>
         </div>
 
-        <div class="card route" style="margin-top:14px">
-          <span class="badge">注意</span>
-          <ul>
-            <li>大黒PAは高速内施設のため、規制/混雑で入れない場合があります。</li>
-            <li>入れない場合は、海ほたるPAなど代替スポット＋夜景ルートに切り替えます。</li>
-            <li>現地のルールと安全指示を必ず守ってください。</li>
-          </ul>
+        <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>注意</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>大黒PAは高速内施設のため、規制/混雑で入れない場合があります。</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>入れない場合は、海ほたるPAなど代替スポット＋夜景ルートに切り替えます。</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>現地のルールと安全指示を必ず守ってください。</span></li></ul>
         </div>
 
-        <div style="margin-top:16px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div style="margin-top:16px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">撮影プランを相談する ↗</a></div>
       </div>
     </div>
   </div></section>
@@ -213,23 +209,12 @@
           </g>
         </svg>
 
-        <div class="card route" style="margin-top:14px">
-          <span class="badge">代替スポット</span>
-          <h3>海ほたるPA</h3>
-          <ul>
-            <li>大黒PAが規制/混雑の場合、海ほたるPAなどに切り替えます。</li>
-          </ul>
+        <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>代替スポット</h3><h3>海ほたるPA</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>大黒PAが規制/混雑の場合、海ほたるPAなどに切り替えます。</span></li></ul>
         </div>
       </div>
     </div>
 
-    <div class="card route" style="margin-top:14px">
-      <span class="badge">ご案内</span>
-      <ul>
-        <li>大黒PAは高速内施設のため、当日の規制/混雑で入れない場合があります。</li>
-        <li>安全と現地ルールを最優先（通行の妨げ・周囲への迷惑になる行為はしません）。</li>
-        <li>日程/人数/言語/希望の雰囲気（カーミート重視 or 夜景重視）を送ってください。おすすめの時間帯を提案します。</li>
-      </ul>
+    <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>ご案内</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>大黒PAは高速内施設のため、当日の規制/混雑で入れない場合があります。</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>安全と現地ルールを最優先（通行の妨げ・周囲への迷惑になる行為はしません）。</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>日程/人数/言語/希望の雰囲気（カーミート重視 or 夜景重視）を送ってください。おすすめの時間帯を提案します。</span></li></ul>
     </div>
   </div></section>
 
@@ -348,54 +333,34 @@
   </div></div></section>
 </main>
 
-<footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div><a href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp：+81 70 9082 0657</a></div>
-      </div>
-
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山フォトツアー · 東京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+<footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>旅のひとときを、光の中に。</p><a class="site-footer-book" href="/ja/book/">撮影プランを相談する <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/ja/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>東京の街、富士山、海辺。自然なあなたを、旅の記憶とともに。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="言語"><a href="/zh/routes/daikoku/" lang="zh">中文</a><a href="/en/routes/daikoku/" lang="en">EN</a><a href="/ja/routes/daikoku/" lang="ja" aria-current="page">日本語</a></nav></div><nav class="site-footer-links" aria-label="フッターナビゲーション"><div class="site-footer-group footer-site">
           <h4>サイト</h4>
           <a href="/ja/">ホーム</a>
           <a href="/ja/about/">概要</a>
           <a href="/ja/portfolio/">ポートフォリオ</a>
           <a href="/ja/contact/">連絡</a>
-          <a href="/ja/book/">予約</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>ルート</h4>
           <a href="/ja/routes/">ルート一覧</a>
           <a href="/ja/routes/fuji/">富士山</a>
           <a href="/ja/routes/tokyo/">東京</a>
           <a href="/ja/routes/kamakura/">鎌倉</a>
           <a href="/ja/routes/hanabi/">花火大会</a>
-          <a href="/ja/routes/daikoku/">大黒 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/ja/autumn/">紅葉特集</a><a href="/ja/routes/daikoku/">大黒 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>撮影オプション</h4>
           <a href="/ja/services/">オプション一覧</a>
           <a href="/ja/services/dress/">ドレスレンタル</a>
           <a href="/ja/services/flowers/">お花の予約</a>
           <a href="/ja/services/makeup/">ヘアメイク</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="規約・ポリシー（英語）">
         <a href="/en/privacy-policy/">プライバシー</a>
         <a href="/en/terms-and-conditions/">予約規約</a>
         <a href="/en/legal-disclosure/">運営者情報</a>
-        <span class="footer-policy-language">英語</span>
+        <span class="site-footer-policy-language">英語</span>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
-  <script src="/assets/js/site.js"></script><script>document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());</script></body></html>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());</script></body></html>

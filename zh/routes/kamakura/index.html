@@ -1,10 +1,10 @@
 <!doctype html><html lang="zh"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>镰仓旅拍｜shenlan photography</title>
-  
-  
+
+
   <link rel="icon" href="https://shenlan.jp/assets/logo/logo.png"/>
 <link rel="canonical" href="https://shenlan.jp/zh/routes/kamakura/"/>
 <meta name="description" content="镰仓・江之岛旅拍路线：寺庙、江之电、海岸与日落。"/>
-<link rel="stylesheet" href="/assets/css/style.css?v=services-20261104"/><!-- seo:links:start -->
+<link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104"/><!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/routes/kamakura/"/>
     <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/routes/kamakura/"/>
     <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/routes/kamakura/"/>
@@ -32,7 +32,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head><body><header class="nav">
+<link rel="stylesheet" href="/assets/css/route-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head><body><header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/zh/" aria-label="shenlan photography">
         <img decoding="async" height="170" width="512" class="logo" src="/assets/logo/logo.png" alt="shenlan photography" />
@@ -47,7 +47,7 @@
         <a href="/zh/about/">关于</a>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">行程</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">行程<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/zh/routes/" role="menuitem"><span>路线介绍</span><small>总览</small></a>
             <a href="/zh/routes/fuji/" role="menuitem"><span>富士山</span><small>主推</small></a>
@@ -57,17 +57,25 @@
         </div>
 
         <div class="dropdown" data-dropdown>
-          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">作品集</button>
+          <button data-dropdown-btn aria-haspopup="true" aria-expanded="false">作品集<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/zh/portfolio/" role="menuitem"><span>全部</span><small>全部</small></a>
-            <a href="/zh/portfolio/landscape/" role="menuitem"><span>风景</span><small>风景</small></a>
-            <a href="/zh/portfolio/aerial/" role="menuitem"><span>航拍</span><small>航拍</small></a>
-            <a href="/zh/portfolio/people/" role="menuitem"><span>人物</span><small>人物</small></a>
-            <a href="/zh/portfolio/other/" role="menuitem"><span>其他</span><small>其他</small></a>
+            <a href="/zh/portfolio/" role="menuitem"><span>全部</span></a>
+            <a href="/zh/portfolio/landscape/" role="menuitem"><span>风景</span></a>
+            <a href="/zh/portfolio/aerial/" role="menuitem"><span>航拍</span></a>
+            <a href="/zh/portfolio/people/" role="menuitem"><span>人物</span></a>
+            <a href="/zh/portfolio/other/" role="menuitem"><span>其他</span></a>
           </div>
         </div>
 
-        <a href="/zh/services/">拍摄配套</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">拍摄配套<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="拍摄配套">
+            <a href="/zh/services/" role="menuitem"><span>配套总览</span></a>
+            <a href="/zh/services/dress/" role="menuitem"><span>婚纱租赁</span></a>
+            <a href="/zh/services/flowers/" role="menuitem"><span>鲜花预订</span></a>
+            <a href="/zh/services/makeup/" role="menuitem"><span>化妆造型</span></a>
+          </div>
+        </div>
         <a href="/zh/contact/">联系</a>
         <a class="pill accent" href="/zh/book/">现在预约</a>
       </nav>
@@ -101,7 +109,13 @@
       <a class="sub" href="/zh/portfolio/other/">其他</a>
     </div>
 
-    <a href="/zh/services/">拍摄配套</a>
+    <button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">拍摄配套</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/zh/services/">配套总览</a>
+      <a class="sub" href="/zh/services/dress/">婚纱租赁</a>
+      <a class="sub" href="/zh/services/flowers/">鲜花预订</a>
+      <a class="sub" href="/zh/services/makeup/">化妆造型</a>
+    </div>
         <a href="/zh/contact/">联系</a>
     <a href="/zh/book/">现在预约</a>
 
@@ -112,7 +126,7 @@
     </div>
   </div>
 
-  
+
 
 
 
@@ -129,78 +143,61 @@
 <main>
   <section class="page-head"><div class="container"><h1>镰仓和江之岛旅拍（定制）</h1><p>寺庙、人情味、江之电与海风。更慢的节奏，拍出“旅途的氛围”。</p></div></section>
   <section class="section"><div class="container reveal">
-    <h2>行程示例</h2>
-    <div class="routes" style="margin-top:14px"><div class="card route"><span class="badge">镰仓经典</span><h3>镰仓站 → 小町通 → 鹤冈八幡宫</h3><ul><li>小町通：边走边拍（更生活）</li><li>鹤冈八幡宫：台阶、鸟居、神社氛围</li><li>周边小巷：更干净的人像背景</li></ul></div>
-<div class="card route"><span class="badge">长谷区域</span><h3>镰仓大佛（高德院）→ 长谷寺</h3><ul><li>大佛经典机位（避开人潮很重要）</li><li>长谷寺：视野+季节花（绣球花季尤其漂亮）</li><li>短距离散步：情侣很出片</li></ul></div>
-<div class="card route"><span class="badge">海边和江之电</span><h3>江之电氛围 + 七里滨/稻村崎（日落）</h3><ul><li>江之电：复古电车与生活感</li><li>海边人像：海风、剪影、夕阳</li><li>可选：江之岛上岛，拍金色时刻</li></ul></div></div>
-    <div class="card route" style="margin-top:14px"><span class="badge">适合人群</span><ul><li>情侣/求婚</li><li>从东京出发的一日游家庭</li><li>想要海边电影感的人像</li></ul></div>
-    <div class="card route" style="margin-top:14px"><span class="badge">说明</span><ul><li>周末人多：我们会调整顺序与时间窗，尽量避开拥挤。</li><li>天气好时海边可拍到“富士山+海”同框。</li><li>可定制偏寺庙文化 或 偏海边氛围，两种都很热门。</li></ul>
-<div style="margin-top:12px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp</a></div></div>
+    <div class="route-section-intro" id="route-overview"><p class="route-eyebrow">旅途的几种可能</p><h2>选一段风景，写下你的旅程。</h2><p>以下为拍摄点位参考，具体组合与顺序会结合天气、光线和人流安排。</p></div><div class="routes route-story-grid" style="margin-top:14px"><div class="card route route-story"><div class="route-story-heading"><span class="route-story-number" aria-hidden="true">01</span><span class="route-eyebrow">镰仓 · 古都散步</span></div><h3>把脚步，交给古都。</h3><p class="route-story-intro">从热闹的小町通走入安静街巷，在鸟居与台阶间，留下不赶时间的笑容。</p><div class="route-locations"><h4>拍摄地点参考</h4><ul><li>小町通：边走边拍（更生活）</li><li>鹤冈八幡宫：台阶、鸟居、神社氛围</li><li>周边小巷：更干净的人像背景</li></ul></div></div>
+<div class="card route route-story"><div class="route-story-heading"><span class="route-story-number" aria-hidden="true">02</span><span class="route-eyebrow">长谷 · 寺院与花</span></div><h3>在花与树影之间停一停。</h3><p class="route-story-intro">听风经过寺院，沿着季节的花慢慢走，让相伴的片刻自然入画。</p><div class="route-locations"><h4>拍摄地点参考</h4><ul><li>大佛经典机位（避开人潮很重要）</li><li>长谷寺：视野+季节花（绣球花季尤其漂亮）</li><li>短距离散步：情侣很出片</li></ul></div></div>
+<div class="card route route-story"><div class="route-story-heading"><span class="route-story-number" aria-hidden="true">03</span><span class="route-eyebrow">海岸 · 江之电</span></div><h3>跟着电车，去听海。</h3><p class="route-story-intro">让海风吹动衣角，在夕阳与浪声之间，把旅途拍成一段温柔的电影。</p><div class="route-locations"><h4>拍摄地点参考</h4><ul><li>江之电：复古电车与生活感</li><li>海边人像：海风、剪影、夕阳</li><li>可选：江之岛上岛，拍金色时刻</li></ul></div></div></div>
+    <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>适合人群</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>情侣/求婚</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>从东京出发的一日游家庭</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>想要海边电影感的人像</span></li></ul></div>
+    <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>说明</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>周末人多：我们会调整顺序与时间窗，尽量避开拥挤。</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>天气好时海边可拍到“富士山+海”同框。</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>可定制偏寺庙文化 或 偏海边氛围，两种都很热门。</span></li></ul>
+<div style="margin-top:12px"><a class="pill" href="https://wa.me/817090820657" target="_blank" rel="noopener">聊聊你的拍摄计划 ↗</a></div></div>
   </div></section>
-  
-  <section class="section"><div class="container reveal"><aside class="route-services" id="route-services" aria-label="拍摄配套"><h3>为这次旅拍，搭配你的造型</h3><div class="services-options"><a class="route-service-link" href="/zh/services/dress/"><span class="route-service-icon dress" aria-hidden="true"><img src="/assets/img/services/dress.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">婚纱租赁</span><span class="route-service-description">轻婚纱 · 礼服搭配</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a><a class="route-service-link" href="/zh/services/flowers/"><span class="route-service-icon flowers" aria-hidden="true"><img src="/assets/img/services/flowers.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">鲜花预订</span><span class="route-service-description">手捧花 · 求婚花束</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a><a class="route-service-link" href="/zh/services/makeup/"><span class="route-service-icon makeup" aria-hidden="true"><img src="/assets/img/services/makeup.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">化妆造型</span><span class="route-service-description">自然妆感 · 妆发搭配</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a></div><p>配套服务需单独确认内容、费用与档期，是否包含在行程中以最终确认的报价为准。</p></aside>
-        <h2>精选作品</h2><div class="masonry" style="margin-top:14px">
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC0179.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC0179.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC4879.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC4879.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC6101.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC6101.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC6118.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC6118.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC7508.jpg"><img decoding="async" height="1200" width="960" src="/assets/img/thumbs/kamakura/_DSC7508.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC8695-___-NR.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC8695-___-NR.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC8972.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC8972.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC9090.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC9090.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC9572-___-NR.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC9572-___-NR.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/_DSC9591-___-NR.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC9591-___-NR.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/1.jpg"><img decoding="async" height="641" width="960" src="/assets/img/thumbs/kamakura/1.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-    <a data-lightbox href="/assets/img/full/kamakura/2.jpg"><img decoding="async" height="1280" width="960" src="/assets/img/thumbs/kamakura/2.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
-  </div></div></section>
-</main><footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div>© <span id="y"></span> shenlan photography · Tokyo</div>
-        <div><a href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp：+81 70 9082 0657</a></div>
-      </div>
 
-      <nav class="footer-nav" aria-label="页脚导航">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山旅拍 · 东京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <section class="section"><div class="container reveal"><aside class="route-services" id="route-services" aria-label="拍摄配套"><h3>为这次旅拍，搭配你的造型</h3><div class="services-options"><a class="route-service-link" href="/zh/services/dress/"><span class="route-service-icon dress" aria-hidden="true"><img src="/assets/img/services/dress.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">婚纱租赁</span><span class="route-service-description">轻婚纱 · 礼服搭配</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a><a class="route-service-link" href="/zh/services/flowers/"><span class="route-service-icon flowers" aria-hidden="true"><img src="/assets/img/services/flowers.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">鲜花预订</span><span class="route-service-description">手捧花 · 求婚花束</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a><a class="route-service-link" href="/zh/services/makeup/"><span class="route-service-icon makeup" aria-hidden="true"><img src="/assets/img/services/makeup.svg" width="50" height="50" alt="" loading="lazy"></span><span class="route-service-copy"><span class="route-service-title">化妆造型</span><span class="route-service-description">自然妆感 · 妆发搭配</span></span><span class="route-service-arrow" aria-hidden="true">→</span></a></div><p>配套服务需单独确认内容、费用与档期，是否包含在行程中以最终确认的报价为准。</p></aside>
+        <h2>精选作品</h2><p><a class="pill" href="/zh/autumn/">红叶季专题 →</a></p>
+<div class="masonry" id="route-gallery" style="margin-top:14px">
+<a data-lightbox href="/assets/img/full/kamakura/2.jpg"><img decoding="async" height="1280" width="960" src="/assets/img/thumbs/kamakura/2.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC8972.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC8972.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC9591-___-NR.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC9591-___-NR.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC0179.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC0179.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/autumn/autumn-20-full.webp"><img src="/assets/img/autumn/autumn-20-thumb.webp" srcset="/assets/img/autumn/autumn-20-thumb.webp 534w, /assets/img/autumn/autumn-20-full.webp 1601w" sizes="(max-width:680px) 50vw, 33vw" width="1601" height="2400" alt="镰仓 · Autumn photography" loading=lazy decoding="async"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC9572-___-NR.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC9572-___-NR.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC6101.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC6101.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC9090.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC9090.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC8695-___-NR.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC8695-___-NR.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC6118.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC6118.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/full/kamakura/1.jpg"><img decoding="async" height="641" width="960" src="/assets/img/thumbs/kamakura/1.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/autumn/autumn-21-full.webp"><img src="/assets/img/autumn/autumn-21-thumb.webp" srcset="/assets/img/autumn/autumn-21-thumb.webp 534w, /assets/img/autumn/autumn-21-full.webp 1601w" sizes="(max-width:680px) 50vw, 33vw" width="1601" height="2400" alt="镰仓 · Autumn photography" loading=lazy decoding="async"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC4879.jpg"><img decoding="async" height="1439" width="960" src="/assets/img/thumbs/kamakura/_DSC4879.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+<a data-lightbox href="/assets/img/autumn/autumn-19-full.webp"><img src="/assets/img/autumn/autumn-19-thumb.webp" srcset="/assets/img/autumn/autumn-19-thumb.webp 534w, /assets/img/autumn/autumn-19-full.webp 1601w" sizes="(max-width:680px) 50vw, 33vw" width="1601" height="2400" alt="镰仓 · Autumn photography" loading=lazy decoding="async"></a>
+<a data-lightbox href="/assets/img/full/kamakura/_DSC7508.jpg"><img decoding="async" height="1200" width="960" src="/assets/img/thumbs/kamakura/_DSC7508.jpg" alt="镰仓/江之岛旅拍作品" loading="lazy"></a>
+</div></div></section>
+</main><footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>把旅途，留在光里。</p><a class="site-footer-book" href="/zh/book/">聊聊拍摄计划 <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/zh/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>在东京、富士山与海岸之间，记录自然发生的你。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="语言"><a href="/zh/routes/kamakura/" lang="zh" aria-current="page">中文</a><a href="/en/routes/kamakura/" lang="en">EN</a><a href="/ja/routes/kamakura/" lang="ja">日本語</a></nav></div><nav class="site-footer-links" aria-label="页脚导航"><div class="site-footer-group footer-site">
           <h4>网站</h4>
           <a href="/zh/">首页</a>
           <a href="/zh/about/">关于</a>
           <a href="/zh/portfolio/">作品集</a>
           <a href="/zh/contact/">联系</a>
-          <a href="/zh/book/">现在预约</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>行程</h4>
           <a href="/zh/routes/">路线总览</a>
           <a href="/zh/routes/fuji/">富士山</a>
           <a href="/zh/routes/tokyo/">东京</a>
           <a href="/zh/routes/kamakura/">镰仓</a>
           <a href="/zh/routes/hanabi/">花火大会</a>
-          <a href="/zh/routes/daikoku/">大黑 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/zh/autumn/">红叶季专题</a><a href="/zh/routes/daikoku/">大黑 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>摄影配套</h4>
           <a href="/zh/services/">配套总览</a>
           <a href="/zh/services/dress/">婚纱租赁</a>
           <a href="/zh/services/flowers/">鲜花预订</a>
           <a href="/zh/services/makeup/">化妆造型</a>
-        </div>
-      </nav>
-    </div>
-  
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="条款与政策（英文）">
         <a href="/en/privacy-policy/">隐私政策</a>
         <a href="/en/terms-and-conditions/">预约条款</a>
         <a href="/en/legal-disclosure/">经营者信息</a>
-        <span class="footer-policy-language">英文</span>
+        <span class="site-footer-policy-language">英文</span>
       </nav>
-    </div>
-  </footer>
+    </div></div></div></footer>
 
-  <script src="/assets/js/site.js"></script><script>document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());</script></body></html>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());</script></body></html>

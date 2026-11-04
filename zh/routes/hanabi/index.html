@@ -6,7 +6,7 @@
   <title>夏夜花火纪行｜shenlan photography</title>
   <link rel="canonical" href="https://shenlan.jp/zh/routes/hanabi/"/>
   <meta name="description" content="日本夏季限定花火大会旅拍：浴衣、情侣、求婚、夜景与烟花氛围拍摄。东京及周边花火大会可咨询。" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=services-20261104" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=services-nav-20261104" />
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/routes/hanabi/"/>
   <link rel="alternate" hreflang="zh" href="https://shenlan.jp/zh/routes/hanabi/"/>
   <link rel="alternate" hreflang="ja" href="https://shenlan.jp/ja/routes/hanabi/"/>
@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="/favicon.png?v=3"/>
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-</head>
+<link rel="stylesheet" href="/assets/css/route-stories.css?v=2"><link rel="stylesheet" href="/assets/css/footer-stories.css?v=1"></head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -30,7 +30,7 @@
       <button class="burger" type="button" aria-label="行程" data-burger><span></span><span></span><span></span></button>
       <nav class="nav-links" aria-label="primary">
         <a href="/zh/">首页</a><a href="/zh/about/">关于</a>
-        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">行程</button>
+        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">行程<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="routes">
             <a href="/zh/routes/" role="menuitem"><span>路线介绍</span><small>总览</small></a>
             <a href="/zh/routes/fuji/" role="menuitem"><span>富士山</span><small>主推</small></a>
@@ -40,16 +40,24 @@
             <a href="/zh/routes/daikoku/" role="menuitem"><span>大黑PA</span><small>定制</small></a>
           </div>
         </div>
-        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">作品集</button>
+        <div class="dropdown" data-dropdown><button data-dropdown-btn aria-haspopup="true" aria-expanded="false">作品集<span class="nav-caret" aria-hidden="true"></span></button>
           <div class="dropdown-menu" role="menu" aria-label="portfolio">
-            <a href="/zh/portfolio/" role="menuitem"><span>All</span><small>All</small></a>
-            <a href="/zh/portfolio/landscape/" role="menuitem"><span>Landscape</span><small>Landscape</small></a>
-            <a href="/zh/portfolio/aerial/" role="menuitem"><span>Aerial</span><small>Aerial</small></a>
-            <a href="/zh/portfolio/people/" role="menuitem"><span>People</span><small>People</small></a>
-            <a href="/zh/portfolio/other/" role="menuitem"><span>Other</span><small>Other</small></a>
+            <a href="/zh/portfolio/" role="menuitem"><span>All</span></a>
+            <a href="/zh/portfolio/landscape/" role="menuitem"><span>Landscape</span></a>
+            <a href="/zh/portfolio/aerial/" role="menuitem"><span>Aerial</span></a>
+            <a href="/zh/portfolio/people/" role="menuitem"><span>People</span></a>
+            <a href="/zh/portfolio/other/" role="menuitem"><span>Other</span></a>
           </div>
         </div>
-        <a href="/zh/services/">拍摄配套</a>
+        <div class="dropdown" data-dropdown>
+          <button type="button" data-dropdown-btn aria-haspopup="true" aria-expanded="false" aria-controls="nav-services-menu">拍摄配套<span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-menu" id="nav-services-menu" role="menu" aria-label="拍摄配套">
+            <a href="/zh/services/" role="menuitem"><span>配套总览</span></a>
+            <a href="/zh/services/dress/" role="menuitem"><span>婚纱租赁</span></a>
+            <a href="/zh/services/flowers/" role="menuitem"><span>鲜花预订</span></a>
+            <a href="/zh/services/makeup/" role="menuitem"><span>化妆造型</span></a>
+          </div>
+        </div>
         <a href="/zh/contact/">联系</a><a class="pill accent" href="/zh/book/">现在预约</a>
       </nav>
       <div class="lang" aria-label="language switch"><a href="/en/routes/hanabi/">EN</a><a href="/zh/routes/hanabi/">中文</a><a href="/ja/routes/hanabi/">日本語</a></div>
@@ -61,7 +69,13 @@
     <div class="mp-sub" data-mp-sub hidden>
       <a class="sub" href="/zh/routes/">路线介绍</a><a class="sub" href="/zh/routes/fuji/">富士山</a><a class="sub" href="/zh/routes/hanabi/">花火大会</a><a class="sub" href="/zh/routes/tokyo/">东京</a><a class="sub" href="/zh/routes/kamakura/">镰仓</a><a class="sub" href="/zh/routes/daikoku/">大黑PA</a>
     </div>
-    <a href="/zh/portfolio/">作品集</a><a href="/zh/services/">拍摄配套</a>
+    <a href="/zh/portfolio/">作品集</a><button class="mp-toggle" type="button" data-mp-toggle aria-expanded="false" aria-controls="mobile-services-menu">拍摄配套</button>
+    <div class="mp-sub" id="mobile-services-menu" data-mp-sub hidden>
+      <a class="sub" href="/zh/services/">配套总览</a>
+      <a class="sub" href="/zh/services/dress/">婚纱租赁</a>
+      <a class="sub" href="/zh/services/flowers/">鲜花预订</a>
+      <a class="sub" href="/zh/services/makeup/">化妆造型</a>
+    </div>
         <a href="/zh/contact/">联系</a><a href="/zh/book/">现在预约</a>
     <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><a class="pill" href="/en/routes/hanabi/">EN</a><a class="pill" href="/zh/routes/hanabi/">中文</a><a class="pill" href="/ja/routes/hanabi/">日本語</a></div>
   </div>
@@ -84,12 +98,12 @@
       <div class="container reveal hanabi-service-layout">
         <div class="hanabi-service-copy">
           <div class="hanabi-intro">
-            <div class="card copy-card"><h2>从和服妆造到送回酒店的一晚花火旅拍</h2><p>花火大会当日通常伴随大规模人流与临时交通管制，行程将以东京市区接送为基础进行统筹。客人可在和服店完成妆造后出发，由我们根据会场动线、光线时段与人流状况安排街拍、夜景人像及花火背景拍摄，并在大会结束后送返酒店。</p></div>
-            <div class="card route"><span class="badge">服务流程</span><ul><li>东京市区酒店或和服店接送</li><li>和服店化妆、换装完成后出发</li><li>会场周边街拍 + 蓝调夜景 + 花火氛围</li><li>花火大会结束后送回酒店</li></ul></div>
+            <div class="card copy-card"><h2>把一个夏夜，留在盛开的光里。</h2><p>花火大会当日通常伴随大规模人流与临时交通管制，行程将以东京市区接送为基础进行统筹。客人可在和服店完成妆造后出发，由我们根据会场动线、光线时段与人流状况安排街拍、夜景人像及花火背景拍摄，并在大会结束后送返酒店。</p></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>服务流程</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>东京市区酒店或和服店接送</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>和服店化妆、换装完成后出发</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>会场周边街拍 + 蓝调夜景 + 花火氛围</span></li><li><span aria-hidden="true" class="route-practical-mark">04</span><span>花火大会结束后送回酒店</span></li></ul></div>
           </div>
           <div class="hanabi-info">
-            <div class="card route"><span class="badge">出行方式</span><ul><li>包车拍摄：适合情侣、家庭、朋友小团体，动线更自由</li><li>拼车拍摄：最多 5 人，适合想控制预算又需要接送的客人</li><li>东京、横滨、镰仓、热海等方向会按当天交通管制规划</li></ul></div>
-            <div class="card route"><span class="badge">预约提醒</span><ul><li>建议提前 2-4 周咨询，热门大会当天交通和住宿会很紧张。</li><li>如遇雨天、强风或大会取消，可根据情况改期或调整为夜景/街拍方案。</li><li>和服店、酒店位置、人数和是否拼车会影响出发时间与最终报价。</li></ul></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>出行方式</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>包车拍摄：适合情侣、家庭、朋友小团体，动线更自由</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>拼车拍摄：最多 5 人，适合想控制预算又需要接送的客人</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>东京、横滨、镰仓、热海等方向会按当天交通管制规划</span></li></ul></div>
+            <div class="card route route-practical"><h3 class="route-practical-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>预约提醒</h3><ul class="route-practical-list"><li><span aria-hidden="true" class="route-practical-mark">01</span><span>建议提前 2-4 周咨询，热门大会当天交通和住宿会很紧张。</span></li><li><span aria-hidden="true" class="route-practical-mark">02</span><span>如遇雨天、强风或大会取消，可根据情况改期或调整为夜景/街拍方案。</span></li><li><span aria-hidden="true" class="route-practical-mark">03</span><span>和服店、酒店位置、人数和是否拼车会影响出发时间与最终报价。</span></li></ul></div>
           </div>
         </div>
           <div class="hanabi-video-frame" data-hanabi-player>
@@ -129,47 +143,35 @@
 <a data-lightbox href="/assets/img/full/fireworks/_DSC5160.jpg"><img decoding="async" src="/assets/img/thumbs/fireworks/_DSC5160.jpg" alt="花火大会" loading="lazy"></a></div></div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><div class="row"><div>© <span id="y"></span> shenlan photography · Tokyo</div><div><a href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp：+81 70 9082 0657</a></div></div>
-      <nav class="footer-nav" aria-label="页脚导航">
-        <div class="footer-brand">
-          <h4>shenlan photography</h4>
-          <div class="small">富士山旅拍 · 东京</div>
-          <div class="small" style="margin-top:8px">English / 中文 / 日本語</div>
-        </div>
-        <div class="footer-group footer-site">
+  <footer class="site-footer"><div class="container"><div class="site-footer-invitation"><p>把旅途，留在光里。</p><a class="site-footer-book" href="/zh/book/">聊聊拍摄计划 <span aria-hidden="true">↗</span></a></div><div class="site-footer-directory"><div class="site-footer-identity"><a href="/zh/" class="site-footer-wordmark">SHENLAN<span>PHOTOGRAPHY</span></a><p>在东京、富士山与海岸之间，记录自然发生的你。</p><a class="site-footer-contact" href="https://wa.me/817090820657" target="_blank" rel="noopener">WhatsApp <span>+81 70 9082 0657 ↗</span></a><nav class="site-footer-languages" aria-label="语言"><a href="/zh/routes/hanabi/" lang="zh" aria-current="page">中文</a><a href="/en/routes/hanabi/" lang="en">EN</a><a href="/ja/routes/hanabi/" lang="ja">日本語</a></nav></div><nav class="site-footer-links" aria-label="页脚导航"><div class="site-footer-group footer-site">
           <h4>网站</h4>
           <a href="/zh/">首页</a>
           <a href="/zh/about/">关于</a>
           <a href="/zh/portfolio/">作品集</a>
           <a href="/zh/contact/">联系</a>
-          <a href="/zh/book/">现在预约</a>
-        </div>
-        <div class="footer-group footer-routes">
+
+        </div><div class="site-footer-group footer-routes">
           <h4>行程</h4>
           <a href="/zh/routes/">路线总览</a>
           <a href="/zh/routes/fuji/">富士山</a>
           <a href="/zh/routes/tokyo/">东京</a>
           <a href="/zh/routes/kamakura/">镰仓</a>
           <a href="/zh/routes/hanabi/">花火大会</a>
-          <a href="/zh/routes/daikoku/">大黑 PA</a>
-        </div>
-        <div class="footer-group footer-extras">
+          <a href="/zh/autumn/">红叶季专题</a><a href="/zh/routes/daikoku/">大黑 PA</a>
+        </div><div class="site-footer-group footer-extras">
           <h4>摄影配套</h4>
           <a href="/zh/services/">配套总览</a>
           <a href="/zh/services/dress/">婚纱租赁</a>
           <a href="/zh/services/flowers/">鲜花预订</a>
           <a href="/zh/services/makeup/">化妆造型</a>
-        </div>
-      </nav></div>
-    <div class="container footer-policies">
+        </div></nav></div><div class="site-footer-bottom"><small>© <span id="y">2026</span> shenlan photography · Tokyo</small><div class="site-footer-policies">
       <nav aria-label="条款与政策（英文）">
         <a href="/en/privacy-policy/">隐私政策</a>
         <a href="/en/terms-and-conditions/">预约条款</a>
         <a href="/en/legal-disclosure/">经营者信息</a>
-        <span class="footer-policy-language">英文</span>
+        <span class="site-footer-policy-language">英文</span>
       </nav>
-    </div>
-  </footer>
-  <script src="/assets/js/site.js?v=hanabi-video-2"></script><script>document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());</script>
+    </div></div></div></footer>
+  <script src="/assets/js/site.js?v=services-nav-20261104"></script><script>document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());</script>
 </body>
 </html>
