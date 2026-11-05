@@ -1,0 +1,10 @@
+.nav-sketch{display:block;width:26px;height:26px;flex:0 0 26px;color:#8593a5;transition:color .2s}
+.dropdown-menu a:has(>.nav-sketch){justify-content:flex-start;gap:12px}
+.dropdown-menu a:has(>.nav-sketch) small{margin-left:auto}
+.mobile-panel a.sub:has(>.nav-sketch){display:flex;align-items:center;justify-content:flex-start;gap:12px}
+.dropdown-menu a:hover>.nav-sketch,.mobile-panel a.sub:hover>.nav-sketch{color:#526c87}
+@media(prefers-reduced-motion:reduce){.nav-sketch{transition:none}}
+
+.dropdown-menu[aria-label="routes"]{min-width:280px}
+.dropdown-menu[aria-label="routes"] a>span,.dropdown-menu[aria-label="routes"] a>small{white-space:nowrap}
+@media(hover:hover){.dropdown:has(.dropdown-menu[aria-label="routes"])::after{width:280px}}

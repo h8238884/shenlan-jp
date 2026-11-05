@@ -1,0 +1,40 @@
+/* Home galleries: consistent photo frames and clear interactive controls. */
+.home-portfolio,.home-instagram{padding-top:68px;padding-bottom:68px}
+.home-portfolio h2,.home-instagram h2{font-size:clamp(28px,3vw,40px);font-weight:500;letter-spacing:-.035em;color:#34424b;margin:0 0 30px}
+.home-portfolio .tabs{margin-top:0}
+.home-portfolio .tabbar{gap:26px;border-bottom:1px solid #deded7;padding-bottom:12px}
+.home-portfolio .tabbtn{border:0;background:none;border-radius:0;padding:8px 0 12px;color:#7c8285;font-size:14px}
+.home-portfolio .tabbtn.active{color:#34424b}
+.home-portfolio .tabbtn:after{left:0;right:0;bottom:0;background:#a18b6f;height:1px}
+.home-portfolio .tabpanes{margin-top:22px}
+.home-portfolio .tabhead{display:flex;justify-content:flex-end;margin:0 0 20px}
+.home-portfolio .tabhead .small{display:none}
+.home-portfolio .more{font-size:12px;color:#657079}
+.home-portfolio .thumb-scroll{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;overflow:visible;padding:0;align-items:start}
+.home-portfolio .thumb{display:block;min-width:0;width:auto;height:auto;aspect-ratio:3/4;border:0;border-radius:3px;box-shadow:none;background:#eeede8;overflow:hidden;transform:none}
+.home-portfolio .thumb img{width:100%;height:100%;object-fit:cover;transform:none;transition:opacity .25s}
+.home-portfolio .thumb:hover{transform:none;box-shadow:none}
+.home-portfolio .thumb:hover img{transform:none;opacity:.92}
+.home-instagram{border-top:1px solid #e4e2dc}
+.home-instagram h2{margin-bottom:20px}
+.home-instagram .ig-card{padding:0;background:none;border:0;border-radius:0;box-shadow:none}
+.home-instagram .ig-top{align-items:center;margin-bottom:26px}
+.home-instagram .ig-top b{font-size:14px;font-weight:400;color:#657079;letter-spacing:.04em}
+.home-instagram .ig-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin:0;align-items:start}
+.home-instagram .ig-grid a{border:0;border-radius:3px;background:#eeede8;overflow:hidden;aspect-ratio:3/4}
+.home-instagram .ig-grid img{height:100%;object-fit:cover;width:100%;display:block;transition:opacity .25s}
+.home-instagram .ig-grid a:hover img{opacity:.88}
+@media(max-width:760px){.home-portfolio,.home-instagram{padding-top:42px;padding-bottom:42px}.home-portfolio .thumb-scroll{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.home-instagram .ig-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.home-portfolio .tabbar{gap:24px}.home-instagram .ig-top{margin-bottom:20px}}
+@media(prefers-reduced-motion:reduce){.home-portfolio .thumb img,.home-instagram .ig-grid img{transition:none}}
+
+.home-portfolio .tabbtn{padding:10px 15px 13px;border-radius:6px 6px 0 0;cursor:pointer;transition:background .2s,color .2s}
+.home-portfolio .tabbtn:after{left:15px;right:15px}
+.home-portfolio .tabbtn:focus-visible{outline:2px solid #a18b6f;outline-offset:3px}
+.home-instagram-button{display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:10px 18px;border:1px solid #bcb5aa;border-radius:6px;color:#34424b;background:#faf9f6;font-size:13px;font-weight:500;text-decoration:none;transition:background .2s,border-color .2s,color .2s;cursor:pointer}
+.home-instagram-button span{font-size:17px}
+.home-instagram-button:focus-visible{outline:2px solid #a18b6f;outline-offset:4px}
+@media(hover:hover){.home-portfolio .tabbtn:hover{background:#eeece6;color:#34424b}.home-portfolio .tabbtn:hover:after{transform:scaleX(1)}.home-instagram-button:hover{background:#34424b;border-color:#34424b;color:white}}
+@media(max-width:760px){.home-portfolio .tabbar{gap:8px}.home-portfolio .tabbtn{padding-left:12px;padding-right:12px}.home-instagram-button{padding:9px 13px;gap:12px}}
+@media(prefers-reduced-motion:reduce){.home-portfolio .tabbtn,.home-instagram-button{transition:none}}
+/* Wide scenery and aerial work get horizontal frames; portraits stay vertical. */
+.home-portfolio [data-pane="landscape"] .thumb,.home-portfolio [data-pane="aerial"] .thumb{aspect-ratio:4/3}
