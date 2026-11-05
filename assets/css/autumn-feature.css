@@ -13,21 +13,21 @@
 .autumn-feature-copy{text-shadow:0 1px 8px rgba(0,0,0,.45)}
 
 @media (max-width: 620px) {
-  .autumn-feature-home {
+  .autumn-feature-top {
     display: grid;
     grid-template-rows: auto minmax(300px, 1fr);
     aspect-ratio: 2 / 3;
     min-height: 0;
   }
-  .autumn-feature-home picture { position: absolute; inset: 0; }
-  .autumn-feature-home::after {
+  .autumn-feature-top picture { position: absolute; inset: 0; }
+  .autumn-feature-top::after {
     background: linear-gradient(180deg, rgba(30,16,9,.74), rgba(30,16,9,.46) 28%, transparent 55%);
   }
-  .autumn-feature-home .autumn-feature-copy {
+  .autumn-feature-top .autumn-feature-copy {
     min-height: 0;
     padding: 20px;
     justify-content: flex-start;
   }
-  .autumn-feature-home h2 { margin: 8px 0 6px; font-size: clamp(21px, 5.7vw, 27px); }
-  .autumn-feature-home p { margin-bottom: 10px; line-height: 1.5; color: #fff; }
+  .autumn-feature-top h2 { margin: 8px 0 6px; font-size: clamp(21px, 5.7vw, 27px); }
+  .autumn-feature-top p { margin-bottom: 10px; line-height: 1.5; color: #fff; }
 }

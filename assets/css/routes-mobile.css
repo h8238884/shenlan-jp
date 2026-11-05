@@ -1,0 +1,23 @@
+@media (max-width: 620px) {
+  .routes-hero { gap: 20px; }
+  .routes-hero .route-link {
+    aspect-ratio: 4 / 5;
+    min-height: 320px;
+    padding: 22px;
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, .10);
+    isolation: isolate;
+  }
+  .routes-hero .route-link::before {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+  .routes-hero .route-link::after {
+    background: linear-gradient(180deg, transparent 35%, rgba(9, 17, 27, .16) 55%, rgba(9, 17, 27, .76));
+  }
+  .routes-hero .route-link .badge { align-self: flex-start; }
+  .routes-hero .route-link h3 { font-size: 26px; margin: 10px 0 4px; }
+  .routes-hero .route-link .small { color: #fff; margin: 0; }
+}
