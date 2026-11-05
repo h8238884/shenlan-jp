@@ -8,7 +8,7 @@
   const flowerReference = /^M20-(?:0[1-9]|1[0-9]|2[0-4])$/.test(params.get('flower') || '') ? params.get('flower') : '';
   const makeupReference = /^DMZ-(?:0[1-9]|1[0-8])$/.test(params.get('look') || '') ? params.get('look') : '';
   const hasMakeupArtist = params.get('artist') === 'damizhou' || Boolean(makeupReference);
-  const dressReference = /^PS-(?:0[1-9]|1[0-2])$/.test(params.get('dress') || '') ? params.get('dress') : '';
+  const dressReference = /^PS-(?:0[1-9]|1[0-8])$/.test(params.get('dress') || '') ? params.get('dress') : '';
   const hasDressBoutique = params.get('boutique') === 'purestudio' || Boolean(dressReference);
   const requested = params.getAll('service').flatMap(value => value.split(',')).filter(value => allowed.has(value));
   if (flowerReference && !requested.includes('flowers')) requested.push('flowers');

@@ -5,3 +5,11 @@
 /zh/fuji/ /zh/routes/fuji/ 301
 /zh/tokyo/ /zh/routes/tokyo/ 301
 /zh/kamakura/ /zh/routes/kamakura/ 301
+/zh/contact/ /zh/book/ 301
+/zh/contact /zh/book/ 301
+/en/contact/ /en/book/ 301
+/en/contact /en/book/ 301
+/ja/contact/ /ja/book/ 301
+/ja/contact /ja/book/ 301
+/zh/faq/ /zh/book/ 301
+/zh/faq /zh/book/ 301

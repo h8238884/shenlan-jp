@@ -1,0 +1,23 @@
+.consult-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 30px;
+  background: #f2f1ed;
+  border-radius: 18px;
+  scroll-margin-top: 100px;
+}
+.consult-panel h2, .slim-note h3 {font-size: 18px; margin: 0 0 12px}
+.consult-wechat {display: flex; align-items: center; gap: 18px}
+.consult-wechat img {display: block; width: 128px; height: auto}
+.consult-wechat p, .slim-note p {color: #626b73; line-height: 1.8; margin: 5px 0}
+.consult-wechat a {text-decoration: underline; text-underline-offset: 3px}
+.slim-note {padding: 24px; margin: 20px 0; background: #f4f3ef; border-radius: 16px}
+.slim-links {display: flex; flex-wrap: wrap; gap: 12px}
+.slim-links a {padding: 10px 16px; background: #f4f3ef; border-radius: 12px}
+@media(max-width:680px){
+  .consult-panel {width: calc(100% - 36px); padding: 20px}
+  .consult-wechat img {width: 108px}
+}
