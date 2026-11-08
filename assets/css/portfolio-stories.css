@@ -1,0 +1,19 @@
+/* Portfolio introductions share the quiet line art and warm neutrals of the homepage. */
+.portfolio-heading{padding:142px 0 34px;color:#34424b}
+.portfolio-eyebrow{font-size:11px;font-weight:550;letter-spacing:.16em;color:#8b7b65;margin:0 0 20px}
+.portfolio-title{display:flex;align-items:center;gap:18px}
+.portfolio-title h1{font-size:clamp(32px,3.6vw,46px);font-weight:500;line-height:1.25;letter-spacing:-.035em;margin:0}
+.portfolio-title-sketch{width:55px;height:55px;flex:0 0 55px;color:#8593a5;transform:rotate(-4deg)}
+.portfolio-intro{font-size:14px;line-height:1.9;color:#748087;margin:20px 0 0;max-width:660px}
+.portfolio-categories{display:flex;gap:14px;border-bottom:1px solid #deded7;align-items:stretch}
+.portfolio-category{display:flex;align-items:center;justify-content:center;gap:10px;position:relative;min-height:54px;padding:12px 18px;color:#737f86;font-size:13px;line-height:1.4;border-radius:7px 7px 0 0;transition:background .2s,color .2s}
+.portfolio-category:after{content:'';position:absolute;left:18px;right:18px;bottom:-1px;height:2px;background:#a18b6f;transform:scaleX(0);transition:transform .2s}
+.portfolio-category-sketch{display:block;width:25px;height:25px;flex:0 0 25px;color:#8593a5}
+.portfolio-category[aria-current="page"]{color:#34424b;background:#f0efea;font-weight:550}
+.portfolio-category[aria-current="page"]:after{transform:scaleX(1)}
+.portfolio-category[aria-current="page"] .portfolio-category-sketch{color:#63778a}
+.portfolio-category:focus-visible{outline:2px solid #8593a5;outline-offset:3px;z-index:1}
+.portfolio-page .portfolio-gallery{padding-top:28px}
+@media(hover:hover){.portfolio-category:hover{background:#f0efea;color:#34424b}.portfolio-category:hover:after{transform:scaleX(1)}}
+@media(max-width:600px){.portfolio-heading{padding:111px 0 26px}.portfolio-eyebrow{font-size:10px;margin-bottom:16px}.portfolio-title{gap:13px}.portfolio-title h1{font-size:32px}.portfolio-title-sketch{width:43px;height:43px;flex-basis:43px}.portfolio-intro{font-size:13px;margin-top:16px}.portfolio-categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}.portfolio-category{flex-direction:column;gap:7px;padding:12px 2px;font-size:11px;min-width:0;text-align:center}.portfolio-category:after{left:8px;right:8px}.portfolio-category-sketch{width:23px;height:23px;flex-basis:23px}.portfolio-page .portfolio-gallery{padding-top:22px}}
+@media(prefers-reduced-motion:reduce){.portfolio-category,.portfolio-category:after{transition:none}}
