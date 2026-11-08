@@ -17,3 +17,36 @@
 @media(hover:hover){.portfolio-category:hover{background:#f0efea;color:#34424b}.portfolio-category:hover:after{transform:scaleX(1)}}
 @media(max-width:600px){.portfolio-heading{padding:111px 0 26px}.portfolio-eyebrow{font-size:10px;margin-bottom:16px}.portfolio-title{gap:13px}.portfolio-title h1{font-size:32px}.portfolio-title-sketch{width:43px;height:43px;flex-basis:43px}.portfolio-intro{font-size:13px;margin-top:16px}.portfolio-categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}.portfolio-category{flex-direction:column;gap:7px;padding:12px 2px;font-size:11px;min-width:0;text-align:center}.portfolio-category:after{left:8px;right:8px}.portfolio-category-sketch{width:23px;height:23px;flex-basis:23px}.portfolio-page .portfolio-gallery{padding-top:22px}}
 @media(prefers-reduced-motion:reduce){.portfolio-category,.portfolio-category:after{transition:none}}
+
+.portfolio-index, .portfolio-group { scroll-margin-top: 100px; }
+.portfolio-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 18px;
+  margin-bottom: 20px;
+}
+.portfolio-index a, .portfolio-group header a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 13px;
+  color: #55626a;
+  text-decoration: underline;
+  text-decoration-color: #b3ada2;
+  text-underline-offset: 4px;
+}
+.portfolio-group + .portfolio-group { margin-top: clamp(32px, 6vw, 72px); }
+.portfolio-group header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #deded7;
+  padding: 12px 0;
+}
+.portfolio-group header h2 {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
+  color: #34424b;
+}

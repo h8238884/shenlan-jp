@@ -12,3 +12,6 @@
 
 /assets/js/*
   Cache-Control: public, max-age=604800
+
+/assets/data/availability.js
+  Cache-Control: public, no-cache

@@ -38,3 +38,20 @@
 @media(prefers-reduced-motion:reduce){.home-portfolio .tabbtn,.home-instagram-button{transition:none}}
 /* Wide scenery and aerial work get horizontal frames; portraits stay vertical. */
 .home-portfolio [data-pane="landscape"] .thumb,.home-portfolio [data-pane="aerial"] .thumb{aspect-ratio:4/3}
+
+.hero-playback {
+  position: absolute;
+  z-index: 4;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: rgba(24,33,38,.62);
+  color: white;
+  cursor: pointer;
+  font: 18px/1 system-ui, sans-serif;
+}
+.hero-playback:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+#selected-work { scroll-margin-top: 80px; }

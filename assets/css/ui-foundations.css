@@ -1,0 +1,62 @@
+/* Public UI rules. Partner colours remain local; seasonal hero art is intentionally excluded. */
+:root{--ui-ink:#34424b;--ui-muted:#5f6c75;--ui-line:#d9ddd8;--ui-wash:#f0efea;--ui-action:#34424b;--ui-radius:14px}
+.dress-page{--ui-action:#657b72;--ui-wash:#f1f3ef}
+.flowers-page{--ui-action:#566050;--ui-wash:#f2f0e9}
+.makeup-page{--ui-action:#916d68;--ui-wash:#f0e9e5}
+.ui-action{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 18px;border:1px solid transparent;border-radius:6px;box-shadow:none;font-size:13px;font-weight:500;line-height:1.5;text-align:center;cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s,color .2s}
+.ui-action.ui-action-primary{background:var(--ui-action);border-color:var(--ui-action);color:#fff}
+.ui-action.ui-action-secondary{background:transparent;border-color:#b8c0c0;color:var(--ui-action)}
+.ui-action.ui-action-text{padding:10px 0;min-height:44px;background:none;border:0;border-radius:2px;color:var(--ui-action);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.ui-action>span{color:inherit}
+.ui-action:focus-visible{outline:2px solid var(--ui-action);outline-offset:4px}
+.route-consult-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}
+.route-consult-actions .ui-action{max-width:100%}
+.route-consult-actions .ui-action span{white-space:nowrap}
+.routes-hero .route-link{border:0;border-radius:var(--ui-radius);box-shadow:0 6px 22px rgba(30,43,51,.07)}
+.routes-hero .route-link::before{opacity:1;filter:none}
+.routes-hero .route-link::after{background:linear-gradient(180deg,transparent 32%,rgba(15,23,29,.12) 48%,rgba(15,23,29,.7) 100%)}
+.routes-hero .route-link .badge{position:absolute;top:16px;left:16px;z-index:2;align-self:flex-start;width:auto;min-width:0;border:0;border-radius:4px;padding:5px 8px;background:rgba(20,30,35,.28);color:rgba(255,255,255,.92);font-size:11px;font-weight:400;line-height:1.5;letter-spacing:.04em;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.page-story .card.route-story,.page-story .card.route-inclusions,.page-story .card.route-practical{border-radius:var(--ui-radius);box-shadow:none}
+.page-story .card.route-story{border:1px solid #e5e7e1}
+.page-story .card.calendar,.page-story .card.form,.page-story .metro-card{border:1px solid #e0e3dd;border-radius:var(--ui-radius);box-shadow:0 5px 22px rgba(30,43,51,.035)}
+.page-story .photo-card{border-radius:12px;box-shadow:none;border-color:#e0e3dd}
+main .masonry>a{border:0;border-radius:6px;box-shadow:none}
+.service-card,.route-service-link{border-radius:var(--ui-radius);border-color:#e0e3dd;box-shadow:none}
+.services-note,.slim-note{border-radius:12px}
+.services-breadcrumb{font-size:12px;line-height:1.8;gap:10px;margin-bottom:28px;color:var(--ui-muted)}
+.services-breadcrumb a{display:inline-flex;align-items:center;min-height:24px;text-underline-offset:4px}
+.dress-filters,.flower-filters,.makeup-filters{display:flex;flex-wrap:wrap;gap:6px 10px;margin-bottom:26px;padding-bottom:10px;border-bottom:1px solid var(--ui-line)}
+button.dress-filter,button.flower-filter,button.makeup-filter{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 12px;border:0;border-bottom:2px solid transparent;border-radius:6px 6px 0 0;background:transparent;color:var(--ui-muted);font-size:12px;line-height:1.6;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+button.dress-filter[aria-pressed=true],button.flower-filter[aria-pressed=true],button.makeup-filter[aria-pressed=true]{background:var(--ui-wash);color:var(--ui-ink);border-bottom-color:var(--ui-action);font-weight:600}
+button.dress-filter:focus-visible,button.flower-filter:focus-visible,button.makeup-filter:focus-visible,.services-breadcrumb a:focus-visible{outline:2px solid var(--ui-action);outline-offset:3px}
+.route-story-intro,.route-facts p,.route-practical-list li,.route-section-intro>p:last-child{color:var(--ui-muted)}
+.route-story-intro,.route-section-intro>p:last-child{font-size:14px;line-height:1.9}
+.route-facts p,.route-practical-list li{font-size:13px;line-height:1.85}
+.site-footer{color:#5e6a73}
+.site-footer-identity>p{font-size:13px;color:#5e6a73}
+.site-footer-contact,.site-footer-languages,.site-footer-group a{font-size:12px}
+.site-footer-contact span{font-size:13px}
+.site-footer-group h4{font-size:12px;color:#6c6253}
+.site-footer-bottom small{font-size:12px;color:#5e6a73;line-height:1.7}
+.site-footer-policies nav{font-size:12px;gap:10px 18px}
+.site-footer-policy-language{font-size:11px;color:#647078}
+.site-footer-policies a{display:inline-flex;align-items:center;min-height:28px;padding:4px 0}
+.dropdown-menu{background:rgba(251,251,250,.88);backdrop-filter:blur(20px) saturate(115%);-webkit-backdrop-filter:blur(20px) saturate(115%);box-shadow:0 12px 34px rgba(30,43,51,.09)}
+.nav-links>a[aria-current=page],.nav-links button[data-nav-current=true]{color:#2e414d;background:#f0efea}
+.nav-links>a[aria-current=page]::after,.nav-links button[data-nav-current=true]::after{transform:scaleX(1);background:#a18b6f}
+.dropdown-menu a[aria-current=page],.mobile-panel .mp-sub a[aria-current=page]{background:#eaece6;color:#34424b;font-weight:600}
+.dropdown-menu a[aria-current=page]::after{display:none}
+.dropdown-menu a[aria-current=page]>.nav-sketch{color:#526b80}
+.mobile-panel>a[aria-current=page],.mobile-panel button[data-nav-current=true]{background:#eaece6;border-color:#cdd3ca;color:#34424b;font-weight:600}
+@media(hover:hover){.ui-action-primary:hover{filter:brightness(.93);box-shadow:none}.ui-action-secondary:hover{background:var(--ui-wash);border-color:var(--ui-action);color:var(--ui-ink);box-shadow:none}.ui-action-text:hover{text-decoration-thickness:2px;box-shadow:none}.routes-hero .route-link:hover::before{opacity:1;filter:none}.routes-hero .route-link:hover::after{background:linear-gradient(180deg,transparent 32%,rgba(15,23,29,.12) 48%,rgba(15,23,29,.7) 100%)}button.dress-filter:hover,button.flower-filter:hover,button.makeup-filter:hover{background:var(--ui-wash);color:var(--ui-ink)}.service-card:hover,.route-service-link:hover{box-shadow:0 6px 22px rgba(30,43,51,.06)}}
+@media(max-width:1100px){.nav-links{display:none}.burger{display:inline-block}.lang{display:none}.mobile-panel{display:block;transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}body.menu-open .mobile-panel{opacity:1;transform:none;pointer-events:auto}body.menu-open{overflow:hidden}}
+@media(max-width:680px){.ui-action{padding:11px 15px}.route-consult-actions{gap:10px}.route-consult-actions .ui-action{font-size:12px}.dress-filters,.flower-filters,.makeup-filters{gap:5px}button.dress-filter,button.flower-filter,button.makeup-filter{padding-left:9px;padding-right:9px}.site-footer-policies nav{gap:8px 14px}}
+@media(prefers-reduced-motion:reduce){.ui-action,button.dress-filter,button.flower-filter,button.makeup-filter{transition:none}}
+
+/* Restore the desktop colour reveal; touch layouts keep fully visible photographs. */
+@media(min-width:981px) and (hover:hover){.routes-hero .route-link::before{opacity:.62;filter:saturate(.92) contrast(.98) brightness(.92)}.routes-hero .route-link::after{background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.6))}.routes-hero .route-link:hover::before{opacity:.92;filter:none}.routes-hero .route-link:hover::after{background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.52))}}
+
+/* The menu itself owns the full-width bridge, including its opening animation. */
+.dropdown::after{content:none}
+.dropdown-menu::before{content:'';position:absolute;left:0;right:0;top:-18px;height:20px;background:transparent}
+@media(min-width:981px) and (hover:hover){.routes-hero .route-link:focus-visible::before{opacity:.92;filter:none}}
