@@ -1,0 +1,100 @@
+.map-shortcut {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:40px;
+  padding:0 13px;
+  border:1px solid #a9beb0;
+  border-radius:999px;
+  background:#e8f0e8;
+  color:#345746;
+  white-space:nowrap;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+}
+.map-shortcut svg {flex:none}
+.map-invite {
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:16px;
+  min-height:clamp(175px,18vw,220px);
+  box-sizing:border-box;
+  margin-top:24px;
+  padding:24px clamp(20px,4vw,52px);
+  overflow:hidden;
+  border-radius:16px;
+  color:#fff;
+  background:#28423f;
+  text-decoration:none;
+}
+.map-invite .map-invite-photo {
+  position:absolute;
+  z-index:-3;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 49%;
+}
+.map-invite::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:linear-gradient(90deg,rgba(14,33,34,.83),rgba(16,34,36,.66) 37%,transparent 62%,rgba(19,42,41,.32));
+}
+.map-invite-chart {
+  position:absolute;
+  inset:0 0 0 auto;
+  z-index:-1;
+  width:34%;
+  background-color:rgba(27,56,54,.28);
+  background-image:url("/assets/maps/atlas-card.svg?v=2"),
+    linear-gradient(#e7eee127 1px,transparent 1px),
+    linear-gradient(90deg,#e7eee127 1px,transparent 1px);
+  background-size:auto 96%,26px 26px,26px 26px;
+  background-position:68% center,center,center;
+  background-repeat:no-repeat,repeat,repeat;
+  mask-image:linear-gradient(90deg,transparent,#000 25%);
+}
+.map-invite-copy {display:grid;gap:8px;max-width:50%;color:white}
+.map-invite-copy strong {font-size:clamp(24px,2.5vw,33px);font-weight:550;line-height:1.2}
+.map-invite-copy > span {font-size:14px;line-height:1.6;text-shadow:0 1px 3px #182a2c}
+.map-invite-action {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:6px 13px;
+  border-radius:999px;
+  background:#f6f5e9;
+  color:#2d4740;
+  font-size:13px;
+  font-weight:600;
+}
+.map-invite-action > span {margin-left:3px;font-size:16px;transition:transform .2s}
+.map-shortcut:focus-visible,.map-invite:focus-visible {outline:3px solid #547b66;outline-offset:3px}
+@media(hover:hover) {
+  .map-shortcut:hover {background:#e4eddf;border-color:#849f88}
+  .map-invite:hover .map-invite-action {background:white}
+  .map-invite:hover .map-invite-action > span {transform:translateX(3px)}
+}
+@media(max-width:1100px) {
+  .nav-inner .map-shortcut {margin-left:auto;order:1}
+  .nav-inner .burger {order:2}
+}
+@media(max-width:600px) {
+  .map-shortcut {min-height:40px;padding:0 10px;gap:5px;font-size:12px}
+  .map-invite {min-height:222px;justify-content:flex-end;margin-top:18px;padding:19px;gap:12px}
+  .map-invite::before {background:linear-gradient(0deg,#102b30ed,rgba(15,39,42,.72) 35%,transparent 84%)}
+  .map-invite-chart {inset:0 0 auto auto;width:53%;height:62%;background-position:74% center,center,center;mask-image:linear-gradient(115deg,transparent,#000 31%);background-color:transparent}
+  .map-invite-copy {max-width:82%;gap:5px}
+  .map-invite-copy strong {font-size:23px}
+  .map-invite-copy > span {font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.map-invite-action > span {transition:none}}

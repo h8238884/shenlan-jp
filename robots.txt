@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://shenlan.jp/sitemap.xml
+Sitemap: https://map.shenlan.jp/sitemap.xml

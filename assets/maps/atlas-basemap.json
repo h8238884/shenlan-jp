@@ -1,0 +1,195 @@
+{
+  "version": 8,
+  "name": "Shenlan · Japan",
+  "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+  "sources": {
+    "gsi": {
+      "type": "vector",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 4,
+      "maxzoom": 16,
+      "attribution": "<a href=\"https://maps.gsi.go.jp/vector/\" target=\"_blank\">地理院地図Vector（仮称）</a>",
+      "bounds": [
+        122,
+        20,
+        154.5,
+        46.5
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "Water",
+      "type": "fill",
+      "source": "gsi",
+      "source-layer": "waterarea",
+      "minzoom": 2,
+      "paint": {
+        "fill-color": "#bddce4"
+      }
+    },
+    {
+      "id": "Contours",
+      "type": "line",
+      "source": "gsi",
+      "source-layer": "contour",
+      "minzoom": 8,
+      "paint": {
+        "line-color": "#a49779",
+        "line-width": 0.65,
+        "line-opacity": 0.4
+      }
+    },
+    {
+      "id": "Rivers",
+      "type": "line",
+      "source": "gsi",
+      "source-layer": "river",
+      "minzoom": 2,
+      "paint": {
+        "line-color": "#8cbccb",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "Lake shores",
+      "type": "line",
+      "source": "gsi",
+      "source-layer": "lake",
+      "minzoom": 2,
+      "paint": {
+        "line-color": "#89b7c1",
+        "line-width": 0.75
+      }
+    },
+    {
+      "id": "Coast",
+      "type": "line",
+      "source": "gsi",
+      "source-layer": "coastline",
+      "minzoom": 2,
+      "paint": {
+        "line-color": "#8eafb1",
+        "line-width": 0.8
+      }
+    },
+    {
+      "id": "Prefectures",
+      "type": "line",
+      "source": "gsi",
+      "source-layer": "boundary",
+      "minzoom": 5,
+      "paint": {
+        "line-color": "#aba99a",
+        "line-width": 1,
+        "line-dasharray": [
+          4,
+          3
+        ]
+      },
+      "filter": [
+        "in",
+        "ftCode",
+        1211,
+        51212
+      ]
+    },
+    {
+      "id": "Roads",
+      "type": "line",
+      "source": "gsi",
+      "source-layer": "road",
+      "minzoom": 8,
+      "paint": {
+        "line-color": "#cebfa7",
+        "line-width": 0.8,
+        "line-opacity": 0.65
+      }
+    },
+    {
+      "id": "Buildings",
+      "type": "fill",
+      "source": "gsi",
+      "source-layer": "building",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#dad8cd",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "Landmarks",
+      "type": "symbol",
+      "source": "gsi",
+      "source-layer": "label",
+      "minzoom": 3,
+      "paint": {
+        "text-color": "#40574d",
+        "text-halo-color": "#fffef7",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "in",
+        "annoCtg",
+        110,
+        140,
+        311,
+        314,
+        315,
+        316,
+        321,
+        322,
+        333
+      ],
+      "layout": {
+        "text-field": [
+          "get",
+          "knj"
+        ],
+        "text-font": [
+          "NotoSansCJKjp-Regular"
+        ],
+        "text-size": 13,
+        "text-max-width": 9,
+        "text-padding": 3
+      }
+    },
+    {
+      "id": "Local places",
+      "type": "symbol",
+      "source": "gsi",
+      "source-layer": "label",
+      "minzoom": 9,
+      "paint": {
+        "text-color": "#667266",
+        "text-halo-color": "#fffef7",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "in",
+        "annoCtg",
+        120,
+        130,
+        210,
+        220,
+        323,
+        324,
+        334
+      ],
+      "layout": {
+        "text-field": [
+          "get",
+          "knj"
+        ],
+        "text-font": [
+          "NotoSansCJKjp-Regular"
+        ],
+        "text-size": 11,
+        "text-max-width": 9,
+        "text-padding": 3
+      }
+    }
+  ]
+}
