@@ -15,7 +15,7 @@
       return response.json();
     };
     const [land, places, tokyoWards] = await Promise.all([
-      read('japan-prefectures.json'), read('photo-locations.json?v=1114b'), read('tokyo-23-wards.json')
+      read('japan-prefectures.json'), read('photo-locations.json?v=1114c'), read('tokyo-23-wards.json')
     ]);
     const map = L.map('photo-map', {minZoom:3,maxZoom:17,zoomControl:false,zoomSnap:.1,scrollWheelZoom:true,maxBounds:[[16,114],[52,158]],maxBoundsViscosity:.85});
     L.control.zoom({position:'bottomright'}).addTo(map);

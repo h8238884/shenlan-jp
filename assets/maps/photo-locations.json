@@ -3375,5 +3375,32 @@
     "thumb": "/assets/img/autumn/autumn-21-thumb.webp"
    }
   ]
+ },
+ {
+  "pref": "静岡県",
+  "city": {
+   "ja": "富士宮市",
+   "zh": "富士宫市",
+   "en": "Fujinomiya"
+  },
+  "lat": 35.42440677176106,
+  "lng": 138.59262023395252,
+  "title": {
+   "zh": "朝雾高原",
+   "ja": "朝霧高原",
+   "en": "Asagiri Plateau"
+  },
+  "photos": [
+   {
+    "id": "P-20045F9E7E",
+    "thumb": "/assets/img/thumbs/fuji/_DSC7840-web.webp",
+    "full": "/assets/img/full/fuji/_DSC7840.jpg"
+   },
+   {
+    "id": "P-AE0AE29A27",
+    "thumb": "/assets/img/thumbs/fuji/_DSC7868-web.webp",
+    "full": "/assets/img/full/fuji/_DSC7868.jpg"
+   }
+  ]
  }
 ]
