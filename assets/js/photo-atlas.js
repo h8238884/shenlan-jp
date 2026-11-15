@@ -344,15 +344,25 @@
       if (selectedRegion && viewMode === 'places') fitView();
     });
     render();
+    // A touch can focus a pin before its click. Opening the card at that
+    // moment can redirect the rest of the tap to the photo or the map.
+    let touchFocus = false;
+    document.addEventListener('pointerdown', event => {
+      touchFocus = event.pointerType === 'touch' || event.pointerType === 'pen';
+    }, true);
+    document.addEventListener('keydown', () => { touchFocus = false; }, true);
     for (const place of places) {
       const title = place.title[lang];
       const marker = L.marker([place.lat, place.lng], {icon, title, alt: title, riseOnHover: true}).addTo(map);
       markers.set(place, marker);
-      marker.on('mouseover', () => {
-        if (matchMedia('(hover:hover)').matches) preview(place);
+      const pin = marker.getElement();
+      pin.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'mouse') preview(place);
       });
       marker.on('click', () => preview(place, true));
-      marker.getElement().addEventListener('focus', () => preview(place));
+      pin.addEventListener('focus', () => {
+        if (!touchFocus) preview(place);
+      });
     }
     routeLine.addTo(map);
     planner.hidden = false;
