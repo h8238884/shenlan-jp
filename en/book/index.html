@@ -26,6 +26,12 @@
     .cta{border:1px solid rgba(79,106,169,.45);background:rgba(79,106,169,.10);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit}
     .cta.secondary{background:rgba(255,255,255,.82);border-color:rgba(11,18,32,.12)}
     .cta:hover{background:rgba(79,106,169,.14)}
+  .booking-itinerary {padding:14px 16px;background:#f2f5ef;border-radius:12px;color:#344e40}
+    .booking-itinerary h3 {margin:0;font-size:16px}
+    .booking-itinerary ol {margin:.6em 0;padding-left:1.6em;line-height:1.7}
+    .booking-itinerary p:empty {display:none}
+    .booking-itinerary a {font-size:14px;text-decoration:underline}
+    .card.form [hidden] {display:none}
   </style>
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/book/"/>
@@ -175,6 +181,7 @@
 
         <div class="card form">
           <h3 style="margin:0 0 10px;font-size:16px">Your enquiry</h3>
+          <section class="field booking-itinerary" hidden><h3>My photo route</h3><ol></ol><p role="status"></p><a href="/en/portfolio/map/">Edit on the map →</a></section>
           <div class="field"><label for="route">Preferred route (optional)</label><select id="route" aria-describedby="route-hint" data-summary-label="Preferred route"><option value="">Not decided yet</option><option value="fuji">Mt. Fuji photoshoot</option><option value="tokyo">Tokyo photoshoot</option><option value="kamakura">Kamakura &amp; Enoshima photoshoot</option><option value="daikoku">Daikoku PA car meet</option><option value="hanabi">Fireworks photoshoot</option></select><p class="hint" id="route-hint">Choose a route or leave this open. We will confirm the details together.</p></div><div class="field"><label for="people">Group size</label>
             <select id="people" aria-describedby="people-hint"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select><p class="hint" id="people-hint">Count everyone travelling, including children. For other group sizes, please leave a note.</p>
           </div>
@@ -223,7 +230,7 @@
 
   <script src="/assets/vendor/flatpickr-4.6.13/flatpickr.min.js"></script>
   <script src="/assets/js/site.js?v=4183ee988d02"></script>
-  <script src="/assets/js/services-booking.js?v=20261105-2"></script><script src="/assets/data/availability.js"></script><script src="/assets/js/booking-route.js?v=20261108-1"></script>
+  <script src="/assets/js/services-booking.js?v=20261105-2"></script><script src="/assets/data/availability.js"></script><script src="/assets/js/booking-route.js?v=1115n"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     const datesLoaded = Array.isArray(window.shenlanUnavailableDates);

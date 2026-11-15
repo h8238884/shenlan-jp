@@ -31,7 +31,17 @@
 @media(max-width:700px){.atlas-layout{grid-template-columns:1fr}.atlas-directory{max-height:165px}.atlas-directory h2{padding:10px 14px;font-size:15px}#photo-map{height:clamp(350px,53svh,490px)}.atlas-filters{gap:5px}.atlas-filters button{padding:6px 10px}.atlas-popup figure{width:min(196px,60vw,33dvh)}}
 .atlas-photo-controls{display:flex;align-items:center;justify-content:space-between;margin-top:5px;color:#62746a;font-size:11px}
 .atlas-photo-controls button{min-width:36px;min-height:32px;border-radius:4px;border:1px solid #dce2dd;background:#f5f7f4;color:#354f43;font:20px/1 system-ui;cursor:pointer}
-.atlas-popup .leaflet-popup-close-button{background:white;border-radius:50%;margin:3px}
+.leaflet-container .atlas-popup a.leaflet-popup-close-button {
+  top:0;right:0;width:44px;height:44px;box-sizing:border-box;
+  display:grid;place-items:start end;padding:5px;background:transparent;color:white;z-index:1;
+}
+.atlas-popup .leaflet-popup-close-button span {
+  display:grid;place-items:center;box-sizing:border-box;width:25px;height:25px;
+  border-radius:50%;background:rgba(0,0,0,.55);color:#fff;
+  font:400 20px/1 system-ui,sans-serif;
+}
+.atlas-popup .leaflet-popup-close-button:is(:hover,:focus-visible) span {background:rgba(0,0,0,.72)}
+.atlas-popup .leaflet-popup-close-button:focus-visible {outline:2px solid #29483c;outline-offset:1px;border-radius:50%}
 
 /* Dedicated map workspace */
 .atlas-body {margin:0;overflow:hidden}
@@ -47,6 +57,20 @@
 .atlas-filters {gap:5px;margin-bottom:12px}
 .atlas-filters button {min-height:31px;padding:4px 9px;font-size:12px;border-radius:18px}
 .atlas-panel .atlas-directory {display:block;background:transparent;max-height:none;border-top:1px solid #dce2dc}
+#atlas-search {
+  box-sizing:border-box;
+  width:100%;
+  margin:5px 0 9px;
+  padding:9px 12px 9px 34px;
+  border:1px solid #c5d1c8;
+  border-radius:9px;
+  color:#29483c;
+  background:#f6f8f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235b7364' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='m16 16 5 5'/%3E%3C/svg%3E") no-repeat 11px center;
+  font:inherit;
+  font-size:14px;
+}
+#atlas-search:focus-visible {outline:2px solid #517660;outline-offset:1px}
+@media(max-width:700px) {#atlas-search {font-size:16px}}
 .atlas-directory summary {padding:12px 0;cursor:pointer;font-weight:550;font-size:14px}
 .atlas-directory small {margin-left:2px}
 .atlas-panel #place-list {max-height:min(45vh,425px);overflow:auto;padding:0}
@@ -57,7 +81,8 @@
 .atlas-country {top:16px;right:16px;padding:7px 13px}
 .atlas-expand {display:block;position:relative;border:0;padding:0;background:none;cursor:zoom-in}
 .atlas-expand span {position:absolute;bottom:5px;right:5px;border-radius:4px;background:#14271dcc;color:white;padding:3px 6px;font-size:11px}
-#atlas-viewer {position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:16px;border:0;background:#141916;color:white}
+#atlas-viewer {position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:16px;border:0;background:transparent;color:white}
+#atlas-viewer::backdrop {background:rgba(18, 26, 22, .72);backdrop-filter:blur(3px)}
 #atlas-viewer[open] {display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:12px}
 #atlas-viewer header,.viewer-controls {display:flex;align-items:center;justify-content:space-between;gap:18px}
 #atlas-viewer h2 {margin:0;font-size:17px;color:inherit}
@@ -87,6 +112,27 @@
 .leaflet-gl-layer .maplibregl-canvas {position:absolute;left:0;top:0}
 @media(max-width:700px) {.atlas-brand-row img {width:84px}.atlas-brand-row {padding-bottom:3px;margin-bottom:0}}
 
-.atlas-city {display:flex;align-items:center;gap:.65rem;margin:0 0 .65rem;color:#4f6659;font-size:12px}
-.atlas-city select {flex:1;min-width:0;max-width:100%;min-height:32px;border:1px solid #c6d1c8;border-radius:7px;padding:3px 6px;background:#fafbf8;color:#314b3a;font:inherit}
-@media(max-width:700px){.atlas-city{margin:0 0 5px}.atlas-city select{min-height:30px}}
+.atlas-planner {margin-bottom:10px}
+.atlas-plan-toggle,.atlas-add-stop,.plan-enquire {display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#38584b;color:white;border:0;border-radius:8px;padding:8px 12px;font:600 13px/1.4 system-ui;cursor:pointer;text-decoration:none}
+.atlas-plan-toggle::before {content:"";width:10px;height:10px;border:2px solid currentColor;border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+.atlas-plan-toggle {border:1px solid #9bad9f;background:#fff;color:#355444}
+.atlas-plan-toggle[aria-expanded="true"] {background:#2d5945;border-color:#2d5945;color:#fff}
+.atlas-plan-toggle[aria-expanded="true"]::before {width:7px;height:12px;border:solid currentColor;border-width:0 2px 2px 0;border-radius:0;transform:translateY(-2px) rotate(45deg)}
+.atlas-plan-toggle[aria-expanded="false"] .plan-active-label,
+.atlas-plan-toggle[aria-expanded="true"] .plan-idle-label {display:none}
+.atlas-plan-toggle:focus-visible {outline:2px solid #38654d;outline-offset:3px}
+.plan-count:not(:empty) {border-radius:1em;background:white;color:#38584b;padding:0 6px}
+.atlas-planner [hidden],.atlas-planner[hidden] {display:none}
+#atlas-itinerary {margin-top:7px;padding:8px 10px;background:#f1f5ef;border-radius:8px}
+.plan-hint {font-size:13px;margin:0;line-height:1.45}
+.plan-stops {counter-reset:stop;list-style:none;margin:0;padding:0;max-height:min(24vh,180px);overflow:auto}
+.plan-stops li {counter-increment:stop;display:flex;align-items:center;gap:3px;border-bottom:1px solid #dbe3dc;padding:3px 0;font-size:12px}
+.plan-stops li::before {content:counter(stop) ".";font-variant-numeric:tabular-nums;color:#56695e}
+.plan-stops li span {flex:1}
+.plan-stops button {border:0;background:transparent;color:#345544;min-width:30px;min-height:32px;font-size:17px;cursor:pointer}
+.plan-stops button:disabled {opacity:.25}
+.plan-enquire {margin-top:7px}
+.atlas-add-stop {margin-top:6px;width:100%}
+.atlas-add-stop:disabled {background:#e8efe9;color:#38584b}
+.atlas-pin[data-stop]::after {content:attr(data-stop);display:grid;place-items:center;background:#365b49;color:white;width:23px;height:23px;font:bold 12px system-ui}
+@media(max-width:700px){.atlas-planner{margin-bottom:5px}.plan-stops{max-height:11dvh}}

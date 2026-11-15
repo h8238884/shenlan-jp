@@ -33,13 +33,19 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-<link rel="stylesheet" href="/assets/css/footer-stories.css?v=3"><link rel="alternate" hreflang="x-default" href="https://map.shenlan.jp/"><link rel="stylesheet" href="/assets/css/nav-sketches.css?v=2"><link rel="stylesheet" href="/assets/css/language-navigation.css?v=1"><link rel="stylesheet" href="/assets/css/portfolio-stories.css?v=a8a199836c63"><link rel="stylesheet" href="/assets/css/photo-viewer.css?v=20261108-1"><link rel="stylesheet" href="/assets/css/ui-foundations.css?v=8ccb3680e491"><link rel="stylesheet" href="/assets/vendor/leaflet-1.9.4/leaflet.css"><link rel="stylesheet" href="/assets/css/photo-atlas.css?v=1114b"></head><body class="atlas-body"><main class="atlas-page">
+<link rel="stylesheet" href="/assets/css/footer-stories.css?v=3"><link rel="alternate" hreflang="x-default" href="https://map.shenlan.jp/"><link rel="stylesheet" href="/assets/css/nav-sketches.css?v=2"><link rel="stylesheet" href="/assets/css/language-navigation.css?v=1"><link rel="stylesheet" href="/assets/css/portfolio-stories.css?v=a8a199836c63"><link rel="stylesheet" href="/assets/css/photo-viewer.css?v=20261108-1"><link rel="stylesheet" href="/assets/css/ui-foundations.css?v=8ccb3680e491"><link rel="stylesheet" href="/assets/vendor/leaflet-1.9.4/leaflet.css"><link rel="stylesheet" href="/assets/css/photo-atlas.css?v=1115n"></head><body class="atlas-body"><main class="atlas-page">
 <div id="photo-map" aria-label="Japan photo map"></div>
 <section class="atlas-panel">
 <div class="atlas-brand-row"><a href="/en/" aria-label="Shenlan Photography · Home"><img src="/assets/logo/logo.png" width="512" height="170" alt="Shenlan Photography"></a><details class="atlas-site-menu"><summary>Site menu</summary><nav aria-label="Site menu"><a href="/en/">Home</a><a href="/en/portfolio/">Portfolio</a><a href="/en/routes/">Routes</a><a href="/en/services/">Shoot extras</a><a href="/en/about/">About</a><a href="/en/book/">Booking</a></nav></details></div>
 <header class="atlas-panel-head"><a class="atlas-back" href="/en/portfolio/">← Portfolio</a><nav aria-label="Language"><a href="/zh/portfolio/map/" lang="zh" >中文</a><a href="/en/portfolio/map/" lang="en" aria-current="page">EN</a><a href="/ja/portfolio/map/" lang="ja" >日本語</a></nav></header>
-<h1>Japan photo map</h1><div class="atlas-filters" aria-label="Locations"><button data-region="" aria-pressed="true">All locations</button><button data-region="東京都" data-code="JP-13" aria-pressed="false">Tokyo</button><button data-region="山梨県" data-code="JP-19" aria-pressed="false">Yamanashi</button><button data-region="神奈川県" data-code="JP-14" aria-pressed="false">Kanagawa</button><button data-region="静岡県" data-code="JP-22" aria-pressed="false">Shizuoka</button><button data-region="長野県" data-code="JP-20" aria-pressed="false">Nagano</button><button data-region="富山県" data-code="JP-16" aria-pressed="false">Toyama</button><button data-region="茨城県" data-code="JP-08" aria-pressed="false">Ibaraki</button><button data-region="京都府" data-code="JP-26" aria-pressed="false">Kyoto</button><button data-region="群馬県" data-code="JP-10" aria-pressed="false">Gunma</button><button data-region="奈良県" data-code="JP-29" aria-pressed="false">Nara</button><button data-region="千葉県" data-code="JP-12" aria-pressed="false">Chiba</button><button data-region="福島県" data-code="JP-07" aria-pressed="false">Fukushima</button><button data-region="大阪府" data-code="JP-27" aria-pressed="false">Osaka</button><button data-region="埼玉県" data-code="JP-11" aria-pressed="false">Saitama</button><button data-region="山形県" data-code="JP-06" aria-pressed="false">Yamagata</button><button data-region="栃木県" data-code="JP-09" aria-pressed="false">Tochigi</button></div>
-<label class="atlas-city">City or ward<select id="atlas-city"><option value="">All</option></select></label><details class="atlas-directory"><summary>Locations <small id="place-count">112</small></summary><div id="place-list"><ul><li><a href="/assets/img/full/tokyo/1.jpg">Sensō-ji</a> · Taitō</li>
+<h1>Japan photo map</h1>
+<input type="search" id="atlas-search" placeholder="Search places, cities or prefectures" aria-label="Search places, cities or prefectures" aria-controls="place-list" enterkeyhint="search" hidden>
+<div class="atlas-filters" aria-label="Locations"><button data-region="" aria-pressed="true">All locations</button><button data-region="東京都" data-names="Tokyo 东京 東京" data-code="JP-13" aria-pressed="false">Tokyo</button><button data-region="山梨県" data-names="Yamanashi 山梨" data-code="JP-19" aria-pressed="false">Yamanashi</button><button data-region="神奈川県" data-names="Kanagawa 神奈川" data-code="JP-14" aria-pressed="false">Kanagawa</button><button data-region="静岡県" data-names="Shizuoka 静冈 静岡" data-code="JP-22" aria-pressed="false">Shizuoka</button><button data-region="新潟県" data-names="Niigata 新潟" data-code="JP-15" aria-pressed="false">Niigata</button><button data-region="長野県" data-names="Nagano 長野 长野" data-code="JP-20" aria-pressed="false">Nagano</button><button data-region="富山県" data-names="Toyama 富山" data-code="JP-16" aria-pressed="false">Toyama</button><button data-region="茨城県" data-names="Ibaraki 茨城" data-code="JP-08" aria-pressed="false">Ibaraki</button><button data-region="京都府" data-names="Kyoto 京都" data-code="JP-26" aria-pressed="false">Kyoto</button><button data-region="群馬県" data-names="Gunma 群馬 群马" data-code="JP-10" aria-pressed="false">Gunma</button><button data-region="奈良県" data-names="Nara 奈良" data-code="JP-29" aria-pressed="false">Nara</button><button data-region="千葉県" data-names="Chiba 千叶 千葉" data-code="JP-12" aria-pressed="false">Chiba</button><button data-region="福島県" data-names="Fukushima 福岛 福島" data-code="JP-07" aria-pressed="false">Fukushima</button><button data-region="大阪府" data-names="Osaka 大阪" data-code="JP-27" aria-pressed="false">Osaka</button><button data-region="埼玉県" data-names="Saitama 埼玉" data-code="JP-11" aria-pressed="false">Saitama</button><button data-region="山形県" data-names="Yamagata 山形" data-code="JP-06" aria-pressed="false">Yamagata</button><button data-region="栃木県" data-names="Tochigi 栃木" data-code="JP-09" aria-pressed="false">Tochigi</button></div>
+<div class="atlas-planner" hidden>
+<button type="button" class="atlas-plan-toggle" aria-controls="atlas-itinerary" aria-expanded="false"><span class="plan-idle-label">Plan a route</span><span class="plan-active-label">Editing route</span><span class="plan-count"></span></button>
+<div id="atlas-itinerary" hidden><p class="plan-hint">Choose a photo spot on the map to add it to your route.</p><ol class="plan-stops" aria-label="My photo route"></ol>
+<a class="plan-enquire" href="/en/book/" hidden>Enquire about this route →</a></div></div>
+<details class="atlas-directory"><summary>Locations <small id="place-count">141</small></summary><div id="place-list"><ul><li><a href="/assets/img/full/tokyo/1.jpg">Sensō-ji</a> · Taitō</li>
 <li><a href="/assets/img/full/tokyo/2.jpg">Kabukichō Ichibangai Gate</a> · Shinjuku</li>
 <li><a href="/assets/img/full/tokyo/DSC04713.jpg">Kanda Myōjin</a> · Chiyoda</li>
 <li><a href="/assets/img/full/tokyo/DSC08215.jpg">University of Tokyo, Hongō Campus</a> · Bunkyō</li>
@@ -150,7 +156,36 @@
 <li><a href="/assets/img/full/daikoku/daikoku56.jpg">Umihotaru Parking Area</a> · Kisarazu</li>
 <li><a href="/assets/img/autumn/autumn-00-full.webp">Lake Minami-Inaga</a> · Minami-Alps</li>
 <li><a href="/assets/img/autumn/autumn-20-full.webp">Engaku-ji, Kamakura</a> · Kamakura</li>
-<li><a href="/assets/img/full/fuji/_DSC7840.jpg">Asagiri Plateau</a> · Fujinomiya</li></ul></div></details>
+<li><a href="/assets/img/full/fuji/_DSC7840.jpg">Asagiri Plateau</a> · Fujinomiya</li>
+<li><a href="/assets/img/atlas/full/P-CFB8901071.webp">Yaesu–Nihonbashi Sakura Street</a> · Chūō</li>
+<li><a href="/assets/img/atlas/full/P-CC5AE4EC2F.webp">Ueno Park Entrance Police Box</a> · Taitō</li>
+<li><a href="/assets/img/atlas/full/P-8DA9C4C34A.webp">Kita-Asaba Cherry Embankment Park</a> · Sakado</li>
+<li><a href="/assets/img/atlas/full/P-E392F89CD2.webp">Tsuki no E Bookshop</a> · Fujiyoshida</li>
+<li><a href="/assets/img/atlas/full/P-BE900421EB.webp">Lake Kawaguchi North Shore</a> · Fujikawaguchiko</li>
+<li><a href="/assets/img/atlas/full/P-2C24C386E2.webp">Kotobuki Station Approach</a> · Fujiyoshida</li>
+<li><a href="/assets/img/atlas/full/P-07E34DB33E.webp">Fujiyoshida Cherry Blossom Path</a> · Fujiyoshida</li>
+<li><a href="/assets/img/atlas/full/P-DDFD120F80.webp">Arakura Fuji Sengen Shrine Torii</a> · Fujiyoshida</li>
+<li><a href="/assets/img/atlas/full/P-8B24023878.webp">Arakurayama Sengen Park Hillside Path</a> · Fujiyoshida</li>
+<li><a href="/assets/img/atlas/full/P-73F75B8707.webp">Kawaguchi Lakeside Greenway</a> · Fujikawaguchiko</li>
+<li><a href="/assets/img/atlas/full/P-81DEACD456.webp">Fujiyoshida Cherry Blossom Street</a> · Fujiyoshida</li>
+<li><a href="/assets/img/atlas/full/P-2FFA164D98.webp">Ōmigawa Station</a> · Kashiwazaki</li>
+<li><a href="/assets/img/atlas/full/P-790F24AFBC.webp">Kiyotsu Gorge Tunnel</a> · Tōkamachi</li>
+<li><a href="/assets/img/atlas/full/P-5DC8C3257B.webp">Ōsawa Station</a> · Minamiuonuma</li>
+<li><a href="/assets/img/atlas/full/P-D676A25134.webp">Miyukinohama Seaside Gate</a> · Odawara</li>
+<li><a href="/assets/img/atlas/full/P-E728113B82.webp">Kaisei Hydrangea Village</a> · Kaisei</li>
+<li><a href="/assets/img/atlas/full/P-DE2D1ADB28.webp">Ōi Yume no Sato</a> · Ōi</li>
+<li><a href="/assets/img/atlas/full/P-1A5D7F80EB.webp">Mount Kusatsu-Shirane Yugama Crater Lake</a> · Kusatsu</li>
+<li><a href="/assets/img/atlas/full/P-7ED2FC4466.webp">Ōide Park, Hakuba</a> · Hakuba</li>
+<li><a href="/assets/img/atlas/full/P-01DC0FF0FE.webp">Nihondaira Plateau</a> · Shizuoka</li>
+<li><a href="/assets/img/atlas/full/P-E7941BFF64.webp">Taiseki-ji Temple</a> · Fujinomiya</li>
+<li><a href="/assets/img/atlas/full/P-F66CDC99DA.webp">Atami Ginza Shopping Street</a> · Atami</li>
+<li><a href="/assets/img/atlas/full/P-3F878D0115.webp">Kawazu Station Front</a> · Kawazu</li>
+<li><a href="/assets/img/atlas/full/P-EFD812E663.webp">Narai-juku</a> · Shiojiri</li>
+<li><a href="/assets/img/atlas/full/P-EC82194946.webp">Matsumoto Castle</a> · Matsumoto</li>
+<li><a href="/assets/img/atlas/full/P-99EE97F81A.webp">Seisui-ji Temple, Wakaho Hoshina</a> · Nagano</li>
+<li><a href="/assets/img/atlas/full/P-104BF8FC08.webp">Teishō-ji Temple</a> · Saku</li>
+<li><a href="/assets/img/atlas/full/P-0FAC20FE40.webp">Hanazura Inari Shrine</a> · Saku</li>
+<li><a href="/assets/img/atlas/full/P-0BF96ACAC7.webp">Nirasaki Station</a> · Nirasaki</li></ul></div></details>
 </section><button class="atlas-country">All Japan ↗</button><p role="status" id="atlas-status" data-error="The map could not load. Please refresh to try again."></p>
 <dialog id="atlas-viewer" aria-labelledby="atlas-view-title"><header><h2 id="atlas-view-title"></h2><button class="viewer-close" aria-label="Close">×</button></header><img alt=""><div class="viewer-controls"><button data-step="-1">‹</button><span aria-live="polite"></span><button data-step="1">›</button></div></dialog>
-</main><script src="/assets/vendor/leaflet-1.9.4/leaflet.js"></script><script src="/assets/vendor/atlas-maplibre/maplibre-gl-4.7.1.js"></script><script src="/assets/vendor/atlas-maplibre/leaflet-maplibre-0.0.22.js"></script><script src="/assets/js/photo-atlas.js?v=1114c"></script></body></html>
+</main><script src="/assets/vendor/leaflet-1.9.4/leaflet.js"></script><script src="/assets/vendor/atlas-maplibre/maplibre-gl-4.7.1.js"></script><script src="/assets/vendor/atlas-maplibre/leaflet-maplibre-0.0.22.js"></script><script src="/assets/js/photo-atlas.js?v=1115n"></script></body></html>

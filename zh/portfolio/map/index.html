@@ -33,13 +33,19 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180"/>
   <!-- seo:icons:end -->
 <link rel="stylesheet" href="/assets/css/services.css?v=20261104-1">
-<link rel="stylesheet" href="/assets/css/footer-stories.css?v=3"><link rel="alternate" hreflang="x-default" href="https://map.shenlan.jp/"><link rel="stylesheet" href="/assets/css/nav-sketches.css?v=2"><link rel="stylesheet" href="/assets/css/language-navigation.css?v=1"><link rel="stylesheet" href="/assets/css/portfolio-stories.css?v=a8a199836c63"><link rel="stylesheet" href="/assets/css/photo-viewer.css?v=20261108-1"><link rel="stylesheet" href="/assets/css/ui-foundations.css?v=8ccb3680e491"><link rel="stylesheet" href="/assets/vendor/leaflet-1.9.4/leaflet.css"><link rel="stylesheet" href="/assets/css/photo-atlas.css?v=1114b"></head><body class="atlas-body"><main class="atlas-page">
+<link rel="stylesheet" href="/assets/css/footer-stories.css?v=3"><link rel="alternate" hreflang="x-default" href="https://map.shenlan.jp/"><link rel="stylesheet" href="/assets/css/nav-sketches.css?v=2"><link rel="stylesheet" href="/assets/css/language-navigation.css?v=1"><link rel="stylesheet" href="/assets/css/portfolio-stories.css?v=a8a199836c63"><link rel="stylesheet" href="/assets/css/photo-viewer.css?v=20261108-1"><link rel="stylesheet" href="/assets/css/ui-foundations.css?v=8ccb3680e491"><link rel="stylesheet" href="/assets/vendor/leaflet-1.9.4/leaflet.css"><link rel="stylesheet" href="/assets/css/photo-atlas.css?v=1115n"></head><body class="atlas-body"><main class="atlas-page">
 <div id="photo-map" aria-label="日本摄影地图"></div>
 <section class="atlas-panel">
 <div class="atlas-brand-row"><a href="/zh/" aria-label="Shenlan Photography · 首页"><img src="/assets/logo/logo.png" width="512" height="170" alt="Shenlan Photography"></a><details class="atlas-site-menu"><summary>网站导航</summary><nav aria-label="网站导航"><a href="/zh/">首页</a><a href="/zh/portfolio/">作品集</a><a href="/zh/routes/">拍摄行程</a><a href="/zh/services/">拍摄配套</a><a href="/zh/about/">关于摄影师</a><a href="/zh/book/">预约与咨询</a></nav></details></div>
 <header class="atlas-panel-head"><a class="atlas-back" href="/zh/portfolio/">← 作品集</a><nav aria-label="Language"><a href="/zh/portfolio/map/" lang="zh" aria-current="page">中文</a><a href="/en/portfolio/map/" lang="en" >EN</a><a href="/ja/portfolio/map/" lang="ja" >日本語</a></nav></header>
-<h1>日本摄影地图</h1><div class="atlas-filters" aria-label="取景地"><button data-region="" aria-pressed="true">全部地点</button><button data-region="東京都" data-code="JP-13" aria-pressed="false">东京</button><button data-region="山梨県" data-code="JP-19" aria-pressed="false">山梨</button><button data-region="神奈川県" data-code="JP-14" aria-pressed="false">神奈川</button><button data-region="静岡県" data-code="JP-22" aria-pressed="false">静冈</button><button data-region="長野県" data-code="JP-20" aria-pressed="false">长野</button><button data-region="富山県" data-code="JP-16" aria-pressed="false">富山</button><button data-region="茨城県" data-code="JP-08" aria-pressed="false">茨城</button><button data-region="京都府" data-code="JP-26" aria-pressed="false">京都</button><button data-region="群馬県" data-code="JP-10" aria-pressed="false">群马</button><button data-region="奈良県" data-code="JP-29" aria-pressed="false">奈良</button><button data-region="千葉県" data-code="JP-12" aria-pressed="false">千叶</button><button data-region="福島県" data-code="JP-07" aria-pressed="false">福岛</button><button data-region="大阪府" data-code="JP-27" aria-pressed="false">大阪</button><button data-region="埼玉県" data-code="JP-11" aria-pressed="false">埼玉</button><button data-region="山形県" data-code="JP-06" aria-pressed="false">山形</button><button data-region="栃木県" data-code="JP-09" aria-pressed="false">栃木</button></div>
-<label class="atlas-city">市区町村<select id="atlas-city"><option value="">全部</option></select></label><details class="atlas-directory"><summary>取景地 <small id="place-count">112</small></summary><div id="place-list"><ul><li><a href="/assets/img/full/tokyo/1.jpg">浅草寺</a> · 台东区</li>
+<h1>日本摄影地图</h1>
+<input type="search" id="atlas-search" placeholder="搜索取景地、城市或都道府县" aria-label="搜索取景地、城市或都道府县" aria-controls="place-list" enterkeyhint="search" hidden>
+<div class="atlas-filters" aria-label="取景地"><button data-region="" aria-pressed="true">全部地点</button><button data-region="東京都" data-names="Tokyo 东京 東京" data-code="JP-13" aria-pressed="false">东京</button><button data-region="山梨県" data-names="Yamanashi 山梨" data-code="JP-19" aria-pressed="false">山梨</button><button data-region="神奈川県" data-names="Kanagawa 神奈川" data-code="JP-14" aria-pressed="false">神奈川</button><button data-region="静岡県" data-names="Shizuoka 静冈 静岡" data-code="JP-22" aria-pressed="false">静冈</button><button data-region="新潟県" data-names="Niigata 新潟" data-code="JP-15" aria-pressed="false">新潟</button><button data-region="長野県" data-names="Nagano 長野 长野" data-code="JP-20" aria-pressed="false">长野</button><button data-region="富山県" data-names="Toyama 富山" data-code="JP-16" aria-pressed="false">富山</button><button data-region="茨城県" data-names="Ibaraki 茨城" data-code="JP-08" aria-pressed="false">茨城</button><button data-region="京都府" data-names="Kyoto 京都" data-code="JP-26" aria-pressed="false">京都</button><button data-region="群馬県" data-names="Gunma 群馬 群马" data-code="JP-10" aria-pressed="false">群马</button><button data-region="奈良県" data-names="Nara 奈良" data-code="JP-29" aria-pressed="false">奈良</button><button data-region="千葉県" data-names="Chiba 千叶 千葉" data-code="JP-12" aria-pressed="false">千叶</button><button data-region="福島県" data-names="Fukushima 福岛 福島" data-code="JP-07" aria-pressed="false">福岛</button><button data-region="大阪府" data-names="Osaka 大阪" data-code="JP-27" aria-pressed="false">大阪</button><button data-region="埼玉県" data-names="Saitama 埼玉" data-code="JP-11" aria-pressed="false">埼玉</button><button data-region="山形県" data-names="Yamagata 山形" data-code="JP-06" aria-pressed="false">山形</button><button data-region="栃木県" data-names="Tochigi 栃木" data-code="JP-09" aria-pressed="false">栃木</button></div>
+<div class="atlas-planner" hidden>
+<button type="button" class="atlas-plan-toggle" aria-controls="atlas-itinerary" aria-expanded="false"><span class="plan-idle-label">制定路线</span><span class="plan-active-label">正在制定路线</span><span class="plan-count"></span></button>
+<div id="atlas-itinerary" hidden><p class="plan-hint">点击地图上的取景地，把想拍的地方加入路线。</p><ol class="plan-stops" aria-label="我的拍摄路线"></ol>
+<a class="plan-enquire" href="/zh/book/" hidden>咨询这条路线 →</a></div></div>
+<details class="atlas-directory"><summary>取景地 <small id="place-count">141</small></summary><div id="place-list"><ul><li><a href="/assets/img/full/tokyo/1.jpg">浅草寺</a> · 台东区</li>
 <li><a href="/assets/img/full/tokyo/2.jpg">歌舞伎町一番街入口</a> · 新宿区</li>
 <li><a href="/assets/img/full/tokyo/DSC04713.jpg">神田神社（神田明神）</a> · 千代田区</li>
 <li><a href="/assets/img/full/tokyo/DSC08215.jpg">东京大学本乡校区</a> · 文京区</li>
@@ -150,7 +156,36 @@
 <li><a href="/assets/img/full/daikoku/daikoku56.jpg">海萤停车区</a> · 木更津市</li>
 <li><a href="/assets/img/autumn/autumn-00-full.webp">南伊奈湖</a> · 南阿尔卑斯市</li>
 <li><a href="/assets/img/autumn/autumn-20-full.webp">镰仓·圆觉寺</a> · 镰仓市</li>
-<li><a href="/assets/img/full/fuji/_DSC7840.jpg">朝雾高原</a> · 富士宫市</li></ul></div></details>
+<li><a href="/assets/img/full/fuji/_DSC7840.jpg">朝雾高原</a> · 富士宫市</li>
+<li><a href="/assets/img/atlas/full/P-CFB8901071.webp">八重洲・日本桥樱花通</a> · 中央区</li>
+<li><a href="/assets/img/atlas/full/P-CC5AE4EC2F.webp">上野公园前交番</a> · 台东区</li>
+<li><a href="/assets/img/atlas/full/P-8DA9C4C34A.webp">北浅羽樱堤公园</a> · 坂户市</li>
+<li><a href="/assets/img/atlas/full/P-E392F89CD2.webp">月之江书店</a> · 富士吉田市</li>
+<li><a href="/assets/img/atlas/full/P-BE900421EB.webp">河口湖北岸湖畔</a> · 富士河口湖町</li>
+<li><a href="/assets/img/atlas/full/P-2C24C386E2.webp">富士急行线寿站外</a> · 富士吉田市</li>
+<li><a href="/assets/img/atlas/full/P-07E34DB33E.webp">富士吉田樱花小径</a> · 富士吉田市</li>
+<li><a href="/assets/img/atlas/full/P-DDFD120F80.webp">新仓富士浅间神社大鸟居</a> · 富士吉田市</li>
+<li><a href="/assets/img/atlas/full/P-8B24023878.webp">新仓山浅间公园登山步道</a> · 富士吉田市</li>
+<li><a href="/assets/img/atlas/full/P-73F75B8707.webp">河口地区湖岸绿地</a> · 富士河口湖町</li>
+<li><a href="/assets/img/atlas/full/P-81DEACD456.webp">富士吉田樱花街景</a> · 富士吉田市</li>
+<li><a href="/assets/img/atlas/full/P-2FFA164D98.webp">青海川站</a> · 柏崎市</li>
+<li><a href="/assets/img/atlas/full/P-790F24AFBC.webp">清津峡溪谷隧道</a> · 十日町市</li>
+<li><a href="/assets/img/atlas/full/P-5DC8C3257B.webp">大泽站</a> · 南鱼沼市</li>
+<li><a href="/assets/img/atlas/full/P-D676A25134.webp">御幸之滨·通向大海的门</a> · 小田原市</li>
+<li><a href="/assets/img/atlas/full/P-E728113B82.webp">开成绣球花之乡</a> · 开成町</li>
+<li><a href="/assets/img/atlas/full/P-DE2D1ADB28.webp">大井梦之里</a> · 大井町</li>
+<li><a href="/assets/img/atlas/full/P-1A5D7F80EB.webp">草津白根山汤釜火口湖</a> · 草津町</li>
+<li><a href="/assets/img/atlas/full/P-7ED2FC4466.webp">白马大出公园</a> · 白马村</li>
+<li><a href="/assets/img/atlas/full/P-01DC0FF0FE.webp">日本平</a> · 静冈市</li>
+<li><a href="/assets/img/atlas/full/P-E7941BFF64.webp">富士宫大石寺</a> · 富士宫市</li>
+<li><a href="/assets/img/atlas/full/P-F66CDC99DA.webp">热海银座商店街</a> · 热海市</li>
+<li><a href="/assets/img/atlas/full/P-3F878D0115.webp">河津站前</a> · 河津町</li>
+<li><a href="/assets/img/atlas/full/P-EFD812E663.webp">奈良井宿</a> · 盐尻市</li>
+<li><a href="/assets/img/atlas/full/P-EC82194946.webp">松本城</a> · 松本市</li>
+<li><a href="/assets/img/atlas/full/P-99EE97F81A.webp">长野清水寺（若穗保科）</a> · 长野市</li>
+<li><a href="/assets/img/atlas/full/P-104BF8FC08.webp">贞祥寺</a> · 佐久市</li>
+<li><a href="/assets/img/atlas/full/P-0FAC20FE40.webp">鼻颜稻荷神社</a> · 佐久市</li>
+<li><a href="/assets/img/atlas/full/P-0BF96ACAC7.webp">韭崎站</a> · 韭崎市</li></ul></div></details>
 </section><button class="atlas-country">日本全境 ↗</button><p role="status" id="atlas-status" data-error="地图暂未载入，请刷新重试。"></p>
 <dialog id="atlas-viewer" aria-labelledby="atlas-view-title"><header><h2 id="atlas-view-title"></h2><button class="viewer-close" aria-label="关闭">×</button></header><img alt=""><div class="viewer-controls"><button data-step="-1">‹</button><span aria-live="polite"></span><button data-step="1">›</button></div></dialog>
-</main><script src="/assets/vendor/leaflet-1.9.4/leaflet.js"></script><script src="/assets/vendor/atlas-maplibre/maplibre-gl-4.7.1.js"></script><script src="/assets/vendor/atlas-maplibre/leaflet-maplibre-0.0.22.js"></script><script src="/assets/js/photo-atlas.js?v=1114c"></script></body></html>
+</main><script src="/assets/vendor/leaflet-1.9.4/leaflet.js"></script><script src="/assets/vendor/atlas-maplibre/maplibre-gl-4.7.1.js"></script><script src="/assets/vendor/atlas-maplibre/leaflet-maplibre-0.0.22.js"></script><script src="/assets/js/photo-atlas.js?v=1115n"></script></body></html>

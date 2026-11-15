@@ -26,6 +26,12 @@
     .cta{border:1px solid rgba(79,106,169,.45);background:rgba(79,106,169,.10);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit}
     .cta.secondary{background:rgba(255,255,255,.82);border-color:rgba(11,18,32,.12)}
     .cta:hover{background:rgba(79,106,169,.14)}
+  .booking-itinerary {padding:14px 16px;background:#f2f5ef;border-radius:12px;color:#344e40}
+    .booking-itinerary h3 {margin:0;font-size:16px}
+    .booking-itinerary ol {margin:.6em 0;padding-left:1.6em;line-height:1.7}
+    .booking-itinerary p:empty {display:none}
+    .booking-itinerary a {font-size:14px;text-decoration:underline}
+    .card.form [hidden] {display:none}
   </style>
 <!-- seo:links:start -->
   <link rel="alternate" hreflang="en" href="https://shenlan.jp/en/book/"/>
@@ -175,6 +181,7 @@
 
         <div class="card form">
           <h3 style="margin:0 0 10px;font-size:16px">撮影のご相談</h3>
+          <section class="field booking-itinerary" hidden><h3>希望の撮影ルート</h3><ol></ol><p role="status"></p><a href="/ja/portfolio/map/">地図で変更する →</a></section>
           <div class="field"><label for="route">希望ルート（任意）</label><select id="route" aria-describedby="route-hint" data-summary-label="希望ルート"><option value="">まだ決まっていません</option><option value="fuji">富士山フォトツアー</option><option value="tokyo">東京フォトツアー</option><option value="kamakura">鎌倉・江の島フォトツアー</option><option value="daikoku">大黒 PA カーミート</option><option value="hanabi">花火撮影</option></select><p class="hint" id="route-hint">未選択でも構いません。詳しい内容はご相談のうえ確認します。</p></div><div class="field"><label for="people">人数</label>
             <select id="people" aria-describedby="people-hint">
               <option value="1">1</option><option value="2" selected>2</option>
@@ -230,7 +237,7 @@
 
   <script src="/assets/vendor/flatpickr-4.6.13/flatpickr.min.js"></script><script src="/assets/vendor/flatpickr-4.6.13/ja.js"></script><script>flatpickr.l10ns.ja.yearAriaLabel = "年";</script>
   <script src="/assets/js/site.js?v=4183ee988d02"></script>
-  <script src="/assets/js/services-booking.js?v=20261105-2"></script><script src="/assets/data/availability.js"></script><script src="/assets/js/booking-route.js?v=20261108-1"></script>
+  <script src="/assets/js/services-booking.js?v=20261105-2"></script><script src="/assets/data/availability.js"></script><script src="/assets/js/booking-route.js?v=1115n"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     const datesLoaded = Array.isArray(window.shenlanUnavailableDates);

@@ -3,8 +3,6 @@
   const regionButtons = [...document.querySelectorAll('[data-region]')];
   const labels = Object.fromEntries(regionButtons.map(b => [b.dataset.region, b.textContent]));
   const codeNames = Object.fromEntries(regionButtons.filter(b=>b.dataset.code && b.dataset.code !== 'JP-13').map(b=>[b.dataset.code,b.dataset.region]));
-  const citySelect = document.getElementById('atlas-city');
-  const allCities = citySelect.options[0].text;
   const lang = document.documentElement.lang;
   const captions = {zh:['上一张','下一张','放大','缩小'],en:['Previous photo','Next photo','Zoom in','Zoom out'],ja:['前の写真','次の写真','拡大','縮小']}[lang];
   const closeLabel = {zh:'关闭照片',en:'Close photo',ja:'写真を閉じる'}[document.documentElement.lang];
@@ -15,7 +13,7 @@
       return response.json();
     };
     const [land, places, tokyoWards] = await Promise.all([
-      read('japan-prefectures.json'), read('photo-locations.json?v=1114c'), read('tokyo-23-wards.json')
+      read('japan-prefectures.json'), read('photo-locations.json?v=1115n'), read('tokyo-23-wards.json')
     ]);
     const map = L.map('photo-map', {minZoom:3,maxZoom:17,zoomControl:false,zoomSnap:.1,scrollWheelZoom:true,maxBounds:[[16,114],[52,158]],maxBoundsViscosity:.85});
     L.control.zoom({position:'bottomright'}).addTo(map);
@@ -96,25 +94,92 @@
     }
     let activeOutline;
     let selectedRegion = '';
-    let selectedCity = '';
-    let subset = [];
     let viewMode = 'places';
     L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
-    const visible = L.layerGroup().addTo(map);
     const icon = L.divIcon({className:'atlas-pin',iconSize:[26,26],iconAnchor:[13,13]});
     const frame = L.popup({className:'atlas-popup',maxWidth:256,autoPan:false,offset:[0,-7]});
     let pinned = null;
     function fitView() {
       let bounds;
       if (viewMode === 'country') bounds = [[24.1,122.9],[45.6,146.1]];
-      else if (selectedCity && subset.length) bounds = subset.map(p=>[p.lat,p.lng]);
+      else if (viewMode === 'itinerary') bounds = stops.map(place => [place.lat, place.lng]);
       else if (activeOutline) bounds = activeOutline.getBounds();
       else bounds = places.map(place => [place.lat, place.lng]);
       map.fitBounds(bounds, {
         paddingTopLeft:padding(), paddingBottomRight:compact.matches ? [12,56] : [18,32],
-        maxZoom:selectedCity ? 14 : 17, animate:false
+        maxZoom: viewMode === 'itinerary' ? 14 : map.getMaxZoom(), animate:false
       });
     }
+    const planner = document.querySelector('.atlas-planner');
+    const togglePlan = planner.querySelector('.atlas-plan-toggle');
+    const itinerary = document.getElementById('atlas-itinerary');
+    const enquiry = planner.querySelector('.plan-enquire');
+    const enquiryPage = enquiry.href;
+    const languageLinks = [...document.querySelectorAll('.atlas-panel-head a[lang]')];
+    const markers = new Map();
+    const routeLine = L.polyline([], {color:'#356754', weight:3, dashArray:'5 7', interactive:false});
+    const actions = {
+      zh: {add:'加入路线', remove:'移除', up:'上移', down:'下移', added:'已加入路线'},
+      en: {add:'Add to route', remove:'Remove', up:'Move up', down:'Move down', added:'Added to route'},
+      ja: {add:'ルートに追加', remove:'削除', up:'前へ', down:'後へ', added:'追加済み'}
+    }[lang];
+    const byPhoto = new Map(places.flatMap(place => place.photos.map(photo => [photo.id, place])));
+    const requestedStops = new URLSearchParams(location.search).get('stops') || '';
+    const stops = [...new Set(requestedStops.split(',').map(id => byPhoto.get(id)).filter(Boolean))];
+
+    function withStops(href) {
+      const url = new URL(href, location.href);
+      if (stops.length) url.searchParams.set('stops', stops.map(place => place.photos[0].id).join(','));
+      else url.searchParams.delete('stops');
+      return url.href;
+    }
+    function drawRoute() {
+      const list = planner.querySelector('.plan-stops');
+      list.replaceChildren();
+      for (const [index, place] of stops.entries()) {
+        const item = document.createElement('li');
+        const name = document.createElement('span');
+        name.textContent = place.title[lang];
+        item.append(name);
+        for (const [key, symbol] of [['up','↑'], ['down','↓'], ['remove','×']]) {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = symbol;
+          button.setAttribute('aria-label', actions[key] + ' · ' + place.title[lang]);
+          button.disabled = (key === 'up' && index === 0) || (key === 'down' && index === stops.length - 1);
+          button.onclick = () => {
+            stops.splice(index, 1);
+            if (key !== 'remove') stops.splice(index + (key === 'up' ? -1 : 1), 0, place);
+            map.closePopup();
+            drawRoute();
+            (list.children[Math.min(index, stops.length - 1)]?.querySelector('button:not(:disabled)') || togglePlan).focus();
+          };
+          item.append(button);
+        }
+        list.append(item);
+      }
+      planner.querySelector('.plan-hint').hidden = stops.length > 0;
+      planner.querySelector('.plan-count').textContent = stops.length ? String(stops.length) : '';
+      enquiry.hidden = stops.length === 0;
+      enquiry.href = withStops(enquiryPage);
+      languageLinks.forEach(link => {link.href = withStops(link.href);});
+      const nextUrl = withStops(location.href);
+      if (nextUrl !== location.href) history.replaceState(history.state, '', nextUrl);
+      routeLine.setLatLngs(stops.map(place => [place.lat, place.lng]));
+      for (const [place, marker] of markers) {
+        const element = marker.getElement();
+        const index = stops.indexOf(place);
+        if (index < 0) delete element.dataset.stop;
+        else element.dataset.stop = String(index + 1);
+      }
+    }
+    function showPlanner(open) {
+      itinerary.hidden = !open;
+      togglePlan.setAttribute('aria-expanded', String(open));
+      map.closePopup();
+      if (open && compact.matches) directory.open = false;
+    }
+    togglePlan.onclick = () => showPlanner(itinerary.hidden);
     function preview(p, pin=false) {
       if (!pin && pinned) return;
       if (pin) pinned = p;
@@ -163,6 +228,20 @@
         }
         figure.append(nav);
       }
+      if (!itinerary.hidden) {
+        const add = document.createElement('button');
+        add.type = 'button';
+        add.className = 'atlas-add-stop';
+        add.disabled = stops.includes(p);
+        add.textContent = add.disabled ? actions.added : '+ ' + actions.add;
+        add.onclick = () => {
+          if (!stops.includes(p)) stops.push(p);
+          drawRoute();
+          map.closePopup();
+          togglePlan.focus({preventScroll:true});
+        };
+        figure.append(add);
+      }
       const pixel = map.latLngToContainerPoint([p.lat,p.lng]);
       frame.options.offset = L.point(0,-7);
       frame.options.autoPan = false;
@@ -186,39 +265,35 @@
       frame.getElement().querySelector('.leaflet-popup-close-button')?.setAttribute('aria-label',closeLabel);
     }
     map.on('popupclose',()=>{pinned=null;});
-    function render(region='', mode='places', city='') {
-      siteMenu.open = false;
+    const search = document.querySelector('#atlas-search');
+    const list = document.getElementById('place-list');
+    const normalize = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const regionTerms = new Map(regionButtons.map(button => [button.dataset.region, button.dataset.names]));
+    const searchText = new Map(places.map(place => [place, normalize([
+      ...Object.values(place.title), ...Object.values(place.city), place.pref, regionTerms.get(place.pref)
+    ].join(' '))]));
+    function selectRegion(region) {
       selectedRegion = region;
-      selectedCity = city;
-      viewMode = mode;
-      if (compact.matches) directory.open = false;
       if (activeOutline) map.removeLayer(activeOutline);
       activeOutline = regions.get(region);
       if (activeOutline) activeOutline.addTo(map);
-      map.closePopup();
-      visible.clearLayers();
       regionButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.region===region)));
-      const regional = places.filter(p=>!region || p.pref===region);
-      const key = p=>p.pref+'/'+p.city.ja;
-      const options = new Map(regional.map(p=>[key(p), region ? p.city[lang] : labels[p.pref]+' · '+p.city[lang]]));
-      citySelect.replaceChildren(new Option(allCities,''));
-      for(const [value,label] of [...options].sort((a,b)=>a[1].localeCompare(b[1],lang))) citySelect.add(new Option(label,value));
-      citySelect.value = city;
-      subset = regional.filter(p=>!city || key(p)===city);
-      const list = document.getElementById('place-list');
+    }
+    function updateList() {
+      const terms = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+      const subset = places.filter(place =>
+        (!selectedRegion || place.pref === selectedRegion) &&
+        terms.every(term => searchText.get(place).includes(term))
+      );
       list.replaceChildren();
+      list.scrollTop = 0;
       if (subset.length === 0) {
         const empty = document.createElement('p');
-        empty.textContent = {zh:'这里还没有照片。',en:'No photos here yet.',ja:'このエリアにはまだ写真がありません。'}[lang];
+        empty.textContent = {zh:'没有找到匹配的取景地。',en:'No matching photo spots.',ja:'一致する撮影地がありません。'}[lang];
         list.append(empty);
       }
       document.getElementById('place-count').textContent = subset.length;
-      fitView();
       for (const p of subset) {
-        const marker = L.marker([p.lat,p.lng],{icon,title:p.title[lang],alt:p.title[lang],riseOnHover:true}).addTo(visible);
-        marker.on('mouseover',()=>{if(matchMedia('(hover:hover)').matches)preview(p);});
-        marker.on('click',()=>preview(p,true));
-        marker.getElement().addEventListener('focus',()=>preview(p));
         const button = document.createElement('button');
         button.type = 'button';
         const thumb=document.createElement('img');
@@ -231,19 +306,60 @@
         button.onclick = () => {
           viewMode = 'place';
           if(compact.matches) directory.open=false;
-          map.setView(marker.getLatLng(),Math.max(map.getZoom(),14),{animate:false});
+          map.setView([p.lat, p.lng],Math.max(map.getZoom(),14),{animate:false});
           preview(p,true);
         };
         list.append(button);
       }
     }
+    function render(region='', mode='places') {
+      siteMenu.open = false;
+      viewMode = mode;
+      search.value = '';
+      if (compact.matches) directory.open = false;
+      selectRegion(region);
+      map.closePopup();
+      updateList();
+      fitView();
+    }
+    search.oninput = () => {
+      if (selectedRegion) selectRegion('');
+      map.closePopup();
+      directory.open = true;
+      updateList();
+    };
+    search.onfocus = () => { if (search.value) directory.open = true; };
+    search.onkeydown = event => {
+      if (event.isComposing || event.keyCode === 229) return;
+      if (event.key === 'Enter' && search.value.trim()) {
+        event.preventDefault();
+        const first = list.querySelector('button');
+        if (first) { search.blur(); first.click(); }
+      }
+    };
+    search.hidden = false;
     regionButtons.forEach(b=>b.onclick=()=>render(b.dataset.region));
-    citySelect.onchange=()=>render(selectedRegion,'places',citySelect.value);
     document.querySelector('.atlas-country').onclick = () => render('', 'country');
     map.on('resize', () => {
       if (selectedRegion && viewMode === 'places') fitView();
     });
     render();
+    for (const place of places) {
+      const title = place.title[lang];
+      const marker = L.marker([place.lat, place.lng], {icon, title, alt: title, riseOnHover: true}).addTo(map);
+      markers.set(place, marker);
+      marker.on('mouseover', () => {
+        if (matchMedia('(hover:hover)').matches) preview(place);
+      });
+      marker.on('click', () => preview(place, true));
+      marker.getElement().addEventListener('focus', () => preview(place));
+    }
+    routeLine.addTo(map);
+    planner.hidden = false;
+    showPlanner(stops.length > 0);
+    drawRoute();
+    if (stops.length) viewMode = 'itinerary';
+    fitView();
     const cartography = L.maplibreGL({
       pane:'atlasCartography', style:'/assets/maps/atlas-basemap.json',
       interactive:false, padding:0.05
