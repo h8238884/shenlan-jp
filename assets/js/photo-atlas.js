@@ -2,7 +2,7 @@
   const status = document.getElementById('atlas-status');
   const regionButtons = [...document.querySelectorAll('[data-region]')];
   const labels = Object.fromEntries(regionButtons.map(b => [b.dataset.region, b.textContent]));
-  const codeNames = Object.fromEntries(regionButtons.filter(b=>b.dataset.code && b.dataset.code !== 'JP-13').map(b=>[b.dataset.code,b.dataset.region]));
+  const codeNames = Object.fromEntries(regionButtons.filter(b=>b.dataset.code).map(b=>[b.dataset.code,b.dataset.region]));
   const lang = document.documentElement.lang;
   const captions = {zh:['上一张','下一张','放大','缩小'],en:['Previous photo','Next photo','Zoom in','Zoom out'],ja:['前の写真','次の写真','拡大','縮小']}[lang];
   const closeLabel = {zh:'关闭照片',en:'Close photo',ja:'写真を閉じる'}[document.documentElement.lang];
@@ -15,10 +15,12 @@
     const [land, places, tokyoWards] = await Promise.all([
       read('japan-prefectures.json'), read('photo-locations.json?v=1116-tags'), read('tokyo-23-wards.json')
     ]);
-    const map = L.map('photo-map', {minZoom:3,maxZoom:17,zoomControl:false,zoomSnap:.1,scrollWheelZoom:true,maxBounds:[[16,114],[52,158]],maxBoundsViscosity:.85});
+    const compact = window.matchMedia('(max-width:700px)');
+    // A tall mobile viewport needs more pan range to frame Japan below the panel.
+    const panBounds = () => compact.matches ? [[-70,60],[75,205]] : [[16,114],[52,158]];
+    const map = L.map('photo-map', {minZoom:3,maxZoom:17,zoomControl:false,zoomSnap:.1,scrollWheelZoom:true,maxBounds:panBounds(),maxBoundsViscosity:.85});
     L.control.zoom({position:'bottomright'}).addTo(map);
     map.attributionControl.setPrefix(false);
-    const compact = window.matchMedia('(max-width:700px)');
     const directory = document.querySelector('.atlas-directory');
     directory.open = !compact.matches;
     const panel = document.querySelector('.atlas-panel');
@@ -89,8 +91,9 @@
       control.setAttribute('aria-label',label);
     }
     map.createPane('landFallback').style.zIndex = 190;
+    const regionFill = '#c6d6bd';
     L.geoJSON(land, {pane:'landFallback',interactive:false, attribution:'<a href="https://www.naturalearthdata.com/">Natural Earth</a>',
-      style: feature => ({weight:1,color:'#aab7a6',fillColor:codeNames[feature.properties.code]?'#c6d6bd':'#f2f0e4',fillOpacity:1})
+      style: feature => ({className:codeNames[feature.properties.code]?'atlas-land featured':'atlas-land',weight:1,color:'#aab7a6',fillColor:codeNames[feature.properties.code]?regionFill:'#f2f0e4',fillOpacity:1})
     }).addTo(map);
     const tileURL = name => 'https://cyberjapandata.gsi.go.jp/xyz/'+name+'/{z}/{x}/{y}.png';
     const bounds = [[20,122],[46.5,154.5]];
@@ -104,12 +107,12 @@
     const areas = land.features
       .filter(feature => codeNames[feature.properties.code])
       .map(feature => [codeNames[feature.properties.code], feature]);
-    areas.push(['東京都', tokyoWards]);
     for (const [region, shape] of areas) {
-      const outline = L.geoJSON(shape, {
-        style:{color:'#426b60',weight:region === '東京都' ? 1 : 1.8,opacity:.85,fill:false},
-        attribution:region === '東京都'
-          ? '<a href="https://smartnews-smri.github.io/japan-topography/">国土数値情報・SMRI</a>' : null,
+      // The full prefecture is shaded and clickable; the Tokyo shortcut frames the wards.
+      const isTokyo = region === '東京都';
+      const outline = L.geoJSON(isTokyo ? tokyoWards : shape, {
+        attribution: isTokyo ? '<a href="https://smartnews-smri.github.io/japan-topography/">国土数値情報・SMRI</a>' : null,
+        style:{className:'atlas-region-outline',color:'#426b60',weight:isTokyo ? 1 : 1.8,opacity:.85,fill:false},
         interactive:false
       });
       regions.set(region, outline);
@@ -131,8 +134,14 @@
       else if (activeOutline) bounds = activeOutline.getBounds();
       else bounds = places.filter(place => matchingPhotos(place).length).map(place => [place.lat, place.lng]);
       if (Array.isArray(bounds) && !bounds.length) return;
+      let bottomRight = [18,32];
+      if (compact.matches) {
+        const controls = map.getContainer().querySelector('.leaflet-control-zoom');
+        const reserve = map.getContainer().getBoundingClientRect().bottom - controls.getBoundingClientRect().top;
+        bottomRight = [12, Math.ceil(reserve) + 8];
+      }
       map.fitBounds(bounds, {
-        paddingTopLeft:padding(), paddingBottomRight:compact.matches ? [12,56] : [18,32],
+        paddingTopLeft:padding(), paddingBottomRight:bottomRight,
         maxZoom: viewMode === 'itinerary' ? 14 : map.getMaxZoom(), animate:false
       });
     }
@@ -143,7 +152,7 @@
     const enquiryPage = enquiry.href;
     const languageLinks = [...document.querySelectorAll('.atlas-panel-head a[lang]')];
     const markers = new Map();
-    const routeLine = L.polyline([], {color:'#356754', weight:3, dashArray:'5 7', interactive:false});
+    const routeLine = L.polyline([], {className:'atlas-route-line',color:'#356754', weight:3, dashArray:'5 7', interactive:false});
     const actions = {
       zh: {add:'加入路线', remove:'移除', up:'上移', down:'下移', added:'已加入路线'},
       en: {add:'Add to route', remove:'Remove', up:'Move up', down:'Move down', added:'Added to route'},
@@ -185,7 +194,7 @@
         list.append(item);
       }
       planner.querySelector('.plan-hint').hidden = stops.length > 0;
-      planner.querySelector('.plan-count').textContent = stops.length ? String(stops.length) : '';
+      togglePlan.querySelector('.plan-count').textContent = stops.length ? String(stops.length) : '';
       enquiry.hidden = stops.length === 0;
       enquiry.href = withStops(enquiryPage);
       languageLinks.forEach(link => {link.href = withStops(link.href);});
@@ -323,6 +332,45 @@
     }
     map.on('popupclose',()=>{pinned=null;});
     const search = document.querySelector('#atlas-search');
+    const drawer = document.getElementById('atlas-search-drawer');
+    const searchToggle = document.querySelector('.atlas-search-toggle');
+    const titleRow = document.querySelector('.atlas-title-row');
+    const regionBar = document.querySelector('.atlas-filters');
+    function arrangeControls() {
+      if (compact.matches) {
+        titleRow.append(togglePlan);
+        drawer.append(search, directory);
+      } else {
+        if (drawer.open) drawer.close();
+        planner.prepend(togglePlan);
+        regionBar.before(search);
+        panel.append(directory);
+      }
+      searchToggle.hidden = !compact.matches;
+      directory.open = !compact.matches;
+      map.setMaxBounds(panBounds());
+    }
+    searchToggle.onclick = () => {
+      siteMenu.open = false;
+      map.closePopup();
+      directory.open = true;
+      drawer.showModal();
+      search.focus({preventScroll:true});
+    };
+    drawer.querySelector('.atlas-drawer-close').onclick = () => drawer.close();
+    drawer.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !event.isComposing) {
+        event.preventDefault();
+        drawer.close();
+      }
+    });
+    drawer.addEventListener('click', event => {
+      if (event.target !== drawer) return;
+      const box = drawer.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right) drawer.close();
+    });
+    arrangeControls();
+    compact.addEventListener('change', arrangeControls);
     const list = document.getElementById('place-list');
     const normalize = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const regionTerms = new Map(regionButtons.map(button => [button.dataset.region, button.dataset.names]));
@@ -361,6 +409,7 @@
         pref.textContent=labels[p.pref]+' · '+p.city[lang]; text.append(pref);
         button.append(thumb,text);
         button.onclick = () => {
+          if (drawer.open) drawer.close();
           viewMode = 'place';
           if(compact.matches) directory.open=false;
           map.setView([p.lat, p.lng],Math.max(map.getZoom(),14),{animate:false});
@@ -398,7 +447,7 @@
     regionButtons.forEach(b=>b.onclick=()=>render(b.dataset.region));
     document.querySelector('.atlas-country').onclick = () => render('', 'country');
     map.on('resize', () => {
-      if (selectedRegion && viewMode === 'places') fitView();
+      if (viewMode === 'country' || (selectedRegion && viewMode === 'places')) fitView();
     });
     const topicBar = document.querySelector('.atlas-topics');
     function updateMarker(place, pin) {
@@ -462,11 +511,33 @@
     drawRoute();
     if (stops.length) viewMode = 'itinerary';
     fitView();
+    const base = await read('atlas-basemap.json');
+    const nightPaint = {
+      Water:{'fill-color':'#294b59'}, Contours:{'line-color':'#a69676'},
+      Rivers:{'line-color':'#68a5b6'}, 'Lake shores':{'line-color':'#68949f'},
+      Coast:{'line-color':'#73979a'}, Prefectures:{'line-color':'#879288'},
+      Roads:{'line-color':'#af9e82'}, Buildings:{'fill-color':'#5b685f'},
+      Landmarks:{'text-color':'#f1ebd8','text-halo-color':'#203328'},
+      'Local places':{'text-color':'#d4e2d8','text-halo-color':'#22362d'}
+    };
+    const night = () => document.documentElement.dataset.atlasTheme === 'dark';
     const cartography = L.maplibreGL({
-      pane:'atlasCartography', style:'/assets/maps/atlas-basemap.json',
-      interactive:false, padding:0.05
-    });
-    cartography.addTo(map);
+      pane:'atlasCartography', style:{...base, layers:base.layers.map(layer => ({
+        ...layer, paint:{...layer.paint, ...(night() ? nightPaint[layer.id] : {})}
+      }))}, interactive:false, padding:0.05
+    }).addTo(map);
+    const gl = cartography.getMaplibreMap();
+    let paintReady = false;
+    function syncPaint() {
+      if (!paintReady) return;
+      for (const layer of base.layers) {
+        for (const [property, dark] of Object.entries(nightPaint[layer.id] || {})) {
+          gl.setPaintProperty(layer.id, property, night() ? dark : layer.paint[property]);
+        }
+      }
+    }
+    gl.once('style.load', () => { paintReady = true; syncPaint(); });
+    document.addEventListener('atlas-theme-change', syncPaint);
   } catch(error) {
     status.textContent = status.dataset.error;
     console.error('Photo map:',error);

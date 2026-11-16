@@ -382,10 +382,6 @@
     const pA = document.querySelector('[data-hero-primary]');
     const pAt = document.querySelector('[data-hero-primary-text]');
     const pAs = document.querySelector('[data-hero-primary-sub]');
-    // secondary CTA removed
-    const pB = null;
-    const pBt = null;
-    const pBs = null;
 
     if(title && d.title) title.textContent = d.title;
     if(desc && d.desc) desc.textContent = d.desc;
@@ -394,7 +390,6 @@
     if(pAt && d.primaryText) pAt.textContent = d.primaryText;
     if(pAs && d.primarySub) pAs.textContent = d.primarySub;
 
-    // secondary CTA removed
   }
 
   const hero = document.querySelector('.swiper[data-hero]');
@@ -405,8 +400,31 @@
     let enabled = !motion.matches;
     let hovering = section.matches(':hover') && window.matchMedia('(hover: hover)').matches;
     let focused = section.contains(document.activeElement);
+    const editorial = document.body.classList.contains('home-page');
+    let photoMotion;
+    let previousSlide;
+    function presentSlide(sw) {
+      applyHeroSlide(sw);
+      const slide = sw.slides[sw.activeIndex];
+      if (!editorial || !slide || slide === previousSlide) return;
+      previousSlide = slide;
+      if (motion.matches || !slide.animate) return;
+      const image = slide.querySelector('img');
+      if (image) {
+        image.getAnimations().forEach(animation => animation.cancel());
+        photoMotion = image.animate([{transform:'scale(1.022)'}, {transform:'scale(1)'}],
+          {duration:6100, easing:'ease-out', fill:'forwards'});
+        if (!enabled || hovering || focused || document.hidden) photoMotion.pause();
+      }
+      for (const line of section.querySelectorAll('.hero-title > *')) {
+        line.getAnimations().forEach(animation => animation.cancel());
+        line.animate([{opacity:.35, transform:'translateY(9px)'}, {opacity:1, transform:'none'}],
+          {duration:600, delay:line.tagName === 'P' ? 65 : 0, easing:'ease-out', fill:'backwards'});
+      }
+    }
     const swiper = new Swiper(hero, {
       loop: true,
+      ...(editorial ? {effect:'fade', fadeEffect:{crossFade:true}} : {}),
       speed: motion.matches ? 0 : 900,
       autoplay: {enabled, delay:5200, disableOnInteraction:false},
       grabCursor: true,
@@ -417,10 +435,14 @@
         prevEl:hero.querySelector('.swiper-button-prev')
       },
       keyboard: {enabled:true},
-      on: {init:applyHeroSlide, slideChange:applyHeroSlide}
+      on: {init:presentSlide, slideChange:presentSlide}
     });
     const updatePlayback = () => {
       const shouldPlay = enabled && !hovering && !focused && !document.hidden;
+      if (photoMotion && photoMotion.playState !== 'finished') {
+        if (shouldPlay) photoMotion.play();
+        else photoMotion.pause();
+      }
       if (shouldPlay && !swiper.autoplay.running) swiper.autoplay.start();
       if (!shouldPlay && swiper.autoplay.running) swiper.autoplay.stop();
       if (control) {
@@ -449,7 +471,14 @@
     });
     motion.addEventListener('change', () => {
       swiper.params.speed = motion.matches ? 0 : 900;
-      if (motion.matches) enabled = false;
+      if (motion.matches) {
+        enabled = false;
+        if (editorial) {
+          section.querySelectorAll('.swiper-slide img, .hero-title > *').forEach(el =>
+            el.getAnimations().forEach(animation => animation.cancel()));
+          photoMotion = null;
+        }
+      }
       updatePlayback();
     });
     document.addEventListener('visibilitychange', updatePlayback);

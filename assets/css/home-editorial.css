@@ -1,0 +1,80 @@
+/* Self-hosted title subsets cover the homepage headings in each language. */
+@font-face {
+  font-family: "Home Serif SC";
+  src: url("../fonts/home/noto-serif-sc.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Home Serif JP";
+  src: url("../fonts/home/noto-serif-jp.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Home Manrope";
+  src: url("../fonts/home/manrope.woff2") format("woff2");
+  font-weight: 550;
+  font-display: swap;
+}
+.home-page {
+  --display-face: "Home Serif SC", "Songti SC", Georgia, serif;
+  --caption-face: "Home Manrope", system-ui, sans-serif;
+}
+.home-page:lang(ja) { --display-face: "Home Serif JP", "Yu Mincho", serif; }
+.home-page .hero-title h1,
+.home-page main h2.illustrated-heading,
+.home-page .map-invite-copy strong {
+  font-family: var(--display-face);
+  font-weight: 600;
+  letter-spacing: .012em;
+  text-wrap: balance;
+}
+.home-page .hero-title h1 {
+  font-size: clamp(36px, 4.7vw, 72px);
+  line-height: 1.19;
+  margin-bottom: .2em;
+  text-shadow: 0 2px 18px rgb(9 18 24 / 34%);
+}
+.home-page .hero-title p,
+.home-page :is(.home-story-eyebrow, .services-eyebrow) {
+  font-family: var(--caption-face);
+  font-weight: 550;
+}
+.home-page .hero-title p { letter-spacing: .025em; }
+.home-page .hero-title { min-width: 0; }
+.home-page .hero-copy {
+  text-shadow: 0 1px 8px rgb(9 18 24 / 32%);
+  pointer-events: none;
+}
+.home-page .hero-copy a { pointer-events: auto; }
+.home-page .hero .swiper-slide { overflow: hidden; }
+.home-page .hero .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 52% 0 0;
+  pointer-events: none;
+  background: linear-gradient(transparent, rgb(11 21 27 / 51%));
+}
+@media (max-width: 600px) {
+  .home-page .hero-title h1 { font-size: clamp(29px, 7.1vw, 40px); }
+  .home-page .hero-title p { line-height: 1.6; }
+}
+@keyframes home-appear {
+  from { opacity: .25; transform: translateY(15px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.reveal-on .home-page .reveal { transform: none; transition: none; }
+  .home-page .reveal.show :is(.illustrated-heading, .home-portrait, .home-vehicle-gallery),
+  .home-page .reveal.show .tabpane.active .thumb {
+    animation: home-appear 720ms cubic-bezier(.18,.74,.22,1) backwards;
+  }
+  .home-page .reveal.show .thumb:nth-child(2) { animation-delay: 55ms; }
+  .home-page .reveal.show .thumb:nth-child(3) { animation-delay: 105ms; }
+  .home-page .reveal.show .thumb:nth-child(4) { animation-delay: 150ms; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-on .home-page .reveal,
+  .home-page .tabpane.active { animation: none; transition: none; transform: none; }
+}
