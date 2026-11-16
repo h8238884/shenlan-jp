@@ -17,17 +17,29 @@
    {
     "id": "P-02BFDE68AD",
     "thumb": "/assets/img/thumbs/tokyo/1-web.webp",
-    "full": "/assets/img/full/tokyo/1.jpg"
+    "full": "/assets/img/full/tokyo/1.jpg",
+    "tags": [
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-300AAEF2FD",
     "full": "/assets/img/full/people/_DSC5500-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC5500-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC5500-___-NR-web.webp",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-8A8239E806",
     "full": "/assets/img/full/people/_DSC5524-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC5524-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC5524-___-NR-web.webp",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    }
   ]
  },
@@ -49,42 +61,78 @@
    {
     "id": "P-4CF2D69CF0",
     "thumb": "/assets/img/thumbs/tokyo/2-web.webp",
-    "full": "/assets/img/full/tokyo/2.jpg"
+    "full": "/assets/img/full/tokyo/2.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-12C3D30C03",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1419-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1419.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1419.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-68C56FE581",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1439-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1439.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1439.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-264A3598D6",
     "thumb": "/assets/img/thumbs/tokyo/_DSC5339-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC5339.jpg"
+    "full": "/assets/img/full/tokyo/_DSC5339.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-75AE620F70",
     "thumb": "/assets/img/thumbs/tokyo/_DSC5351-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC5351.jpg"
+    "full": "/assets/img/full/tokyo/_DSC5351.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-8FEEFB25B1",
     "thumb": "/assets/img/thumbs/tokyo/_DSC9529-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC9529.jpg"
+    "full": "/assets/img/full/tokyo/_DSC9529.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-0D88393FE6",
     "thumb": "/assets/img/thumbs/tokyo/_DSC9536-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC9536.jpg"
+    "full": "/assets/img/full/tokyo/_DSC9536.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-A2E46C56B3",
     "full": "/assets/img/car/gallery/_DSC9339.jpg",
-    "thumb": "/assets/img/car/thumbs/_DSC9339.jpg"
+    "thumb": "/assets/img/car/thumbs/_DSC9339.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -106,12 +154,20 @@
    {
     "id": "P-75F447F56F",
     "thumb": "/assets/img/thumbs/tokyo/DSC04713-web.webp",
-    "full": "/assets/img/full/tokyo/DSC04713.jpg"
+    "full": "/assets/img/full/tokyo/DSC04713.jpg",
+    "tags": [
+     "culture",
+     "heritage"
+    ]
    },
    {
     "id": "P-D24457735B",
     "thumb": "/assets/img/thumbs/tokyo/_DSC0454-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC0454.jpg"
+    "full": "/assets/img/full/tokyo/_DSC0454.jpg",
+    "tags": [
+     "culture",
+     "heritage"
+    ]
    }
   ]
  },
@@ -133,17 +189,29 @@
    {
     "id": "P-AFA00B32F0",
     "thumb": "/assets/img/thumbs/tokyo/DSC08215-web.webp",
-    "full": "/assets/img/full/tokyo/DSC08215.jpg"
+    "full": "/assets/img/full/tokyo/DSC08215.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-B5FCA01DCE",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1839-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1839.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1839.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-8EE0B99FFC",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1872xhs-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1872xhs.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1872xhs.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    }
   ]
  },
@@ -165,52 +233,88 @@
    {
     "id": "P-E6FD868A73",
     "thumb": "/assets/img/thumbs/tokyo/_DSC0722-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC0722.jpg"
+    "full": "/assets/img/full/tokyo/_DSC0722.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-5CA6A6FAF9",
     "thumb": "/assets/img/thumbs/tokyo/_DSC0856ins-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC0856ins.jpg"
+    "full": "/assets/img/full/tokyo/_DSC0856ins.jpg",
+    "tags": [
+     "city",
+     "portrait"
+    ]
    },
    {
     "id": "P-8A22CE7D48",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1684-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1684.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1684.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-43A722EB13",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2573-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2573.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2573.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-5A7192ABA0",
     "thumb": "/assets/img/thumbs/tokyo/_DSC8006-___-NR-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC8006-___-NR.jpg"
+    "full": "/assets/img/full/tokyo/_DSC8006-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-2AD42BF4C3",
     "full": "/assets/img/full/people/_DSC7910-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC7910-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC7910-___-NR-web.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-CFE899421D",
     "full": "/assets/img/full/people/_DSC7926-___-NR-card.webp",
-    "thumb": "/assets/img/full/people/_DSC7926-___-NR-card.webp"
+    "thumb": "/assets/img/full/people/_DSC7926-___-NR-card.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-0C41F140CA",
     "full": "/assets/img/full/people/_DSC7926-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC7926-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC7926-___-NR-web.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-F903878AEF",
     "full": "/assets/img/full/other/_DSC2548ins.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC2548ins-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC2548ins-web.webp",
+    "tags": [
+     "culture"
+    ]
    },
    {
     "id": "P-F8FD633545",
     "full": "/assets/img/car/gallery/_DSC8778.jpg",
-    "thumb": "/assets/img/car/thumbs/_DSC8778.jpg"
+    "thumb": "/assets/img/car/thumbs/_DSC8778.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -232,27 +336,49 @@
    {
     "id": "P-D304FF931E",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1351-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1351.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1351.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-01E2E0770F",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1738-___-NR-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1738-___-NR.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1738-___-NR.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-7086274308",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2361-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2361.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2361.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-B49551AED5",
     "thumb": "/assets/img/thumbs/tokyo/_DSC5284-___-NRins-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC5284-___-NRins.jpg"
+    "full": "/assets/img/full/tokyo/_DSC5284-___-NRins.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-8F15978273",
     "full": "/assets/img/full/other/_DSC5181.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC5181-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC5181-web.webp",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -274,22 +400,40 @@
    {
     "id": "P-56828A544F",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1796-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1796.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1796.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-D8E52D7FE9",
     "full": "/assets/img/atlas/full/P-D8E52D7FE9.webp",
-    "thumb": "/assets/img/atlas/thumb/P-D8E52D7FE9.webp"
+    "thumb": "/assets/img/atlas/thumb/P-D8E52D7FE9.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-4C14D8A863",
     "full": "/assets/img/atlas/full/P-4C14D8A863.webp",
-    "thumb": "/assets/img/atlas/thumb/P-4C14D8A863.webp"
+    "thumb": "/assets/img/atlas/thumb/P-4C14D8A863.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    },
    {
     "id": "P-77C02CA6B5",
     "full": "/assets/img/atlas/full/P-77C02CA6B5.webp",
-    "thumb": "/assets/img/atlas/thumb/P-77C02CA6B5.webp"
+    "thumb": "/assets/img/atlas/thumb/P-77C02CA6B5.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -311,42 +455,79 @@
    {
     "id": "P-B44D48AD17",
     "thumb": "/assets/img/thumbs/tokyo/_DSC1915-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC1915.jpg"
+    "full": "/assets/img/full/tokyo/_DSC1915.jpg",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-68C464A5D3",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2283-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2283.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2283.jpg",
+    "tags": [
+     "autumn",
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-E045E1CAFA",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2296-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2296.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2296.jpg",
+    "tags": [
+     "autumn",
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-51DC20E0A6",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2327-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2327.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2327.jpg",
+    "tags": [
+     "autumn",
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-6C5C4CD830",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2335-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2335.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2335.jpg",
+    "tags": [
+     "autumn",
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-0FD59B0490",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2366-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2366.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2366.jpg",
+    "tags": [
+     "autumn",
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-60356430B0",
     "thumb": "/assets/img/thumbs/tokyo/_DSC5021-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC5021.jpg"
+    "full": "/assets/img/full/tokyo/_DSC5021.jpg",
+    "tags": [
+     "heritage",
+     "culture"
+    ]
    },
    {
     "id": "P-E084C91856",
     "full": "/assets/img/full/other/_DSC2415.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC2415-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC2415-web.webp",
+    "tags": [
+     "heritage",
+     "culture"
+    ]
    }
   ]
  },
@@ -368,12 +549,19 @@
    {
     "id": "P-57D80F55A4",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2217-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2217.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2217.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-4D185D28E3",
     "thumb": "/assets/img/thumbs/tokyo/_DSC2281-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC2281.jpg"
+    "full": "/assets/img/full/tokyo/_DSC2281.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -395,17 +583,26 @@
    {
     "id": "P-88124BD7CD",
     "thumb": "/assets/img/thumbs/tokyo/_DSC3206-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC3206.jpg"
+    "full": "/assets/img/full/tokyo/_DSC3206.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-29EA4218F3",
     "thumb": "/assets/img/thumbs/tokyo/_DSC3219-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC3219.jpg"
+    "full": "/assets/img/full/tokyo/_DSC3219.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-7B2EFAD8AC",
     "thumb": "/assets/img/thumbs/tokyo/_DSC3238-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC3238.jpg"
+    "full": "/assets/img/full/tokyo/_DSC3238.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -427,12 +624,18 @@
    {
     "id": "P-4CAA7EED33",
     "thumb": "/assets/img/thumbs/tokyo/_DSC4330-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC4330.jpg"
+    "full": "/assets/img/full/tokyo/_DSC4330.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-A7EBD147EE",
     "thumb": "/assets/img/thumbs/tokyo/_DSC4376-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC4376.jpg"
+    "full": "/assets/img/full/tokyo/_DSC4376.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -454,7 +657,11 @@
    {
     "id": "P-F0946E0220",
     "thumb": "/assets/img/thumbs/tokyo/_DSC4881-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC4881.jpg"
+    "full": "/assets/img/full/tokyo/_DSC4881.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -476,7 +683,11 @@
    {
     "id": "P-490C8E8152",
     "thumb": "/assets/img/thumbs/tokyo/_DSC5381-___-NR-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC5381-___-NR.jpg"
+    "full": "/assets/img/full/tokyo/_DSC5381-___-NR.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -498,7 +709,11 @@
    {
     "id": "P-F138A61CB9",
     "thumb": "/assets/img/thumbs/tokyo/_DSC6195-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC6195.jpg"
+    "full": "/assets/img/full/tokyo/_DSC6195.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -520,7 +735,11 @@
    {
     "id": "P-50340DD43D",
     "thumb": "/assets/img/thumbs/tokyo/_DSC8562-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC8562.jpg"
+    "full": "/assets/img/full/tokyo/_DSC8562.jpg",
+    "tags": [
+     "heritage",
+     "city"
+    ]
    }
   ]
  },
@@ -542,12 +761,18 @@
    {
     "id": "P-04F9ACB76E",
     "thumb": "/assets/img/thumbs/tokyo/_DSC8656-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC8656.jpg"
+    "full": "/assets/img/full/tokyo/_DSC8656.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-7ED26BF3B0",
     "thumb": "/assets/img/thumbs/tokyo/_DSC8666-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC8666.jpg"
+    "full": "/assets/img/full/tokyo/_DSC8666.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -569,12 +794,20 @@
    {
     "id": "P-B1C80519C9",
     "thumb": "/assets/img/thumbs/tokyo/_DSC9420-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC9420.jpg"
+    "full": "/assets/img/full/tokyo/_DSC9420.jpg",
+    "tags": [
+     "culture",
+     "city"
+    ]
    },
    {
     "id": "P-CDEF09C0D2",
     "thumb": "/assets/img/thumbs/tokyo/_DSC9711-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC9711.jpg"
+    "full": "/assets/img/full/tokyo/_DSC9711.jpg",
+    "tags": [
+     "culture",
+     "city"
+    ]
    }
   ]
  },
@@ -596,7 +829,10 @@
    {
     "id": "P-CB188D8073",
     "thumb": "/assets/img/thumbs/tokyo/_DSC9431-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC9431.jpg"
+    "full": "/assets/img/full/tokyo/_DSC9431.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -618,7 +854,10 @@
    {
     "id": "P-2C642ABF5C",
     "thumb": "/assets/img/thumbs/tokyo/_DSC9554-web.webp",
-    "full": "/assets/img/full/tokyo/_DSC9554.jpg"
+    "full": "/assets/img/full/tokyo/_DSC9554.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -640,7 +879,10 @@
    {
     "id": "P-5834909EE0",
     "thumb": "/assets/img/thumbs/tokyo/___-1-web.webp",
-    "full": "/assets/img/full/tokyo/___-1.jpg"
+    "full": "/assets/img/full/tokyo/___-1.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -662,27 +904,47 @@
    {
     "id": "P-9A7AD47661",
     "thumb": "/assets/img/thumbs/fuji/1-web.webp",
-    "full": "/assets/img/full/fuji/1.jpg"
+    "full": "/assets/img/full/fuji/1.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-7990B3F377",
     "thumb": "/assets/img/thumbs/fuji/2-web.webp",
-    "full": "/assets/img/full/fuji/2.jpg"
+    "full": "/assets/img/full/fuji/2.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-91C46983A0",
     "thumb": "/assets/img/thumbs/fuji/_DSC0836-web.webp",
-    "full": "/assets/img/full/fuji/_DSC0836.jpg"
+    "full": "/assets/img/full/fuji/_DSC0836.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-20A8C01098",
     "thumb": "/assets/img/thumbs/fuji/_DSC5716-web.webp",
-    "full": "/assets/img/full/fuji/_DSC5716.jpg"
+    "full": "/assets/img/full/fuji/_DSC5716.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-E2AF130CA7",
     "thumb": "/assets/img/thumbs/fuji/_DSC5736-web.webp",
-    "full": "/assets/img/full/fuji/_DSC5736.jpg"
+    "full": "/assets/img/full/fuji/_DSC5736.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -704,7 +966,11 @@
    {
     "id": "P-57D1A2EB05",
     "thumb": "/assets/img/thumbs/fuji/DSC06547-web.webp",
-    "full": "/assets/img/full/fuji/DSC06547.jpg"
+    "full": "/assets/img/full/fuji/DSC06547.jpg",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    }
   ]
  },
@@ -726,7 +992,11 @@
    {
     "id": "P-4C3CBC836E",
     "thumb": "/assets/img/thumbs/fuji/DSC09525-web.webp",
-    "full": "/assets/img/full/fuji/DSC09525.jpg"
+    "full": "/assets/img/full/fuji/DSC09525.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -748,22 +1018,41 @@
    {
     "id": "P-0C3C430B2E",
     "thumb": "/assets/img/thumbs/fuji/_DSC0073-web.webp",
-    "full": "/assets/img/full/fuji/_DSC0073.jpg"
+    "full": "/assets/img/full/fuji/_DSC0073.jpg",
+    "tags": [
+     "sakura",
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-1FC742AC4F",
     "thumb": "/assets/img/thumbs/fuji/_DSC2454-web.webp",
-    "full": "/assets/img/full/fuji/_DSC2454.jpg"
+    "full": "/assets/img/full/fuji/_DSC2454.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-656BE0E116",
     "full": "/assets/img/atlas/full/P-656BE0E116.webp",
-    "thumb": "/assets/img/atlas/thumb/P-656BE0E116.webp"
+    "thumb": "/assets/img/atlas/thumb/P-656BE0E116.webp",
+    "tags": [
+     "sakura",
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-3FB38579A2",
     "full": "/assets/img/atlas/full/P-3FB38579A2.webp",
-    "thumb": "/assets/img/atlas/thumb/P-3FB38579A2.webp"
+    "thumb": "/assets/img/atlas/thumb/P-3FB38579A2.webp",
+    "tags": [
+     "sakura",
+     "heritage",
+     "nature"
+    ]
    }
   ]
  },
@@ -785,12 +1074,20 @@
    {
     "id": "P-02BA22C7E4",
     "thumb": "/assets/img/thumbs/fuji/_DSC0993-web.webp",
-    "full": "/assets/img/full/fuji/_DSC0993.jpg"
+    "full": "/assets/img/full/fuji/_DSC0993.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-66E893097D",
     "thumb": "/assets/img/thumbs/fuji/_DSC7698-web.webp",
-    "full": "/assets/img/full/fuji/_DSC7698.jpg"
+    "full": "/assets/img/full/fuji/_DSC7698.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    }
   ]
  },
@@ -812,52 +1109,91 @@
    {
     "id": "P-6865FCD3F1",
     "thumb": "/assets/img/thumbs/fuji/_DSC0996-web.webp",
-    "full": "/assets/img/full/fuji/_DSC0996.jpg"
+    "full": "/assets/img/full/fuji/_DSC0996.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-05A770DA41",
     "thumb": "/assets/img/thumbs/fuji/_DSC1385-___-NR-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1385-___-NR.jpg"
+    "full": "/assets/img/full/fuji/_DSC1385-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-642BBFDAC3",
     "thumb": "/assets/img/thumbs/fuji/_DSC1408-___-NR-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1408-___-NR.jpg"
+    "full": "/assets/img/full/fuji/_DSC1408-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-A79F97EE31",
     "thumb": "/assets/img/thumbs/fuji/_DSC2894-web.webp",
-    "full": "/assets/img/full/fuji/_DSC2894.jpg"
+    "full": "/assets/img/full/fuji/_DSC2894.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-E062A3E0C8",
     "thumb": "/assets/img/thumbs/fuji/_DSC2949-web.webp",
-    "full": "/assets/img/full/fuji/_DSC2949.jpg"
+    "full": "/assets/img/full/fuji/_DSC2949.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-95C852229B",
     "thumb": "/assets/img/thumbs/fuji/_DSC2980-web.webp",
-    "full": "/assets/img/full/fuji/_DSC2980.jpg"
+    "full": "/assets/img/full/fuji/_DSC2980.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-BC835FCCBB",
     "thumb": "/assets/img/thumbs/fuji/_DSC5277-web.webp",
-    "full": "/assets/img/full/fuji/_DSC5277.jpg"
+    "full": "/assets/img/full/fuji/_DSC5277.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-B7D03C2516",
     "thumb": "/assets/img/thumbs/fuji/_DSC6134-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6134.jpg"
+    "full": "/assets/img/full/fuji/_DSC6134.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-3381369ACF",
     "thumb": "/assets/img/thumbs/fuji/_DSC9664-web.webp",
-    "full": "/assets/img/full/fuji/_DSC9664.jpg"
+    "full": "/assets/img/full/fuji/_DSC9664.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-FA8616DFF1",
     "full": "/assets/img/atlas/full/P-FA8616DFF1.webp",
-    "thumb": "/assets/img/atlas/thumb/P-FA8616DFF1.webp"
+    "thumb": "/assets/img/atlas/thumb/P-FA8616DFF1.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -879,32 +1215,61 @@
    {
     "id": "P-E277409525",
     "thumb": "/assets/img/thumbs/fuji/_DSC1070-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1070.jpg"
+    "full": "/assets/img/full/fuji/_DSC1070.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-C59724B559",
     "thumb": "/assets/img/thumbs/fuji/_DSC1418-___-NR-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1418-___-NR.jpg"
+    "full": "/assets/img/full/fuji/_DSC1418-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-390B972FC7",
     "thumb": "/assets/img/thumbs/fuji/_DSC2338-web.webp",
-    "full": "/assets/img/full/fuji/_DSC2338.jpg"
+    "full": "/assets/img/full/fuji/_DSC2338.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-21F8F1B063",
     "thumb": "/assets/img/thumbs/fuji/_DSC6352-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6352.jpg"
+    "full": "/assets/img/full/fuji/_DSC6352.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-0BFFF4FBB7",
     "thumb": "/assets/img/thumbs/fuji/_DSC6617-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6617.jpg"
+    "full": "/assets/img/full/fuji/_DSC6617.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-CC53F7D186",
     "thumb": "/assets/img/thumbs/fuji/_DSC9882-web.webp",
-    "full": "/assets/img/full/fuji/_DSC9882.jpg"
+    "full": "/assets/img/full/fuji/_DSC9882.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    }
   ]
  },
@@ -926,32 +1291,58 @@
    {
     "id": "P-EA0F4CC1EC",
     "thumb": "/assets/img/full/fuji/_DSC1325-___-NR-card.webp",
-    "full": "/assets/img/full/fuji/_DSC1325-___-NR-card.webp"
+    "full": "/assets/img/full/fuji/_DSC1325-___-NR-card.webp",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-C734F689C0",
     "thumb": "/assets/img/thumbs/fuji/_DSC1325-___-NR-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1325-___-NR.jpg"
+    "full": "/assets/img/full/fuji/_DSC1325-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-86EE7439F2",
     "thumb": "/assets/img/thumbs/fuji/_DSC3948-web.webp",
-    "full": "/assets/img/full/fuji/_DSC3948.jpg"
+    "full": "/assets/img/full/fuji/_DSC3948.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-DB808EB1AA",
     "thumb": "/assets/img/thumbs/fuji/_DSC6270-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6270.jpg"
+    "full": "/assets/img/full/fuji/_DSC6270.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-9092390FE2",
     "thumb": "/assets/img/thumbs/fuji/_DSC6318-___-NR-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6318-___-NR.jpg"
+    "full": "/assets/img/full/fuji/_DSC6318-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-28705412E7",
     "thumb": "/assets/img/thumbs/fuji/_DSC6339ins-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6339ins.jpg"
+    "full": "/assets/img/full/fuji/_DSC6339ins.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -973,27 +1364,47 @@
    {
     "id": "P-69EF93D29F",
     "thumb": "/assets/img/thumbs/fuji/_DSC1795-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1795.jpg"
+    "full": "/assets/img/full/fuji/_DSC1795.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-6D01A9BBF7",
     "thumb": "/assets/img/thumbs/fuji/_DSC1863-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1863.jpg"
+    "full": "/assets/img/full/fuji/_DSC1863.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-A15BD2036D",
     "thumb": "/assets/img/thumbs/fuji/_DSC6586-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6586.jpg"
+    "full": "/assets/img/full/fuji/_DSC6586.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-1395172970",
     "thumb": "/assets/img/thumbs/fuji/_DSC6822-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6822.jpg"
+    "full": "/assets/img/full/fuji/_DSC6822.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-FDC66EFFEE",
     "full": "/assets/img/atlas/full/P-FDC66EFFEE.webp",
-    "thumb": "/assets/img/atlas/thumb/P-FDC66EFFEE.webp"
+    "thumb": "/assets/img/atlas/thumb/P-FDC66EFFEE.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -1015,47 +1426,86 @@
    {
     "id": "P-BDB54EFB5A",
     "thumb": "/assets/img/thumbs/fuji/_DSC1905-web.webp",
-    "full": "/assets/img/full/fuji/_DSC1905.jpg"
+    "full": "/assets/img/full/fuji/_DSC1905.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-EEBFF19A2C",
     "thumb": "/assets/img/thumbs/landscape/_DSC1937xhs-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1937xhs.jpg"
+    "full": "/assets/img/full/landscape/_DSC1937xhs.jpg",
+    "tags": [
+     "fireworks",
+     "nature"
+    ]
    },
    {
     "id": "P-19EC770A09",
     "thumb": "/assets/img/thumbs/landscape/_DSC1942-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1942.jpg"
+    "full": "/assets/img/full/landscape/_DSC1942.jpg",
+    "tags": [
+     "fireworks",
+     "nature"
+    ]
    },
    {
     "id": "P-78F9CEADE1",
     "thumb": "/assets/img/thumbs/landscape/_DSC1971xhs-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1971xhs.jpg"
+    "full": "/assets/img/full/landscape/_DSC1971xhs.jpg",
+    "tags": [
+     "fireworks",
+     "nature"
+    ]
    },
    {
     "id": "P-7ACF12612F",
     "full": "/assets/img/full/people/_DSC8793-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC8793-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC8793-___-NR-web.webp",
+    "tags": [
+     "portrait",
+     "fireworks",
+     "nature"
+    ]
    },
    {
     "id": "P-FEF9DC6AD2",
     "full": "/assets/img/full/people/_DSC8874-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC8874-___-NR.jpg"
+    "thumb": "/assets/img/thumbs/people/_DSC8874-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "fireworks",
+     "nature"
+    ]
    },
    {
     "id": "P-75973883E5",
     "full": "/assets/img/full/people/_DSC8899-___-NRins.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC8899-___-NRins.jpg"
+    "thumb": "/assets/img/thumbs/people/_DSC8899-___-NRins.jpg",
+    "tags": [
+     "portrait",
+     "fireworks",
+     "nature"
+    ]
    },
    {
     "id": "P-CFB4FE456A",
     "full": "/assets/img/atlas/full/P-CFB4FE456A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-CFB4FE456A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-CFB4FE456A.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-53BF738B2D",
     "full": "/assets/img/atlas/full/P-53BF738B2D.webp",
-    "thumb": "/assets/img/atlas/thumb/P-53BF738B2D.webp"
+    "thumb": "/assets/img/atlas/thumb/P-53BF738B2D.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    }
   ]
  },
@@ -1077,7 +1527,12 @@
    {
     "id": "P-0D36C28A05",
     "thumb": "/assets/img/thumbs/fuji/_DSC3012ins-web.webp",
-    "full": "/assets/img/full/fuji/_DSC3012ins.jpg"
+    "full": "/assets/img/full/fuji/_DSC3012ins.jpg",
+    "tags": [
+     "sakura",
+     "heritage",
+     "nature"
+    ]
    }
   ]
  },
@@ -1099,27 +1554,47 @@
    {
     "id": "P-54A07FEB56",
     "thumb": "/assets/img/thumbs/fuji/_DSC3725-web.webp",
-    "full": "/assets/img/full/fuji/_DSC3725.jpg"
+    "full": "/assets/img/full/fuji/_DSC3725.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-9DA0DE6C73",
     "thumb": "/assets/img/thumbs/fuji/_DSC3796-web.webp",
-    "full": "/assets/img/full/fuji/_DSC3796.jpg"
+    "full": "/assets/img/full/fuji/_DSC3796.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-C6737182E5",
     "full": "/assets/img/full/people/_DSC3811-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC3811-___-NR.jpg"
+    "thumb": "/assets/img/thumbs/people/_DSC3811-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-D9F22EBBCE",
     "full": "/assets/img/atlas/full/P-D9F22EBBCE.webp",
-    "thumb": "/assets/img/atlas/thumb/P-D9F22EBBCE.webp"
+    "thumb": "/assets/img/atlas/thumb/P-D9F22EBBCE.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-351FA7F0E6",
     "full": "/assets/img/atlas/full/P-351FA7F0E6.webp",
-    "thumb": "/assets/img/atlas/thumb/P-351FA7F0E6.webp"
+    "thumb": "/assets/img/atlas/thumb/P-351FA7F0E6.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -1141,32 +1616,58 @@
    {
     "id": "P-433BBAD216",
     "thumb": "/assets/img/thumbs/fuji/_DSC5346-web.webp",
-    "full": "/assets/img/full/fuji/_DSC5346.jpg"
+    "full": "/assets/img/full/fuji/_DSC5346.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-6494C5DB6C",
     "thumb": "/assets/img/thumbs/fuji/_DSC5775-web.webp",
-    "full": "/assets/img/full/fuji/_DSC5775.jpg"
+    "full": "/assets/img/full/fuji/_DSC5775.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "culture"
+    ]
    },
    {
     "id": "P-EAE036F31B",
     "full": "/assets/img/autumn/autumn-17-full.webp",
-    "thumb": "/assets/img/autumn/autumn-17-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-17-thumb.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-6C88292D93",
     "full": "/assets/img/autumn/autumn-18-full.webp",
-    "thumb": "/assets/img/autumn/autumn-18-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-18-thumb.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-AFC1532DF5",
     "full": "/assets/img/atlas/full/P-AFC1532DF5.webp",
-    "thumb": "/assets/img/atlas/thumb/P-AFC1532DF5.webp"
+    "thumb": "/assets/img/atlas/thumb/P-AFC1532DF5.webp",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-FB24ADE9B7",
     "full": "/assets/img/atlas/full/P-FB24ADE9B7.webp",
-    "thumb": "/assets/img/atlas/thumb/P-FB24ADE9B7.webp"
+    "thumb": "/assets/img/atlas/thumb/P-FB24ADE9B7.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -1188,12 +1689,21 @@
    {
     "id": "P-F52036C9A9",
     "thumb": "/assets/img/thumbs/fuji/_DSC5805-web.webp",
-    "full": "/assets/img/full/fuji/_DSC5805.jpg"
+    "full": "/assets/img/full/fuji/_DSC5805.jpg",
+    "tags": [
+     "portrait",
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-6541B1A5AF",
     "thumb": "/assets/img/thumbs/fuji/_DSC6337-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6337.jpg"
+    "full": "/assets/img/full/fuji/_DSC6337.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    }
   ]
  },
@@ -1215,12 +1725,20 @@
    {
     "id": "P-89D726B16D",
     "thumb": "/assets/img/thumbs/fuji/_DSC6349-___-NR-1-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6349-___-NR-1.jpg"
+    "full": "/assets/img/full/fuji/_DSC6349-___-NR-1.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-DF4D2AAAD8",
     "thumb": "/assets/img/thumbs/fuji/_DSC6410-___-NR-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6410-___-NR.jpg"
+    "full": "/assets/img/full/fuji/_DSC6410-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -1242,17 +1760,29 @@
    {
     "id": "P-439C8880CC",
     "thumb": "/assets/img/thumbs/fuji/_DSC6737-web.webp",
-    "full": "/assets/img/full/fuji/_DSC6737.jpg"
+    "full": "/assets/img/full/fuji/_DSC6737.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-5CE8355CFF",
     "thumb": "/assets/img/thumbs/fuji/_DSC8987-web.webp",
-    "full": "/assets/img/full/fuji/_DSC8987.jpg"
+    "full": "/assets/img/full/fuji/_DSC8987.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-EF3E0A780A",
     "thumb": "/assets/img/thumbs/fuji/_DSC9874-web.webp",
-    "full": "/assets/img/full/fuji/_DSC9874.jpg"
+    "full": "/assets/img/full/fuji/_DSC9874.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -1274,27 +1804,45 @@
    {
     "id": "P-E05EAB770C",
     "thumb": "/assets/img/thumbs/fuji/_DSC7944-web.webp",
-    "full": "/assets/img/full/fuji/_DSC7944.jpg"
+    "full": "/assets/img/full/fuji/_DSC7944.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-40B8F85025",
     "thumb": "/assets/img/thumbs/fuji/_DSC7959-web.webp",
-    "full": "/assets/img/full/fuji/_DSC7959.jpg"
+    "full": "/assets/img/full/fuji/_DSC7959.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-A5B918FEC4",
     "full": "/assets/img/atlas/full/P-A5B918FEC4.webp",
-    "thumb": "/assets/img/atlas/thumb/P-A5B918FEC4.webp"
+    "thumb": "/assets/img/atlas/thumb/P-A5B918FEC4.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-061F8D4861",
     "full": "/assets/img/atlas/full/P-061F8D4861.webp",
-    "thumb": "/assets/img/atlas/thumb/P-061F8D4861.webp"
+    "thumb": "/assets/img/atlas/thumb/P-061F8D4861.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-442BC8C440",
     "full": "/assets/img/atlas/full/P-442BC8C440.webp",
-    "thumb": "/assets/img/atlas/thumb/P-442BC8C440.webp"
+    "thumb": "/assets/img/atlas/thumb/P-442BC8C440.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -1316,72 +1864,136 @@
    {
     "id": "P-0B96E1234D",
     "thumb": "/assets/img/thumbs/fuji/_DSC7983-web.webp",
-    "full": "/assets/img/full/fuji/_DSC7983.jpg"
+    "full": "/assets/img/full/fuji/_DSC7983.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-B51DA26CC7",
     "thumb": "/assets/img/thumbs/landscape/_DSC7949-web.webp",
-    "full": "/assets/img/full/landscape/_DSC7949.jpg"
+    "full": "/assets/img/full/landscape/_DSC7949.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-897859C7A9",
     "full": "/assets/img/autumn/autumn-03-full.webp",
-    "thumb": "/assets/img/autumn/autumn-03-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-03-thumb.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-C568375358",
     "full": "/assets/img/autumn/autumn-04-full.webp",
-    "thumb": "/assets/img/autumn/autumn-04-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-04-thumb.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-F7436BDF91",
     "full": "/assets/img/autumn/autumn-05-full.webp",
-    "thumb": "/assets/img/autumn/autumn-05-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-05-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-0FC9EE5E8E",
     "full": "/assets/img/autumn/autumn-07-full.webp",
-    "thumb": "/assets/img/autumn/autumn-07-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-07-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-24D31530F9",
     "full": "/assets/img/autumn/autumn-08-full.webp",
-    "thumb": "/assets/img/autumn/autumn-08-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-08-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-3912FBF639",
     "full": "/assets/img/autumn/autumn-09-full.webp",
-    "thumb": "/assets/img/autumn/autumn-09-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-09-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-BFB5918896",
     "full": "/assets/img/autumn/autumn-10-full.webp",
-    "thumb": "/assets/img/autumn/autumn-10-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-10-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-9CDD04891D",
     "full": "/assets/img/autumn/autumn-11-full.webp",
-    "thumb": "/assets/img/autumn/autumn-11-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-11-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-DD1ABE5908",
     "full": "/assets/img/autumn/autumn-12-full.webp",
-    "thumb": "/assets/img/autumn/autumn-12-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-12-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-C6A74D0BCB",
     "full": "/assets/img/autumn/autumn-13-full.webp",
-    "thumb": "/assets/img/autumn/autumn-13-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-13-thumb.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-AF1A00FE19",
     "full": "/assets/img/autumn/autumn-14-full.webp",
-    "thumb": "/assets/img/autumn/autumn-14-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-14-thumb.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-926FE73E9C",
     "full": "/assets/img/autumn/autumn-15-full.webp",
-    "thumb": "/assets/img/autumn/autumn-15-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-15-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -1403,17 +2015,32 @@
    {
     "id": "P-900768B351",
     "thumb": "/assets/img/thumbs/fuji/_DSC8008-web.webp",
-    "full": "/assets/img/full/fuji/_DSC8008.jpg"
+    "full": "/assets/img/full/fuji/_DSC8008.jpg",
+    "tags": [
+     "portrait",
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-A6D25AA620",
     "thumb": "/assets/img/thumbs/fuji/_DSC8012-web.webp",
-    "full": "/assets/img/full/fuji/_DSC8012.jpg"
+    "full": "/assets/img/full/fuji/_DSC8012.jpg",
+    "tags": [
+     "portrait",
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-BBAC775494",
     "thumb": "/assets/img/thumbs/fuji/_DSC8037-web.webp",
-    "full": "/assets/img/full/fuji/_DSC8037.jpg"
+    "full": "/assets/img/full/fuji/_DSC8037.jpg",
+    "tags": [
+     "portrait",
+     "heritage",
+     "nature"
+    ]
    }
   ]
  },
@@ -1435,27 +2062,44 @@
    {
     "id": "P-D3A2BFE86C",
     "thumb": "/assets/img/thumbs/fuji/_DSC9449-web.webp",
-    "full": "/assets/img/full/fuji/_DSC9449.jpg"
+    "full": "/assets/img/full/fuji/_DSC9449.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-D6CD5EAFF6",
     "thumb": "/assets/img/thumbs/landscape/_DSC9488.jpg",
-    "full": "/assets/img/full/landscape/_DSC9488.jpg"
+    "full": "/assets/img/full/landscape/_DSC9488.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-E4F023DA8B",
     "full": "/assets/img/atlas/full/P-E4F023DA8B.webp",
-    "thumb": "/assets/img/atlas/thumb/P-E4F023DA8B.webp"
+    "thumb": "/assets/img/atlas/thumb/P-E4F023DA8B.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-BE9F0C27EB",
     "full": "/assets/img/atlas/full/P-BE9F0C27EB.webp",
-    "thumb": "/assets/img/atlas/thumb/P-BE9F0C27EB.webp"
+    "thumb": "/assets/img/atlas/thumb/P-BE9F0C27EB.webp",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-B97B96DA98",
     "full": "/assets/img/atlas/full/P-B97B96DA98.webp",
-    "thumb": "/assets/img/atlas/thumb/P-B97B96DA98.webp"
+    "thumb": "/assets/img/atlas/thumb/P-B97B96DA98.webp",
+    "tags": [
+     "city",
+     "nature"
+    ]
    }
   ]
  },
@@ -1477,22 +2121,38 @@
    {
     "id": "P-F1A26CBFCA",
     "thumb": "/assets/img/thumbs/fuji/_DSC9604-web.webp",
-    "full": "/assets/img/full/fuji/_DSC9604.jpg"
+    "full": "/assets/img/full/fuji/_DSC9604.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-3EB08BDECF",
     "thumb": "/assets/img/thumbs/fuji/_DSC9621-web.webp",
-    "full": "/assets/img/full/fuji/_DSC9621.jpg"
+    "full": "/assets/img/full/fuji/_DSC9621.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-025107F9CE",
     "thumb": "/assets/img/thumbs/landscape/_DSC9860.jpg",
-    "full": "/assets/img/full/landscape/_DSC9860.jpg"
+    "full": "/assets/img/full/landscape/_DSC9860.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-B7AE5EA10D",
     "full": "/assets/img/full/aerial/DJI_0216.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_0216-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_0216-web.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    }
   ]
  },
@@ -1514,12 +2174,20 @@
    {
     "id": "P-EAC97A8F76",
     "thumb": "/assets/img/thumbs/kamakura/1-web.webp",
-    "full": "/assets/img/full/kamakura/1.jpg"
+    "full": "/assets/img/full/kamakura/1.jpg",
+    "tags": [
+     "culture",
+     "city"
+    ]
    },
    {
     "id": "P-07B2801130",
     "thumb": "/assets/img/thumbs/kamakura/_DSC7508-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC7508.jpg"
+    "full": "/assets/img/full/kamakura/_DSC7508.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -1541,7 +2209,11 @@
    {
     "id": "P-A3FB12C140",
     "thumb": "/assets/img/thumbs/kamakura/2-web.webp",
-    "full": "/assets/img/full/kamakura/2.jpg"
+    "full": "/assets/img/full/kamakura/2.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    }
   ]
  },
@@ -1563,47 +2235,80 @@
    {
     "id": "P-E73784DB0B",
     "thumb": "/assets/img/thumbs/kamakura/_DSC0179-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC0179.jpg"
+    "full": "/assets/img/full/kamakura/_DSC0179.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-323928BA57",
     "thumb": "/assets/img/thumbs/kamakura/_DSC4879-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC4879.jpg"
+    "full": "/assets/img/full/kamakura/_DSC4879.jpg",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-BB6A3F2CC6",
     "thumb": "/assets/img/thumbs/kamakura/_DSC8695-___-NR-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC8695-___-NR.jpg"
+    "full": "/assets/img/full/kamakura/_DSC8695-___-NR.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-9E0D99AC50",
     "thumb": "/assets/img/thumbs/kamakura/_DSC9090-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC9090.jpg"
+    "full": "/assets/img/full/kamakura/_DSC9090.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-4164A91ADF",
     "thumb": "/assets/img/thumbs/kamakura/_DSC9572-___-NR-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC9572-___-NR.jpg"
+    "full": "/assets/img/full/kamakura/_DSC9572-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-0D1D12A21E",
     "thumb": "/assets/img/thumbs/kamakura/_DSC9591-___-NR-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC9591-___-NR.jpg"
+    "full": "/assets/img/full/kamakura/_DSC9591-___-NR.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-FCC5BE3F04",
     "thumb": "/assets/img/thumbs/landscape/_DSC8935.jpg",
-    "full": "/assets/img/full/landscape/_DSC8935.jpg"
+    "full": "/assets/img/full/landscape/_DSC8935.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-2FFEEEB175",
     "full": "/assets/img/autumn/autumn-19-full.webp",
-    "thumb": "/assets/img/autumn/autumn-19-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-19-thumb.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-0CC253AF39",
     "full": "/assets/img/car/gallery/_DSC8995.jpg",
-    "thumb": "/assets/img/car/thumbs/_DSC8995.jpg"
+    "thumb": "/assets/img/car/thumbs/_DSC8995.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -1625,17 +2330,31 @@
    {
     "id": "P-1D909A2263",
     "thumb": "/assets/img/full/kamakura/_DSC6101-card.webp",
-    "full": "/assets/img/full/kamakura/_DSC6101-card.webp"
+    "full": "/assets/img/full/kamakura/_DSC6101-card.webp",
+    "tags": [
+     "hydrangea",
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-26D15A4D05",
     "thumb": "/assets/img/thumbs/kamakura/_DSC6101-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC6101.jpg"
+    "full": "/assets/img/full/kamakura/_DSC6101.jpg",
+    "tags": [
+     "hydrangea",
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-2468D4EA34",
     "thumb": "/assets/img/thumbs/kamakura/_DSC6118-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC6118.jpg"
+    "full": "/assets/img/full/kamakura/_DSC6118.jpg",
+    "tags": [
+     "hydrangea",
+     "portrait"
+    ]
    }
   ]
  },
@@ -1657,7 +2376,11 @@
    {
     "id": "P-8A513CE2DA",
     "thumb": "/assets/img/thumbs/kamakura/_DSC8972-web.webp",
-    "full": "/assets/img/full/kamakura/_DSC8972.jpg"
+    "full": "/assets/img/full/kamakura/_DSC8972.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    }
   ]
  },
@@ -1679,7 +2402,10 @@
    {
     "id": "P-28A81BA886",
     "thumb": "/assets/img/thumbs/landscape/DSC07402-web.webp",
-    "full": "/assets/img/full/landscape/DSC07402.jpg"
+    "full": "/assets/img/full/landscape/DSC07402.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -1701,12 +2427,19 @@
    {
     "id": "P-C5CEED2AA6",
     "thumb": "/assets/img/thumbs/landscape/DSC08623-web.webp",
-    "full": "/assets/img/full/landscape/DSC08623.jpg"
+    "full": "/assets/img/full/landscape/DSC08623.jpg",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-E5BD3B71E8",
     "thumb": "/assets/img/thumbs/landscape/DSC08647-web.webp",
-    "full": "/assets/img/full/landscape/DSC08647.jpg"
+    "full": "/assets/img/full/landscape/DSC08647.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -1728,7 +2461,11 @@
    {
     "id": "P-7CBA1EEB21",
     "thumb": "/assets/img/thumbs/landscape/_DSC0207-web.webp",
-    "full": "/assets/img/full/landscape/_DSC0207.jpg"
+    "full": "/assets/img/full/landscape/_DSC0207.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -1750,7 +2487,11 @@
    {
     "id": "P-411C4E076D",
     "thumb": "/assets/img/thumbs/landscape/_DSC0270-web.webp",
-    "full": "/assets/img/full/landscape/_DSC0270.jpg"
+    "full": "/assets/img/full/landscape/_DSC0270.jpg",
+    "tags": [
+     "heritage",
+     "culture"
+    ]
    }
   ]
  },
@@ -1772,7 +2513,11 @@
    {
     "id": "P-C980C13AF7",
     "thumb": "/assets/img/thumbs/landscape/_DSC0397-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC0397-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC0397-___-NR.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -1794,7 +2539,12 @@
    {
     "id": "P-49E3808AAA",
     "thumb": "/assets/img/thumbs/landscape/_DSC0410-web.webp",
-    "full": "/assets/img/full/landscape/_DSC0410.jpg"
+    "full": "/assets/img/full/landscape/_DSC0410.jpg",
+    "tags": [
+     "sakura",
+     "heritage",
+     "nature"
+    ]
    }
   ]
  },
@@ -1816,7 +2566,11 @@
    {
     "id": "P-20FC6F4C3F",
     "thumb": "/assets/img/thumbs/landscape/_DSC0585-web.webp",
-    "full": "/assets/img/full/landscape/_DSC0585.jpg"
+    "full": "/assets/img/full/landscape/_DSC0585.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -1838,22 +2592,39 @@
    {
     "id": "P-835FE93251",
     "thumb": "/assets/img/thumbs/landscape/_DSC1112-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1112.jpg"
+    "full": "/assets/img/full/landscape/_DSC1112.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-86166C2782",
     "thumb": "/assets/img/thumbs/landscape/_DSC1191-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1191.jpg"
+    "full": "/assets/img/full/landscape/_DSC1191.jpg",
+    "tags": [
+     "autumn",
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-12E1CDE057",
     "thumb": "/assets/img/thumbs/landscape/_DSC1236-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1236.jpg"
+    "full": "/assets/img/full/landscape/_DSC1236.jpg",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-A361E1B14A",
     "full": "/assets/img/full/people/_DSC4977.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC4977-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC4977-web.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -1875,12 +2646,18 @@
    {
     "id": "P-F7AF688275",
     "thumb": "/assets/img/thumbs/landscape/_DSC1573-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1573.jpg"
+    "full": "/assets/img/full/landscape/_DSC1573.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-74C502556F",
     "thumb": "/assets/img/thumbs/landscape/_DSC1640-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1640.jpg"
+    "full": "/assets/img/full/landscape/_DSC1640.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -1902,12 +2679,19 @@
    {
     "id": "P-1528E88069",
     "thumb": "/assets/img/thumbs/landscape/_DSC1615-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC1615-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC1615-___-NR.jpg",
+    "tags": [
+     "city",
+     "nature"
+    ]
    },
    {
     "id": "P-AA28055BD9",
     "thumb": "/assets/img/thumbs/landscape/_DSC8173-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8173.jpg"
+    "full": "/assets/img/full/landscape/_DSC8173.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -1929,17 +2713,26 @@
    {
     "id": "P-E5903A0B2C",
     "thumb": "/assets/img/thumbs/landscape/_DSC2196-web.webp",
-    "full": "/assets/img/full/landscape/_DSC2196.jpg"
+    "full": "/assets/img/full/landscape/_DSC2196.jpg",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-C174F91603",
     "full": "/assets/img/full/landscape/_DSC2234.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC2234-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC2234-web.webp",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-F2F06BDA24",
     "full": "/assets/img/full/landscape/_DSC2244.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC2244-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC2244-web.webp",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -1961,7 +2754,10 @@
    {
     "id": "P-03DAD91CC4",
     "thumb": "/assets/img/thumbs/landscape/_DSC2301-web.webp",
-    "full": "/assets/img/full/landscape/_DSC2301.jpg"
+    "full": "/assets/img/full/landscape/_DSC2301.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -1983,7 +2779,11 @@
    {
     "id": "P-5E9293CB05",
     "thumb": "/assets/img/thumbs/landscape/_DSC2736-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC2736-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC2736-___-NR.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -2005,7 +2805,11 @@
    {
     "id": "P-8023E1D6DF",
     "thumb": "/assets/img/thumbs/landscape/_DSC3340-web.webp",
-    "full": "/assets/img/full/landscape/_DSC3340.jpg"
+    "full": "/assets/img/full/landscape/_DSC3340.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -2027,17 +2831,29 @@
    {
     "id": "P-1E019A7B86",
     "thumb": "/assets/img/thumbs/landscape/_DSC3702-web.webp",
-    "full": "/assets/img/full/landscape/_DSC3702.jpg"
+    "full": "/assets/img/full/landscape/_DSC3702.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-1B8D865F04",
     "full": "/assets/img/full/other/_DSC2367.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC2367-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC2367-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-441FBE2F01",
     "full": "/assets/img/atlas/full/P-441FBE2F01.webp",
-    "thumb": "/assets/img/atlas/thumb/P-441FBE2F01.webp"
+    "thumb": "/assets/img/atlas/thumb/P-441FBE2F01.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -2059,7 +2875,10 @@
    {
     "id": "P-34FE147F70",
     "thumb": "/assets/img/thumbs/landscape/_DSC3879-web.webp",
-    "full": "/assets/img/full/landscape/_DSC3879.jpg"
+    "full": "/assets/img/full/landscape/_DSC3879.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2081,7 +2900,11 @@
    {
     "id": "P-C4BA88F87C",
     "thumb": "/assets/img/thumbs/landscape/_DSC5173-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC5173-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC5173-___-NR.jpg",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -2103,7 +2926,11 @@
    {
     "id": "P-EF5D05C790",
     "thumb": "/assets/img/thumbs/landscape/_DSC5193-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC5193-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC5193-___-NR.jpg",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    }
   ]
  },
@@ -2125,7 +2952,11 @@
    {
     "id": "P-07DFF3AAA6",
     "thumb": "/assets/img/thumbs/landscape/_DSC5559xhs-web.webp",
-    "full": "/assets/img/full/landscape/_DSC5559xhs.jpg"
+    "full": "/assets/img/full/landscape/_DSC5559xhs.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -2147,7 +2978,10 @@
    {
     "id": "P-C6ACFB8E7E",
     "thumb": "/assets/img/thumbs/landscape/_DSC5816-web.webp",
-    "full": "/assets/img/full/landscape/_DSC5816.jpg"
+    "full": "/assets/img/full/landscape/_DSC5816.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -2169,7 +3003,10 @@
    {
     "id": "P-5939B1A043",
     "thumb": "/assets/img/thumbs/landscape/_DSC5905_1-web.webp",
-    "full": "/assets/img/full/landscape/_DSC5905_1.jpg"
+    "full": "/assets/img/full/landscape/_DSC5905_1.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2191,17 +3028,26 @@
    {
     "id": "P-0C2DDA1BB2",
     "thumb": "/assets/img/thumbs/landscape/_DSC5966-web.webp",
-    "full": "/assets/img/full/landscape/_DSC5966.jpg"
+    "full": "/assets/img/full/landscape/_DSC5966.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-C04C75B283",
     "thumb": "/assets/img/thumbs/landscape/_DSC6412-web.webp",
-    "full": "/assets/img/full/landscape/_DSC6412.jpg"
+    "full": "/assets/img/full/landscape/_DSC6412.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-E2F76B97D6",
     "full": "/assets/img/full/aerial/_DSC6595ins.jpg",
-    "thumb": "/assets/img/thumbs/aerial/_DSC6595ins-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/_DSC6595ins-web.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2223,7 +3069,11 @@
    {
     "id": "P-C73FBBF14E",
     "thumb": "/assets/img/thumbs/landscape/_DSC7219-web.webp",
-    "full": "/assets/img/full/landscape/_DSC7219.jpg"
+    "full": "/assets/img/full/landscape/_DSC7219.jpg",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    }
   ]
  },
@@ -2245,7 +3095,10 @@
    {
     "id": "P-359188533B",
     "thumb": "/assets/img/thumbs/landscape/_DSC8013-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8013.jpg"
+    "full": "/assets/img/full/landscape/_DSC8013.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2267,42 +3120,74 @@
    {
     "id": "P-F097B4F0CD",
     "thumb": "/assets/img/thumbs/landscape/_DSC8393-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8393.jpg"
+    "full": "/assets/img/full/landscape/_DSC8393.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-DD9FCBBD29",
     "thumb": "/assets/img/thumbs/landscape/_DSC8409-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8409.jpg"
+    "full": "/assets/img/full/landscape/_DSC8409.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-7C641E9AC4",
     "thumb": "/assets/img/thumbs/landscape/_DSC8462-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8462-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC8462-___-NR.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-425C503104",
     "thumb": "/assets/img/thumbs/landscape/_DSC8477-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8477-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC8477-___-NR.jpg",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-F48EBC289C",
     "full": "/assets/img/autumn/oyamadera-01-full.webp",
-    "thumb": "/assets/img/autumn/oyamadera-01-thumb.webp"
+    "thumb": "/assets/img/autumn/oyamadera-01-thumb.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-D92BDE0C3D",
     "full": "/assets/img/autumn/oyamadera-02-full.webp",
-    "thumb": "/assets/img/autumn/oyamadera-02-thumb.webp"
+    "thumb": "/assets/img/autumn/oyamadera-02-thumb.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-2396179AAA",
     "full": "/assets/img/autumn/oyamadera-04-full.webp",
-    "thumb": "/assets/img/autumn/oyamadera-04-thumb.webp"
+    "thumb": "/assets/img/autumn/oyamadera-04-thumb.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-CF67D13B37",
     "full": "/assets/img/autumn/oyamadera-05-full.webp",
-    "thumb": "/assets/img/autumn/oyamadera-05-thumb.webp"
+    "thumb": "/assets/img/autumn/oyamadera-05-thumb.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -2324,7 +3209,10 @@
    {
     "id": "P-F7EA465D4D",
     "thumb": "/assets/img/thumbs/landscape/_DSC8468-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8468.jpg"
+    "full": "/assets/img/full/landscape/_DSC8468.jpg",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -2346,17 +3234,29 @@
    {
     "id": "P-A44064D1E3",
     "thumb": "/assets/img/thumbs/landscape/_DSC8632ins-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8632ins.jpg"
+    "full": "/assets/img/full/landscape/_DSC8632ins.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-3D30A091E6",
     "thumb": "/assets/img/thumbs/landscape/_DSC8706-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8706.jpg"
+    "full": "/assets/img/full/landscape/_DSC8706.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-AB6846198C",
     "thumb": "/assets/img/thumbs/landscape/_DSC8776-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8776.jpg"
+    "full": "/assets/img/full/landscape/_DSC8776.jpg",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    }
   ]
  },
@@ -2378,32 +3278,54 @@
    {
     "id": "P-30AD58FBF8",
     "thumb": "/assets/img/thumbs/landscape/_DSC8717-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8717-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC8717-___-NR.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-4A9DB6613A",
     "thumb": "/assets/img/thumbs/landscape/_DSC8718-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8718-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC8718-___-NR.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-89F65869CA",
     "thumb": "/assets/img/thumbs/landscape/_DSC8729-___-NR-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8729-___-NR.jpg"
+    "full": "/assets/img/full/landscape/_DSC8729-___-NR.jpg",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-0E8B3AEA0B",
     "full": "/assets/img/full/people/_DSC8735-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC8735-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC8735-___-NR-web.webp",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-87D72BD36B",
     "full": "/assets/img/full/aerial/DJI_0242.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_0242-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_0242-web.webp",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-43DE2E3FBD",
     "full": "/assets/img/full/aerial/DJI_0247.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_0247-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_0247-web.webp",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    }
   ]
  },
@@ -2425,12 +3347,19 @@
    {
     "id": "P-BA4ECA89AD",
     "thumb": "/assets/img/thumbs/landscape/_DSC8727-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8727.jpg"
+    "full": "/assets/img/full/landscape/_DSC8727.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-B24D58F4B0",
     "full": "/assets/img/autumn/autumn-16-full.webp",
-    "thumb": "/assets/img/autumn/autumn-16-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-16-thumb.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -2452,22 +3381,37 @@
    {
     "id": "P-46AA02662A",
     "thumb": "/assets/img/thumbs/landscape/_DSC8882-web.webp",
-    "full": "/assets/img/full/landscape/_DSC8882.jpg"
+    "full": "/assets/img/full/landscape/_DSC8882.jpg",
+    "tags": [
+     "heritage",
+     "nature"
+    ]
    },
    {
     "id": "P-B789B4256C",
     "thumb": "/assets/img/thumbs/landscape/_DSC8934.jpg",
-    "full": "/assets/img/full/landscape/_DSC8934.jpg"
+    "full": "/assets/img/full/landscape/_DSC8934.jpg",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-CA623A9A4D",
     "full": "/assets/img/atlas/full/P-CA623A9A4D.webp",
-    "thumb": "/assets/img/atlas/thumb/P-CA623A9A4D.webp"
+    "thumb": "/assets/img/atlas/thumb/P-CA623A9A4D.webp",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-3377688C18",
     "full": "/assets/img/atlas/full/P-3377688C18.webp",
-    "thumb": "/assets/img/atlas/thumb/P-3377688C18.webp"
+    "thumb": "/assets/img/atlas/thumb/P-3377688C18.webp",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    }
   ]
  },
@@ -2489,7 +3433,10 @@
    {
     "id": "P-42CEE963D3",
     "thumb": "/assets/img/thumbs/landscape/_DSC9502.jpg",
-    "full": "/assets/img/full/landscape/_DSC9502.jpg"
+    "full": "/assets/img/full/landscape/_DSC9502.jpg",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2511,12 +3458,20 @@
    {
     "id": "P-A91E24961A",
     "thumb": "/assets/img/thumbs/people/DSC07548-web.webp",
-    "full": "/assets/img/full/people/DSC07548.jpg"
+    "full": "/assets/img/full/people/DSC07548.jpg",
+    "tags": [
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-532F1240D6",
     "full": "/assets/img/full/other/_DSC5213.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC5213-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC5213-web.webp",
+    "tags": [
+     "nature",
+     "heritage"
+    ]
    }
   ]
  },
@@ -2538,12 +3493,20 @@
    {
     "id": "P-76E2370FD6",
     "thumb": "/assets/img/thumbs/people/_DSC0595-web.webp",
-    "full": "/assets/img/full/people/_DSC0595.jpg"
+    "full": "/assets/img/full/people/_DSC0595.jpg",
+    "tags": [
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-87070FC2FC",
     "thumb": "/assets/img/thumbs/people/_DSC0613-web.webp",
-    "full": "/assets/img/full/people/_DSC0613.jpg"
+    "full": "/assets/img/full/people/_DSC0613.jpg",
+    "tags": [
+     "portrait",
+     "culture"
+    ]
    }
   ]
  },
@@ -2565,17 +3528,29 @@
    {
     "id": "P-A0468AD3C9",
     "thumb": "/assets/img/thumbs/people/_DSC0715-___-NR-web.webp",
-    "full": "/assets/img/full/people/_DSC0715-___-NR.jpg"
+    "full": "/assets/img/full/people/_DSC0715-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-09E0C4C270",
     "thumb": "/assets/img/thumbs/people/_DSC0724-___-NR-web.webp",
-    "full": "/assets/img/full/people/_DSC0724-___-NR.jpg"
+    "full": "/assets/img/full/people/_DSC0724-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-92DD305DAB",
     "thumb": "/assets/img/thumbs/people/_DSC0738-___-NR-web.webp",
-    "full": "/assets/img/full/people/_DSC0738-___-NR.jpg"
+    "full": "/assets/img/full/people/_DSC0738-___-NR.jpg",
+    "tags": [
+     "portrait",
+     "culture"
+    ]
    }
   ]
  },
@@ -2597,7 +3572,11 @@
    {
     "id": "P-D8D9EDFA04",
     "full": "/assets/img/full/tokyo/DSC06957.jpg",
-    "thumb": "/assets/img/thumbs/tokyo/DSC06957-web.webp"
+    "thumb": "/assets/img/thumbs/tokyo/DSC06957-web.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    }
   ]
  },
@@ -2619,12 +3598,18 @@
    {
     "id": "P-36ABC9322B",
     "full": "/assets/img/full/landscape/_DSC0337__.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC0337__-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC0337__-web.webp",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-A258F98810",
     "full": "/assets/img/full/landscape/_DSC0713__.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC0713__-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC0713__-web.webp",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -2646,12 +3631,18 @@
    {
     "id": "P-193566E69B",
     "full": "/assets/img/full/landscape/_DSC0976-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC0976-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC0976-___-NR-web.webp",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-48586B4D1D",
     "full": "/assets/img/full/other/_DSC1079-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC1079-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC1079-___-NR-web.webp",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -2673,7 +3664,10 @@
    {
     "id": "P-41E5A30ED9",
     "full": "/assets/img/full/landscape/_DSC1174-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC1174-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC1174-___-NR-web.webp",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -2695,42 +3689,69 @@
    {
     "id": "P-E9B8429785",
     "full": "/assets/img/full/landscape/_DSC6685.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC6685-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC6685-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-034F20DEDA",
     "full": "/assets/img/full/landscape/_DSC6798ins.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC6798ins-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC6798ins-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-D4A8F394F1",
     "full": "/assets/img/full/landscape/_DSC6904.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC6904-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC6904-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-288B36D2D2",
     "full": "/assets/img/full/landscape/_DSC6916.jpg",
-    "thumb": "/assets/img/thumbs/landscape/_DSC6916-web.webp"
+    "thumb": "/assets/img/thumbs/landscape/_DSC6916-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-850BE43368",
     "full": "/assets/img/full/people/_DSC6710.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC6710-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC6710-web.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-44DA6D1648",
     "full": "/assets/img/full/people/photographer-960.jpg",
-    "thumb": "/assets/img/thumbs/people/photographer-960-web.webp"
+    "thumb": "/assets/img/thumbs/people/photographer-960-web.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-D104C126D5",
     "full": "/assets/img/full/people/photographer.jpg",
-    "thumb": "/assets/img/thumbs/people/photographer.jpg"
+    "thumb": "/assets/img/thumbs/people/photographer.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-C5A34805E4",
     "full": "/assets/img/full/aerial/_DSC6680.jpg",
-    "thumb": "/assets/img/thumbs/aerial/_DSC6680-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/_DSC6680-web.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2752,12 +3773,21 @@
    {
     "id": "P-B9B47AD967",
     "full": "/assets/img/full/people/_DSC0339.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC0339-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC0339-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-3F5318230F",
     "full": "/assets/img/full/other/_DSC0431ins.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC0431ins-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC0431ins-web.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    }
   ]
  },
@@ -2779,47 +3809,91 @@
    {
     "id": "P-52797FB44B",
     "full": "/assets/img/full/people/_DSC1962.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC1962-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC1962-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-06124AD20C",
     "full": "/assets/img/full/people/_DSC2002.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC2002.jpg"
+    "thumb": "/assets/img/thumbs/people/_DSC2002.jpg",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-23559B3367",
     "full": "/assets/img/full/people/_DSC2012.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC2012-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC2012-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-47B1145774",
     "full": "/assets/img/full/people/_DSC2025.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC2025-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC2025-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-FC944E91D8",
     "full": "/assets/img/full/other/_DSC2136.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC2136-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC2136-web.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-9740D29B93",
     "full": "/assets/img/full/other/_DSC2315.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC2315-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC2315-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-044D75D622",
     "full": "/assets/img/atlas/full/P-044D75D622.webp",
-    "thumb": "/assets/img/atlas/thumb/P-044D75D622.webp"
+    "thumb": "/assets/img/atlas/thumb/P-044D75D622.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-8C5A04921A",
     "full": "/assets/img/atlas/full/P-8C5A04921A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-8C5A04921A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-8C5A04921A.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-84D5E3773C",
     "full": "/assets/img/atlas/full/P-84D5E3773C.webp",
-    "thumb": "/assets/img/atlas/thumb/P-84D5E3773C.webp"
+    "thumb": "/assets/img/atlas/thumb/P-84D5E3773C.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -2841,17 +3915,27 @@
    {
     "id": "P-D5BE7EF604",
     "full": "/assets/img/full/people/_DSC4269-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC4269-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC4269-___-NR-web.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-CE8B972B99",
     "full": "/assets/img/full/other/_DSC4167ins.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC4167ins-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC4167ins-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-8454AAE119",
     "full": "/assets/img/full/other/_DSC4232-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC4232-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC4232-___-NR-web.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -2873,7 +3957,11 @@
    {
     "id": "P-4BAAC0DD08",
     "full": "/assets/img/full/people/_DSC5901.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC5901-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC5901-web.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -2895,12 +3983,22 @@
    {
     "id": "P-2F5E5542A3",
     "full": "/assets/img/full/people/_DSC7543.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC7543-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC7543-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-F7AD17A39E",
     "full": "/assets/img/full/people/_DSC7652.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC7652-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC7652-web.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -2922,62 +4020,117 @@
    {
     "id": "P-5F6B4D3368",
     "full": "/assets/img/full/people/_DSC8842.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC8842-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC8842-web.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-10D04173EA",
     "full": "/assets/img/full/people/_DSC9303.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC9303-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC9303-web.webp",
+    "tags": [
+     "fireworks",
+     "culture"
+    ]
    },
    {
     "id": "P-4713763A3B",
     "full": "/assets/img/full/people/_DSC9889ins.jpg",
-    "thumb": "/assets/img/thumbs/people/_DSC9889ins-web.webp"
+    "thumb": "/assets/img/thumbs/people/_DSC9889ins-web.webp",
+    "tags": [
+     "fireworks",
+     "culture"
+    ]
    },
    {
     "id": "P-515A3FDA90",
     "full": "/assets/img/full/fireworks/_DSC4348.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC4348-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC4348-web.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-6A81F548A6",
     "full": "/assets/img/full/fireworks/_DSC4654.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC4654-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC4654-web.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-00366062C4",
     "full": "/assets/img/full/fireworks/_DSC4703.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC4703-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC4703-web.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-023459485C",
     "full": "/assets/img/full/fireworks/_DSC4942.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC4942-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC4942-web.webp",
+    "tags": [
+     "fireworks",
+     "culture"
+    ]
    },
    {
     "id": "P-7B3C73BECC",
     "full": "/assets/img/full/fireworks/_DSC5137.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC5137-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC5137-web.webp",
+    "tags": [
+     "fireworks",
+     "culture"
+    ]
    },
    {
     "id": "P-C5C16ED521",
     "full": "/assets/img/full/fireworks/_DSC5160.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC5160-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC5160-web.webp",
+    "tags": [
+     "fireworks",
+     "culture"
+    ]
    },
    {
     "id": "P-FFC1F42154",
     "full": "/assets/img/atlas/full/P-FFC1F42154.webp",
-    "thumb": "/assets/img/atlas/thumb/P-FFC1F42154.webp"
+    "thumb": "/assets/img/atlas/thumb/P-FFC1F42154.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-4B3082054B",
     "full": "/assets/img/atlas/full/P-4B3082054B.webp",
-    "thumb": "/assets/img/atlas/thumb/P-4B3082054B.webp"
+    "thumb": "/assets/img/atlas/thumb/P-4B3082054B.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    },
    {
     "id": "P-D44908B291",
     "full": "/assets/img/atlas/full/P-D44908B291.webp",
-    "thumb": "/assets/img/atlas/thumb/P-D44908B291.webp"
+    "thumb": "/assets/img/atlas/thumb/P-D44908B291.webp",
+    "tags": [
+     "fireworks",
+     "portrait",
+     "culture"
+    ]
    }
   ]
  },
@@ -2999,7 +4152,10 @@
    {
     "id": "P-93C4CC9768",
     "full": "/assets/img/full/aerial/DJI_0422-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_0422-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_0422-___-NR-web.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -3021,7 +4177,11 @@
    {
     "id": "P-D7998DFE33",
     "full": "/assets/img/full/aerial/DJI_0942.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_0942-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_0942-web.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    }
   ]
  },
@@ -3043,12 +4203,18 @@
    {
     "id": "P-103FB11869",
     "full": "/assets/img/full/aerial/DJI_20230812160232_0044_D.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_20230812160232_0044_D-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_20230812160232_0044_D-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-4DC5C79F6B",
     "full": "/assets/img/full/aerial/DJI_20230812164533_0105_D.jpg",
-    "thumb": "/assets/img/thumbs/aerial/DJI_20230812164533_0105_D-web.webp"
+    "thumb": "/assets/img/thumbs/aerial/DJI_20230812164533_0105_D-web.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -3070,12 +4236,19 @@
    {
     "id": "P-4A1A547A03",
     "full": "/assets/img/full/fireworks/_DSC6673.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC6673-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC6673-web.webp",
+    "tags": [
+     "fireworks",
+     "portrait"
+    ]
    },
    {
     "id": "P-80FAD9F5E8",
     "full": "/assets/img/full/fireworks/_DSC6860.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC6860-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC6860-web.webp",
+    "tags": [
+     "fireworks"
+    ]
    }
   ]
  },
@@ -3097,7 +4270,11 @@
    {
     "id": "P-9EEAFC8E57",
     "full": "/assets/img/full/fireworks/_DSC9669.jpg",
-    "thumb": "/assets/img/thumbs/fireworks/_DSC9669-web.webp"
+    "thumb": "/assets/img/thumbs/fireworks/_DSC9669-web.webp",
+    "tags": [
+     "fireworks",
+     "nature"
+    ]
    }
   ]
  },
@@ -3119,17 +4296,26 @@
    {
     "id": "P-D3C3FBFEC6",
     "full": "/assets/img/full/other/DSC03985.jpg",
-    "thumb": "/assets/img/thumbs/other/DSC03985-web.webp"
+    "thumb": "/assets/img/thumbs/other/DSC03985-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-4EAA82A6AC",
     "full": "/assets/img/full/other/DSC04022.jpg",
-    "thumb": "/assets/img/thumbs/other/DSC04022-web.webp"
+    "thumb": "/assets/img/thumbs/other/DSC04022-web.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-FA914AD078",
     "full": "/assets/img/full/other/DSC04077.jpg",
-    "thumb": "/assets/img/thumbs/other/DSC04077-web.webp"
+    "thumb": "/assets/img/thumbs/other/DSC04077-web.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -3151,7 +4337,11 @@
    {
     "id": "P-B439DCB8B2",
     "full": "/assets/img/full/other/_DSC1052ins.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC1052ins-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC1052ins-web.webp",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -3173,7 +4363,11 @@
    {
     "id": "P-FAFCCBF724",
     "full": "/assets/img/full/other/_DSC2408.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC2408-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC2408-web.webp",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -3195,7 +4389,11 @@
    {
     "id": "P-7307529164",
     "full": "/assets/img/full/other/_DSC4407.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC4407-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC4407-web.webp",
+    "tags": [
+     "heritage",
+     "culture"
+    ]
    }
   ]
  },
@@ -3217,7 +4415,11 @@
    {
     "id": "P-87971AAFC6",
     "full": "/assets/img/full/other/_DSC4559.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC4559-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC4559-web.webp",
+    "tags": [
+     "nature",
+     "portrait"
+    ]
    }
   ]
  },
@@ -3239,7 +4441,10 @@
    {
     "id": "P-3A02A0250C",
     "full": "/assets/img/full/other/_DSC5304.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC5304-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC5304-web.webp",
+    "tags": [
+     "culture"
+    ]
    }
   ]
  },
@@ -3261,7 +4466,10 @@
    {
     "id": "P-8B19AAAC1E",
     "full": "/assets/img/full/other/_DSC5731ins.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC5731ins-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC5731ins-web.webp",
+    "tags": [
+     "city"
+    ]
    }
   ]
  },
@@ -3283,12 +4491,20 @@
    {
     "id": "P-C023589527",
     "full": "/assets/img/full/other/_DSC7832.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC7832-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC7832-web.webp",
+    "tags": [
+     "culture",
+     "heritage"
+    ]
    },
    {
     "id": "P-E88B98A041",
     "full": "/assets/img/full/other/_DSC7859.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC7859-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC7859-web.webp",
+    "tags": [
+     "culture",
+     "heritage"
+    ]
    }
   ]
  },
@@ -3310,7 +4526,11 @@
    {
     "id": "P-D56D18327E",
     "full": "/assets/img/full/other/_DSC9662.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC9662-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC9662-web.webp",
+    "tags": [
+     "fireworks",
+     "culture"
+    ]
    }
   ]
  },
@@ -3332,7 +4552,11 @@
    {
     "id": "P-AEBF0AEBFB",
     "full": "/assets/img/full/other/_DSC9978-___-NR.jpg",
-    "thumb": "/assets/img/thumbs/other/_DSC9978-___-NR-web.webp"
+    "thumb": "/assets/img/thumbs/other/_DSC9978-___-NR-web.webp",
+    "tags": [
+     "city",
+     "culture"
+    ]
    }
   ]
  },
@@ -3354,7 +4578,11 @@
    {
     "id": "P-74F5A2E127",
     "full": "/assets/img/full/daikoku/_DSC0762.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC0762-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC0762-web.webp",
+    "tags": [
+     "culture",
+     "city"
+    ]
    }
   ]
  },
@@ -3376,52 +4604,101 @@
    {
     "id": "P-D632FC75E7",
     "full": "/assets/img/full/daikoku/_DSC1147.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC1147-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC1147-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-33D8F82725",
     "full": "/assets/img/full/daikoku/_DSC5989.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC5989-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC5989-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-67785A3AD5",
     "full": "/assets/img/full/daikoku/_DSC7281.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC7281-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC7281-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-805F77FE0B",
     "full": "/assets/img/full/daikoku/_DSC8273.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC8273-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC8273-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-7771F66358",
     "full": "/assets/img/full/daikoku/_DSC8885.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC8885-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC8885-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-9945936610",
     "full": "/assets/img/full/daikoku/_DSC8941.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/_DSC8941-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/_DSC8941-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-D626195378",
     "full": "/assets/img/full/daikoku/daikoku10.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/daikoku10-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/daikoku10-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-FB4540C2B4",
     "full": "/assets/img/full/daikoku/daikoku12.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/daikoku12-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/daikoku12-web.webp",
+    "tags": [
+     "culture",
+     "city"
+    ]
    },
    {
     "id": "P-00BEFAB36A",
     "full": "/assets/img/full/daikoku/daikoku14.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/daikoku14-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/daikoku14-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-1E9537E08A",
     "full": "/assets/img/full/daikoku/daikoku58.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/daikoku58-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/daikoku58-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -3443,12 +4720,22 @@
    {
     "id": "P-03824F12C1",
     "full": "/assets/img/full/daikoku/daikoku56.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/daikoku56-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/daikoku56-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    },
    {
     "id": "P-C5C54CE3EE",
     "full": "/assets/img/full/daikoku/daikoku57.jpg",
-    "thumb": "/assets/img/thumbs/daikoku/daikoku57-web.webp"
+    "thumb": "/assets/img/thumbs/daikoku/daikoku57-web.webp",
+    "tags": [
+     "culture",
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -3470,22 +4757,40 @@
    {
     "id": "P-150A4CCEBA",
     "full": "/assets/img/autumn/autumn-00-full.webp",
-    "thumb": "/assets/img/autumn/autumn-00-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-00-thumb.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-180CD4E0AE",
     "full": "/assets/img/autumn/autumn-01-full.webp",
-    "thumb": "/assets/img/autumn/autumn-01-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-01-thumb.webp",
+    "tags": [
+     "autumn",
+     "nature"
+    ]
    },
    {
     "id": "P-4CF1411257",
     "full": "/assets/img/autumn/autumn-02-full.webp",
-    "thumb": "/assets/img/autumn/autumn-02-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-02-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-8395A36A7D",
     "full": "/assets/img/autumn/autumn-06-full.webp",
-    "thumb": "/assets/img/autumn/autumn-06-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-06-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -3507,12 +4812,21 @@
    {
     "id": "P-FAF879AE0F",
     "full": "/assets/img/autumn/autumn-20-full.webp",
-    "thumb": "/assets/img/autumn/autumn-20-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-20-thumb.webp",
+    "tags": [
+     "autumn",
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-D93A869FBD",
     "full": "/assets/img/autumn/autumn-21-full.webp",
-    "thumb": "/assets/img/autumn/autumn-21-thumb.webp"
+    "thumb": "/assets/img/autumn/autumn-21-thumb.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -3534,12 +4848,20 @@
    {
     "id": "P-20045F9E7E",
     "thumb": "/assets/img/thumbs/fuji/_DSC7840-web.webp",
-    "full": "/assets/img/full/fuji/_DSC7840.jpg"
+    "full": "/assets/img/full/fuji/_DSC7840.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-AE0AE29A27",
     "thumb": "/assets/img/thumbs/fuji/_DSC7868-web.webp",
-    "full": "/assets/img/full/fuji/_DSC7868.jpg"
+    "full": "/assets/img/full/fuji/_DSC7868.jpg",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -3561,12 +4883,20 @@
    {
     "id": "P-CFB8901071",
     "full": "/assets/img/atlas/full/P-CFB8901071.webp",
-    "thumb": "/assets/img/atlas/thumb/P-CFB8901071.webp"
+    "thumb": "/assets/img/atlas/thumb/P-CFB8901071.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    },
    {
     "id": "P-1DC715134D",
     "full": "/assets/img/atlas/full/P-1DC715134D.webp",
-    "thumb": "/assets/img/atlas/thumb/P-1DC715134D.webp"
+    "thumb": "/assets/img/atlas/thumb/P-1DC715134D.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    }
   ]
  },
@@ -3588,7 +4918,10 @@
    {
     "id": "P-CC5AE4EC2F",
     "full": "/assets/img/atlas/full/P-CC5AE4EC2F.webp",
-    "thumb": "/assets/img/atlas/thumb/P-CC5AE4EC2F.webp"
+    "thumb": "/assets/img/atlas/thumb/P-CC5AE4EC2F.webp",
+    "tags": [
+     "sakura"
+    ]
    }
   ]
  },
@@ -3610,22 +4943,42 @@
    {
     "id": "P-8DA9C4C34A",
     "full": "/assets/img/atlas/full/P-8DA9C4C34A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-8DA9C4C34A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-8DA9C4C34A.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-2C39760C4A",
     "full": "/assets/img/atlas/full/P-2C39760C4A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-2C39760C4A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-2C39760C4A.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-28632B7A0B",
     "full": "/assets/img/atlas/full/P-28632B7A0B.webp",
-    "thumb": "/assets/img/atlas/thumb/P-28632B7A0B.webp"
+    "thumb": "/assets/img/atlas/thumb/P-28632B7A0B.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-F44CC37539",
     "full": "/assets/img/atlas/full/P-F44CC37539.webp",
-    "thumb": "/assets/img/atlas/thumb/P-F44CC37539.webp"
+    "thumb": "/assets/img/atlas/thumb/P-F44CC37539.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "culture"
+    ]
    }
   ]
  },
@@ -3647,7 +5000,11 @@
    {
     "id": "P-E392F89CD2",
     "full": "/assets/img/atlas/full/P-E392F89CD2.webp",
-    "thumb": "/assets/img/atlas/thumb/P-E392F89CD2.webp"
+    "thumb": "/assets/img/atlas/thumb/P-E392F89CD2.webp",
+    "tags": [
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -3669,12 +5026,22 @@
    {
     "id": "P-BE900421EB",
     "full": "/assets/img/atlas/full/P-BE900421EB.webp",
-    "thumb": "/assets/img/atlas/thumb/P-BE900421EB.webp"
+    "thumb": "/assets/img/atlas/thumb/P-BE900421EB.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-47C6DADDC0",
     "full": "/assets/img/atlas/full/P-47C6DADDC0.webp",
-    "thumb": "/assets/img/atlas/thumb/P-47C6DADDC0.webp"
+    "thumb": "/assets/img/atlas/thumb/P-47C6DADDC0.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -3696,7 +5063,12 @@
    {
     "id": "P-2C24C386E2",
     "full": "/assets/img/atlas/full/P-2C24C386E2.webp",
-    "thumb": "/assets/img/atlas/thumb/P-2C24C386E2.webp"
+    "thumb": "/assets/img/atlas/thumb/P-2C24C386E2.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -3718,17 +5090,32 @@
    {
     "id": "P-07E34DB33E",
     "full": "/assets/img/atlas/full/P-07E34DB33E.webp",
-    "thumb": "/assets/img/atlas/thumb/P-07E34DB33E.webp"
+    "thumb": "/assets/img/atlas/thumb/P-07E34DB33E.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-5CE13EDF86",
     "full": "/assets/img/atlas/full/P-5CE13EDF86.webp",
-    "thumb": "/assets/img/atlas/thumb/P-5CE13EDF86.webp"
+    "thumb": "/assets/img/atlas/thumb/P-5CE13EDF86.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-5A6A2ED56D",
     "full": "/assets/img/atlas/full/P-5A6A2ED56D.webp",
-    "thumb": "/assets/img/atlas/thumb/P-5A6A2ED56D.webp"
+    "thumb": "/assets/img/atlas/thumb/P-5A6A2ED56D.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -3750,7 +5137,10 @@
    {
     "id": "P-DDFD120F80",
     "full": "/assets/img/atlas/full/P-DDFD120F80.webp",
-    "thumb": "/assets/img/atlas/thumb/P-DDFD120F80.webp"
+    "thumb": "/assets/img/atlas/thumb/P-DDFD120F80.webp",
+    "tags": [
+     "heritage"
+    ]
    }
   ]
  },
@@ -3772,12 +5162,21 @@
    {
     "id": "P-8B24023878",
     "full": "/assets/img/atlas/full/P-8B24023878.webp",
-    "thumb": "/assets/img/atlas/thumb/P-8B24023878.webp"
+    "thumb": "/assets/img/atlas/thumb/P-8B24023878.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-FBD09BD902",
     "full": "/assets/img/atlas/full/P-FBD09BD902.webp",
-    "thumb": "/assets/img/atlas/thumb/P-FBD09BD902.webp"
+    "thumb": "/assets/img/atlas/thumb/P-FBD09BD902.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    }
   ]
  },
@@ -3799,22 +5198,40 @@
    {
     "id": "P-73F75B8707",
     "full": "/assets/img/atlas/full/P-73F75B8707.webp",
-    "thumb": "/assets/img/atlas/thumb/P-73F75B8707.webp"
+    "thumb": "/assets/img/atlas/thumb/P-73F75B8707.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-15FBE09C3A",
     "full": "/assets/img/atlas/full/P-15FBE09C3A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-15FBE09C3A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-15FBE09C3A.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-6E01ADAD5C",
     "full": "/assets/img/atlas/full/P-6E01ADAD5C.webp",
-    "thumb": "/assets/img/atlas/thumb/P-6E01ADAD5C.webp"
+    "thumb": "/assets/img/atlas/thumb/P-6E01ADAD5C.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-0C94BA93B9",
     "full": "/assets/img/atlas/full/P-0C94BA93B9.webp",
-    "thumb": "/assets/img/atlas/thumb/P-0C94BA93B9.webp"
+    "thumb": "/assets/img/atlas/thumb/P-0C94BA93B9.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -3836,17 +5253,30 @@
    {
     "id": "P-81DEACD456",
     "full": "/assets/img/atlas/full/P-81DEACD456.webp",
-    "thumb": "/assets/img/atlas/thumb/P-81DEACD456.webp"
+    "thumb": "/assets/img/atlas/thumb/P-81DEACD456.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    },
    {
     "id": "P-15C50C4F6E",
     "full": "/assets/img/atlas/full/P-15C50C4F6E.webp",
-    "thumb": "/assets/img/atlas/thumb/P-15C50C4F6E.webp"
+    "thumb": "/assets/img/atlas/thumb/P-15C50C4F6E.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    },
    {
     "id": "P-B3B2C8F250",
     "full": "/assets/img/atlas/full/P-B3B2C8F250.webp",
-    "thumb": "/assets/img/atlas/thumb/P-B3B2C8F250.webp"
+    "thumb": "/assets/img/atlas/thumb/P-B3B2C8F250.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -3868,7 +5298,12 @@
    {
     "id": "P-2FFA164D98",
     "full": "/assets/img/atlas/full/P-2FFA164D98.webp",
-    "thumb": "/assets/img/atlas/thumb/P-2FFA164D98.webp"
+    "thumb": "/assets/img/atlas/thumb/P-2FFA164D98.webp",
+    "tags": [
+     "portrait",
+     "culture",
+     "nature"
+    ]
    }
   ]
  },
@@ -3890,22 +5325,37 @@
    {
     "id": "P-790F24AFBC",
     "full": "/assets/img/atlas/full/P-790F24AFBC.webp",
-    "thumb": "/assets/img/atlas/thumb/P-790F24AFBC.webp"
+    "thumb": "/assets/img/atlas/thumb/P-790F24AFBC.webp",
+    "tags": [
+     "culture",
+     "nature"
+    ]
    },
    {
     "id": "P-BDD3D3D2BA",
     "full": "/assets/img/atlas/full/P-BDD3D3D2BA.webp",
-    "thumb": "/assets/img/atlas/thumb/P-BDD3D3D2BA.webp"
+    "thumb": "/assets/img/atlas/thumb/P-BDD3D3D2BA.webp",
+    "tags": [
+     "culture",
+     "portrait"
+    ]
    },
    {
     "id": "P-09262A017E",
     "full": "/assets/img/atlas/full/P-09262A017E.webp",
-    "thumb": "/assets/img/atlas/thumb/P-09262A017E.webp"
+    "thumb": "/assets/img/atlas/thumb/P-09262A017E.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-28E7F65EE9",
     "full": "/assets/img/atlas/full/P-28E7F65EE9.webp",
-    "thumb": "/assets/img/atlas/thumb/P-28E7F65EE9.webp"
+    "thumb": "/assets/img/atlas/thumb/P-28E7F65EE9.webp",
+    "tags": [
+     "culture",
+     "portrait"
+    ]
    }
   ]
  },
@@ -3927,7 +5377,12 @@
    {
     "id": "P-5DC8C3257B",
     "full": "/assets/img/atlas/full/P-5DC8C3257B.webp",
-    "thumb": "/assets/img/atlas/thumb/P-5DC8C3257B.webp"
+    "thumb": "/assets/img/atlas/thumb/P-5DC8C3257B.webp",
+    "tags": [
+     "portrait",
+     "culture",
+     "nature"
+    ]
    }
   ]
  },
@@ -3949,17 +5404,28 @@
    {
     "id": "P-D676A25134",
     "full": "/assets/img/atlas/full/P-D676A25134.webp",
-    "thumb": "/assets/img/atlas/thumb/P-D676A25134.webp"
+    "thumb": "/assets/img/atlas/thumb/P-D676A25134.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-E5A52EA48D",
     "full": "/assets/img/atlas/full/P-E5A52EA48D.webp",
-    "thumb": "/assets/img/atlas/thumb/P-E5A52EA48D.webp"
+    "thumb": "/assets/img/atlas/thumb/P-E5A52EA48D.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-5F2528D501",
     "full": "/assets/img/atlas/full/P-5F2528D501.webp",
-    "thumb": "/assets/img/atlas/thumb/P-5F2528D501.webp"
+    "thumb": "/assets/img/atlas/thumb/P-5F2528D501.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -3981,12 +5447,19 @@
    {
     "id": "P-E728113B82",
     "full": "/assets/img/atlas/full/P-E728113B82.webp",
-    "thumb": "/assets/img/atlas/thumb/P-E728113B82.webp"
+    "thumb": "/assets/img/atlas/thumb/P-E728113B82.webp",
+    "tags": [
+     "hydrangea"
+    ]
    },
    {
     "id": "P-F0597F14C7",
     "full": "/assets/img/atlas/full/P-F0597F14C7.webp",
-    "thumb": "/assets/img/atlas/thumb/P-F0597F14C7.webp"
+    "thumb": "/assets/img/atlas/thumb/P-F0597F14C7.webp",
+    "tags": [
+     "hydrangea",
+     "nature"
+    ]
    }
   ]
  },
@@ -4008,22 +5481,40 @@
    {
     "id": "P-DE2D1ADB28",
     "full": "/assets/img/atlas/full/P-DE2D1ADB28.webp",
-    "thumb": "/assets/img/atlas/thumb/P-DE2D1ADB28.webp"
+    "thumb": "/assets/img/atlas/thumb/P-DE2D1ADB28.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-154504035D",
     "full": "/assets/img/atlas/full/P-154504035D.webp",
-    "thumb": "/assets/img/atlas/thumb/P-154504035D.webp"
+    "thumb": "/assets/img/atlas/thumb/P-154504035D.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-CD8027E3E4",
     "full": "/assets/img/atlas/full/P-CD8027E3E4.webp",
-    "thumb": "/assets/img/atlas/thumb/P-CD8027E3E4.webp"
+    "thumb": "/assets/img/atlas/thumb/P-CD8027E3E4.webp",
+    "tags": [
+     "sakura",
+     "nature"
+    ]
    },
    {
     "id": "P-ECECF79AB3",
     "full": "/assets/img/atlas/full/P-ECECF79AB3.webp",
-    "thumb": "/assets/img/atlas/thumb/P-ECECF79AB3.webp"
+    "thumb": "/assets/img/atlas/thumb/P-ECECF79AB3.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "nature"
+    ]
    }
   ]
  },
@@ -4045,17 +5536,26 @@
    {
     "id": "P-1A5D7F80EB",
     "full": "/assets/img/atlas/full/P-1A5D7F80EB.webp",
-    "thumb": "/assets/img/atlas/thumb/P-1A5D7F80EB.webp"
+    "thumb": "/assets/img/atlas/thumb/P-1A5D7F80EB.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-5CB7939203",
     "full": "/assets/img/atlas/full/P-5CB7939203.webp",
-    "thumb": "/assets/img/atlas/thumb/P-5CB7939203.webp"
+    "thumb": "/assets/img/atlas/thumb/P-5CB7939203.webp",
+    "tags": [
+     "nature"
+    ]
    },
    {
     "id": "P-1DB482E23F",
     "full": "/assets/img/atlas/full/P-1DB482E23F.webp",
-    "thumb": "/assets/img/atlas/thumb/P-1DB482E23F.webp"
+    "thumb": "/assets/img/atlas/thumb/P-1DB482E23F.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -4077,22 +5577,37 @@
    {
     "id": "P-7ED2FC4466",
     "full": "/assets/img/atlas/full/P-7ED2FC4466.webp",
-    "thumb": "/assets/img/atlas/thumb/P-7ED2FC4466.webp"
+    "thumb": "/assets/img/atlas/thumb/P-7ED2FC4466.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-D71750F475",
     "full": "/assets/img/atlas/full/P-D71750F475.webp",
-    "thumb": "/assets/img/atlas/thumb/P-D71750F475.webp"
+    "thumb": "/assets/img/atlas/thumb/P-D71750F475.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-2D319F2BDF",
     "full": "/assets/img/atlas/full/P-2D319F2BDF.webp",
-    "thumb": "/assets/img/atlas/thumb/P-2D319F2BDF.webp"
+    "thumb": "/assets/img/atlas/thumb/P-2D319F2BDF.webp",
+    "tags": [
+     "portrait",
+     "nature"
+    ]
    },
    {
     "id": "P-9BE8604DF5",
     "full": "/assets/img/atlas/full/P-9BE8604DF5.webp",
-    "thumb": "/assets/img/atlas/thumb/P-9BE8604DF5.webp"
+    "thumb": "/assets/img/atlas/thumb/P-9BE8604DF5.webp",
+    "tags": [
+     "nature"
+    ]
    }
   ]
  },
@@ -4114,7 +5629,11 @@
    {
     "id": "P-01DC0FF0FE",
     "full": "/assets/img/atlas/full/P-01DC0FF0FE.webp",
-    "thumb": "/assets/img/atlas/thumb/P-01DC0FF0FE.webp"
+    "thumb": "/assets/img/atlas/thumb/P-01DC0FF0FE.webp",
+    "tags": [
+     "city",
+     "nature"
+    ]
    }
   ]
  },
@@ -4136,17 +5655,32 @@
    {
     "id": "P-E7941BFF64",
     "full": "/assets/img/atlas/full/P-E7941BFF64.webp",
-    "thumb": "/assets/img/atlas/thumb/P-E7941BFF64.webp"
+    "thumb": "/assets/img/atlas/thumb/P-E7941BFF64.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-B1D6C4B622",
     "full": "/assets/img/atlas/full/P-B1D6C4B622.webp",
-    "thumb": "/assets/img/atlas/thumb/P-B1D6C4B622.webp"
+    "thumb": "/assets/img/atlas/thumb/P-B1D6C4B622.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "heritage"
+    ]
    },
    {
     "id": "P-788FF713A1",
     "full": "/assets/img/atlas/full/P-788FF713A1.webp",
-    "thumb": "/assets/img/atlas/thumb/P-788FF713A1.webp"
+    "thumb": "/assets/img/atlas/thumb/P-788FF713A1.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "heritage"
+    ]
    }
   ]
  },
@@ -4168,12 +5702,20 @@
    {
     "id": "P-F66CDC99DA",
     "full": "/assets/img/atlas/full/P-F66CDC99DA.webp",
-    "thumb": "/assets/img/atlas/thumb/P-F66CDC99DA.webp"
+    "thumb": "/assets/img/atlas/thumb/P-F66CDC99DA.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    },
    {
     "id": "P-872A020776",
     "full": "/assets/img/atlas/full/P-872A020776.webp",
-    "thumb": "/assets/img/atlas/thumb/P-872A020776.webp"
+    "thumb": "/assets/img/atlas/thumb/P-872A020776.webp",
+    "tags": [
+     "sakura",
+     "city"
+    ]
    }
   ]
  },
@@ -4195,7 +5737,12 @@
    {
     "id": "P-3F878D0115",
     "full": "/assets/img/atlas/full/P-3F878D0115.webp",
-    "thumb": "/assets/img/atlas/thumb/P-3F878D0115.webp"
+    "thumb": "/assets/img/atlas/thumb/P-3F878D0115.webp",
+    "tags": [
+     "sakura",
+     "portrait",
+     "city"
+    ]
    }
   ]
  },
@@ -4217,12 +5764,22 @@
    {
     "id": "P-EFD812E663",
     "full": "/assets/img/atlas/full/P-EFD812E663.webp",
-    "thumb": "/assets/img/atlas/thumb/P-EFD812E663.webp"
+    "thumb": "/assets/img/atlas/thumb/P-EFD812E663.webp",
+    "tags": [
+     "heritage",
+     "culture",
+     "autumn"
+    ]
    },
    {
     "id": "P-9214A0AA64",
     "full": "/assets/img/atlas/full/P-9214A0AA64.webp",
-    "thumb": "/assets/img/atlas/thumb/P-9214A0AA64.webp"
+    "thumb": "/assets/img/atlas/thumb/P-9214A0AA64.webp",
+    "tags": [
+     "heritage",
+     "culture",
+     "autumn"
+    ]
    }
   ]
  },
@@ -4244,12 +5801,20 @@
    {
     "id": "P-EC82194946",
     "full": "/assets/img/atlas/full/P-EC82194946.webp",
-    "thumb": "/assets/img/atlas/thumb/P-EC82194946.webp"
+    "thumb": "/assets/img/atlas/thumb/P-EC82194946.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-06C7B7F9DD",
     "full": "/assets/img/atlas/full/P-06C7B7F9DD.webp",
-    "thumb": "/assets/img/atlas/thumb/P-06C7B7F9DD.webp"
+    "thumb": "/assets/img/atlas/thumb/P-06C7B7F9DD.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -4271,22 +5836,38 @@
    {
     "id": "P-99EE97F81A",
     "full": "/assets/img/atlas/full/P-99EE97F81A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-99EE97F81A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-99EE97F81A.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-7AC0FFFE84",
     "full": "/assets/img/atlas/full/P-7AC0FFFE84.webp",
-    "thumb": "/assets/img/atlas/thumb/P-7AC0FFFE84.webp"
+    "thumb": "/assets/img/atlas/thumb/P-7AC0FFFE84.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-10D6381866",
     "full": "/assets/img/atlas/full/P-10D6381866.webp",
-    "thumb": "/assets/img/atlas/thumb/P-10D6381866.webp"
+    "thumb": "/assets/img/atlas/thumb/P-10D6381866.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-302E2FE0F6",
     "full": "/assets/img/atlas/full/P-302E2FE0F6.webp",
-    "thumb": "/assets/img/atlas/thumb/P-302E2FE0F6.webp"
+    "thumb": "/assets/img/atlas/thumb/P-302E2FE0F6.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -4308,22 +5889,38 @@
    {
     "id": "P-104BF8FC08",
     "full": "/assets/img/atlas/full/P-104BF8FC08.webp",
-    "thumb": "/assets/img/atlas/thumb/P-104BF8FC08.webp"
+    "thumb": "/assets/img/atlas/thumb/P-104BF8FC08.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-B9E4808E15",
     "full": "/assets/img/atlas/full/P-B9E4808E15.webp",
-    "thumb": "/assets/img/atlas/thumb/P-B9E4808E15.webp"
+    "thumb": "/assets/img/atlas/thumb/P-B9E4808E15.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-A5391F6C86",
     "full": "/assets/img/atlas/full/P-A5391F6C86.webp",
-    "thumb": "/assets/img/atlas/thumb/P-A5391F6C86.webp"
+    "thumb": "/assets/img/atlas/thumb/P-A5391F6C86.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-83866936C9",
     "full": "/assets/img/atlas/full/P-83866936C9.webp",
-    "thumb": "/assets/img/atlas/thumb/P-83866936C9.webp"
+    "thumb": "/assets/img/atlas/thumb/P-83866936C9.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -4345,17 +5942,29 @@
    {
     "id": "P-0FAC20FE40",
     "full": "/assets/img/atlas/full/P-0FAC20FE40.webp",
-    "thumb": "/assets/img/atlas/thumb/P-0FAC20FE40.webp"
+    "thumb": "/assets/img/atlas/thumb/P-0FAC20FE40.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-121D315A76",
     "full": "/assets/img/atlas/full/P-121D315A76.webp",
-    "thumb": "/assets/img/atlas/thumb/P-121D315A76.webp"
+    "thumb": "/assets/img/atlas/thumb/P-121D315A76.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    },
    {
     "id": "P-CF17CF635A",
     "full": "/assets/img/atlas/full/P-CF17CF635A.webp",
-    "thumb": "/assets/img/atlas/thumb/P-CF17CF635A.webp"
+    "thumb": "/assets/img/atlas/thumb/P-CF17CF635A.webp",
+    "tags": [
+     "autumn",
+     "heritage"
+    ]
    }
   ]
  },
@@ -4377,12 +5986,18 @@
    {
     "id": "P-0BF96ACAC7",
     "full": "/assets/img/atlas/full/P-0BF96ACAC7.webp",
-    "thumb": "/assets/img/atlas/thumb/P-0BF96ACAC7.webp"
+    "thumb": "/assets/img/atlas/thumb/P-0BF96ACAC7.webp",
+    "tags": [
+     "city"
+    ]
    },
    {
     "id": "P-3453655A55",
     "full": "/assets/img/atlas/full/P-3453655A55.webp",
-    "thumb": "/assets/img/atlas/thumb/P-3453655A55.webp"
+    "thumb": "/assets/img/atlas/thumb/P-3453655A55.webp",
+    "tags": [
+     "city"
+    ]
    }
   ]
  }

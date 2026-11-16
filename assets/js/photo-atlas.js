@@ -13,7 +13,7 @@
       return response.json();
     };
     const [land, places, tokyoWards] = await Promise.all([
-      read('japan-prefectures.json'), read('photo-locations.json?v=1115n'), read('tokyo-23-wards.json')
+      read('japan-prefectures.json'), read('photo-locations.json?v=1116-tags'), read('tokyo-23-wards.json')
     ]);
     const map = L.map('photo-map', {minZoom:3,maxZoom:17,zoomControl:false,zoomSnap:.1,scrollWheelZoom:true,maxBounds:[[16,114],[52,158]],maxBoundsViscosity:.85});
     L.control.zoom({position:'bottomright'}).addTo(map);
@@ -37,10 +37,35 @@
     }
     const viewer = document.getElementById('atlas-viewer');
     const largeImage = viewer.querySelector('img');
-    let currentPlace, activeIndex, returnTo;
+    const topics = {
+      city:      {color:'#53799b', zh:'城市风光', ja:'都市風景', en:'Cityscapes'},
+      nature:    {color:'#388268', zh:'自然风光', ja:'自然風景', en:'Nature'},
+      sakura:    {color:'#d67ba3', zh:'樱花', ja:'桜', en:'Cherry blossoms'},
+      autumn:    {color:'#c25430', zh:'红叶', ja:'紅葉', en:'Autumn foliage'},
+      hydrangea: {color:'#8970bc', zh:'紫阳花', ja:'あじさい', en:'Hydrangeas'},
+      heritage:  {color:'#926943', zh:'古迹', ja:'史跡', en:'Heritage'},
+      culture:   {color:'#247f91', zh:'人文', ja:'暮らし・文化', en:'Local culture'},
+      portrait:  {color:'#995273', zh:'人像', ja:'ポートレート', en:'Portraits'},
+      fireworks: {color:'#ad791b', zh:'花火', ja:'花火', en:'Fireworks'}
+    };
+    let selectedTopic = '';
+    function matchingPhotos(place) {
+      return selectedTopic ? place.photos.filter(photo => photo.tags?.includes(selectedTopic)) : place.photos;
+    }
+    // A mixed location uses its most frequent primary subject, with ties in album order.
+    function primaryTopic(place) {
+      const counts = new Map();
+      for (const photo of place.photos) {
+        const tag = photo.tags?.[0];
+        if (topics[tag]) counts.set(tag, (counts.get(tag) || 0) + 1);
+      }
+      return [...counts].sort((a,b) => b[1] - a[1])[0]?.[0];
+    }
+    const placeTopics = new Map(places.map(place => [place, primaryTopic(place)]));
+    let currentPlace, viewerPhotos, activeIndex, returnTo;
     const fullLabel = {zh:'查看大图',en:'View full photo',ja:'写真を拡大'}[lang];
     function displayPhoto(step=0) {
-      const batch = currentPlace.photos;
+      const batch = viewerPhotos;
       activeIndex = (activeIndex + step + batch.length) % batch.length;
       largeImage.src = batch[activeIndex].full;
       largeImage.alt = currentPlace.title[lang] + ' · ' + (activeIndex+1);
@@ -57,7 +82,7 @@
       }
     });
     viewer.addEventListener('close',()=>returnTo?.focus({preventScroll:true}));
-    largeImage.onerror=()=>{const thumb=currentPlace.photos[activeIndex].thumb;if(largeImage.getAttribute('src')!==thumb) largeImage.src=thumb;};
+    largeImage.onerror=()=>{const thumb=viewerPhotos[activeIndex].thumb;if(largeImage.getAttribute('src')!==thumb) largeImage.src=thumb;};
     for (const [selector,label] of [['.leaflet-control-zoom-in',captions[2]],['.leaflet-control-zoom-out',captions[3]]]) {
       const control = map.getContainer().querySelector(selector);
       control.title = label;
@@ -104,7 +129,8 @@
       if (viewMode === 'country') bounds = [[24.1,122.9],[45.6,146.1]];
       else if (viewMode === 'itinerary') bounds = stops.map(place => [place.lat, place.lng]);
       else if (activeOutline) bounds = activeOutline.getBounds();
-      else bounds = places.map(place => [place.lat, place.lng]);
+      else bounds = places.filter(place => matchingPhotos(place).length).map(place => [place.lat, place.lng]);
+      if (Array.isArray(bounds) && !bounds.length) return;
       map.fitBounds(bounds, {
         paddingTopLeft:padding(), paddingBottomRight:compact.matches ? [12,56] : [18,32],
         maxZoom: viewMode === 'itinerary' ? 14 : map.getMaxZoom(), animate:false
@@ -180,19 +206,37 @@
       if (open && compact.matches) directory.open = false;
     }
     togglePlan.onclick = () => showPlanner(itinerary.hidden);
+    const googleMapsLabel = {zh:'在 Google 地图中打开', ja:'Google マップで開く', en:'Open in Google Maps'}[lang];
     function preview(p, pin=false) {
       if (!pin && pinned) return;
+      const photos = matchingPhotos(p);
+      if (!photos.length) return;
       if (pin) pinned = p;
       const figure = document.createElement('figure');
       const img = document.createElement('img');
       let index = 0;
-      img.src = p.photos[index].thumb;
+      img.src = photos[index].thumb;
       img.alt = '';
       const caption = document.createElement('figcaption');
       caption.textContent = p.title[lang];
       const region = document.createElement('small');
       region.textContent = labels[p.pref]+' · '+p.city[lang];
       caption.prepend(region);
+      const tagLine = document.createElement('span');
+      tagLine.className = 'atlas-photo-tags';
+      function updateTags() {
+        tagLine.replaceChildren();
+        for (const key of photos[index].tags || []) {
+          const topic = topics[key];
+          if (!topic) continue;
+          const label = document.createElement('span');
+          label.style.setProperty('--topic-color', topic.color);
+          label.textContent = topic[lang];
+          tagLine.append(label);
+        }
+      }
+      updateTags();
+      caption.append(tagLine);
       const expand = document.createElement('button');
       expand.type='button';
       expand.className='atlas-expand';
@@ -202,16 +246,27 @@
       badge.textContent = fullLabel+' ⤢';
       expand.append(badge);
       expand.onclick=()=>{
-        currentPlace=p; activeIndex=index; returnTo=expand; pinned=p;
+        currentPlace=p; viewerPhotos=photos; activeIndex=index; returnTo=expand; pinned=p;
         viewer.querySelector('h2').textContent=p.title[lang];
         displayPhoto(); viewer.showModal(); viewer.querySelector('.viewer-close').focus();
       };
       figure.append(expand,caption);
-      if (p.photos.length > 1) {
+      if (itinerary.hidden) {
+        const mapsLink = document.createElement('a');
+        mapsLink.className = 'atlas-maps-link';
+        mapsLink.href = 'https://www.google.com/maps/search/?' + new URLSearchParams({
+          api: '1', query: [p.lat, p.lng].join(',')
+        });
+        mapsLink.target = '_blank';
+        mapsLink.rel = 'noopener noreferrer';
+        mapsLink.textContent = googleMapsLabel;
+        caption.append(mapsLink);
+      }
+      if (photos.length > 1) {
         const nav = document.createElement('div');
         nav.className = 'atlas-photo-controls';
         const count = document.createElement('span');
-        count.textContent = '1 / ' + p.photos.length;
+        count.textContent = '1 / ' + photos.length;
         for (const [step, label] of [[-1,captions[0]],[1,captions[1]]]) {
           const button = document.createElement('button');
           button.type = 'button';
@@ -219,9 +274,11 @@
           button.setAttribute('aria-label',label);
           button.onclick = () => {
             pinned = p;
-            index = (index + step + p.photos.length) % p.photos.length;
-            img.src = p.photos[index].thumb;
-            count.textContent = (index+1) + ' / ' + p.photos.length;
+            index = (index + step + photos.length) % photos.length;
+            img.src = photos[index].thumb;
+            updateTags();
+            frame.update();
+            count.textContent = (index+1) + ' / ' + photos.length;
           };
           nav.append(button);
           if (step < 0) nav.append(count);
@@ -282,7 +339,7 @@
     function updateList() {
       const terms = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
       const subset = places.filter(place =>
-        (!selectedRegion || place.pref === selectedRegion) &&
+        matchingPhotos(place).length && (!selectedRegion || place.pref === selectedRegion) &&
         terms.every(term => searchText.get(place).includes(term))
       );
       list.replaceChildren();
@@ -297,7 +354,7 @@
         const button = document.createElement('button');
         button.type = 'button';
         const thumb=document.createElement('img');
-        thumb.src=p.photos[0].thumb; thumb.alt=''; thumb.loading='lazy';
+        thumb.src=matchingPhotos(p)[0].thumb; thumb.alt=''; thumb.loading='lazy';
         const text=document.createElement('span');
         text.textContent=p.title[lang];
         const pref=document.createElement('small');
@@ -343,6 +400,40 @@
     map.on('resize', () => {
       if (selectedRegion && viewMode === 'places') fitView();
     });
+    const topicBar = document.querySelector('.atlas-topics');
+    function updateMarker(place, pin) {
+      pin.hidden = matchingPhotos(place).length === 0;
+      const topic = topics[selectedTopic || placeTopics.get(place)];
+      pin.style.setProperty('--topic-color', topic?.color || '#61756a');
+      const label = topic ? place.title[lang] + ' · ' + topic[lang] : place.title[lang];
+      pin.title = label;
+      pin.setAttribute('aria-label', label);
+    }
+    for (const [key, topic] of Object.entries(topics)) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.dataset.topic = key;
+      button.setAttribute('aria-pressed', 'false');
+      button.style.setProperty('--topic-color', topic.color);
+      button.textContent = topic[lang];
+      topicBar.append(button);
+    }
+    topicBar.addEventListener('click', event => {
+      const button = event.target.closest('button[data-topic]');
+      if (!button || selectedTopic === button.dataset.topic) return;
+      selectedTopic = button.dataset.topic;
+      for (const option of topicBar.querySelectorAll('button')) {
+        option.setAttribute('aria-pressed', String(option === button));
+      }
+      map.closePopup();
+      for (const [place, marker] of markers) updateMarker(place, marker.getElement());
+      updateList();
+      if (!selectedRegion && !search.value.trim()) {
+        viewMode = 'places';
+        fitView();
+      }
+    });
+    topicBar.hidden = false;
     render();
     // A touch can focus a pin before its click. Opening the card at that
     // moment can redirect the rest of the tap to the photo or the map.
@@ -356,6 +447,7 @@
       const marker = L.marker([place.lat, place.lng], {icon, title, alt: title, riseOnHover: true}).addTo(map);
       markers.set(place, marker);
       const pin = marker.getElement();
+      updateMarker(place, pin);
       pin.addEventListener('pointerenter', event => {
         if (event.pointerType === 'mouse') preview(place);
       });
