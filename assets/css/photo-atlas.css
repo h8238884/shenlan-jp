@@ -169,34 +169,39 @@
 
 .atlas-title-row {display:flow-root}
 .atlas-search-toggle[hidden] {display:none}
-#atlas-search-drawer {
-  box-sizing:border-box;position:fixed;inset:0 0 0 auto;margin:0;
-  width:min(90vw,390px);max-width:100%;height:100dvh;max-height:100%;
-  padding:max(16px,env(safe-area-inset-top)) 16px max(12px,env(safe-area-inset-bottom));
-  border:0;border-left:1px solid #d1dbd3;background:#fafcf9;color:#2f4439;
-}
-#atlas-search-drawer[open] {display:flex;flex-direction:column;animation:atlas-drawer-in .2s ease-out}
-#atlas-search-drawer::backdrop {background:#182d264d}
-#atlas-search-drawer header {display:flex;align-items:center;justify-content:space-between;gap:8px}
-#atlas-search-drawer h2 {font:600 19px/1.4 system-ui;margin:0}
-.atlas-drawer-close,.atlas-search-toggle {
+.atlas-search-toggle {
   display:inline-grid;place-items:center;flex:none;width:40px;height:40px;padding:0;
   border:1px solid #d4ded5;border-radius:50%;background:#fff;color:#345344;cursor:pointer;
 }
-.atlas-drawer-close {font:22px/1 system-ui}
 .atlas-search-toggle span {width:13px;height:13px;border:1.8px solid currentColor;border-radius:50%;position:relative}
 .atlas-search-toggle span::after {content:"";position:absolute;width:7px;height:2px;background:currentColor;bottom:-3px;right:-5px;transform:rotate(48deg)}
-#atlas-search-drawer .atlas-directory {display:block;overflow:auto;max-height:none;background:transparent;overscroll-behavior:contain}
-#atlas-search-drawer #place-list {max-height:none;padding:0}
-#atlas-search-drawer #place-list button {display:flex;align-items:center;gap:12px;padding:8px 2px}
-@keyframes atlas-drawer-in {from {transform:translateX(100%)} to {transform:translateX(0)}}
-@media(prefers-reduced-motion:reduce){#atlas-search-drawer[open] {animation:none}}
+.atlas-panel .atlas-directory[hidden], #atlas-search[hidden] {display:none}
+@keyframes atlas-search-in {
+  from {opacity:0;clip-path:inset(0 0 0 100%);}
+  to {opacity:1;clip-path:inset(0);}
+}
 @media(max-width:700px){
   .atlas-title-row {display:flex;align-items:center;gap:5px;margin:2px 0 6px}
   .atlas-title-row h1 {flex:1;min-width:0;margin:0;font-size:clamp(16px,4.7vw,19px)}
   .atlas-title-row .atlas-plan-toggle {flex:none;min-height:40px;font-size:12px;padding:5px 9px;gap:5px}
+  .atlas-title-row.search-open h1 {flex:0 1 84px;font-size:14px;line-height:1.35}
+  .atlas-title-row #atlas-search {
+    flex:1 1 0;min-width:0;width:0;height:40px;margin:0;padding:7px 8px;
+    background-image:none;animation:atlas-search-in .24s ease-out;
+  }
+  .search-open .atlas-search-toggle {width:28px;height:40px;border:0;background:transparent}
+  .search-open .atlas-search-toggle span {width:14px;height:14px;border:0;border-radius:0}
+  .search-open .atlas-search-toggle span::before,
+  .search-open .atlas-search-toggle span::after {
+    content:"";position:absolute;top:6px;left:0;width:14px;height:1.5px;
+    background:currentColor;transform:rotate(45deg);
+  }
+  .search-open .atlas-search-toggle span::after {transform:rotate(-45deg)}
+  .atlas-title-row + .atlas-directory {margin-bottom:6px}
+  .atlas-title-row + .atlas-directory #place-list {max-height:min(28dvh,240px);overscroll-behavior:contain}
   .atlas-planner:has(#atlas-itinerary[hidden]) {display:none}
 }
+@media(prefers-reduced-motion:reduce){.atlas-title-row #atlas-search {animation:none}}
 
 /* Night atlas: style the cartography and controls separately from the photographs. */
 :root[data-atlas-theme="dark"] {
@@ -212,16 +217,16 @@
 [data-atlas-theme="dark"] .atlas-land.featured {fill:#415e4e}
 [data-atlas-theme="dark"] .atlas-region-outline {stroke:#a4c8b3}
 [data-atlas-theme="dark"] .atlas-route-line {stroke:#d2ecc2}
-[data-atlas-theme="dark"] :is(.atlas-panel,.atlas-country,.atlas-site-menu nav,.leaflet-popup-content-wrapper,.leaflet-popup-tip,#atlas-search-drawer,#atlas-status:not(:empty)) {
+[data-atlas-theme="dark"] :is(.atlas-panel,.atlas-country,.atlas-site-menu nav,.leaflet-popup-content-wrapper,.leaflet-popup-tip,#atlas-status:not(:empty)) {
   background:var(--atlas-paper);color:var(--atlas-ink);border-color:var(--atlas-rule)
 }
 [data-atlas-theme="dark"] :is(.atlas-brand-row,.atlas-panel .atlas-directory,.atlas-topics,.atlas-site-menu summary,.plan-stops li) {border-color:var(--atlas-rule)}
 [data-atlas-theme="dark"] .atlas-brand-row img {filter:brightness(0) invert(.94)}
-[data-atlas-theme="dark"] :is(.atlas-panel h1,#atlas-search-drawer h2,.atlas-site-menu nav a,.atlas-directory summary,.plan-hint,.plan-stops button) {color:var(--atlas-ink)}
+[data-atlas-theme="dark"] :is(.atlas-panel h1,.atlas-site-menu nav a,.atlas-directory summary,.plan-hint,.plan-stops button) {color:var(--atlas-ink)}
 [data-atlas-theme="dark"] :is(.atlas-panel-head a,.atlas-directory small,.atlas-directory p,.atlas-popup small,.atlas-photo-tags span,.atlas-photo-controls,.atlas-topics button),
 [data-atlas-theme="dark"] #place-list small {color:var(--atlas-muted)}
 [data-atlas-theme="dark"] .plan-stops li::before {color:var(--atlas-muted)}
-[data-atlas-theme="dark"] :is(.atlas-filters button,.atlas-drawer-close,.atlas-search-toggle,.atlas-plan-toggle,.atlas-photo-controls button,.leaflet-bar a),
+[data-atlas-theme="dark"] :is(.atlas-filters button,.atlas-search-toggle,.atlas-plan-toggle,.atlas-photo-controls button,.leaflet-bar a),
 [data-atlas-theme="dark"] #atlas-search,
 [data-atlas-theme="dark"] .leaflet-container .leaflet-control-scale-line {
   background-color:var(--atlas-raised);border-color:var(--atlas-rule);color:var(--atlas-ink)

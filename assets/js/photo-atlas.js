@@ -332,45 +332,53 @@
     }
     map.on('popupclose',()=>{pinned=null;});
     const search = document.querySelector('#atlas-search');
-    const drawer = document.getElementById('atlas-search-drawer');
     const searchToggle = document.querySelector('.atlas-search-toggle');
     const titleRow = document.querySelector('.atlas-title-row');
     const regionBar = document.querySelector('.atlas-filters');
+    const searchLabel = searchToggle.getAttribute('aria-label');
+    const fullPlaceholder = search.placeholder;
+    const closeSearchLabel = {zh:'收起搜索', en:'Close search', ja:'検索を閉じる'}[lang];
+    function setSearchOpen(open, focus = false) {
+      titleRow.classList.toggle('search-open', open);
+      search.hidden = compact.matches && !open;
+      searchToggle.setAttribute('aria-expanded', String(open));
+      searchToggle.setAttribute('aria-label', open ? closeSearchLabel : searchLabel);
+      directory.open = !compact.matches || open;
+      updateList();
+      if (focus) (open ? search : searchToggle).focus({preventScroll:true});
+    }
     function arrangeControls() {
       if (compact.matches) {
-        titleRow.append(togglePlan);
-        drawer.append(search, directory);
+        titleRow.append(search, searchToggle, togglePlan);
+        titleRow.after(directory);
+        search.placeholder = {zh:'搜索取景地', en:'Search spots', ja:'撮影地を検索'}[lang];
       } else {
-        if (drawer.open) drawer.close();
         planner.prepend(togglePlan);
         regionBar.before(search);
         panel.append(directory);
+        search.placeholder = fullPlaceholder;
       }
       searchToggle.hidden = !compact.matches;
-      directory.open = !compact.matches;
+      setSearchOpen(false);
       map.setMaxBounds(panBounds());
     }
     searchToggle.onclick = () => {
       siteMenu.open = false;
       map.closePopup();
-      directory.open = true;
-      drawer.showModal();
-      search.focus({preventScroll:true});
+      setSearchOpen(!titleRow.classList.contains('search-open'), true);
     };
-    drawer.querySelector('.atlas-drawer-close').onclick = () => drawer.close();
-    drawer.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && !event.isComposing) {
+    titleRow.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !event.isComposing && compact.matches) {
         event.preventDefault();
-        drawer.close();
+        setSearchOpen(false, true);
       }
     });
-    drawer.addEventListener('click', event => {
-      if (event.target !== drawer) return;
-      const box = drawer.getBoundingClientRect();
-      if (event.clientX < box.left || event.clientX > box.right) drawer.close();
+    document.addEventListener('click', event => {
+      if (compact.matches && titleRow.classList.contains('search-open') &&
+          !titleRow.contains(event.target) && !directory.contains(event.target)) {
+        setSearchOpen(false);
+      }
     });
-    arrangeControls();
-    compact.addEventListener('change', arrangeControls);
     const list = document.getElementById('place-list');
     const normalize = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const regionTerms = new Map(regionButtons.map(button => [button.dataset.region, button.dataset.names]));
@@ -386,6 +394,12 @@
     }
     function updateList() {
       const terms = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+      directory.hidden = compact.matches && (!titleRow.classList.contains('search-open') || terms.length === 0);
+      if (directory.hidden) {
+        list.replaceChildren();
+        document.getElementById('place-count').textContent = '0';
+        return;
+      }
       const subset = places.filter(place =>
         matchingPhotos(place).length && (!selectedRegion || place.pref === selectedRegion) &&
         terms.every(term => searchText.get(place).includes(term))
@@ -409,7 +423,7 @@
         pref.textContent=labels[p.pref]+' · '+p.city[lang]; text.append(pref);
         button.append(thumb,text);
         button.onclick = () => {
-          if (drawer.open) drawer.close();
+          if (compact.matches) { search.blur(); setSearchOpen(false); }
           viewMode = 'place';
           if(compact.matches) directory.open=false;
           map.setView([p.lat, p.lng],Math.max(map.getZoom(),14),{animate:false});
@@ -443,7 +457,8 @@
         if (first) { search.blur(); first.click(); }
       }
     };
-    search.hidden = false;
+    arrangeControls();
+    compact.addEventListener('change', arrangeControls);
     regionButtons.forEach(b=>b.onclick=()=>render(b.dataset.region));
     document.querySelector('.atlas-country').onclick = () => render('', 'country');
     map.on('resize', () => {
@@ -511,6 +526,13 @@
     drawRoute();
     if (stops.length) viewMode = 'itinerary';
     fitView();
+    const requestedSpot = new URLSearchParams(location.search).get('spot');
+    const sharedPlace = places.find(place => place.photos.some(photo => photo.id === requestedSpot));
+    if (sharedPlace) {
+      viewMode = 'place';
+      map.setView([sharedPlace.lat, sharedPlace.lng], 14, {animate:false});
+      preview(sharedPlace, true);
+    }
     const base = await read('atlas-basemap.json');
     const nightPaint = {
       Water:{'fill-color':'#294b59'}, Contours:{'line-color':'#a69676'},
