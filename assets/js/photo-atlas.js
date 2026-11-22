@@ -6,6 +6,22 @@
   const lang = document.documentElement.lang;
   const captions = {zh:['上一张','下一张','放大','缩小'],en:['Previous photo','Next photo','Zoom in','Zoom out'],ja:['前の写真','次の写真','拡大','縮小']}[lang];
   const closeLabel = {zh:'关闭照片',en:'Close photo',ja:'写真を閉じる'}[document.documentElement.lang];
+  const copyrightDialog = document.getElementById('atlas-copyright');
+  let copyrightTrigger;
+  document.querySelectorAll('[data-copyright-open]').forEach(button => {
+    button.addEventListener('click', () => {
+      copyrightTrigger = button;
+      copyrightDialog.showModal();
+      copyrightDialog.querySelector('.copyright-close').focus();
+    });
+  });
+  copyrightDialog.querySelector('.copyright-close').onclick = () => copyrightDialog.close();
+  copyrightDialog.addEventListener('close', () => copyrightTrigger?.focus({preventScroll:true}));
+  copyrightDialog.addEventListener('click', event => {
+    if (event.target !== copyrightDialog) return;
+    const box = copyrightDialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) copyrightDialog.close();
+  });
   try {
     const read = async path => {
       const response = await fetch('/assets/maps/' + path);
@@ -13,7 +29,7 @@
       return response.json();
     };
     const [land, places, tokyoWards] = await Promise.all([
-      read('japan-prefectures.json'), read('photo-locations.json?v=1116-tags'), read('tokyo-23-wards.json')
+      read('japan-prefectures.json'), read('photo-locations.json?v=89a123ebdf1b'), read('tokyo-23-wards.json')
     ]);
     const compact = window.matchMedia('(max-width:700px)');
     // A tall mobile viewport needs more pan range to frame Japan below the panel.
@@ -21,6 +37,15 @@
     const map = L.map('photo-map', {minZoom:3,maxZoom:17,zoomControl:false,zoomSnap:.1,scrollWheelZoom:true,maxBounds:panBounds(),maxBoundsViscosity:.85});
     L.control.zoom({position:'bottomright'}).addTo(map);
     map.attributionControl.setPrefix(false);
+    const photoCredit = L.control({position:'bottomright'});
+    photoCredit.onAdd = () => {
+      const credit = document.getElementById('atlas-photo-credit');
+      credit.hidden = false;
+      L.DomEvent.disableClickPropagation(credit);
+      L.DomEvent.disableScrollPropagation(credit);
+      return credit;
+    };
+    photoCredit.addTo(map);
     const directory = document.querySelector('.atlas-directory');
     directory.open = !compact.matches;
     const panel = document.querySelector('.atlas-panel');
@@ -44,6 +69,7 @@
       nature:    {color:'#388268', zh:'自然风光', ja:'自然風景', en:'Nature'},
       sakura:    {color:'#d67ba3', zh:'樱花', ja:'桜', en:'Cherry blossoms'},
       autumn:    {color:'#c25430', zh:'红叶', ja:'紅葉', en:'Autumn foliage'},
+      snow:      {color:'#6dabc2', zh:'雪境', ja:'雪景色', en:'Snowscapes'},
       hydrangea: {color:'#8970bc', zh:'紫阳花', ja:'あじさい', en:'Hydrangeas'},
       heritage:  {color:'#926943', zh:'古迹', ja:'史跡', en:'Heritage'},
       culture:   {color:'#247f91', zh:'人文', ja:'暮らし・文化', en:'Local culture'},
@@ -307,6 +333,14 @@
           togglePlan.focus({preventScroll:true});
         };
         figure.append(add);
+      }
+      if (window.AtlasComments) {
+        const notes = document.createElement('button');
+        notes.type = 'button'; notes.className = 'atlas-comments-entry';
+        notes.textContent = window.AtlasComments.label + ' ›';
+        notes.setAttribute('aria-haspopup', 'dialog');
+        notes.onclick = () => { pinned = p; window.AtlasComments.open(p, notes); };
+        figure.append(notes);
       }
       const pixel = map.latLngToContainerPoint([p.lat,p.lng]);
       frame.options.offset = L.point(0,-7);
