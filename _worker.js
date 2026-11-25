@@ -22,6 +22,8 @@ export default {
     function document(body, type) {
       return new Response(request.method === 'HEAD' ? null : body, {headers: {'Content-Type': type + '; charset=utf-8'}});
     }
+    const atlasIcon = {'/favicon.ico':'map-20261125.ico','/favicon.png':'map-20261125-48.png','/apple-touch-icon.png':'map-20261125-180.png'}[pathname];
+    if (atlasIcon) return env.ASSETS.fetch(new Request(site + '/assets/icons/' + atlasIcon, {method:request.method}));
     if (pathname === '/robots.txt') return document('User-agent: *\nAllow: /\nSitemap: '+atlas+'/sitemap.xml\n', 'text/plain');
     if (pathname === '/sitemap.xml') return document(xml, 'application/xml');
     const page = pathname.match(/^\/(zh|en|ja)(?:\/index\.html|\/)?$/);
